@@ -1,0 +1,46 @@
+view,tool,model,context_a,context_b,n_a,n_b,cliffs_delta,magnitude
+original,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,212,307,0.6485,Large
+original,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,212,305,0.6381,Large
+original,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,212,292,0.5945,Large
+original,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,212,302,0.442,Medium
+original,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,294,212,-0.5832,Large
+original,roberta,gpt-5-mini-2025-08-07,Repo Path,File Diff,308,306,-0.46,Medium
+original,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,26,152,0.7126,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,26,127,0.6669,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,180,152,0.6165,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,26,232,0.6097,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,180,232,0.5464,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,104,127,0.4058,Medium
+original,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,104,152,0.3735,Medium
+original,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,127,180,-0.6287,Large
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,302,292,0.758,Large
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,212,292,0.6963,Large
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,302,307,0.5667,Large
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,212,307,0.4448,Medium
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,305,292,0.4021,Medium
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,305,302,-0.4548,Medium
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,294,212,-0.4648,Medium
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,294,302,-0.5863,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,26,152,0.71,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,180,152,0.7064,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,26,232,0.5806,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,180,232,0.5641,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,104,152,0.5476,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,26,127,0.5469,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,104,127,0.3642,Medium
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,104,232,0.3617,Medium
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,127,180,-0.5521,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,302,308,0.5486,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,308,308,0.4962,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,308,308,0.4002,Medium
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,308,308,0.39,Medium
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,308,308,-0.3685,Medium
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,308,308,-0.5075,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,308,308,-0.5223,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,308,302,-0.6123,Large
+original,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,308,308,0.4411,Medium
+original,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Contents,308,302,0.4371,Medium
+original,zerogpt,gpt-5-mini-2025-08-07,PR Title,Linked Issue,308,308,0.4001,Medium
+original,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Contents,308,302,0.3935,Medium
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,308,308,-0.3374,Medium
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,308,308,-0.416,Medium

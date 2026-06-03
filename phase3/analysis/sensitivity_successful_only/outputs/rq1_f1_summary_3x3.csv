@@ -1,0 +1,10 @@
+tool,model,best_F1,best_ctx,worst_F1,worst_ctx,mean_F1,range
+roberta,Qwen/Qwen2.5-72B-Instruct,0.631,PR Title,0.308,Without FC,0.422,0.323
+roberta,gpt-5-mini-2025-08-07,0.013,PR Title,0.0,Repo Path,0.008,0.013
+roberta,meta-llama/llama-3.1-70b-instruct,0.579,File Contents,0.133,PR Title,0.287,0.446
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,0.863,File Contents,0.255,Linked Issue,0.555,0.608
+roberta-qa,gpt-5-mini-2025-08-07,0.0,Repo Path,0.0,Repo Path,0.0,0.0
+roberta-qa,meta-llama/llama-3.1-70b-instruct,0.531,File Contents,0.093,Linked Issue,0.233,0.439
+zerogpt,Qwen/Qwen2.5-72B-Instruct,0.813,File Contents,0.194,Linked Issue,0.527,0.62
+zerogpt,gpt-5-mini-2025-08-07,0.448,PR Title,0.064,File Contents,0.22,0.384
+zerogpt,meta-llama/llama-3.1-70b-instruct,0.206,File Contents,0.006,Linked Issue,0.064,0.2

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR Description Blind Coder</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- PapaParse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-primary: #3b82f6;
+            --accent-primary-hover: #2563eb;
+            --accent-human: #10b981;
+            --accent-ai: #8b5cf6;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: radial-gradient(circle at top right, #1e1b4b, #0f172a);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .view {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #cbd5e1;
+        }
+
+        input[type="file"],
+        input[type="number"] {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="file"]::file-selector-button {
+            background: var(--accent-primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            margin-right: 1rem;
+            transition: background 0.2s;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background: var(--accent-primary-hover);
+        }
+
+        input:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            background: var(--accent-primary);
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--accent-primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            background: #475569;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Coding View */
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .description-box {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 16px;
+            min-height: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            color: #e2e8f0;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-human {
+            background: var(--accent-human);
+            flex: 1;
+        }
+
+        .btn-human:hover {
+            background: #059669;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-ai {
+            background: var(--accent-ai);
+            flex: 1;
+        }
+
+        .btn-ai:hover {
+            background: #7c3aed;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Results View */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-value.success {
+            color: #10b981;
+        }
+
+        .stat-value.danger {
+            color: #ef4444;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Blind Coder</h1>
+
+        <!-- Setup View -->
+        <div id="setupView" class="view active">
+            <h2
+                style="text-align: center; margin-bottom: 2rem; background: none; -webkit-text-fill-color: var(--text-color);">
+                New Session</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #94a3b8;">
+                Upload your detection_results.csv to begin the blind coding session.
+            </p>
+            <div class="form-group">
+                <label for="csvFile">CSV File</label>
+                <input type="file" id="csvFile" accept=".csv">
+            </div>
+            <div class="form-group">
+                <label for="numChecks">Number of Descriptions to Check</label>
+                <input type="number" id="numChecks" min="1" max="1000" value="50">
+            </div>
+            <button id="startBtn" class="btn" disabled>Start Coding</button>
+
+            <hr style="margin: 2rem 0; border: 0; height: 1px; background: var(--border-color);">
+
+            <h2
+                style="text-align: center; margin-bottom: 2rem; background: none; -webkit-text-fill-color: var(--text-color);">
+                View Existing Results</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #94a3b8;">
+                Upload an existing blind_coding_results.json or .csv to view the analysis.
+            </p>
+            <div class="form-group">
+                <label for="resultsFile">Results File (.json, .csv)</label>
+                <input type="file" id="resultsFile" accept=".json,.csv">
+            </div>
+        </div>
+
+        <!-- Coding View -->
+        <div id="codingView" class="view">
+            <div class="progress-header">
+                <span id="progressText">Item 1 of 50</span>
+                <span id="timeLeft"></span>
+            </div>
+            <div class="progress-bar-bg">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <div id="descriptionContent" class="description-box">
+                Loading...
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-human" onclick="codeCurrent('human')" title="Keyboard Shortcut: H">Human
+                    Written</button>
+                <button class="btn btn-ai" onclick="codeCurrent('ai')" title="Keyboard Shortcut: A">AI
+                    Generated</button>
+            </div>
+        </div>
+
+        <!-- Results View -->
+        <div id="resultsView" class="view">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Analysis Complete!</h2>
+
+            <div class="results-grid">
+                <div class="stat-card">
+                    <div id="totalCoded" class="stat-value">0</div>
+                    <div class="stat-label">Total Coded</div>
+                </div>
+                <div class="stat-card">
+                    <div id="accuracy" class="stat-value success">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div id="correctCount" class="stat-value success">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-card">
+                    <div id="incorrectCount" class="stat-value danger">0</div>
+                    <div class="stat-label">Incorrect</div>
+                </div>
+            </div>
+
+            <div
+                style="margin-bottom: 2rem; color: #cbd5e1; background: rgba(15, 23, 42, 0.6); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                <h3
+                    style="margin-bottom: 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                    Confusion Matrix</h3>
+                <ul style="list-style-type: none; line-height: 2;">
+                    <li style="display: flex; justify-content: space-between;"><span>Predicted <strong>Human</strong>,
+                            Actually <strong>Human</strong> <span style="color: #94a3b8; font-size: 0.9em;">(True
+                                Negative)</span></span> <strong id="tnCount" style="color: #10b981;">0</strong></li>
+                    <li style="display: flex; justify-content: space-between;"><span>Predicted <strong>AI</strong>,
+                            Actually <strong>AI</strong> <span style="color: #94a3b8; font-size: 0.9em;">(True
+                                Positive)</span></span> <strong id="tpCount" style="color: #10b981;">0</strong></li>
+                    <li style="display: flex; justify-content: space-between;"><span>Predicted <strong>AI</strong>,
+                            Actually <strong>Human</strong> <span style="color: #94a3b8; font-size: 0.9em;">(False
+                                Positive)</span></span> <strong id="fpCount" style="color: #ef4444;">0</strong></li>
+                    <li style="display: flex; justify-content: space-between;"><span>Predicted <strong>Human</strong>,
+                            Actually <strong>AI</strong> <span style="color: #94a3b8; font-size: 0.9em;">(False
+                                Negative)</span></span> <strong id="fnCount" style="color: #ef4444;">0</strong></li>
+                </ul>
+            </div>
+
+            <div id="mistakesContainer" style="margin-bottom: 2rem; display: none;">
+                <h3
+                    style="margin-bottom: 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                    Review Answers</h3>
+                <div style="max-height: 400px; overflow-y: auto; padding-right: 10px;">
+                    <ul id="resultsList"
+                        style="list-style-type: none; display: flex; flex-direction: column; gap: 1rem;">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn" style="background: #475569; flex: 1;" onclick="location.reload()">Start
+                    Over</button>
+                <button class="btn" style="flex: 1;" onclick="exportResults('json')">Export JSON</button>
+                <button class="btn" style="flex: 1;" onclick="exportResults('csv')">Export CSV</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let parsedData = [];
+        let sampleData = [];
+        let currentIndex = 0;
+        let results = [];
+        let isCoding = false;
+
+        const fileInput = document.getElementById('csvFile');
+        const startBtn = document.getElementById('startBtn');
+        const numChecksInput = document.getElementById('numChecks');
+
+        const resultsFileInput = document.getElementById('resultsFile');
+        resultsFileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                const extension = file.name.split('.').pop().toLowerCase();
+
+                if (extension === 'json') {
+                    const reader = new FileReader();
+                    reader.onload = function (event) {
+                        try {
+                            const parsedResults = JSON.parse(event.target.result);
+                            if (!Array.isArray(parsedResults)) {
+                                throw new Error("JSON should be an array of results.");
+                            }
+                            // Convert string booleans to actual booleans if needed
+                            results = parsedResults.map(r => ({
+                                ...r,
+                                isCorrect: typeof r.isCorrect === 'string' ? r.isCorrect === 'true' : r.isCorrect
+                            }));
+                            finishCoding();
+                        } catch (err) {
+                            console.error(err);
+                            alert("Error parsing JSON file. " + err.message);
+                        }
+                    };
+                    reader.readAsText(file);
+                } else if (extension === 'csv') {
+                    Papa.parse(file, {
+                        header: true,
+                        skipEmptyLines: true,
+                        complete: function (parsedData) {
+                            try {
+                                results = parsedData.data.map(row => ({
+                                    pr_id: row.pr_id,
+                                    text: row.text,
+                                    actual: row.actual,
+                                    predicted: row.predicted,
+                                    isCorrect: row.isCorrect === 'true' || row.isCorrect === true
+                                }));
+                                finishCoding();
+                            } catch (err) {
+                                console.error(err);
+                                alert("Error parsing CSV Results. " + err.message);
+                            }
+                        },
+                        error: function (error) {
+                            alert('Error parsing CSV: ' + error.message);
+                        }
+                    });
+                } else {
+                    alert("Please upload a .json or .csv file");
+                }
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                startBtn.disabled = true;
+                startBtn.textContent = 'Parsing CSV...';
+
+                Papa.parse(e.target.files[0], {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: function (results) {
+                        try {
+                            // Map properly to entry_type from lowercase parsing if it occurs
+                            parsedData = results.data.filter(row => row.text && row.text.trim().length > 0 && row.entry_type);
+
+                            if (parsedData.length === 0) {
+                                alert("No valid rows found. Ensure the CSV has 'text' and 'entry_type' columns.");
+                                startBtn.disabled = false;
+                                startBtn.textContent = 'Error';
+                                return;
+                            }
+
+                            startBtn.disabled = false;
+                            startBtn.textContent = 'Start Coding';
+                            numChecksInput.max = parsedData.length;
+
+                            if (parsedData.length < parseInt(numChecksInput.value)) {
+                                numChecksInput.value = parsedData.length;
+                            }
+                        } catch (err) {
+                            console.error(err);
+                            alert("Error processing CSV data. " + err.message);
+                            startBtn.disabled = false;
+                            startBtn.textContent = 'Error';
+                        }
+                    },
+                    error: function (error) {
+                        alert('Error parsing CSV: ' + error.message);
+                        startBtn.disabled = false;
+                        startBtn.textContent = 'Error';
+                    }
+                });
+            } else {
+                startBtn.disabled = true;
+            }
+        });
+
+        startBtn.addEventListener('click', () => {
+            const num = parseInt(numChecksInput.value);
+            if (num > parsedData.length) {
+                alert(`Cannot select more than ${parsedData.length} items. (Found ${parsedData.length} valid rows)`);
+                return;
+            }
+
+            // Randomly select num items
+            const shuffled = [...parsedData].sort(() => 0.5 - Math.random());
+            sampleData = shuffled.slice(0, num);
+
+            currentIndex = 0;
+            results = [];
+            isCoding = true;
+
+            switchView('codingView');
+            showCurrentItem();
+        });
+
+        function switchView(viewId) {
+            document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
+            document.getElementById(viewId).classList.add('active');
+        }
+
+        function showCurrentItem() {
+            if (currentIndex >= sampleData.length) {
+                finishCoding();
+                return;
+            }
+
+            const item = sampleData[currentIndex];
+            document.getElementById('progressText').textContent = `Item ${currentIndex + 1} of ${sampleData.length}`;
+            document.getElementById('progressBar').style.width = `${((currentIndex) / sampleData.length) * 100}%`;
+
+            let text = item.text || '';
+            // Remove surround quotes if any
+            text = text.replace(/^\"|\"$/g, '');
+
+            document.getElementById('descriptionContent').textContent = text;
+        }
+
+        function codeCurrent(userPrediction) {
+            if (!isCoding) return;
+
+            const item = sampleData[currentIndex];
+            const actualTruth = (item.entry_type || '').toLowerCase() === 'ai' ? 'ai' : 'human';
+
+            results.push({
+                pr_id: item.pr_id,
+                text: item.text,
+                actual: actualTruth,
+                predicted: userPrediction,
+                isCorrect: actualTruth === userPrediction
+            });
+
+            currentIndex++;
+            document.getElementById('progressBar').style.width = `${((currentIndex) / sampleData.length) * 100}%`;
+
+            showCurrentItem();
+        }
+
+        function finishCoding() {
+            isCoding = false;
+            switchView('resultsView');
+
+            const total = results.length;
+            const correct = results.filter(r => r.isCorrect).length;
+            const accuracy = total > 0 ? ((correct / total) * 100).toFixed(1) : 0;
+
+            let tp = 0; // Predict AI, Actual AI
+            let fp = 0; // Predict AI, Actual Human
+            let tn = 0; // Predict Human, Actual Human
+            let fn = 0; // Predict Human, Actual AI
+
+            const resultsList = document.getElementById('resultsList');
+            if (resultsList) resultsList.innerHTML = '';
+
+            results.forEach((r, idx) => {
+                if (r.predicted === 'ai' && r.actual === 'ai') tp++;
+                if (r.predicted === 'ai' && r.actual === 'human') fp++;
+                if (r.predicted === 'human' && r.actual === 'human') tn++;
+                if (r.predicted === 'human' && r.actual === 'ai') fn++;
+
+                if (resultsList) {
+                    const li = document.createElement('li');
+                    li.style.background = 'rgba(15, 23, 42, 0.4)';
+                    li.style.padding = '1rem';
+                    li.style.borderRadius = '8px';
+                    li.style.border = `1px solid ${r.isCorrect ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)'}`;
+
+                    const safeText = (r.text || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                    li.innerHTML = `
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="color: #94a3b8; font-size: 0.9em;">Item ${idx + 1} (PR: ${r.pr_id || 'Unknown'})</span>
+                            <span style="color: ${r.isCorrect ? '#10b981' : '#ef4444'}; font-weight: bold;">
+                                ${r.isCorrect ? 'Correct' : 'Incorrect'}
+                            </span>
+                        </div>
+                        <div style="color: #e2e8f0; font-size: 0.95em; margin-bottom: 0.5rem; max-height: 100px; overflow-y: auto; background: rgba(0,0,0,0.2); padding: 0.5rem; border-radius: 4px; white-space: pre-wrap;">${safeText}</div>
+                        <div style="display: flex; gap: 1rem; font-size: 0.9em;">
+                            <span>Predicted: <strong style="color: ${r.predicted === 'ai' ? '#8b5cf6' : '#10b981'}">${(r.predicted || '').toUpperCase()}</strong></span>
+                            <span>Actual: <strong style="color: ${r.actual === 'ai' ? '#8b5cf6' : '#10b981'}">${(r.actual || '').toUpperCase()}</strong></span>
+                        </div>
+                    `;
+                    resultsList.appendChild(li);
+                }
+            });
+
+            const mistContainer = document.getElementById('mistakesContainer');
+            if (mistContainer) mistContainer.style.display = 'block';
+
+            document.getElementById('totalCoded').textContent = total;
+
+            const accuracyEl = document.getElementById('accuracy');
+            accuracyEl.textContent = `${accuracy}%`;
+            accuracyEl.className = `stat-value ${accuracy >= 50 ? 'success' : 'danger'}`;
+
+            document.getElementById('correctCount').textContent = correct;
+            document.getElementById('incorrectCount').textContent = total - correct;
+
+            document.getElementById('tpCount').textContent = tp;
+            document.getElementById('tnCount').textContent = tn;
+            document.getElementById('fpCount').textContent = fp;
+            document.getElementById('fnCount').textContent = fn;
+        }
+
+        function exportResults(format) {
+            let dataStr, filename;
+            if (format === 'json') {
+                dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(results, null, 2));
+                filename = "blind_coding_results.json";
+            } else if (format === 'csv') {
+                const csvStr = Papa.unparse(results);
+                dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csvStr);
+                filename = "blind_coding_results.csv";
+            }
+
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", filename);
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (!isCoding) return;
+            if (e.key.toLowerCase() === 'h') {
+                codeCurrent('human');
+            } else if (e.key.toLowerCase() === 'a') {
+                codeCurrent('ai');
+            }
+        });
+    </script>
+</body>
+
+</html>

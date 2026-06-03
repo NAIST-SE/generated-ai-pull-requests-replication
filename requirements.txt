@@ -1,0 +1,31 @@
+gql[requests]
+pandas
+python-dateutil # Remove if not using advanced date/time features from dateutil
+requests # Redundant with gql[requests] but including it for clarity. Pip handles this correctly.
+tqdm
+papermill
+jupyter
+ipykernel
+python-daemon
+types-requests
+pytest
+openai
+tiktoken
+scikit_learn
+textstat
+bert_score
+spacy>=3.8.0
+# spaCy English POS model used in phase3 lexical-density analysis
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+seaborn
+emoji
+transformers>=4.45.0
+torch>=2.4.0
+accelerate>=0.33.0
+bitsandbytes>=0.43.1
+scikit-posthocs
+numpy
+bitsandbytes>=0.43.1
+matplotlib
+# flash-attn
+rouge_score

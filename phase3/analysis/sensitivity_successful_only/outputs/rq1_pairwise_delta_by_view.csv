@@ -1,0 +1,676 @@
+view,tool,model,context_a,context_b,n_a,n_b,cliffs_delta,magnitude
+original,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,294,212,-0.5832,Large
+original,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,294,305,0.0455,Negligible
+original,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,294,302,-0.1987,Small
+original,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,294,292,-0.0597,Negligible
+original,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,294,307,0.0098,Negligible
+original,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,212,305,0.6381,Large
+original,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,212,302,0.442,Medium
+original,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,212,292,0.5945,Large
+original,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,212,307,0.6485,Large
+original,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,305,302,-0.2558,Small
+original,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,305,292,-0.1235,Negligible
+original,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,305,307,-0.0462,Negligible
+original,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,302,292,0.1565,Small
+original,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,302,307,0.2335,Small
+original,roberta,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,292,307,0.0883,Negligible
+original,roberta,gpt-5-mini-2025-08-07,Repo Path,PR Title,308,308,-0.3072,Small
+original,roberta,gpt-5-mini-2025-08-07,Repo Path,File Diff,308,306,-0.46,Medium
+original,roberta,gpt-5-mini-2025-08-07,Repo Path,File Contents,308,302,-0.2829,Small
+original,roberta,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,308,307,-0.2475,Small
+original,roberta,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,308,308,-0.2702,Small
+original,roberta,gpt-5-mini-2025-08-07,PR Title,File Diff,308,306,-0.2026,Small
+original,roberta,gpt-5-mini-2025-08-07,PR Title,File Contents,308,302,-0.0096,Negligible
+original,roberta,gpt-5-mini-2025-08-07,PR Title,Linked Issue,308,307,0.0567,Negligible
+original,roberta,gpt-5-mini-2025-08-07,PR Title,Without File Contents,308,308,0.0218,Negligible
+original,roberta,gpt-5-mini-2025-08-07,File Diff,File Contents,306,302,0.17,Small
+original,roberta,gpt-5-mini-2025-08-07,File Diff,Linked Issue,306,307,0.2455,Small
+original,roberta,gpt-5-mini-2025-08-07,File Diff,Without File Contents,306,308,0.2089,Small
+original,roberta,gpt-5-mini-2025-08-07,File Contents,Linked Issue,302,307,0.0571,Negligible
+original,roberta,gpt-5-mini-2025-08-07,File Contents,Without File Contents,302,308,0.0318,Negligible
+original,roberta,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,307,308,-0.0318,Negligible
+original,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,104,26,-0.2537,Small
+original,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,104,127,0.4058,Medium
+original,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,104,180,-0.2899,Small
+original,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,104,152,0.3735,Medium
+original,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,104,232,0.2976,Small
+original,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,26,127,0.6669,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,26,180,-0.0876,Negligible
+original,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,26,152,0.7126,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,26,232,0.6097,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,127,180,-0.6287,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,127,152,-0.1294,Negligible
+original,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,127,232,-0.1694,Small
+original,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,180,152,0.6165,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,180,232,0.5464,Large
+original,roberta,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,152,232,-0.0784,Negligible
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,294,212,-0.4648,Medium
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,294,305,-0.126,Negligible
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,294,302,-0.5863,Large
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,294,292,0.3124,Small
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,294,307,0.0794,Negligible
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,212,305,0.2994,Small
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,212,302,-0.2506,Small
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,212,292,0.6963,Large
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,212,307,0.4448,Medium
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,305,302,-0.4548,Medium
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,305,292,0.4021,Medium
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,305,307,0.1776,Small
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,302,292,0.758,Large
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,302,307,0.5667,Large
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,292,307,-0.1953,Small
+original,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,PR Title,308,308,0.123,Negligible
+original,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Diff,308,306,-0.0684,Negligible
+original,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Contents,308,302,0.1474,Small
+original,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,308,307,0.2164,Small
+original,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,308,308,0.1772,Small
+original,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Diff,308,306,-0.183,Small
+original,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Contents,308,302,0.0299,Negligible
+original,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Linked Issue,308,307,0.0984,Negligible
+original,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Without File Contents,308,308,0.0575,Negligible
+original,roberta-qa,gpt-5-mini-2025-08-07,File Diff,File Contents,306,302,0.205,Small
+original,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Linked Issue,306,307,0.2689,Small
+original,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Without File Contents,306,308,0.2413,Small
+original,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Linked Issue,302,307,0.068,Negligible
+original,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Without File Contents,302,308,0.0276,Negligible
+original,roberta-qa,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,307,308,-0.0384,Negligible
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,104,26,-0.2596,Small
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,104,127,0.3642,Medium
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,104,180,-0.2722,Small
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,104,152,0.5476,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,104,232,0.3617,Medium
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,26,127,0.5469,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,26,180,-0.0496,Negligible
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,26,152,0.71,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,26,232,0.5806,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,127,180,-0.5521,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,127,152,0.1931,Small
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,127,232,-0.0161,Negligible
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,180,152,0.7064,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,180,232,0.5641,Large
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,152,232,-0.2126,Small
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,308,308,0.4962,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,308,308,0.0129,Negligible
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,308,302,-0.1097,Negligible
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,308,308,0.39,Medium
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,308,308,0.1114,Negligible
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,308,308,-0.5223,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,308,302,-0.6123,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,308,308,-0.3083,Small
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,308,308,-0.5075,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,308,302,-0.1311,Negligible
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,308,308,0.4002,Medium
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,308,308,0.0964,Negligible
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,302,308,0.5486,Large
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,302,308,0.2528,Small
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,308,308,-0.3685,Medium
+original,zerogpt,gpt-5-mini-2025-08-07,Repo Path,PR Title,308,308,0.0368,Negligible
+original,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Diff,308,308,0.307,Small
+original,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Contents,308,302,0.4371,Medium
+original,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,308,308,0.4411,Medium
+original,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,308,308,0.3111,Small
+original,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Diff,308,308,0.267,Small
+original,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Contents,308,302,0.3935,Medium
+original,zerogpt,gpt-5-mini-2025-08-07,PR Title,Linked Issue,308,308,0.4001,Medium
+original,zerogpt,gpt-5-mini-2025-08-07,PR Title,Without File Contents,308,308,0.2619,Small
+original,zerogpt,gpt-5-mini-2025-08-07,File Diff,File Contents,308,302,0.1259,Negligible
+original,zerogpt,gpt-5-mini-2025-08-07,File Diff,Linked Issue,308,308,0.1425,Negligible
+original,zerogpt,gpt-5-mini-2025-08-07,File Diff,Without File Contents,308,308,-0.0401,Negligible
+original,zerogpt,gpt-5-mini-2025-08-07,File Contents,Linked Issue,302,308,0.0219,Negligible
+original,zerogpt,gpt-5-mini-2025-08-07,File Contents,Without File Contents,302,308,-0.192,Small
+original,zerogpt,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,308,308,-0.1989,Small
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,308,308,0.1742,Small
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,308,308,0.0912,Negligible
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,308,304,-0.1706,Small
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,308,308,0.0545,Negligible
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,308,308,-0.2449,Small
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,308,308,-0.0852,Negligible
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,308,304,-0.3278,Small
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,308,308,-0.1319,Negligible
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,308,308,-0.416,Medium
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,308,304,-0.2543,Small
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,308,308,-0.0423,Negligible
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,308,308,-0.3374,Medium
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,304,308,0.2268,Small
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,304,308,-0.0557,Negligible
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,308,308,-0.3146,Small
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,-0.5928,Large
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,0.0182,Negligible
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.218,Small
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,-0.0396,Negligible
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,-0.0011,Negligible
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,0.6275,Large
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,0.4316,Medium
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,0.6159,Large
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,0.6489,Large
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.251,Small
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,-0.0756,Negligible
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,-0.0305,Negligible
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.1952,Small
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.2435,Small
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,0.0555,Negligible
+roberta_success,roberta,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,-0.3089,Small
+roberta_success,roberta,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,-0.4376,Medium
+roberta_success,roberta,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,-0.2857,Small
+roberta_success,roberta,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,-0.2203,Small
+roberta_success,roberta,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,-0.2338,Small
+roberta_success,roberta,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,-0.1781,Small
+roberta_success,roberta,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,-0.0116,Negligible
+roberta_success,roberta,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.0924,Negligible
+roberta_success,roberta,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.0663,Negligible
+roberta_success,roberta,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.1489,Small
+roberta_success,roberta,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.2556,Small
+roberta_success,roberta,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,0.227,Small
+roberta_success,roberta,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.0885,Negligible
+roberta_success,roberta,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,0.0719,Negligible
+roberta_success,roberta,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.021,Negligible
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,-0.3433,Medium
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.4014,Medium
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.2893,Small
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.3812,Medium
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.299,Small
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.7761,Large
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,-0.0168,Negligible
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.8463,Large
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,0.7412,Large
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.6265,Large
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,-0.1194,Negligible
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.1752,Small
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.6242,Large
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.5498,Large
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.0946,Negligible
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,-0.5007,Large
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,-0.1742,Small
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.6201,Large
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,0.316,Small
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,0.0503,Negligible
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,0.2814,Small
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,-0.2635,Small
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,0.7113,Large
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,0.4357,Medium
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.4459,Medium
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,0.4382,Medium
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,0.1871,Small
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.7719,Large
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.5648,Large
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,-0.2186,Small
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,0.1271,Negligible
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,-0.065,Negligible
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,0.1674,Small
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,0.2878,Small
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,0.2186,Small
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,-0.1838,Small
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,0.0455,Negligible
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.1614,Small
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.0917,Negligible
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.2185,Small
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.3335,Medium
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,0.2753,Small
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.12,Negligible
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,0.0507,Negligible
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.0676,Negligible
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,-0.3323,Medium
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.3588,Medium
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.2779,Small
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.5499,Large
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.3686,Medium
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.6565,Large
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,0.0093,Negligible
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.8381,Large
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,0.7022,Large
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.5641,Large
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,0.1987,Small
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.0133,Negligible
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.7267,Large
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.5849,Large
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.2153,Small
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,0.3913,Medium
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,0.0539,Negligible
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.0605,Negligible
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,0.4212,Medium
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,0.1762,Small
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,-0.3682,Medium
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,-0.4546,Medium
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,-0.156,Small
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,-0.3149,Small
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.1196,Negligible
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,0.3735,Medium
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,0.1147,Negligible
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.5132,Large
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.2577,Small
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,-0.3179,Small
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,0.0495,Negligible
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,0.3057,Small
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,0.438,Medium
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,0.4557,Medium
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,0.3239,Small
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,0.2524,Small
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,0.3829,Medium
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.4029,Medium
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.2592,Small
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.1247,Negligible
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.1553,Small
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,-0.0259,Negligible
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.0362,Negligible
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,-0.1757,Small
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.2008,Small
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,0.2138,Small
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.3109,Small
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.0817,Negligible
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.3402,Medium
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.0681,Negligible
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.0468,Negligible
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,-0.2605,Small
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.0403,Negligible
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,-0.1731,Small
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.3574,Medium
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,-0.0064,Negligible
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.2605,Small
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.3868,Medium
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.141,Negligible
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.2858,Small
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,-0.5928,Large
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,0.0182,Negligible
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.218,Small
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,-0.0396,Negligible
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,-0.0011,Negligible
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,0.6275,Large
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,0.4316,Medium
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,0.6159,Large
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,0.6489,Large
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.251,Small
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,-0.0756,Negligible
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,-0.0305,Negligible
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.1952,Small
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.2435,Small
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,0.0555,Negligible
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,-0.3089,Small
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,-0.4376,Medium
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,-0.2857,Small
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,-0.2203,Small
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,-0.2338,Small
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,-0.1781,Small
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,-0.0116,Negligible
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.0924,Negligible
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.0663,Negligible
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.1489,Small
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.2556,Small
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,0.227,Small
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.0885,Negligible
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,0.0719,Negligible
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.021,Negligible
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,-0.3433,Medium
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.4014,Medium
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.2893,Small
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.3812,Medium
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.299,Small
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.7761,Large
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,-0.0168,Negligible
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.8463,Large
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,0.7412,Large
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.6265,Large
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,-0.1194,Negligible
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.1752,Small
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.6242,Large
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.5498,Large
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.0946,Negligible
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,-0.5007,Large
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,-0.1742,Small
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.6201,Large
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,0.316,Small
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,0.0503,Negligible
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,0.2814,Small
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,-0.2635,Small
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,0.7113,Large
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,0.4357,Medium
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.4459,Medium
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,0.4382,Medium
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,0.1871,Small
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.7719,Large
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.5648,Large
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,-0.2186,Small
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,0.1271,Negligible
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,-0.065,Negligible
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,0.1674,Small
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,0.2878,Small
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,0.2186,Small
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,-0.1838,Small
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,0.0455,Negligible
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.1614,Small
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.0917,Negligible
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.2185,Small
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.3335,Medium
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,0.2753,Small
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.12,Negligible
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,0.0507,Negligible
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.0676,Negligible
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,-0.3323,Medium
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.3588,Medium
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.2779,Small
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.5499,Large
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.3686,Medium
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.6565,Large
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,0.0093,Negligible
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.8381,Large
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,0.7022,Large
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.5641,Large
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,0.1987,Small
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.0133,Negligible
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.7267,Large
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.5849,Large
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.2153,Small
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,0.3913,Medium
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,0.0539,Negligible
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.0605,Negligible
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,0.4212,Medium
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,0.1762,Small
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,-0.3682,Medium
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,-0.4546,Medium
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,-0.156,Small
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,-0.3149,Small
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.1196,Negligible
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,0.3735,Medium
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,0.1147,Negligible
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.5132,Large
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.2577,Small
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,-0.3179,Small
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,0.0495,Negligible
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,0.3057,Small
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,0.438,Medium
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,0.4557,Medium
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,0.3239,Small
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,0.2524,Small
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,0.3829,Medium
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.4029,Medium
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.2592,Small
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.1247,Negligible
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.1553,Small
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,-0.0259,Negligible
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.0362,Negligible
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,-0.1757,Small
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.2008,Small
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,0.2138,Small
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.3109,Small
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.0817,Negligible
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.3402,Medium
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.0681,Negligible
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.0468,Negligible
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,-0.2605,Small
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.0403,Negligible
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,-0.1731,Small
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.3574,Medium
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,-0.0064,Negligible
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.2605,Small
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.3868,Medium
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.141,Negligible
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.2858,Small
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,294,212,-0.5832,Large
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,294,305,0.0455,Negligible
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,294,302,-0.1987,Small
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,294,292,-0.0597,Negligible
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,294,307,0.0098,Negligible
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,212,305,0.6381,Large
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,212,302,0.442,Medium
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,212,292,0.5945,Large
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,212,307,0.6485,Large
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,305,302,-0.2558,Small
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,305,292,-0.1235,Negligible
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,305,307,-0.0462,Negligible
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,302,292,0.1565,Small
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,302,307,0.2335,Small
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,292,307,0.0883,Negligible
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,Repo Path,PR Title,308,308,-0.3072,Small
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,Repo Path,File Diff,308,306,-0.46,Medium
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,Repo Path,File Contents,308,302,-0.2829,Small
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,308,307,-0.2475,Small
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,308,308,-0.2702,Small
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,PR Title,File Diff,308,306,-0.2026,Small
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,PR Title,File Contents,308,302,-0.0096,Negligible
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,PR Title,Linked Issue,308,307,0.0567,Negligible
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,PR Title,Without File Contents,308,308,0.0218,Negligible
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,File Diff,File Contents,306,302,0.17,Small
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,File Diff,Linked Issue,306,307,0.2455,Small
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,File Diff,Without File Contents,306,308,0.2089,Small
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,File Contents,Linked Issue,302,307,0.0571,Negligible
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,File Contents,Without File Contents,302,308,0.0318,Negligible
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,307,308,-0.0318,Negligible
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,104,26,-0.2537,Small
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,104,127,0.4058,Medium
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,104,180,-0.2899,Small
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,104,152,0.3735,Medium
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,104,232,0.2976,Small
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,26,127,0.6669,Large
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,26,180,-0.0876,Negligible
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,26,152,0.7126,Large
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,26,232,0.6097,Large
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,127,180,-0.6287,Large
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,127,152,-0.1294,Negligible
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,127,232,-0.1694,Small
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,180,152,0.6165,Large
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,180,232,0.5464,Large
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,152,232,-0.0784,Negligible
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,294,212,-0.4648,Medium
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,294,305,-0.126,Negligible
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,294,302,-0.5863,Large
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,294,292,0.3124,Small
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,294,307,0.0794,Negligible
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,212,305,0.2994,Small
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,212,302,-0.2506,Small
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,212,292,0.6963,Large
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,212,307,0.4448,Medium
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,305,302,-0.4548,Medium
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,305,292,0.4021,Medium
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,305,307,0.1776,Small
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,302,292,0.758,Large
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,302,307,0.5667,Large
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,292,307,-0.1953,Small
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,PR Title,308,308,0.123,Negligible
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Diff,308,306,-0.0684,Negligible
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Contents,308,302,0.1474,Small
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,308,307,0.2164,Small
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,308,308,0.1772,Small
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Diff,308,306,-0.183,Small
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Contents,308,302,0.0299,Negligible
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Linked Issue,308,307,0.0984,Negligible
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Without File Contents,308,308,0.0575,Negligible
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,File Contents,306,302,0.205,Small
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Linked Issue,306,307,0.2689,Small
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Without File Contents,306,308,0.2413,Small
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Linked Issue,302,307,0.068,Negligible
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Without File Contents,302,308,0.0276,Negligible
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,307,308,-0.0384,Negligible
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,104,26,-0.2596,Small
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,104,127,0.3642,Medium
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,104,180,-0.2722,Small
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,104,152,0.5476,Large
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,104,232,0.3617,Medium
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,26,127,0.5469,Large
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,26,180,-0.0496,Negligible
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,26,152,0.71,Large
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,26,232,0.5806,Large
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,127,180,-0.5521,Large
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,127,152,0.1931,Small
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,127,232,-0.0161,Negligible
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,180,152,0.7064,Large
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,180,232,0.5641,Large
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,152,232,-0.2126,Small
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,308,308,0.4962,Large
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,308,308,0.0129,Negligible
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,308,302,-0.1097,Negligible
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,308,308,0.39,Medium
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,308,308,0.1114,Negligible
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,308,308,-0.5223,Large
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,308,302,-0.6123,Large
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,308,308,-0.3083,Small
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,308,308,-0.5075,Large
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,308,302,-0.1311,Negligible
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,308,308,0.4002,Medium
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,308,308,0.0964,Negligible
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,302,308,0.5486,Large
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,302,308,0.2528,Small
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,308,308,-0.3685,Medium
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,PR Title,308,308,0.0368,Negligible
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Diff,308,308,0.307,Small
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Contents,308,302,0.4371,Medium
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,308,308,0.4411,Medium
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,308,308,0.3111,Small
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Diff,308,308,0.267,Small
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Contents,308,302,0.3935,Medium
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,Linked Issue,308,308,0.4001,Medium
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,Without File Contents,308,308,0.2619,Small
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,File Contents,308,302,0.1259,Negligible
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,Linked Issue,308,308,0.1425,Negligible
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,Without File Contents,308,308,-0.0401,Negligible
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,File Contents,Linked Issue,302,308,0.0219,Negligible
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,File Contents,Without File Contents,302,308,-0.192,Small
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,308,308,-0.1989,Small
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,308,308,0.1742,Small
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,308,308,0.0912,Negligible
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,308,304,-0.1706,Small
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,308,308,0.0545,Negligible
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,308,308,-0.2449,Small
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,308,308,-0.0852,Negligible
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,308,304,-0.3278,Small
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,308,308,-0.1319,Negligible
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,308,308,-0.416,Medium
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,308,304,-0.2543,Small
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,308,308,-0.0423,Negligible
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,308,308,-0.3374,Medium
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,304,308,0.2268,Small
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,304,308,-0.0557,Negligible
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,308,308,-0.3146,Small
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,-0.5928,Large
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,0.0182,Negligible
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.218,Small
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,-0.0396,Negligible
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,-0.0011,Negligible
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,0.6275,Large
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,0.4316,Medium
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,0.6159,Large
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,0.6489,Large
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.251,Small
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,-0.0756,Negligible
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,-0.0305,Negligible
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.1952,Small
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.2435,Small
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,0.0555,Negligible
+common_success,roberta,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,-0.3089,Small
+common_success,roberta,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,-0.4376,Medium
+common_success,roberta,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,-0.2857,Small
+common_success,roberta,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,-0.2203,Small
+common_success,roberta,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,-0.2338,Small
+common_success,roberta,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,-0.1781,Small
+common_success,roberta,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,-0.0116,Negligible
+common_success,roberta,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.0924,Negligible
+common_success,roberta,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.0663,Negligible
+common_success,roberta,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.1489,Small
+common_success,roberta,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.2556,Small
+common_success,roberta,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,0.227,Small
+common_success,roberta,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.0885,Negligible
+common_success,roberta,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,0.0719,Negligible
+common_success,roberta,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.021,Negligible
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,-0.3433,Medium
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.4014,Medium
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.2893,Small
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.3812,Medium
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.299,Small
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.7761,Large
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,-0.0168,Negligible
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.8463,Large
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,0.7412,Large
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.6265,Large
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,-0.1194,Negligible
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.1752,Small
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.6242,Large
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.5498,Large
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.0946,Negligible
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,-0.5007,Large
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,-0.1742,Small
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.6201,Large
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,0.316,Small
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,0.0503,Negligible
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,0.2814,Small
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,-0.2635,Small
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,0.7113,Large
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,0.4357,Medium
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.4459,Medium
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,0.4382,Medium
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,0.1871,Small
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.7719,Large
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.5648,Large
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,-0.2186,Small
+common_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,0.1271,Negligible
+common_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,-0.065,Negligible
+common_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,0.1674,Small
+common_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,0.2878,Small
+common_success,roberta-qa,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,0.2186,Small
+common_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,-0.1838,Small
+common_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,0.0455,Negligible
+common_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.1614,Small
+common_success,roberta-qa,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.0917,Negligible
+common_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.2185,Small
+common_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.3335,Medium
+common_success,roberta-qa,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,0.2753,Small
+common_success,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.12,Negligible
+common_success,roberta-qa,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,0.0507,Negligible
+common_success,roberta-qa,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.0676,Negligible
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,-0.3323,Medium
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.3588,Medium
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.2779,Small
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.5499,Large
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.3686,Medium
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.6565,Large
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,0.0093,Negligible
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.8381,Large
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,0.7022,Large
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.5641,Large
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,0.1987,Small
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.0133,Negligible
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.7267,Large
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.5849,Large
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.2153,Small
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,PR Title,251,186,0.3913,Medium
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Diff,251,260,0.0539,Negligible
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,File Contents,251,259,-0.0605,Negligible
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Linked Issue,251,263,0.4212,Medium
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path,Without File Contents,251,262,0.1762,Small
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Diff,186,260,-0.3682,Medium
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,File Contents,186,259,-0.4546,Medium
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Linked Issue,186,263,-0.156,Small
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title,Without File Contents,186,262,-0.3149,Small
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,File Contents,260,259,-0.1196,Negligible
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Linked Issue,260,263,0.3735,Medium
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff,Without File Contents,260,262,0.1147,Negligible
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Linked Issue,259,263,0.5132,Large
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents,Without File Contents,259,262,0.2577,Small
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,263,262,-0.3179,Small
+common_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,PR Title,263,263,0.0495,Negligible
+common_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Diff,263,263,0.3057,Small
+common_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,File Contents,263,259,0.438,Medium
+common_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Linked Issue,263,263,0.4557,Medium
+common_success,zerogpt,gpt-5-mini-2025-08-07,Repo Path,Without File Contents,263,263,0.3239,Small
+common_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Diff,263,263,0.2524,Small
+common_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,File Contents,263,259,0.3829,Medium
+common_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,Linked Issue,263,263,0.4029,Medium
+common_success,zerogpt,gpt-5-mini-2025-08-07,PR Title,Without File Contents,263,263,0.2592,Small
+common_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,File Contents,263,259,0.1247,Negligible
+common_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,Linked Issue,263,263,0.1553,Small
+common_success,zerogpt,gpt-5-mini-2025-08-07,File Diff,Without File Contents,263,263,-0.0259,Negligible
+common_success,zerogpt,gpt-5-mini-2025-08-07,File Contents,Linked Issue,259,263,0.0362,Negligible
+common_success,zerogpt,gpt-5-mini-2025-08-07,File Contents,Without File Contents,259,263,-0.1757,Small
+common_success,zerogpt,gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,263,263,-0.2008,Small
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,PR Title,96,21,0.2138,Small
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Diff,96,117,0.3109,Small
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,File Contents,96,164,-0.0817,Negligible
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Linked Issue,96,150,0.3402,Medium
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Repo Path,Without File Contents,96,205,0.0681,Negligible
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Diff,21,117,0.0468,Negligible
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,File Contents,21,164,-0.2605,Small
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Linked Issue,21,150,0.0403,Negligible
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title,Without File Contents,21,205,-0.1731,Small
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,File Contents,117,164,-0.3574,Medium
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Linked Issue,117,150,-0.0064,Negligible
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff,Without File Contents,117,205,-0.2605,Small
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Linked Issue,164,150,0.3868,Medium
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,File Contents,Without File Contents,164,205,0.141,Negligible
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,150,205,-0.2858,Small

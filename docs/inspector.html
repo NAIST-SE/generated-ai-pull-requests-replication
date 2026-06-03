@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PR Description Inspector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-primary: #3b82f6;
+            --accent-primary-hover: #2563eb;
+            --accent-human: #10b981;
+            --accent-ai: #8b5cf6;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: radial-gradient(circle at top right, #1e1b4b, #0f172a);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        select,
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="file"]::file-selector-button {
+            background: var(--accent-primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            margin-right: 1rem;
+            transition: background 0.2s;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background: var(--accent-primary-hover);
+        }
+
+        select:focus,
+        input:focus,
+        textarea:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+        }
+
+        .row {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            flex: 1 1 220px;
+        }
+
+        .row.full-row {
+            flex: 1 1 100%;
+        }
+
+        .row label {
+            color: #cbd5e1;
+            font-weight: 500;
+            min-width: 62px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            background: var(--accent-primary);
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--accent-primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            background: #475569;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .viewer {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 16px;
+            min-height: 220px;
+            max-height: 520px;
+            overflow-y: auto;
+        }
+
+        .meta {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .nav {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .note {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.85rem 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            min-height: 64px;
+            background: rgba(15, 23, 42, 0.6);
+            color: #e6eef8;
+            resize: vertical;
+        }
+
+        .small {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        #textContent {
+            white-space: pre-wrap;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .row {
+                flex: 1 1 100%;
+            }
+
+            .nav .btn {
+                flex: 1 1 calc(50% - 0.75rem);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>PR Description Inspector</h1>
+
+        <div class="controls">
+            <div class="row full-row">
+                <label class="small" style="margin-right:8px">CSV File</label>
+                <input id="csvFile" type="file" accept=".csv" />
+            </div>
+
+            <div class="row">
+                <label class="small" style="margin-right:8px">Origin</label>
+                <select id="originFilter">
+                    <option value="any">Any</option>
+                    <option value="human">Human</option>
+                    <option value="ai">AI</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label class="small" style="margin-right:8px">Context</label>
+                <select id="contextFilter">
+                    <option value="any">Any</option>
+                    <option value="Original">Original</option>
+                    <option value="P-1">Repo Path</option>
+                    <option value="P-2">PR Title</option>
+                    <option value="P-3">File Diff</option>
+                    <option value="P-4">File Contents</option>
+                    <option value="P-5">Linked Issues</option>
+                    <option value="P-6">Without File Contents</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label class="small" style="margin-right:8px">Sample</label>
+                <input id="numChecks" type="number" value="50" min="1" style="width:88px" />
+            </div>
+
+            <div class="row" style="margin-left:auto; flex: 0 0 auto;">
+                <button id="startBtn" class="btn" disabled>Load & Inspect</button>
+            </div>
+        </div>
+
+        <div class="small">Expected CSV columns: <strong>pr_id, text, entry_type, context_level</strong>. Rows missing
+            these fields will be skipped.</div>
+
+        <div id="inspector" class="viewer" style="display:none">
+            <div id="meta" class="meta">Item <span id="indexLabel">0</span></div>
+            <div id="textContent">No item selected</div>
+
+            <textarea id="noteInput" class="note" placeholder="Add a short note or observation (optional)"></textarea>
+
+            <div class="nav">
+                <button id="prevBtn" class="btn">◀ Prev</button>
+                <button id="nextBtn" class="btn">Next ▶</button>
+                <button id="saveNoteBtn" class="btn">Save Note</button>
+                <button id="exportBtn" class="btn" style="margin-left:auto">Export Notes</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let parsed = [];
+        let filtered = [];
+        let sample = [];
+        let idx = 0;
+        let notes = {};
+
+        const CONTEXT_LABELS = {
+            'Original': 'Original',
+            'P-1': 'Repo Path',
+            'P-2': 'PR Title',
+            'P-3': 'File Diff',
+            'P-4': 'File Contents',
+            'P-5': 'Linked Issues',
+            'P-6': 'Without File Contents'
+        };
+
+        function getContextLabel(contextCode) {
+            return CONTEXT_LABELS[String(contextCode || '').trim()] || 'Unknown Context';
+        }
+
+        const fileInput = document.getElementById('csvFile');
+        const startBtn = document.getElementById('startBtn');
+        const originFilter = document.getElementById('originFilter');
+        const contextFilter = document.getElementById('contextFilter');
+        const numChecks = document.getElementById('numChecks');
+        const inspector = document.getElementById('inspector');
+        const textContent = document.getElementById('textContent');
+        const meta = document.getElementById('meta');
+        const indexLabel = document.getElementById('indexLabel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const noteInput = document.getElementById('noteInput');
+        const saveNoteBtn = document.getElementById('saveNoteBtn');
+        const exportBtn = document.getElementById('exportBtn');
+
+        fileInput.addEventListener('change', () => {
+            startBtn.disabled = fileInput.files.length === 0;
+        });
+
+        startBtn.addEventListener('click', () => {
+            if (!fileInput.files.length) return;
+            startBtn.textContent = 'Parsing...'; startBtn.disabled = true;
+
+            Papa.parse(fileInput.files[0], {
+                header: true, skipEmptyLines: true,
+                complete: (res) => {
+                    function normalizeContextRaw(v) {
+                        if (!v) return '';
+                        const s = String(v).trim();
+                        const m = s.match(/P-?[1-6]/i);
+                        if (m) return m[0].toUpperCase().replace('P-', 'P-');
+                        if (/original/i.test(s)) return 'Original';
+                        return s;
+                    }
+
+                    parsed = res.data.map(r => ({
+                        pr_id: (r.pr_id || r.prId || r.id || '').toString(),
+                        text: r.text || r.body || r.description || '',
+                        entry_type: (r.entry_type || r.entryType || r.type || '').toLowerCase(),
+                        context_level: normalizeContextRaw(r.context_level || r.context || r.variation || r.prompt_variation || r.entry_key)
+                    })).filter(r => r.pr_id && r.text);
+
+                    applyFiltersAndSample();
+                    if (sample.length === 0) { alert('No rows match the selected filters.'); startBtn.textContent = 'Load & Inspect'; startBtn.disabled = false; return; }
+                    idx = 0; inspector.style.display = 'block'; showItem(); startBtn.textContent = 'Load & Inspect'; startBtn.disabled = false;
+                }, error: (err) => { alert('Parse error: ' + err.message); startBtn.textContent = 'Load & Inspect'; startBtn.disabled = false }
+            });
+        });
+
+        function applyFiltersAndSample() {
+            const origin = originFilter.value;
+            const ctx = contextFilter.value;
+
+            filtered = parsed.filter(r => {
+                if (origin !== 'any' && r.entry_type !== origin) return false;
+                if (ctx !== 'any' && String(r.context_level) !== ctx) return false;
+                return true;
+            });
+
+            const n = Math.min(Math.max(1, parseInt(numChecks.value || 50)), filtered.length);
+            const shuffled = [...filtered].sort(() => 0.5 - Math.random());
+            sample = shuffled.slice(0, n);
+        }
+
+        function showItem() {
+            if (!sample || sample.length === 0) { textContent.textContent = 'No items'; indexLabel.textContent = '0'; return }
+            const it = sample[idx];
+            indexLabel.textContent = `${idx + 1} / ${sample.length}`;
+            const contextLabel = getContextLabel(it.context_level);
+            meta.innerHTML = `Item <strong>${idx + 1}</strong> — PR: <strong>${it.pr_id}</strong> — Origin: <strong style="color:${it.entry_type === 'ai' ? 'var(--ai)' : 'var(--human)'}">${it.entry_type}</strong> — Context: <strong>${contextLabel}</strong>`;
+            textContent.textContent = it.text;
+            noteInput.value = notes[it.pr_id] || '';
+        }
+
+        prevBtn.addEventListener('click', () => { if (idx > 0) { idx--; showItem() } });
+        nextBtn.addEventListener('click', () => { if (idx < sample.length - 1) { idx++; showItem() } else { alert('End of sample') } });
+
+        saveNoteBtn.addEventListener('click', () => {
+            const it = sample[idx]; if (!it) return;
+            const val = noteInput.value.trim();
+            if (val) notes[it.pr_id] = val; else delete notes[it.pr_id];
+            alert('Note saved');
+        });
+
+        exportBtn.addEventListener('click', () => {
+            const rows = Object.keys(notes).map(k => ({ pr_id: k, note: notes[k] }));
+            if (rows.length === 0) { alert('No notes to export'); return }
+            const csv = Papa.unparse(rows);
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a'); a.href = url; a.download = 'inspector_notes.csv'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+        });
+
+        originFilter.addEventListener('change', () => { if (parsed.length) { applyFiltersAndSample(); idx = 0; showItem(); } });
+        contextFilter.addEventListener('change', () => { if (parsed.length) { applyFiltersAndSample(); idx = 0; showItem(); } });
+        numChecks.addEventListener('change', () => { if (parsed.length) { applyFiltersAndSample(); idx = 0; showItem(); } });
+    </script>
+</body>
+
+</html>

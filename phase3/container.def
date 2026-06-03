@@ -1,0 +1,40 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.4.0-cuda12.1-cudnn9-runtime
+
+%post
+    apt-get update && apt-get install -y \
+        git \
+        curl \
+        build-essential \
+        cmake \
+        pkg-config \
+        python3-dev \
+        libopenblas-dev \
+        liblapack-dev \
+        libnuma-dev \
+        ca-certificates && rm -rf /var/lib/apt/lists/*
+
+    # Updated dependencies for Llama 3.1 support (Requires Transformers >= 4.43)
+    pip install --no-cache-dir \
+        "transformers>=4.45.0" \
+        "accelerate>=0.33.0" \
+        "bitsandbytes>=0.43.1" \
+        sentencepiece \
+        huggingface_hub \
+        jupyterlab \
+        ipykernel \
+        safetensors \
+        pandas \
+        ninja \
+        packaging \
+        python-dateutil
+
+    # FlashAttention2 for faster inference (Recommended for Llama-70B)
+    pip install flash-attn --no-build-isolation
+
+%environment
+    export TORCH_HOME=/tmp/torch
+    export HF_HOME=/tmp/huggingface
+
+%runscript
+    exec python "$@"

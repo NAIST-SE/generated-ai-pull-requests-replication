@@ -1,0 +1,10 @@
+tool,model,original,roberta_success,roberta-qa_success,zerogpt_success,common_success
+roberta,Qwen/Qwen2.5-72B-Instruct,0.3351,0.3492,0.3492,0.3351,0.3492
+roberta,gpt-5-mini-2025-08-07,0.0129,0.0151,0.0151,0.0129,0.0151
+roberta,meta-llama/llama-3.1-70b-instruct,0.1612,0.375,0.375,0.1612,0.375
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,0.5904,0.6096,0.6096,0.5904,0.6096
+roberta-qa,gpt-5-mini-2025-08-07,0.0,0.0,0.0,0.0,0.0
+roberta-qa,meta-llama/llama-3.1-70b-instruct,0.1502,0.3286,0.3286,0.1502,0.3286
+zerogpt,Qwen/Qwen2.5-72B-Instruct,0.6095,0.6352,0.6352,0.6095,0.6352
+zerogpt,gpt-5-mini-2025-08-07,0.1829,0.1924,0.1924,0.1829,0.1924
+zerogpt,meta-llama/llama-3.1-70b-instruct,0.0256,0.0661,0.0661,0.0256,0.0661

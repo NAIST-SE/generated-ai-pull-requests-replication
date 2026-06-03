@@ -1,0 +1,10 @@
+tool,model,orig_F1,subset_F1,F1_diff
+roberta,Qwen/Qwen2.5-72B-Instruct,0.3351,0.3492,0.0141
+roberta,gpt-5-mini-2025-08-07,0.0129,0.0151,0.0022
+roberta,meta-llama/llama-3.1-70b-instruct,0.1612,0.375,0.2138
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,0.5904,0.6096,0.0192
+roberta-qa,gpt-5-mini-2025-08-07,0.0,0.0,0.0
+roberta-qa,meta-llama/llama-3.1-70b-instruct,0.1502,0.3286,0.1784
+zerogpt,Qwen/Qwen2.5-72B-Instruct,0.6095,0.6095,0.0
+zerogpt,gpt-5-mini-2025-08-07,0.1829,0.1829,0.0
+zerogpt,meta-llama/llama-3.1-70b-instruct,0.0256,0.0256,0.0

@@ -1,0 +1,46 @@
+tool,model,comparison,orig_delta,orig_mag,pertool_delta,pertool_mag,pertool_sign_flip,pertool_mag_drop_2plus,common_delta,common_mag,common_sign_flip,common_mag_drop_2plus
+roberta,Qwen/Qwen2.5-72B-Instruct,PR Title vs Without File Contents,0.648,Large,0.649,Large,False,False,0.649,Large,False,False
+roberta,Qwen/Qwen2.5-72B-Instruct,PR Title vs File Diff,0.638,Large,0.628,Large,False,False,0.628,Large,False,False
+roberta,Qwen/Qwen2.5-72B-Instruct,PR Title vs Linked Issue,0.595,Large,0.616,Large,False,False,0.616,Large,False,False
+roberta,Qwen/Qwen2.5-72B-Instruct,PR Title vs File Contents,0.442,Medium,0.432,Medium,False,False,0.432,Medium,False,False
+roberta,Qwen/Qwen2.5-72B-Instruct,Repo Path vs PR Title,-0.583,Large,-0.593,Large,False,False,-0.593,Large,False,False
+roberta,gpt-5-mini-2025-08-07,Repo Path vs File Diff,-0.46,Medium,-0.438,Medium,False,False,-0.438,Medium,False,False
+roberta,meta-llama/llama-3.1-70b-instruct,PR Title vs Linked Issue,0.713,Large,0.846,Large,False,False,0.846,Large,False,False
+roberta,meta-llama/llama-3.1-70b-instruct,PR Title vs File Diff,0.667,Large,0.776,Large,False,False,0.776,Large,False,False
+roberta,meta-llama/llama-3.1-70b-instruct,File Contents vs Linked Issue,0.617,Large,0.624,Large,False,False,0.624,Large,False,False
+roberta,meta-llama/llama-3.1-70b-instruct,PR Title vs Without File Contents,0.61,Large,0.741,Large,False,False,0.741,Large,False,False
+roberta,meta-llama/llama-3.1-70b-instruct,File Contents vs Without File Contents,0.546,Large,0.55,Large,False,False,0.55,Large,False,False
+roberta,meta-llama/llama-3.1-70b-instruct,Repo Path vs File Diff,0.406,Medium,0.401,Medium,False,False,0.401,Medium,False,False
+roberta,meta-llama/llama-3.1-70b-instruct,Repo Path vs Linked Issue,0.373,Medium,0.381,Medium,False,False,0.381,Medium,False,False
+roberta,meta-llama/llama-3.1-70b-instruct,File Diff vs File Contents,-0.629,Large,-0.626,Large,False,False,-0.626,Large,False,False
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents vs Linked Issue,0.758,Large,0.772,Large,False,False,0.772,Large,False,False
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title vs Linked Issue,0.696,Large,0.711,Large,False,False,0.711,Large,False,False
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Contents vs Without File Contents,0.567,Large,0.565,Large,False,False,0.565,Large,False,False
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,PR Title vs Without File Contents,0.445,Medium,0.436,Medium,False,False,0.436,Medium,False,False
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff vs Linked Issue,0.402,Medium,0.438,Medium,False,False,0.438,Medium,False,False
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,File Diff vs File Contents,-0.455,Medium,-0.446,Medium,False,False,-0.446,Medium,False,False
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path vs PR Title,-0.465,Medium,-0.501,Large,False,False,-0.501,Large,False,False
+roberta-qa,Qwen/Qwen2.5-72B-Instruct,Repo Path vs File Contents,-0.586,Large,-0.62,Large,False,False,-0.62,Large,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title vs Linked Issue,0.71,Large,0.838,Large,False,False,0.838,Large,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents vs Linked Issue,0.706,Large,0.727,Large,False,False,0.727,Large,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title vs Without File Contents,0.581,Large,0.702,Large,False,False,0.702,Large,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,File Contents vs Without File Contents,0.564,Large,0.585,Large,False,False,0.585,Large,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path vs Linked Issue,0.548,Large,0.55,Large,False,False,0.55,Large,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,PR Title vs File Diff,0.547,Large,0.656,Large,False,False,0.656,Large,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path vs File Diff,0.364,Medium,0.359,Medium,False,False,0.359,Medium,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,Repo Path vs Without File Contents,0.362,Medium,0.369,Medium,False,False,0.369,Medium,False,False
+roberta-qa,meta-llama/llama-3.1-70b-instruct,File Diff vs File Contents,-0.552,Large,-0.564,Large,False,False,-0.564,Large,False,False
+zerogpt,Qwen/Qwen2.5-72B-Instruct,File Contents vs Linked Issue,0.549,Large,0.549,Large,False,False,0.513,Large,False,False
+zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path vs PR Title,0.496,Large,0.496,Large,False,False,0.391,Medium,False,False
+zerogpt,Qwen/Qwen2.5-72B-Instruct,File Diff vs Linked Issue,0.4,Medium,0.4,Medium,False,False,0.374,Medium,False,False
+zerogpt,Qwen/Qwen2.5-72B-Instruct,Repo Path vs Linked Issue,0.39,Medium,0.39,Medium,False,False,0.421,Medium,False,False
+zerogpt,Qwen/Qwen2.5-72B-Instruct,Linked Issue vs Without File Contents,-0.368,Medium,-0.368,Medium,False,False,-0.318,Small,False,False
+zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title vs Without File Contents,-0.507,Large,-0.507,Large,False,False,-0.315,Small,False,True
+zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title vs File Diff,-0.522,Large,-0.522,Large,False,False,-0.368,Medium,False,False
+zerogpt,Qwen/Qwen2.5-72B-Instruct,PR Title vs File Contents,-0.612,Large,-0.612,Large,False,False,-0.455,Medium,False,False
+zerogpt,gpt-5-mini-2025-08-07,Repo Path vs Linked Issue,0.441,Medium,0.441,Medium,False,False,0.456,Medium,False,False
+zerogpt,gpt-5-mini-2025-08-07,Repo Path vs File Contents,0.437,Medium,0.437,Medium,False,False,0.438,Medium,False,False
+zerogpt,gpt-5-mini-2025-08-07,PR Title vs Linked Issue,0.4,Medium,0.4,Medium,False,False,0.403,Medium,False,False
+zerogpt,gpt-5-mini-2025-08-07,PR Title vs File Contents,0.394,Medium,0.394,Medium,False,False,0.383,Medium,False,False
+zerogpt,meta-llama/llama-3.1-70b-instruct,File Diff vs Without File Contents,-0.337,Medium,-0.337,Medium,False,False,-0.26,Small,False,False
+zerogpt,meta-llama/llama-3.1-70b-instruct,PR Title vs Without File Contents,-0.416,Medium,-0.416,Medium,False,False,-0.173,Small,False,False

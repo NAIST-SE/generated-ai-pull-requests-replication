@@ -1,0 +1,6 @@
+view,label,paired_PRs,ai_rows,human_rows
+original,Original (no filter),308,5528,308
+roberta_success,RoBERTa-success only,263,3808,263
+roberta-qa_success,RoBERTa-QA-success only,263,3808,263
+zerogpt_success,ZeroGPT-success only,308,5528,308
+common_success,All three tools succeeded,263,3808,263

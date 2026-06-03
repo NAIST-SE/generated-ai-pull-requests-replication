@@ -1,0 +1,271 @@
+view,tool,model,variation,context,n_human,n_ai,Accuracy,Precision,Recall,F1-Score,Specificity
+original,roberta,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,0.6153,1.0,0.2305,0.3747,1.0
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,0.651,1.0,0.3019,0.4638,1.0
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,0.7532,1.0,0.5065,0.6724,1.0
+original,roberta,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0.5,0.0,0.0,0.0,1.0
+original,roberta-qa,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0.5,0.0,0.0,0.0,1.0
+original,zerogpt,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0.638,1.0,0.276,0.4326,1.0
+original,roberta,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,0.5942,1.0,0.1883,0.3169,1.0
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,0.5747,1.0,0.1494,0.2599,1.0
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,0.513,1.0,0.026,0.0506,1.0
+original,roberta,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,0.7305,1.0,0.461,0.6311,1.0
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,0.7403,1.0,0.4805,0.6491,1.0
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,0.6055,1.0,0.211,0.3485,1.0
+original,roberta,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0.5032,1.0,0.0065,0.0129,1.0
+original,roberta-qa,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0.5,0.0,0.0,0.0,1.0
+original,zerogpt,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0.6445,1.0,0.289,0.4484,1.0
+original,roberta,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,0.5357,1.0,0.0714,0.1333,1.0
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,0.5308,1.0,0.0617,0.1162,1.0
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,0.5081,1.0,0.0162,0.0319,1.0
+original,roberta,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,0.6006,1.0,0.2013,0.3351,1.0
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,0.7094,1.0,0.4188,0.5904,1.0
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,0.7192,1.0,0.4383,0.6095,1.0
+original,roberta,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0.5032,1.0,0.0065,0.0129,1.0
+original,roberta-qa,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0.5,0.0,0.0,0.0,1.0
+original,zerogpt,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0.5503,1.0,0.1006,0.1829,1.0
+original,roberta,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0.5438,1.0,0.0877,0.1612,1.0
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0.5406,1.0,0.0812,0.1502,1.0
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0.5065,1.0,0.013,0.0256,1.0
+original,roberta,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,0.6838,1.0,0.3675,0.5375,1.0
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,0.8791,1.0,0.7583,0.8625,1.0
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,0.8427,1.0,0.6854,0.8134,1.0
+original,roberta,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0.5017,1.0,0.0033,0.0066,1.0
+original,roberta-qa,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0.5,0.0,0.0,0.0,1.0
+original,zerogpt,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0.5166,1.0,0.0331,0.0641,1.0
+original,roberta,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,304,304,0.7039,1.0,0.4079,0.5794,1.0
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,304,304,0.6809,1.0,0.3618,0.5314,1.0
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,304,304,0.5576,1.0,0.1151,0.2065,1.0
+original,roberta,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,308,308,0.6039,1.0,0.2078,0.3441,1.0
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,308,308,0.5731,1.0,0.1461,0.255,1.0
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,308,308,0.5536,1.0,0.1071,0.1935,1.0
+original,roberta,gpt-5-mini-2025-08-07,P-5,Linked Issue,308,308,0.5016,1.0,0.0032,0.0065,1.0
+original,roberta-qa,gpt-5-mini-2025-08-07,P-5,Linked Issue,308,308,0.5,0.0,0.0,0.0,1.0
+original,zerogpt,gpt-5-mini-2025-08-07,P-5,Linked Issue,308,308,0.5179,1.0,0.0357,0.069,1.0
+original,roberta,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,308,308,0.5455,1.0,0.0909,0.1667,1.0
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,308,308,0.5244,1.0,0.0487,0.0929,1.0
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,308,308,0.5016,1.0,0.0032,0.0065,1.0
+original,roberta,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,308,308,0.5909,1.0,0.1818,0.3077,1.0
+original,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,308,308,0.6721,1.0,0.3442,0.5121,1.0
+original,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,308,308,0.6769,1.0,0.3539,0.5228,1.0
+original,roberta,gpt-5-mini-2025-08-07,P-6,Without File Contents,308,308,0.5016,1.0,0.0032,0.0065,1.0
+original,roberta-qa,gpt-5-mini-2025-08-07,P-6,Without File Contents,308,308,0.5,0.0,0.0,0.0,1.0
+original,zerogpt,gpt-5-mini-2025-08-07,P-6,Without File Contents,308,308,0.5325,1.0,0.0649,0.122,1.0
+original,roberta,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,308,308,0.612,1.0,0.224,0.366,1.0
+original,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,308,308,0.5714,1.0,0.1429,0.25,1.0
+original,zerogpt,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,308,308,0.5162,1.0,0.0325,0.0629,1.0
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.6195,1.0,0.239,0.3859,1.0
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.6534,1.0,0.3068,0.4695,1.0
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.7649,1.0,0.5299,0.6927,1.0
+roberta_success,roberta,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.5,0.0,0.0,0.0,1.0
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.5,0.0,0.0,0.0,1.0
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.6331,1.0,0.2662,0.4204,1.0
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.7917,1.0,0.5833,0.7368,1.0
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.724,1.0,0.4479,0.6187,1.0
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.5417,1.0,0.0833,0.1538,1.0
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.828,1.0,0.6559,0.7922,1.0
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.8495,1.0,0.6989,0.8228,1.0
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.6505,1.0,0.3011,0.4628,1.0
+roberta_success,roberta,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.5038,1.0,0.0076,0.0151,1.0
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.5,0.0,0.0,0.0,1.0
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.6426,1.0,0.2852,0.4438,1.0
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.9762,1.0,0.9524,0.9756,1.0
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.881,1.0,0.7619,0.8649,1.0
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.5714,1.0,0.1429,0.25,1.0
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.6058,1.0,0.2115,0.3492,1.0
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.7192,1.0,0.4385,0.6096,1.0
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.7327,1.0,0.4654,0.6352,1.0
+roberta_success,roberta,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5038,1.0,0.0076,0.0151,1.0
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5,0.0,0.0,0.0,1.0
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5532,1.0,0.1065,0.1924,1.0
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.6154,1.0,0.2308,0.375,1.0
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.5983,1.0,0.1966,0.3286,1.0
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.5171,1.0,0.0342,0.0661,1.0
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.6911,1.0,0.3822,0.5531,1.0
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.888,1.0,0.7761,0.8739,1.0
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.8417,1.0,0.6834,0.8119,1.0
+roberta_success,roberta,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5,0.0,0.0,0.0,1.0
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5,0.0,0.0,0.0,1.0
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5154,1.0,0.0309,0.0599,1.0
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.8537,1.0,0.7073,0.8286,1.0
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.811,1.0,0.622,0.7669,1.0
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.5976,1.0,0.1951,0.3265,1.0
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.597,1.0,0.1939,0.3248,1.0
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.5779,1.0,0.1559,0.2697,1.0
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.557,1.0,0.1141,0.2048,1.0
+roberta_success,roberta,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5,0.0,0.0,0.0,1.0
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5,0.0,0.0,0.0,1.0
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5152,1.0,0.0304,0.059,1.0
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5933,1.0,0.1867,0.3146,1.0
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5467,1.0,0.0933,0.1707,1.0
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5033,1.0,0.0067,0.0132,1.0
+roberta_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.5878,1.0,0.1756,0.2987,1.0
+roberta_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.6775,1.0,0.355,0.5239,1.0
+roberta_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.6718,1.0,0.3435,0.5114,1.0
+roberta_success,roberta,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5019,1.0,0.0038,0.0076,1.0
+roberta_success,roberta-qa,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5,0.0,0.0,0.0,1.0
+roberta_success,zerogpt,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5323,1.0,0.0646,0.1214,1.0
+roberta_success,roberta,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.6537,1.0,0.3073,0.4701,1.0
+roberta_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.5951,1.0,0.1902,0.3197,1.0
+roberta_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.5195,1.0,0.039,0.0751,1.0
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.6195,1.0,0.239,0.3859,1.0
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.6534,1.0,0.3068,0.4695,1.0
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.7649,1.0,0.5299,0.6927,1.0
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.6331,1.0,0.2662,0.4204,1.0
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.7917,1.0,0.5833,0.7368,1.0
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.724,1.0,0.4479,0.6187,1.0
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.5417,1.0,0.0833,0.1538,1.0
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.828,1.0,0.6559,0.7922,1.0
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.8495,1.0,0.6989,0.8228,1.0
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.6505,1.0,0.3011,0.4628,1.0
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.5038,1.0,0.0076,0.0151,1.0
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.6426,1.0,0.2852,0.4438,1.0
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.9762,1.0,0.9524,0.9756,1.0
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.881,1.0,0.7619,0.8649,1.0
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.5714,1.0,0.1429,0.25,1.0
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.6058,1.0,0.2115,0.3492,1.0
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.7192,1.0,0.4385,0.6096,1.0
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.7327,1.0,0.4654,0.6352,1.0
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5038,1.0,0.0076,0.0151,1.0
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5532,1.0,0.1065,0.1924,1.0
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.6154,1.0,0.2308,0.375,1.0
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.5983,1.0,0.1966,0.3286,1.0
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.5171,1.0,0.0342,0.0661,1.0
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.6911,1.0,0.3822,0.5531,1.0
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.888,1.0,0.7761,0.8739,1.0
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.8417,1.0,0.6834,0.8119,1.0
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5154,1.0,0.0309,0.0599,1.0
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.8537,1.0,0.7073,0.8286,1.0
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.811,1.0,0.622,0.7669,1.0
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.5976,1.0,0.1951,0.3265,1.0
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.597,1.0,0.1939,0.3248,1.0
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.5779,1.0,0.1559,0.2697,1.0
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.557,1.0,0.1141,0.2048,1.0
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5152,1.0,0.0304,0.059,1.0
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5933,1.0,0.1867,0.3146,1.0
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5467,1.0,0.0933,0.1707,1.0
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5033,1.0,0.0067,0.0132,1.0
+roberta-qa_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.5878,1.0,0.1756,0.2987,1.0
+roberta-qa_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.6775,1.0,0.355,0.5239,1.0
+roberta-qa_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.6718,1.0,0.3435,0.5114,1.0
+roberta-qa_success,roberta,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5019,1.0,0.0038,0.0076,1.0
+roberta-qa_success,roberta-qa,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5,0.0,0.0,0.0,1.0
+roberta-qa_success,zerogpt,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5323,1.0,0.0646,0.1214,1.0
+roberta-qa_success,roberta,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.6537,1.0,0.3073,0.4701,1.0
+roberta-qa_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.5951,1.0,0.1902,0.3197,1.0
+roberta-qa_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.5195,1.0,0.039,0.0751,1.0
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,0.6153,1.0,0.2305,0.3747,1.0
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,0.651,1.0,0.3019,0.4638,1.0
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,0.7532,1.0,0.5065,0.6724,1.0
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0.5,0.0,0.0,0.0,1.0
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0.5,0.0,0.0,0.0,1.0
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0.638,1.0,0.276,0.4326,1.0
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,0.5942,1.0,0.1883,0.3169,1.0
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,0.5747,1.0,0.1494,0.2599,1.0
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,0.513,1.0,0.026,0.0506,1.0
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,0.7305,1.0,0.461,0.6311,1.0
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,0.7403,1.0,0.4805,0.6491,1.0
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,0.6055,1.0,0.211,0.3485,1.0
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0.5032,1.0,0.0065,0.0129,1.0
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0.5,0.0,0.0,0.0,1.0
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0.6445,1.0,0.289,0.4484,1.0
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,0.5357,1.0,0.0714,0.1333,1.0
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,0.5308,1.0,0.0617,0.1162,1.0
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,0.5081,1.0,0.0162,0.0319,1.0
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,0.6006,1.0,0.2013,0.3351,1.0
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,0.7094,1.0,0.4188,0.5904,1.0
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,0.7192,1.0,0.4383,0.6095,1.0
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0.5032,1.0,0.0065,0.0129,1.0
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0.5,0.0,0.0,0.0,1.0
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0.5503,1.0,0.1006,0.1829,1.0
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0.5438,1.0,0.0877,0.1612,1.0
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0.5406,1.0,0.0812,0.1502,1.0
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0.5065,1.0,0.013,0.0256,1.0
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,0.6838,1.0,0.3675,0.5375,1.0
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,0.8791,1.0,0.7583,0.8625,1.0
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,0.8427,1.0,0.6854,0.8134,1.0
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0.5017,1.0,0.0033,0.0066,1.0
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0.5,0.0,0.0,0.0,1.0
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0.5166,1.0,0.0331,0.0641,1.0
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,304,304,0.7039,1.0,0.4079,0.5794,1.0
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,304,304,0.6809,1.0,0.3618,0.5314,1.0
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,304,304,0.5576,1.0,0.1151,0.2065,1.0
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,308,308,0.6039,1.0,0.2078,0.3441,1.0
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,308,308,0.5731,1.0,0.1461,0.255,1.0
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,308,308,0.5536,1.0,0.1071,0.1935,1.0
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,P-5,Linked Issue,308,308,0.5016,1.0,0.0032,0.0065,1.0
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,P-5,Linked Issue,308,308,0.5,0.0,0.0,0.0,1.0
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,P-5,Linked Issue,308,308,0.5179,1.0,0.0357,0.069,1.0
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,308,308,0.5455,1.0,0.0909,0.1667,1.0
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,308,308,0.5244,1.0,0.0487,0.0929,1.0
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,308,308,0.5016,1.0,0.0032,0.0065,1.0
+zerogpt_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,308,308,0.5909,1.0,0.1818,0.3077,1.0
+zerogpt_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,308,308,0.6721,1.0,0.3442,0.5121,1.0
+zerogpt_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,308,308,0.6769,1.0,0.3539,0.5228,1.0
+zerogpt_success,roberta,gpt-5-mini-2025-08-07,P-6,Without File Contents,308,308,0.5016,1.0,0.0032,0.0065,1.0
+zerogpt_success,roberta-qa,gpt-5-mini-2025-08-07,P-6,Without File Contents,308,308,0.5,0.0,0.0,0.0,1.0
+zerogpt_success,zerogpt,gpt-5-mini-2025-08-07,P-6,Without File Contents,308,308,0.5325,1.0,0.0649,0.122,1.0
+zerogpt_success,roberta,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,308,308,0.612,1.0,0.224,0.366,1.0
+zerogpt_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,308,308,0.5714,1.0,0.1429,0.25,1.0
+zerogpt_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,308,308,0.5162,1.0,0.0325,0.0629,1.0
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.6195,1.0,0.239,0.3859,1.0
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.6534,1.0,0.3068,0.4695,1.0
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,251,251,0.7649,1.0,0.5299,0.6927,1.0
+common_success,roberta,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.5,0.0,0.0,0.0,1.0
+common_success,roberta-qa,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.5,0.0,0.0,0.0,1.0
+common_success,zerogpt,gpt-5-mini-2025-08-07,P-1,Repo Path,263,263,0.6331,1.0,0.2662,0.4204,1.0
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.7917,1.0,0.5833,0.7368,1.0
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.724,1.0,0.4479,0.6187,1.0
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,96,96,0.5417,1.0,0.0833,0.1538,1.0
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.828,1.0,0.6559,0.7922,1.0
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.8495,1.0,0.6989,0.8228,1.0
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,186,186,0.6505,1.0,0.3011,0.4628,1.0
+common_success,roberta,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.5038,1.0,0.0076,0.0151,1.0
+common_success,roberta-qa,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.5,0.0,0.0,0.0,1.0
+common_success,zerogpt,gpt-5-mini-2025-08-07,P-2,PR Title,263,263,0.6426,1.0,0.2852,0.4438,1.0
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.9762,1.0,0.9524,0.9756,1.0
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.881,1.0,0.7619,0.8649,1.0
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,21,21,0.5714,1.0,0.1429,0.25,1.0
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.6058,1.0,0.2115,0.3492,1.0
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.7192,1.0,0.4385,0.6096,1.0
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,260,260,0.7327,1.0,0.4654,0.6352,1.0
+common_success,roberta,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5038,1.0,0.0076,0.0151,1.0
+common_success,roberta-qa,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5,0.0,0.0,0.0,1.0
+common_success,zerogpt,gpt-5-mini-2025-08-07,P-3,File Diff,263,263,0.5532,1.0,0.1065,0.1924,1.0
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.6154,1.0,0.2308,0.375,1.0
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.5983,1.0,0.1966,0.3286,1.0
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,117,117,0.5171,1.0,0.0342,0.0661,1.0
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.6911,1.0,0.3822,0.5531,1.0
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.888,1.0,0.7761,0.8739,1.0
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,259,259,0.8417,1.0,0.6834,0.8119,1.0
+common_success,roberta,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5,0.0,0.0,0.0,1.0
+common_success,roberta-qa,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5,0.0,0.0,0.0,1.0
+common_success,zerogpt,gpt-5-mini-2025-08-07,P-4,File Contents,259,259,0.5154,1.0,0.0309,0.0599,1.0
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.8537,1.0,0.7073,0.8286,1.0
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.811,1.0,0.622,0.7669,1.0
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,164,164,0.5976,1.0,0.1951,0.3265,1.0
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.597,1.0,0.1939,0.3248,1.0
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.5779,1.0,0.1559,0.2697,1.0
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,263,263,0.557,1.0,0.1141,0.2048,1.0
+common_success,roberta,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5,0.0,0.0,0.0,1.0
+common_success,roberta-qa,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5,0.0,0.0,0.0,1.0
+common_success,zerogpt,gpt-5-mini-2025-08-07,P-5,Linked Issue,263,263,0.5152,1.0,0.0304,0.059,1.0
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5933,1.0,0.1867,0.3146,1.0
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5467,1.0,0.0933,0.1707,1.0
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,150,150,0.5033,1.0,0.0067,0.0132,1.0
+common_success,roberta,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.5878,1.0,0.1756,0.2987,1.0
+common_success,roberta-qa,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.6775,1.0,0.355,0.5239,1.0
+common_success,zerogpt,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,262,262,0.6718,1.0,0.3435,0.5114,1.0
+common_success,roberta,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5019,1.0,0.0038,0.0076,1.0
+common_success,roberta-qa,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5,0.0,0.0,0.0,1.0
+common_success,zerogpt,gpt-5-mini-2025-08-07,P-6,Without File Contents,263,263,0.5323,1.0,0.0646,0.1214,1.0
+common_success,roberta,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.6537,1.0,0.3073,0.4701,1.0
+common_success,roberta-qa,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.5951,1.0,0.1902,0.3197,1.0
+common_success,zerogpt,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,205,205,0.5195,1.0,0.039,0.0751,1.0

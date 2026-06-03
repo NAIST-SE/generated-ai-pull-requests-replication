@@ -1,0 +1,14 @@
+.DS_Store
+note.txt
+*/env/*
+*.csv
+!phase3/analysis/sensitivity_successful_only/outputs/*.csv
+*.todo
+*.graphql
+*.pkl
+*.json
+*.log
+**/env/**
+*.venv/**
+**/__pycache__/*
+**/.ipynb_checkpoints
