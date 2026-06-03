@@ -32,15 +32,19 @@ Large datasets are hosted on OSF: **https://osf.io/aq5rj/**
 
 Download from OSF (https://osf.io/aq5rj/) and place under a `datasets/` directory at the repo root:
 
-| File | Description |
-|---|---|
-| `selected_prs_sampled.csv` | 308 human-written PR descriptions (final sample) |
-| `selected_prs_with_diffs_and_file_contents.csv` | PR diffs and file contents per PR |
-| `selected_prs_with_related_issues.csv` | Linked GitHub issues per PR |
-| `temperature_1/run_3/detection_results.csv` | Detection scores for all 5,836 entries (primary results file) |
-| `temperature_1/run_3/<model>_*.csv` | Per-model generated descriptions |
+| File | Needed for | Description |
+|---|---|---|
+| `jabref-prs.csv` | Step 1 (optional) | Raw JabRef PR dump mined from GitHub |
+| `jabref_prs_additional.csv` | Step 1 (optional) | Supplementary PRs added in a later collection pass |
+| `selected_prs_sampled.csv` | Steps 2–4 | 308 human-written PR descriptions (final sample) |
+| `selected_prs_with_diffs_and_file_contents.csv` | Step 2 | PR diffs and file contents per PR |
+| `selected_prs_with_related_issues.csv` | Step 2 | Linked GitHub issues per PR |
+| `temperature_1/run_3/detection_results.csv` | Step 4 | Detection scores for all 5,836 entries (primary results file) |
+| `temperature_1/run_3/<model>_*.csv` | Step 3–4 | Per-model generated descriptions |
 
 The `detection_results.csv` from run 3 is the source of truth for Prelim-RQ, RQ1, and the sensitivity analysis.
+
+> **Skipping collection and generation:** If you only want to reproduce the analysis, download `selected_prs_sampled.csv` and `temperature_1/run_3/detection_results.csv` from OSF and jump to Step 4. `jabref-prs.csv` is only needed if you want to re-run the PR filtering and sampling from scratch.
 
 ---
 
@@ -59,7 +63,7 @@ For GPU-based generation (Llama, Qwen) on an HPC cluster, see `HPC_GUIDE.md`.
 ### Step 1 — Data Collection (optional; datasets on OSF)
 
 ```bash
-# Filter and sample PRs from the raw JabRef dump
+# Download jabref-prs.csv from OSF (https://osf.io/aq5rj/) into datasets/ first, then:
 python collection/filter_and_sample_prs.py
 
 # Fetch PR file diffs and contents
