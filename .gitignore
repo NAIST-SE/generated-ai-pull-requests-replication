@@ -3,6 +3,10 @@ note.txt
 */env/*
 *.csv
 !analysis/sensitivity_successful_only/outputs/*.csv
+!datasets/*.csv
+!datasets/temperature_1/run_1/*.csv
+!datasets/temperature_1/run_2/*.csv
+!datasets/temperature_1/run_3/*.csv
 *.todo
 *.graphql
 *.pkl

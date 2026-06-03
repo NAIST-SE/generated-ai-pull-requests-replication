@@ -56,22 +56,33 @@ The paper investigates AI-generated pull-request descriptions produced under six
 
 ## Datasets
 
-Download from OSF (https://osf.io/aq5rj/) and place under a `datasets/` directory at the repo root:
+Most datasets are included in this repository under `datasets/`. The large per-model generation CSVs are hosted on OSF (**https://osf.io/aq5rj/**) and are only needed if you want to re-run the detection pipeline from scratch (Step 3).
+
+### Included in this repo
 
 | File | Needed for | Description |
 |---|---|---|
-| `jabref-prs.csv` | Step 1 (optional) | Raw JabRef PR dump mined from GitHub |
-| `jabref_prs_additional.csv` | Step 1 (optional) | Supplementary PRs added in a later collection pass |
-| `selected_prs_sampled.csv` | Steps 2–4 | 308 human-written PR descriptions (final sample) |
-| `selected_prs_with_diffs_and_file_contents.csv` | Step 2 | PR diffs and file contents per PR |
-| `selected_prs_with_related_issues.csv` | Step 2 | Linked GitHub issues per PR |
-| `temperature_1/run_3/detection_results.csv` | Steps 3–4, analysis | Detection scores for all 5,836 entries — **primary results file** |
-| `temperature_1/run_3/<model>_*.csv` | Steps 3–4 | Per-model generated descriptions (run 3) |
-| `temperature_1/run_2/detection_results.csv` | `compare_runs.ipynb` | Detection scores from an independent generation run used to validate consistency |
+| `datasets/jabref-prs.csv` | Step 1 (optional) | Raw JabRef PR dump mined from GitHub |
+| `datasets/jabref_prs_additional.csv` | Step 1 (optional) | Supplementary PRs added in a later collection pass |
+| `datasets/selected_prs.csv` | Step 1 output | Filtered PRs before final sampling |
+| `datasets/selected_prs_sampled.csv` | Steps 2–4 | 308 human-written PR descriptions (final sample) |
+| `datasets/selected_prs_with_diffs_and_file_contents.csv` | Step 2 | PR diffs and file contents per PR |
+| `datasets/selected_prs_with_related_issues.csv` | Step 2 | Linked GitHub issues per PR |
+| `datasets/temperature_1/run_3/detection_results.csv` | Step 4 | Detection scores for all 5,836 entries — **primary results file** |
+| `datasets/temperature_1/run_2/detection_results.csv` | `compare_runs.ipynb` | Detection scores from an independent run (consistency validation) |
+| `datasets/temperature_1/run_1/detection_results_run_1.csv` | `compare_runs.ipynb` | Detection scores from an independent run (consistency validation) |
 
-The `detection_results.csv` from run 3 (temperature = 1) is the source of truth for Prelim-RQ, RQ1, and the sensitivity analysis. Run 2 is used only in the consistency validation notebook.
+### On OSF only (large generation outputs)
 
-> **Skipping collection and generation:** If you only want to reproduce the analysis, download `selected_prs_sampled.csv` and `temperature_1/run_3/detection_results.csv` from OSF and jump to Step 4. `jabref-prs.csv` is only needed to re-run the PR filtering and sampling from scratch.
+Download from OSF and place under `datasets/temperature_1/run_3/` to re-run detection:
+
+| File | Size | Description |
+|---|---|---|
+| `temperature_1/run_3/chatgpt_results_exp_chatgpt_1771584462.csv` | 46 MB | GPT-5-mini generated descriptions |
+| `temperature_1/run_3/meta-llama_llama-3.1-70b-instruct_1771584467.csv` | 37 MB | Llama-3.1-70B generated descriptions |
+| `temperature_1/run_3/Qwen_Qwen2.5-72B-Instruct_1771584467.csv` | 37 MB | Qwen2.5-72B generated descriptions |
+
+> **Analysis only:** `datasets/temperature_1/run_3/detection_results.csv` is already in this repo — jump straight to Step 4 without downloading anything from OSF.
 
 ---
 
@@ -90,7 +101,6 @@ For GPU-based generation (Llama, Qwen) on an HPC cluster, see `HPC_GUIDE.md`.
 ### Step 1 — Data Collection (optional; datasets on OSF)
 
 ```bash
-# Download jabref-prs.csv from OSF (https://osf.io/aq5rj/) into datasets/ first, then:
 python collection/filter_and_sample_prs.py
 
 # Fetch PR file diffs and contents

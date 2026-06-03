@@ -10,7 +10,7 @@ Objectives:
 - Exclude template issues and external repository references
 - Filter out descriptions that are too short for quality generation
 
-Input: datasets/jabref-prs.csv  (download from OSF: https://osf.io/aq5rj/)
+Input: datasets/jabref-prs.csv
 Output: datasets/selected_prs.csv
 """
 
