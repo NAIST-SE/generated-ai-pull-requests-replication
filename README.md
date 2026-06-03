@@ -65,10 +65,11 @@ Download from OSF (https://osf.io/aq5rj/) and place under a `datasets/` director
 | `selected_prs_sampled.csv` | Steps 2–4 | 308 human-written PR descriptions (final sample) |
 | `selected_prs_with_diffs_and_file_contents.csv` | Step 2 | PR diffs and file contents per PR |
 | `selected_prs_with_related_issues.csv` | Step 2 | Linked GitHub issues per PR |
-| `temperature_1/run_3/detection_results.csv` | Step 4 | Detection scores for all 5,836 entries (primary results file) |
-| `temperature_1/run_3/<model>_*.csv` | Steps 3–4 | Per-model generated descriptions |
+| `temperature_1/run_3/detection_results.csv` | Steps 3–4, analysis | Detection scores for all 5,836 entries — **primary results file** |
+| `temperature_1/run_3/<model>_*.csv` | Steps 3–4 | Per-model generated descriptions (run 3) |
+| `temperature_1/run_2/detection_results.csv` | `compare_runs.ipynb` | Detection scores from an independent generation run used to validate consistency |
 
-The `detection_results.csv` from run 3 (temperature = 1) is the source of truth for Prelim-RQ, RQ1, and the sensitivity analysis.
+The `detection_results.csv` from run 3 (temperature = 1) is the source of truth for Prelim-RQ, RQ1, and the sensitivity analysis. Run 2 is used only in the consistency validation notebook.
 
 > **Skipping collection and generation:** If you only want to reproduce the analysis, download `selected_prs_sampled.csv` and `temperature_1/run_3/detection_results.csv` from OSF and jump to Step 4. `jabref-prs.csv` is only needed to re-run the PR filtering and sampling from scratch.
 
@@ -147,6 +148,7 @@ Open the notebooks in `analysis/` with Jupyter. They expect `datasets/` to be po
 | `analysis_rq3_bertscore.ipynb` | RQ2 — BERTScore semantic similarity | **Yes** — loads DeBERTa-xlarge (~3 GB) |
 | `analysis_rq3_codebert.ipynb` | RQ3 — CodeBERT code-text alignment | **Yes** — loads `microsoft/codebert-base` (~500 MB) |
 | `analysis_rq3_graphcodebert.ipynb` | RQ3 — GraphCodeBERT code-text alignment | **Yes** — loads `microsoft/graphcodebert-base` (~500 MB) |
+| `compare_runs.ipynb` | Validity — paired statistical tests (Wilcoxon + t-test) confirming detection scores are consistent across two independent generation runs at temperature = 1 | No |
 | `sensitivity_successful_only/sensitivity_successful_only.ipynb` | Threats — detector-failure sensitivity rerun | No |
 
 > **GPU note:** The three GPU notebooks auto-detect CUDA → MPS → CPU and will fall back to CPU, but BERTScore will take several hours without a GPU. On a modern GPU all three take roughly 30–60 minutes combined.
