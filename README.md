@@ -140,7 +140,12 @@ python verify_detection.py
 
 ### Step 4 — Analysis
 
-Open the notebooks in `analysis/` with Jupyter. They expect `datasets/` to be populated (or the pre-computed `detection_results.csv` from OSF).
+Open the notebooks in `analysis/` with Jupyter **from the repository root** — this ensures relative paths to `datasets/` resolve correctly:
+
+```bash
+cd generated-ai-pull-requests-replication
+jupyter notebook
+```
 
 > **Note on notebook naming:** The `analysis_rq3_*` prefix is an internal project code (not "Research Question 3"). Those notebooks cover both RQ2 (textual similarity) and RQ3 (code-text alignment) as indicated in the table below.
 
