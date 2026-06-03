@@ -30,7 +30,6 @@ def normalize_model_name(raw: str) -> str:
     lowered = value.lower()
     normalization = {
         "gpt-5-mini-2025-08-07": "gpt-5-mini-2025-08-07",
-        "llama-3.1-8b-instruct": "Llama-3.1-8B-Instruct",
         "llama-3.1-70b-instruct": "Llama-3.1-70B-Instruct",
         "qwen2.5-72b-instruct": "Qwen2.5-72B-Instruct",
     }

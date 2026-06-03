@@ -94,6 +94,7 @@ Download from OSF and place under `datasets/temperature_1/run_3/` to re-run dete
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
+python -c "import nltk; nltk.download('punkt_tab')"
 ```
 
 For GPU-based generation (Llama, Qwen) on an HPC cluster, see `HPC_GUIDE.md`.
