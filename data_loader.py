@@ -26,7 +26,7 @@ BLACKLIST_PRS = ["PR_kwDOAQ0TF86IEX8G"]  # No files fetched
 
 class DataLoader:
     """
-    Single source of truth for loading and merging datasets for Phase 3.
+    Single source of truth for loading and merging datasets.
     """
 
     def __init__(self, base_path: str = "datasets"):

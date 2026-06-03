@@ -454,7 +454,7 @@ def merge_shards(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Phase 3 Detection Pipeline")
+    parser = argparse.ArgumentParser(description="AI Detection Pipeline")
     parser.add_argument("--detectors", nargs="+", default=["zerogpt", "gptzero", "roberta", "roberta-qa"],
                         help="List of detectors to run")
     parser.add_argument("--batch-size", type=int, default=10,  
@@ -482,7 +482,7 @@ def main():
     progress_tracker = ProgressTracker(PROGRESS_DIR)
     csv_handler = CSVHandler(output_csv_abs)
     
-    logger.log("INFO", "system", "Starting Phase 3 Detection Pipeline")
+    logger.log("INFO", "system", "Starting Detection Pipeline")
     
     # 2. Load Data
     loader = DataLoader()  # Assumes running from project root

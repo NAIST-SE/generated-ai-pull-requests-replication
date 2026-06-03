@@ -1,4 +1,4 @@
-# Default Decoding Parameters for Phase 3 Generation Experiments
+# Default Decoding Parameters
 #
 # We fix temperature=0 to ensure deterministic generation of pull request
 # descriptions while maintaining each model's default top_p value, in line

@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-PR Related Issues Extraction - Phase 3
+PR Related Issues Extraction
 
 This script fetches GitHub issues related to PRs from the selected_prs.csv dataset.
-Based on the reference implementation from phase2/pr_issues/fetch_pr_issues.py.
 
 Input: datasets/selected_prs.csv
 Output: datasets/selected_prs_with_related_issues.csv
@@ -190,7 +189,7 @@ def clean_for_json(obj):
 
 def main():
     """Main function to process PR-related issues extraction"""
-    log_activity("🚀 Starting PR Related Issues Extraction - Phase 3")
+    log_activity("🚀 Starting PR Related Issues Extraction")
 
     # Load GitHub tokens
     try:

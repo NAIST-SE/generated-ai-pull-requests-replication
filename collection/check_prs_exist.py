@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Quick check whether PRs from the Phase 3 selected PRs CSV exist on GitHub.
+Quick check whether PRs from the selected PRs CSV exist on GitHub.
 
 Saves a CSV of missing/unreachable PRs to ../datasets/prs_missing_check.csv
 

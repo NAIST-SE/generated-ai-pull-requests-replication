@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Preprocessing script for Phase 2 - Step 1: Filter and Sample PRs
+Filter and sample PRs from the raw JabRef dump.
 
 Objectives:
 - Filter out PRs without any referenced issues AND too short descriptions
@@ -10,8 +10,8 @@ Objectives:
 - Exclude template issues and external repository references
 - Filter out descriptions that are too short for quality generation
 
-Input: phase2/datasets/jabref-prs.csv
-Output: phase2/datasets/selected_prs.csv
+Input: datasets/jabref-prs.csv
+Output: datasets/selected_prs.csv
 """
 
 import pandas as pd

@@ -1,5 +1,5 @@
 """
-Controlled Qwen/Qwen2.5-72B-Instruct Generation Experiment (Phase 3)
+Qwen/Qwen2.5-72B-Instruct Generation Script
 
 This script implements rigorous, reproducible text generation for PR descriptions
 using the Qwen/Qwen2.5-72B-Instruct model.

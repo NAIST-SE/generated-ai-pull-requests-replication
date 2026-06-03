@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-Phase 3: PR Diffs & File Contents Extraction
+PR Diffs & File Contents Extraction
 
-This script fetches PR diffs and file contents using the GitHub API for the selected PRs
-from the Phase 3 dataset. It's adapted from the Phase 2 implementation.
+This script fetches PR diffs and file contents using the GitHub API for the selected PRs.
 
 Input: datasets/selected_prs.csv
 Output: datasets/selected_prs_with_diffs_and_file_contents.csv
@@ -136,7 +135,7 @@ def fetch_pr_files(repo, pr_number, token_cycle, log_path=None):
 
 def process_selected_prs(save_file_content=True):
     """Process the selected PRs and fetch their files"""
-    log_activity("🚀 Starting PR files extraction for Phase 3...")
+    log_activity("🚀 Starting PR files extraction...")
     
     # Load tokens
     try:
@@ -278,7 +277,7 @@ def process_selected_prs(save_file_content=True):
 
 def main():
     """Main function with argument parsing"""
-    parser = argparse.ArgumentParser(description="Extract PR diffs and file contents for Phase 3")
+    parser = argparse.ArgumentParser(description="Extract PR diffs and file contents")
     parser.add_argument(
         "--skip-file-content", 
         action="store_true", 

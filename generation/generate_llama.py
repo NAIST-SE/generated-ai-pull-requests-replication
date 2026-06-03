@@ -1,5 +1,5 @@
 """
-Controlled Llama-3.1-70B-Instruct Generation Experiment (Phase 3)
+Llama-3.1-70B-Instruct Generation Script
 
 This script implements rigorous, reproducible text generation for PR descriptions
 using the Llama-3.1-70B-Instruct model from Hugging Face Transformers.

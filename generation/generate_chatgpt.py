@@ -1,5 +1,5 @@
 """
-Reimplementation of PR Description Generator for ChatGPT (Phase 3 Spec)
+PR Description Generator for GPT-5-mini
 Model: gpt-5-mini-2025-08-07 (or configurable)
 Constraint: NO TRUNCATION.
 """
@@ -36,7 +36,7 @@ except ImportError:
 
 # --- Configuration ---
 
-# Model selection (Phase 3 Requirement)
+# Model selection
 DEFAULT_MODEL = "gpt-5-mini-2025-08-07" 
 
 # Paths

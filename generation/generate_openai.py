@@ -1,5 +1,5 @@
 """
-Unified OpenAI-compatible runner for Phase 3 generators.
+Unified OpenAI-compatible runner for Llama and Qwen generation.
 
 This merges the overlapping logic from `generate_llama_openai.py` and
 `generate_qwen_openai.py` into a single entrypoint. Choose the prompt
