@@ -105,12 +105,23 @@ python verify_detection.py
 
 Open the notebooks in `analysis/` with Jupyter. They expect `datasets/` to be populated.
 
-| Notebook | Content |
-|---|---|
-| `analysis_detectability_by_llm.ipynb` | Prelim-RQ + RQ1 (detectability, Cliff's δ) |
-| `rq1_probability_boxplots.ipynb` | Generates Figure 3 (RQ1 probability boxplots) |
-| `analysis_rq3_*.ipynb` | RQ2 + RQ3 textual and semantic metrics |
-| `sensitivity_successful_only/sensitivity_successful_only.ipynb` | Detector-failure sensitivity rerun (Threats section) |
+| Notebook | Content | GPU? |
+|---|---|---|
+| `analysis_detectability_by_llm.ipynb` | Prelim-RQ + RQ1 (detectability, Cliff's δ) | No |
+| `rq1_probability_boxplots.ipynb` | Generates Figure 3 (RQ1 probability boxplots) | No |
+| `analysis_rq3_bertscore.ipynb` | BERTScore semantic similarity (RQ2) | **Yes** — loads DeBERTa-xlarge (~3 GB) |
+| `analysis_rq3_codebert.ipynb` | CodeBERT code-text alignment (RQ3) | **Yes** — loads `microsoft/codebert-base` (~500 MB) |
+| `analysis_rq3_graphcodebert.ipynb` | GraphCodeBERT code-text alignment (RQ3) | **Yes** — loads `microsoft/graphcodebert-base` (~500 MB) |
+| `analysis_rq3_rouge.ipynb` | ROUGE-1/2/L overlap (RQ2) | No |
+| `analysis_rq3_bm25.ipynb` | BM25 lexical retrieval score (RQ2) | No |
+| `analysis_rq3_word_sentence_count.ipynb` | Word and sentence count verbosity (RQ2) | No |
+| `analysis_rq3_ttr.ipynb` | Type-Token Ratio lexical diversity (RQ2) | No |
+| `analysis_rq3_mtld.ipynb` | MTLD lexical diversity (RQ2) | No |
+| `analysis_rq3_lexical_density.ipynb` | Lexical density (RQ2) | No |
+| `analysis_rq3_reading_ease.ipynb` | Flesch-Kincaid readability (RQ2) | No |
+| `sensitivity_successful_only/sensitivity_successful_only.ipynb` | Detector-failure sensitivity rerun (Threats) | No |
+
+> **GPU note:** The three GPU notebooks auto-detect the best available device (CUDA → MPS → CPU) and will run on CPU as a fallback, but expect several hours for BERTScore without a GPU. On a modern GPU the three notebooks together take roughly 30–60 minutes.
 
 ---
 
