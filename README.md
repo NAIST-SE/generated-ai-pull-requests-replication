@@ -148,6 +148,11 @@ cd generated-ai-pull-requests-replication
 jupyter notebook
 ```
 
+To run notebooks non-interactively (e.g. to reproduce all outputs at once):
+```bash
+python -m papermill analysis/<notebook>.ipynb analysis/<notebook>.ipynb --cwd analysis
+```
+
 > **Note on notebook naming:** The `analysis_rq3_*` prefix is an internal project code (not "Research Question 3"). Those notebooks cover both RQ2 (textual similarity) and RQ3 (code-text alignment) as indicated in the table below.
 
 | Notebook | Answers | GPU? |
