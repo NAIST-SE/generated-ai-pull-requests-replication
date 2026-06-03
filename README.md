@@ -9,6 +9,32 @@ Large datasets are hosted on OSF: **https://osf.io/aq5rj/**
 
 ---
 
+## Study Overview
+
+The paper investigates AI-generated pull-request descriptions produced under six different context configurations and answers four research questions:
+
+- **Prelim-RQ** — How accurate are existing tools at detecting AI-generated PR descriptions?
+- **RQ1** — How does generation context affect the *distinguishability* of AI-generated PR descriptions?
+- **RQ2** — How does generation context shape the *textual similarity* between AI-generated and human-written PR descriptions? (structural, lexical, and semantic metrics)
+- **RQ3** — To what extent does the *code-text alignment* of AI-generated PR descriptions resemble that of human-written ones?
+
+**Models:** `gpt-5-mini-2025-08-07` (proprietary), `meta-llama/Llama-3.1-70B-Instruct`, `Qwen/Qwen2.5-72B-Instruct` — all generated at **temperature = 1**.
+
+**Detectors:** ZeroGPT (commercial), ChatGPT Detector RoBERTa, ChatGPT-QA Detector RoBERTa (both from Guo et al.).
+
+**Context configurations** used when prompting each model:
+
+| ID | Name | Context provided to the LLM |
+|---|---|---|
+| P-1 | Repo Path | Repository name + affected file paths |
+| P-2 | PR Title | PR title only |
+| P-3 | File Diff | Unified diffs (baseline) |
+| P-4 | File Contents | Full file contents |
+| P-5 | Linked Issue | Linked GitHub issue descriptions |
+| P-6 | Without File Contents | All of P-1 + P-2 + P-3 + P-5 combined |
+
+---
+
 ## Repository Structure
 
 ```
@@ -40,11 +66,11 @@ Download from OSF (https://osf.io/aq5rj/) and place under a `datasets/` director
 | `selected_prs_with_diffs_and_file_contents.csv` | Step 2 | PR diffs and file contents per PR |
 | `selected_prs_with_related_issues.csv` | Step 2 | Linked GitHub issues per PR |
 | `temperature_1/run_3/detection_results.csv` | Step 4 | Detection scores for all 5,836 entries (primary results file) |
-| `temperature_1/run_3/<model>_*.csv` | Step 3–4 | Per-model generated descriptions |
+| `temperature_1/run_3/<model>_*.csv` | Steps 3–4 | Per-model generated descriptions |
 
-The `detection_results.csv` from run 3 is the source of truth for Prelim-RQ, RQ1, and the sensitivity analysis.
+The `detection_results.csv` from run 3 (temperature = 1) is the source of truth for Prelim-RQ, RQ1, and the sensitivity analysis.
 
-> **Skipping collection and generation:** If you only want to reproduce the analysis, download `selected_prs_sampled.csv` and `temperature_1/run_3/detection_results.csv` from OSF and jump to Step 4. `jabref-prs.csv` is only needed if you want to re-run the PR filtering and sampling from scratch.
+> **Skipping collection and generation:** If you only want to reproduce the analysis, download `selected_prs_sampled.csv` and `temperature_1/run_3/detection_results.csv` from OSF and jump to Step 4. `jabref-prs.csv` is only needed to re-run the PR filtering and sampling from scratch.
 
 ---
 
@@ -77,20 +103,20 @@ python collection/fetch_pr_issues.py
 
 ### Step 2 — Generation
 
+Generates PR descriptions for all 308 PRs × 6 context configurations (P-1 – P-6) for each model at **temperature = 1**.
+
 ```bash
-# Runs Llama, Qwen (via OpenRouter / HuggingFace router),
-# and GPT-5-mini in parallel. Set API keys as env vars first.
-export OPENROUTER_API_KEY="..."
-export OPENAI_API_KEY="..."
+export OPENROUTER_API_KEY="..."   # for Llama and Qwen via OpenRouter / HuggingFace router
+export OPENAI_API_KEY="..."       # for GPT-5-mini
 bash run_generation.sh
 ```
 
-See `generation/P4_TRUNCATION_GUIDE.md` for handling the File Contents (P-4) context, which can exceed provider token limits.
+> The File Contents context (P-4) can exceed provider token limits. See `generation/P4_TRUNCATION_GUIDE.md`.
 
 ### Step 3 — Detection
 
 ```bash
-# Merge generated CSVs, then run three detectors in parallel
+# Merge generated CSVs into datasets/generated_descriptions.csv, then run three detectors
 bash run_detection_pipeline.sh
 ```
 
@@ -103,25 +129,27 @@ python verify_detection.py
 
 ### Step 4 — Analysis
 
-Open the notebooks in `analysis/` with Jupyter. They expect `datasets/` to be populated.
+Open the notebooks in `analysis/` with Jupyter. They expect `datasets/` to be populated (or the pre-computed `detection_results.csv` from OSF).
 
-| Notebook | Content | GPU? |
+> **Note on notebook naming:** The `analysis_rq3_*` prefix is an internal project code (not "Research Question 3"). Those notebooks cover both RQ2 (textual similarity) and RQ3 (code-text alignment) as indicated in the table below.
+
+| Notebook | Answers | GPU? |
 |---|---|---|
-| `analysis_detectability_by_llm.ipynb` | Prelim-RQ + RQ1 (detectability, Cliff's δ) | No |
-| `rq1_probability_boxplots.ipynb` | Generates Figure 3 (RQ1 probability boxplots) | No |
-| `analysis_rq3_bertscore.ipynb` | BERTScore semantic similarity (RQ2) | **Yes** — loads DeBERTa-xlarge (~3 GB) |
-| `analysis_rq3_codebert.ipynb` | CodeBERT code-text alignment (RQ3) | **Yes** — loads `microsoft/codebert-base` (~500 MB) |
-| `analysis_rq3_graphcodebert.ipynb` | GraphCodeBERT code-text alignment (RQ3) | **Yes** — loads `microsoft/graphcodebert-base` (~500 MB) |
-| `analysis_rq3_rouge.ipynb` | ROUGE-1/2/L overlap (RQ2) | No |
-| `analysis_rq3_bm25.ipynb` | BM25 lexical retrieval score (RQ2) | No |
-| `analysis_rq3_word_sentence_count.ipynb` | Word and sentence count verbosity (RQ2) | No |
-| `analysis_rq3_ttr.ipynb` | Type-Token Ratio lexical diversity (RQ2) | No |
-| `analysis_rq3_mtld.ipynb` | MTLD lexical diversity (RQ2) | No |
-| `analysis_rq3_lexical_density.ipynb` | Lexical density (RQ2) | No |
-| `analysis_rq3_reading_ease.ipynb` | Flesch-Kincaid readability (RQ2) | No |
-| `sensitivity_successful_only/sensitivity_successful_only.ipynb` | Detector-failure sensitivity rerun (Threats) | No |
+| `analysis_detectability_by_llm.ipynb` | Prelim-RQ + RQ1 | No |
+| `rq1_probability_boxplots.ipynb` | RQ1 — generates Figure 3 (probability boxplots) | No |
+| `analysis_rq3_word_sentence_count.ipynb` | RQ2 — word count, sentence count | No |
+| `analysis_rq3_reading_ease.ipynb` | RQ2 — Flesch-Kincaid readability (FKGL) | No |
+| `analysis_rq3_ttr.ipynb` | RQ2 — Type-Token Ratio (TTR) | No |
+| `analysis_rq3_mtld.ipynb` | RQ2 — MTLD lexical diversity | No |
+| `analysis_rq3_lexical_density.ipynb` | RQ2 — lexical density | No |
+| `analysis_rq3_rouge.ipynb` | RQ2 — ROUGE-1/2/L lexical overlap | No |
+| `analysis_rq3_bm25.ipynb` | RQ2 — BM25 lexical relevance | No |
+| `analysis_rq3_bertscore.ipynb` | RQ2 — BERTScore semantic similarity | **Yes** — loads DeBERTa-xlarge (~3 GB) |
+| `analysis_rq3_codebert.ipynb` | RQ3 — CodeBERT code-text alignment | **Yes** — loads `microsoft/codebert-base` (~500 MB) |
+| `analysis_rq3_graphcodebert.ipynb` | RQ3 — GraphCodeBERT code-text alignment | **Yes** — loads `microsoft/graphcodebert-base` (~500 MB) |
+| `sensitivity_successful_only/sensitivity_successful_only.ipynb` | Threats — detector-failure sensitivity rerun | No |
 
-> **GPU note:** The three GPU notebooks auto-detect the best available device (CUDA → MPS → CPU) and will run on CPU as a fallback, but expect several hours for BERTScore without a GPU. On a modern GPU the three notebooks together take roughly 30–60 minutes.
+> **GPU note:** The three GPU notebooks auto-detect CUDA → MPS → CPU and will fall back to CPU, but BERTScore will take several hours without a GPU. On a modern GPU all three take roughly 30–60 minutes combined.
 
 ---
 
