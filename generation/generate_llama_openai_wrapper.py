@@ -15,9 +15,8 @@ def main():
     new_argv = [sys.argv[0]] + default_args + sys.argv[1:]
     sys.argv = new_argv
 
-    # Ensure project root is importable (same pattern as other scripts)
-    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-    from phase3.generation.generate_openai import main as unified_main
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    from generation.generate_openai import main as unified_main
     unified_main()
 
 

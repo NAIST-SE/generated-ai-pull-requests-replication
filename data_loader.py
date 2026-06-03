@@ -29,7 +29,7 @@ class DataLoader:
     Single source of truth for loading and merging datasets for Phase 3.
     """
 
-    def __init__(self, base_path: str = "phase3/datasets"):
+    def __init__(self, base_path: str = "datasets"):
         self.base_path = Path(base_path)
         if not self.base_path.is_absolute():
             # Attempt to resolve relative to project root if running from elsewhere

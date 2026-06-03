@@ -2,7 +2,7 @@
 note.txt
 */env/*
 *.csv
-!phase3/analysis/sensitivity_successful_only/outputs/*.csv
+!analysis/sensitivity_successful_only/outputs/*.csv
 *.todo
 *.graphql
 *.pkl

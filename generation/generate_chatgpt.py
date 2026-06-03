@@ -6,7 +6,7 @@ Constraint: NO TRUNCATION.
 
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import json
 import time
 import argparse
@@ -23,8 +23,8 @@ from dataclasses import dataclass, asdict
 import pandas as pd
 import tiktoken
 
-from phase3.generation.truncate_utils import truncate_pr_files, get_tokenizer_for_model
-from phase3.generation.config import DECODING_PARAMS
+from generation.truncate_utils import truncate_pr_files, get_tokenizer_for_model
+from generation.config import DECODING_PARAMS
 
 # Try to import openai, handle failure gracefully
 try:

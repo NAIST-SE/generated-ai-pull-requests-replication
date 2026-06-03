@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-FILE_PATH = "phase3/datasets/detection_results.csv"
+FILE_PATH = "datasets/detection_results.csv"
 
 def analyze_detection_results():
     if not os.path.exists(FILE_PATH):

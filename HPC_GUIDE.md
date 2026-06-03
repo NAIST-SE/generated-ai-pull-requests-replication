@@ -328,7 +328,7 @@ scontrol show partition gpu_short | grep -E "Gres|AllocTRES"
 
 export OPENROUTER_API_KEY="sk-or-..."
 
-pyenv exec python phase3/generation/generate_openai.py \
+pyenv exec python generation/generate_openai.py \
   --base-url "https://router.huggingface.co/v1" \
   --api-key "$HF_TOKEN" \
   --model "Qwen/Qwen2.5-72B-Instruct" \
@@ -340,7 +340,7 @@ pyenv exec python phase3/generation/generate_openai.py \
   --variations ALL
 
 
-pyenv exec python phase3/generation/generate_openai.py \
+pyenv exec python generation/generate_openai.py \
   --base-url "https://openrouter.ai/api/v1" \
   --api-key "$OPENROUTER_API_KEY" \
   --model "qwen/qwen-2.5-72b-instruct" \
@@ -350,9 +350,9 @@ pyenv exec python phase3/generation/generate_openai.py \
   --provider hyperbolic \
   --limit 2 \
   --variations P-4 \
-  --resume phase3/datasets/Qwen_Qwen2.5-72B-Instruct_1771217443.csv
+  --resume datasets/Qwen_Qwen2.5-72B-Instruct_1771217443.csv
 
-pyenv exec python phase3/generation/generate_openai.py \
+pyenv exec python generation/generate_openai.py \
   --base-url "https://openrouter.ai/api/v1" \
   --api-key "$OPENROUTER_API_KEY" \
   --model "meta-llama/llama-3.1-70b-instruct" \
@@ -360,9 +360,9 @@ pyenv exec python phase3/generation/generate_openai.py \
   --provider "deepinfra" \
   --limit 308 \
   --variations ALL \
-  --resume phase3/datasets/meta-llama_llama-3.1-70b-instruct_1771215436.csv
+  --resume datasets/meta-llama_llama-3.1-70b-instruct_1771215436.csv
 
-pyenv exec python phase3/generation/generate_openai.py \
+pyenv exec python generation/generate_openai.py \
   --base-url "https://openrouter.ai/api/v1" \
   --api-key "$OPENROUTER_API_KEY" \
   --model "meta-llama/llama-3.1-70b-instruct" \
@@ -373,9 +373,9 @@ pyenv exec python phase3/generation/generate_openai.py \
 
 export OPENAI_API_KEY=<your-openai-api-key>
 
-pyenv exec python phase3/generation/generate_chatgpt.py --limit 308 --variation ALL
+pyenv exec python generation/generate_chatgpt.py --limit 308 --variation ALL
 
 export HF_TOKEN=<your-hf-token>
 
- .venv/bin/python3.12 phase3/detection/run_detection.py --detectors zerogpt roberta roberta-qa
+ .venv/bin/python3.12 detection/run_detection.py --detectors zerogpt roberta roberta-qa
 ```

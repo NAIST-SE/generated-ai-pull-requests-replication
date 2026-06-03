@@ -11,7 +11,7 @@ Intelligent file content truncation that preserves the most important parts of e
 ### Enable Truncation for P-4
 
 ```bash
-pyenv exec python phase3/generation/generate_openai.py \
+pyenv exec python generation/generate_openai.py \
   --base-url "https://router.huggingface.co/v1" \
   --api-key "$HF_TOKEN" \
   --model "Qwen/Qwen2.5-72B-Instruct" \
@@ -84,7 +84,7 @@ If you don't use `--truncate-p4`, the script will attempt to send full file cont
 
 ```bash
 # This may fail on 5/10 PRs with 32K limit
-pyenv exec python phase3/generation/generate_openai.py \
+pyenv exec python generation/generate_openai.py \
   --model "Qwen/Qwen2.5-72B-Instruct" \
   --variations P-4
 ```
@@ -95,7 +95,7 @@ Use the notebook to preview which PRs need truncation:
 
 ```bash
 # Open the notebook
-jupyter notebook phase3/analyze_p4_tokens.ipynb
+jupyter notebook analysis/compare_runs.ipynb
 ```
 
 This will show:

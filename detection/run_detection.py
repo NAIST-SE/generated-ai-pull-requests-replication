@@ -1,15 +1,15 @@
 """
-Phase 3 Detection Pipeline
+Detection Pipeline
 
 This script runs AI detection on both Human and AI-generated PR descriptions.
 It uses the common detection tools and utilities.
 
 Input:
-    - Human Baseline: phase3/datasets/selected_prs_sampled.csv
-    - AI Generated: phase3/datasets/generated_descriptions.csv
-    
+    - Human Baseline: datasets/selected_prs_sampled.csv
+    - AI Generated: datasets/generated_descriptions.csv
+
 Output:
-    - Results: phase3/datasets/detection_results.csv
+    - Results: datasets/detection_results.csv
 """
 
 import sys
@@ -25,18 +25,16 @@ import shutil
 import glob
 from typing import List, Dict, Any
 
-# Ensure we can import from phase3 root
-# This allows 'from phase3.data_loader import DataLoader' to work
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from phase3.data_loader import DataLoader
+from data_loader import DataLoader
 from detection_tools import get_available_detectors, create_detector
 from detection_utils import DetectionLogger, ProgressTracker, CSVHandler
 
 # Constants
-DETECTION_RESULTS_PATH = "phase3/datasets/detection_results.csv"
-LOG_DIR = "phase3/detection/logs"
-PROGRESS_DIR = "phase3/detection/progress"
+DETECTION_RESULTS_PATH = "datasets/detection_results.csv"
+LOG_DIR = "detection/logs"
+PROGRESS_DIR = "detection/progress"
 ZERO_GPT_TOKENS_FILE = "detection/env/zero-gpt-tokens.txt" # Path relative to project root
 GPTZERO_API_KEY_FILE = "detection/env/gptzero-api-key.txt" # Path relative to project root
 
@@ -487,7 +485,7 @@ def main():
     logger.log("INFO", "system", "Starting Phase 3 Detection Pipeline")
     
     # 2. Load Data
-    loader = DataLoader() # Assumes running from project root or phase3 is discoverable
+    loader = DataLoader()  # Assumes running from project root
     entries = prepare_entries(loader)
     
     if not entries:

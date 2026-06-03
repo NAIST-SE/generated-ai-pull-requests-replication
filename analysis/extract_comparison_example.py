@@ -3,12 +3,11 @@ import sys
 from pathlib import Path
 import pandas as pd
 
-# Add the parent directory of phase3 (i.e. repo root) to python path if not present
-repo_root = Path(__file__).parent.parent.parent.resolve()
+repo_root = Path(__file__).parent.parent.resolve()
 if str(repo_root) not in sys.path:
     sys.path.append(str(repo_root))
 
-from phase3.data_loader import DataLoader
+from data_loader import DataLoader
 
 def main():
     # Initialize DataLoader using relative path from this script

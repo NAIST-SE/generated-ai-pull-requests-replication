@@ -68,7 +68,7 @@ def main() -> None:
     loader = DataLoader(base_path=str(ROOT / "datasets"))
     df = loader.load_generation_token_runs()
     if df.empty:
-        print("No generation token run data found. Check phase3/datasets.")
+        print("No generation token run data found. Check the datasets/ directory.")
         return
 
     df = df.copy()

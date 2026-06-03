@@ -5,8 +5,8 @@ PR Related Issues Extraction - Phase 3
 This script fetches GitHub issues related to PRs from the selected_prs.csv dataset.
 Based on the reference implementation from phase2/pr_issues/fetch_pr_issues.py.
 
-Input: phase3/datasets/selected_prs.csv
-Output: phase3/datasets/selected_prs_with_related_issues.csv
+Input: datasets/selected_prs.csv
+Output: datasets/selected_prs_with_related_issues.csv
 """
 
 import datetime

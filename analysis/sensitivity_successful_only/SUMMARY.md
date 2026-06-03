@@ -4,7 +4,7 @@
 Are the Prelim-RQ / RQ1 conclusions driven by genuine indistinguishability, or by detector failure on short outputs (1,201 RoBERTa failures, concentrated in Llama-3.1-70B)?
 
 ## Method
-Re-ran Prelim-RQ and RQ1 on three subsets of `phase3/datasets/temperature_1/run_3/detection_results.csv`:
+Re-ran Prelim-RQ and RQ1 on three subsets of `datasets/temperature_1/run_3/detection_results.csv`:
 - **original** — no filter (matches the paper).
 - **{tool}_success** — keep only rows where the named tool returned a successful score; for each headline finding the "per-tool" view is the matching `{tool}_success` view.
 - **common_success** — keep only rows where all three tools succeeded (the strictest, most apples-to-apples view across detectors).
@@ -55,4 +55,4 @@ Add a sensitivity-analysis paragraph to Threats-to-Validity stating:
 2. None of the 44 medium-or-large context effects flipped sign in the per-tool subset; only 1 effect dropped a magnitude class in the strictest common-success view.
 3. The open-source Prelim-RQ F1 magnitudes are conservative because failed scoring on very short outputs is counted as missed detection; the qualitative context-anchoring story is unchanged.
 
-Artifacts for citation/reproducibility live under `phase3/analysis/sensitivity_successful_only/outputs/`.
+Artifacts for citation/reproducibility live under `analysis/sensitivity_successful_only/outputs/`.

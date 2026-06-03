@@ -42,10 +42,9 @@ def check_dependencies():
         )
 check_dependencies()
 
-# Ensure phase3 package is importable
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-from phase3.data_loader import DataLoader, CONTEXT_MAPPING
-from phase3.generation.config import DECODING_PARAMS
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from data_loader import DataLoader, CONTEXT_MAPPING
+from generation.config import DECODING_PARAMS
 
 # --- Configuration & Controlled Variables ---
 

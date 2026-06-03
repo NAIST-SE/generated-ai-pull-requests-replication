@@ -6,7 +6,7 @@ mkdir -p "$LOG_DIR"
 
 # 1. Run LLAMA Generation
 echo "Starting LLAMA Generation..."
-pyenv exec python phase3/generation/generate_openai.py \
+pyenv exec python generation/generate_openai.py \
   --base-url "https://openrouter.ai/api/v1" \
   --api-key "sk-or-v1-xx" \
   --model "meta-llama/llama-3.1-70b-instruct" \
@@ -21,7 +21,7 @@ echo "LLAMA PID: $PID_LLAMA"
 
 # 2. Run QWEN Generation
 echo "Starting QWEN Generation..."
-pyenv exec python phase3/generation/generate_openai.py \
+pyenv exec python generation/generate_openai.py \
   --base-url "https://router.huggingface.co/v1" \
   --api-key "hf_xx" \
   --model "Qwen/Qwen2.5-72B-Instruct" \
@@ -38,7 +38,7 @@ echo "QWEN PID: $PID_QWEN"
 
 # 3. Run CHATGPT Generation
 echo "Starting CHATGPT Generation..."
-pyenv exec python phase3/generation/generate_chatgpt.py \
+pyenv exec python generation/generate_chatgpt.py \
   --limit 308 \
   --variation ALL \
   --workers 5 \

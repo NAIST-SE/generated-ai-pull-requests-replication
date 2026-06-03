@@ -25,14 +25,14 @@ from typing import Dict, Any, List, Optional, Tuple
 from dataclasses import dataclass, asdict
 import pandas as pd
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-from phase3.data_loader import DataLoader, CONTEXT_MAPPING
-from phase3.generation.config import DECODING_PARAMS
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from data_loader import DataLoader, CONTEXT_MAPPING
+from generation.config import DECODING_PARAMS
 
 # Import both prompt builders and select at runtime
-from phase3.generation.generate_llama import PromptBuilder as LlamaPromptBuilder
-from phase3.generation.generate_qwen import PromptBuilder as QwenPromptBuilder
-from phase3.generation.truncate_utils import truncate_pr_files, get_tokenizer_for_model
+from generation.generate_llama import PromptBuilder as LlamaPromptBuilder
+from generation.generate_qwen import PromptBuilder as QwenPromptBuilder
+from generation.truncate_utils import truncate_pr_files, get_tokenizer_for_model
 
 @dataclass
 class ExperimentRecord:

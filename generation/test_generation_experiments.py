@@ -91,8 +91,8 @@ def make_fake_model():
 
 
 @pytest.fixture(params=[
-    "phase3.generation.generate_llama",
-    "phase3.generation.generate_qwen",
+    "generation.generate_llama",
+    "generation.generate_qwen",
 ])
 def patched_module(request, monkeypatch):
     """Import module under test, patch tokenizer/model loading and device availability."""

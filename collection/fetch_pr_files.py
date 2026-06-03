@@ -5,8 +5,8 @@ Phase 3: PR Diffs & File Contents Extraction
 This script fetches PR diffs and file contents using the GitHub API for the selected PRs
 from the Phase 3 dataset. It's adapted from the Phase 2 implementation.
 
-Input: phase3/datasets/selected_prs.csv
-Output: phase3/datasets/selected_prs_with_diffs_and_file_contents.csv
+Input: datasets/selected_prs.csv
+Output: datasets/selected_prs_with_diffs_and_file_contents.csv
 
 Usage:
     python fetch_pr_files.py [--skip-file-content]
