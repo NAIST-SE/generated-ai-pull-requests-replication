@@ -14,9 +14,9 @@ CONTEXT_MAPPING = {
 }
 
 MODEL_MAPPING = {
-    "gpt-5-mini-2025-08-07": "Industrial (GPT-5-mini-2025-08-07)",
-    "Llama-3.1-8B-Instruct": "Open Source (Llama-3.1-8B-Instruct)",
-    "gpt-4o-mini": "Industrial (GPT-4o-mini Fallback)",
+    "gpt-5-mini-2025-08-07": "GPT-5-mini-2025-08-07 (proprietary)",
+    "Llama-3.1-70B-Instruct": "Llama-3.1-70B-Instruct (open-source)",
+    "Qwen2.5-72B-Instruct": "Qwen2.5-72B-Instruct (open-source)",
 }
 
 # --- Blacklist ---

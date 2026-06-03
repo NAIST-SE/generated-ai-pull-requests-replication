@@ -28,7 +28,7 @@ The paper investigates AI-generated pull-request descriptions produced under six
 |---|---|---|
 | P-1 | Repo Path | Repository name + affected file paths |
 | P-2 | PR Title | PR title only |
-| P-3 | File Diff | Unified diffs (baseline) |
+| P-3 | PR Diffs | Unified diffs (baseline) |
 | P-4 | File Contents | Full file contents |
 | P-5 | Linked Issue | Linked GitHub issue descriptions |
 | P-6 | Without File Contents | All of P-1 + P-2 + P-3 + P-5 combined |

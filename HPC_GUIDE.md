@@ -105,7 +105,7 @@ Example: `llm_test.py`
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
-model_name = "meta-llama/Llama-3.1-8B-Instruct"
+model_name = "meta-llama/Llama-3.1-70B-Instruct"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
