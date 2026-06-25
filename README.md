@@ -153,20 +153,18 @@ To run notebooks non-interactively (e.g. to reproduce all outputs at once):
 python -m papermill analysis/<notebook>.ipynb analysis/<notebook>.ipynb --cwd analysis
 ```
 
-> **Note on notebook naming:** The `analysis_rq3_*` prefix is an internal project code (not "Research Question 3"). Those notebooks cover both RQ2 (textual similarity) and RQ3 (code-text alignment) as indicated in the table below.
-
 | Notebook | Answers | GPU? |
 |---|---|---|
 | `analysis_detectability_by_llm.ipynb` | Prelim-RQ + RQ1 | No |
 | `rq1_probability_boxplots.ipynb` | RQ1 — generates Figure 3 (probability boxplots) | No |
-| `analysis_rq3_word_sentence_count.ipynb` | RQ2 — word count, sentence count | No |
-| `analysis_rq3_reading_ease.ipynb` | RQ2 — Flesch-Kincaid readability (FKGL) | No |
-| `analysis_rq3_ttr.ipynb` | RQ2 — Type-Token Ratio (TTR) | No |
-| `analysis_rq3_mtld.ipynb` | RQ2 — MTLD lexical diversity | No |
-| `analysis_rq3_lexical_density.ipynb` | RQ2 — lexical density | No |
-| `analysis_rq3_rouge.ipynb` | RQ2 — ROUGE-1/2/L lexical overlap | No |
-| `analysis_rq3_bm25.ipynb` | RQ2 — BM25 lexical relevance | No |
-| `analysis_rq3_bertscore.ipynb` | RQ2 — BERTScore semantic similarity | **Yes** — loads DeBERTa-xlarge (~3 GB) |
+| `analysis_rq2_word_sentence_count.ipynb` | RQ2 — word count, sentence count | No |
+| `analysis_rq2_reading_ease.ipynb` | RQ2 — Flesch-Kincaid readability (FKGL) | No |
+| `analysis_rq2_ttr.ipynb` | RQ2 — Type-Token Ratio (TTR) | No |
+| `analysis_rq2_mtld.ipynb` | RQ2 — MTLD lexical diversity | No |
+| `analysis_rq2_lexical_density.ipynb` | RQ2 — lexical density | No |
+| `analysis_rq2_rouge.ipynb` | RQ2 — ROUGE-1/2/L lexical overlap | No |
+| `analysis_rq2_bm25.ipynb` | RQ2 — BM25 lexical relevance | No |
+| `analysis_rq2_bertscore.ipynb` | RQ2 — BERTScore semantic similarity | **Yes** — loads DeBERTa-xlarge (~3 GB) |
 | `analysis_rq3_codebert.ipynb` | RQ3 — CodeBERT code-text alignment | **Yes** — loads `microsoft/codebert-base` (~500 MB) |
 | `analysis_rq3_graphcodebert.ipynb` | RQ3 — GraphCodeBERT code-text alignment | **Yes** — loads `microsoft/graphcodebert-base` (~500 MB) |
 | `compare_runs.ipynb` | Validity — paired statistical tests (Wilcoxon + t-test) confirming detection scores are consistent across two independent generation runs at temperature = 1 | No |
