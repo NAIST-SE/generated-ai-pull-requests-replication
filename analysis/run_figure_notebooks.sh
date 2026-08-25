@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run all RQ3 figure notebooks then assemble textual_features_boxplots.pdf.
+# Run all RQ2/RQ3 figure notebooks then assemble textual_features_boxplots.pdf.
 #
 # Usage:
 #   bash run_figure_notebooks.sh
@@ -19,26 +19,30 @@ if [ -f "$LIBCUDA" ]; then
   export LD_PRELOAD="${LD_PRELOAD:+${LD_PRELOAD}:}${LIBCUDA}"
 fi
 
-# Default to the venv's jupyter if it exists and no override is set
-VENV_JUPYTER="$SCRIPT_DIR/../../.venv/bin/jupyter"
-if [ -z "${JUPYTER:-}" ] && [ -x "$VENV_JUPYTER" ]; then
-  JUPYTER="$(realpath "$VENV_JUPYTER")"
-else
-  JUPYTER="${JUPYTER:-jupyter}"
-fi
+# Frontend jupyter (any working nbconvert is fine — it only drives execution; the KERNEL
+# is what needs the packages). Override with JUPYTER=... if needed.
+JUPYTER="${JUPYTER:-jupyter}"
 
-# Resolve jupyter to its full path so we can derive the venv bin directory
-JUPYTER_PATH="$(command -v "$JUPYTER" 2>/dev/null || echo "$JUPYTER")"
-VENV_BIN="$(dirname "$JUPYTER_PATH")"
-VENV_PIP="${VENV_BIN}/pip"
-VENV_PYTHON="${VENV_BIN}/python3"
-[ -x "$VENV_PIP" ]    || VENV_PIP="pip"
-[ -x "$VENV_PYTHON" ] || VENV_PYTHON="python3"
+# Named kernels selected explicitly per notebook so we never depend on which "python3"
+# kernelspec happens to win. Register once (see run instructions):
+#   python -m ipykernel install --user --name iwadi-main          # main analysis env (torch, matplotlib, ...)
+#   <py312-env>/bin/python -m ipykernel install --user --name iwadi-py312   # taaled + spaCy env
+MAIN_KERNEL="${MAIN_KERNEL:-iwadi-main}"     # word/sentence, ttr, reading_ease, rouge, bm25, bertscore, codebert, graphcodebert
+PY312_KERNEL="${PY312_KERNEL:-iwadi-py312}"  # mtld, lexical_density (taaled/spaCy)
 
-echo "=== Checking PyTorch CUDA ==="
-TORCH_VER="$(timeout 15 "$VENV_PYTHON" -c 'import torch; print(torch.__version__)' 2>/dev/null || echo 'not installed')"
-if timeout 15 "$VENV_PYTHON" -c "import torch, sys; sys.exit(0 if torch.cuda.is_available() else 1)" 2>/dev/null; then
-  echo "   ✓ CUDA available — torch ${TORCH_VER}"
+# Python used only to assemble the final PDF (needs matplotlib/pypdf) — the MAIN kernel's env.
+ASSEMBLE_PYTHON="${ASSEMBLE_PYTHON:-python}"
+
+echo "=== Checking kernels & CUDA ==="
+"$JUPYTER" kernelspec list 2>/dev/null | grep -E "iwadi-main|iwadi-py312" || {
+  echo "   ERROR: expected kernels not registered. Register them first:"
+  echo "     python -m ipykernel install --user --name ${MAIN_KERNEL}"
+  echo "     /mnt/ext-hdd1/ayo/py312-analysis/bin/python -m ipykernel install --user --name ${PY312_KERNEL}"
+  exit 1
+}
+TORCH_VER="$(timeout 15 "$ASSEMBLE_PYTHON" -c 'import torch; print(torch.__version__)' 2>/dev/null || echo 'not installed')"
+if timeout 15 "$ASSEMBLE_PYTHON" -c "import torch, sys; sys.exit(0 if torch.cuda.is_available() else 1)" 2>/dev/null; then
+  echo "   ✓ CUDA available — torch ${TORCH_VER} (main kernel: ${MAIN_KERNEL})"
 else
   echo "   WARNING: CUDA unavailable — torch ${TORCH_VER}"
   echo "   Heavy notebooks (bertscore, codebert, graphcodebert) will run on CPU and be slow."
@@ -48,18 +52,18 @@ echo "=== Starting notebook runs ==="
 
 # Light notebooks first, heavy GPU notebooks last
 LIGHT=(
-  analysis_rq3_word_sentence_count.ipynb
-  analysis_rq3_reading_ease.ipynb
-  analysis_rq3_ttr.ipynb
-  analysis_rq3_mtld.ipynb
-  analysis_rq3_lexical_density.ipynb
-  analysis_rq3_rouge.ipynb
-  analysis_rq3_bm25.ipynb
+  analysis_rq2_word_sentence_count.ipynb
+  analysis_rq2_reading_ease.ipynb
+  analysis_rq2_ttr.ipynb
+  analysis_rq2_mtld.ipynb
+  analysis_rq2_lexical_density.ipynb
+  analysis_rq2_rouge.ipynb
+  analysis_rq2_bm25.ipynb
 )
 
 # BERTScore and CodeBERT/GraphCodeBERT all load large transformer models
 HEAVY=(
-  analysis_rq3_bertscore.ipynb
+  analysis_rq2_bertscore.ipynb
   analysis_rq3_codebert.ipynb
   analysis_rq3_graphcodebert.ipynb
 )
@@ -71,14 +75,15 @@ FAILED_NOTEBOOKS=()
 run_notebook() {
   local nb="$1"
   local timeout="$2"
+  local kernel="${3:-$MAIN_KERNEL}"   # kernel name (iwadi-main / iwadi-py312)
   echo ""
-  echo "▶  $nb"
+  echo "▶  $nb   [kernel: $kernel]"
   if "$JUPYTER" nbconvert \
       --to notebook \
       --execute \
       --inplace \
       --ExecutePreprocessor.timeout="$timeout" \
-      --ExecutePreprocessor.kernel_name=python3 \
+      --ExecutePreprocessor.kernel_name="$kernel" \
       "$nb"; then
     echo "   ✓ done"
     ((PASS++)) || true
@@ -91,13 +96,18 @@ run_notebook() {
 
 echo "=== Running light notebooks (timeout: 10 min each) ==="
 for nb in "${LIGHT[@]}"; do
-  run_notebook "$nb" 600
+  case "$nb" in
+    analysis_rq2_mtld.ipynb|analysis_rq2_lexical_density.ipynb)
+      run_notebook "$nb" 600 "$PY312_KERNEL" ;;
+    *)
+      run_notebook "$nb" 600 "$MAIN_KERNEL" ;;
+  esac
 done
 
 echo ""
 echo "=== Running heavy notebooks (timeout: 2 h each) ==="
 for nb in "${HEAVY[@]}"; do
-  run_notebook "$nb" 7200
+  run_notebook "$nb" 7200 "$MAIN_KERNEL"
 done
 
 echo ""
@@ -114,4 +124,4 @@ fi
 
 echo ""
 echo "=== Assembling textual_features_boxplots.pdf ==="
-"$VENV_PYTHON" assemble_textual_features_pdf.py
+"$ASSEMBLE_PYTHON" assemble_textual_features_pdf.py
