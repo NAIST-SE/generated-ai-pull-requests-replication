@@ -27,5 +27,7 @@ scikit-posthocs
 numpy
 bitsandbytes>=0.43.1
 matplotlib
+scipy  # paired_stats.py: Wilcoxon signed-rank, rankdata
+statsmodels  # paired_stats.py: Benjamini-Hochberg FDR (multipletests); numpy fallback if absent
 # flash-attn
 rouge_score
