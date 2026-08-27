@@ -49,12 +49,31 @@ The paper investigates AI-generated pull-request descriptions produced under six
 │   ├── deep_audit/      # Cleaned-data integrity, paired tests, BM25 retrieval, verification
 │   ├── outputs/deep_audit/  # Authoritative Prelim-RQ/RQ1/BM25 result families
 │   └── sensitivity_successful_only/  # Superseded historical analysis; do not cite
+├── supplementary/       # Standalone supplementary results and publication figures
 ├── docs/                # Browser-based tools: blind-coding interface + PR inspector
 ├── data_loader.py       # Shared dataset loader used across scripts and notebooks
 ├── requirements.txt     # Python dependencies
 ├── run_generation.sh    # Parallel generation entry point
 ├── run_detection_pipeline.sh  # Detection entry point
 └── verify_detection.py  # Quick integrity check on detection_results.csv
+```
+
+---
+
+## Supplementary Results
+
+The paper's supplementary results are published in
+[`supplementary/supplementary.tex`](supplementary/supplementary.tex) rather than embedded in
+the manuscript. The document includes additional Preliminary-Question detail, RQ2
+structural and lexical distributions, and the audited ROUGE, BERTScore, and fixed-corpus
+BM25 interpretation.
+
+Compile it without writing build artifacts into the repository:
+
+```bash
+supp_build_dir="$(mktemp -d /tmp/llm-prs-supplement.XXXXXX)"
+cd supplementary
+tectonic -X compile --outdir "$supp_build_dir" --keep-logs supplementary.tex
 ```
 
 ---
