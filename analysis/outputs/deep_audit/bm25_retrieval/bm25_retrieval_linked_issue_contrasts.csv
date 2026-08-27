@@ -1,0 +1,16 @@
+model,context_a,context_b,sign,n,median_human,median_ai,cliffs_delta,rank_biserial,wilcoxon_stat,p,magnitude,adj_p,sig
+Qwen/Qwen2.5-72B-Instruct,Linked Issue,Repo Path,positive values favour Linked Issue,308,1.0,0.009434801958166445,0.7207265137459943,0.9979594883790375,41.0,5.646252398125582e-48,Large,8.469378597188373e-47,True
+Qwen/Qwen2.5-72B-Instruct,Linked Issue,PR Title,positive values favour Linked Issue,308,1.0,0.15476190476190477,0.40134297520661155,0.9756357545302269,240.0,1.1000608537332497e-32,Medium,2.3572732579998208e-32,True
+Qwen/Qwen2.5-72B-Instruct,Linked Issue,File Diff,positive values favour Linked Issue,308,1.0,0.3333333333333333,0.3463168325181312,0.9551116333725029,382.0,2.6594140301077576e-29,Medium,3.324267537634697e-29,True
+Qwen/Qwen2.5-72B-Instruct,Linked Issue,File Contents,positive values favour Linked Issue,302,1.0,0.01266025641025641,0.6377790447787378,0.9916053921568627,137.0,6.992002879993944e-43,Large,2.0976008639981834e-42,True
+Qwen/Qwen2.5-72B-Instruct,Linked Issue,Without File Contents,positive values favour Linked Issue,308,1.0,1.0,0.13296930342384888,0.7300337457817773,1080.0,1.1450259592578633e-12,Negligible,1.226813527776282e-12,True
+gpt-5-mini-2025-08-07,Linked Issue,Repo Path,positive values favour Linked Issue,308,1.0,0.015504807692307693,0.6585849215719346,0.9990496953435072,17.0,1.8277802390972313e-45,Large,6.854175896614617e-45,True
+gpt-5-mini-2025-08-07,Linked Issue,PR Title,positive values favour Linked Issue,308,1.0,0.2,0.3860157699443414,0.9802700468448609,179.0,1.0214016534163196e-31,Medium,1.5321024801244795e-31,True
+gpt-5-mini-2025-08-07,Linked Issue,File Diff,positive values favour Linked Issue,308,1.0,0.3333333333333333,0.3362603305785124,0.9753222836095764,201.0,7.316181840068736e-30,Medium,9.976611600093732e-30,True
+gpt-5-mini-2025-08-07,Linked Issue,File Contents,positive values favour Linked Issue,302,1.0,0.05572755417956656,0.562387614578308,1.0,0.0,2.6775355578668704e-41,Large,6.693838894667176e-41,True
+gpt-5-mini-2025-08-07,Linked Issue,Without File Contents,positive values favour Linked Issue,308,1.0,1.0,0.1625906560971496,0.7862595419847328,924.0,5.449566231291164e-15,Small,6.287961036105189e-15,True
+meta-llama/llama-3.1-70b-instruct,Linked Issue,Repo Path,positive values favour Linked Issue,308,1.0,0.012987012987012988,0.7920496711081126,0.9990582326165437,18.0,6.213096129448291e-47,Large,4.659822097086219e-46,True
+meta-llama/llama-3.1-70b-instruct,Linked Issue,PR Title,positive values favour Linked Issue,308,1.0,0.25,0.45985832349468714,0.989083820662768,98.0,4.1800323764806894e-32,Medium,7.760193073371902e-32,True
+meta-llama/llama-3.1-70b-instruct,Linked Issue,File Diff,positive values favour Linked Issue,308,1.0,0.2,0.46615154326193287,0.9884154831523253,104.0,4.656115844023141e-32,Medium,7.760193073371902e-32,True
+meta-llama/llama-3.1-70b-instruct,Linked Issue,File Contents,positive values favour Linked Issue,302,1.0,0.009478885893980233,0.8175189684662953,0.999144407903532,16.0,1.8922889899092225e-46,Large,9.461444949546112e-46,True
+meta-llama/llama-3.1-70b-instruct,Linked Issue,Without File Contents,positive values favour Linked Issue,308,1.0,1.0,0.1296382189239332,0.8232922732362822,394.5,4.169059062760655e-12,Negligible,4.169059062760655e-12,True

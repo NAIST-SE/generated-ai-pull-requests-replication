@@ -1,0 +1,5 @@
+Model,Metric,N,Mean,Median,Std,Min,Max,Q1,Q3
+Human,Type-Token Ratio,308,0.6258,0.5954,0.138,0.3982,1.0,0.5304,0.661
+meta-llama/llama-3.1-70b-instruct,Type-Token Ratio,1842,0.8021,0.8,0.1268,0.3517,1.0,0.7106,0.9
+gpt-5-mini-2025-08-07,Type-Token Ratio,1842,0.5772,0.5682,0.0814,0.3385,0.8913,0.5185,0.6279
+Qwen/Qwen2.5-72B-Instruct,Type-Token Ratio,1842,0.7038,0.7013,0.095,0.2772,0.9697,0.6374,0.7682

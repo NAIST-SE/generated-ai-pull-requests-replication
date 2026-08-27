@@ -1,0 +1,4 @@
+Model,Metric,N pairs,Human Median,Model Median,Wilcoxon p,Cliff's Delta,Rank-Biserial,Effect Size,adj_Wilcoxon p,sig,Sig
+meta-llama/llama-3.1-70b-instruct,GraphCodeBERT Similarity,308,0.707814633846283,0.7328804284334183,1.8322320629563105e-22,-0.2564,-0.641,Small,1.8322320629563105e-22,True,***
+gpt-5-mini-2025-08-07,GraphCodeBERT Similarity,308,0.707814633846283,0.7414446075757344,3.540871795921148e-36,-0.3222,-0.8257,Small,1.0622615387763443e-35,True,***
+Qwen/Qwen2.5-72B-Instruct,GraphCodeBERT Similarity,308,0.707814633846283,0.7319888820250828,4.7667552268837456e-24,-0.2654,-0.6649,Small,7.150132840325618e-24,True,***

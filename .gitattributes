@@ -1,0 +1,6 @@
+# Preserve byte-level integrity hashes for frozen and audited data exports.
+datasets/temperature_1/run_*/detection_results*.csv -text -diff
+datasets/temperature_1/run_3_cleaned/*.csv -text -diff
+
+# Large generated score exports are data artifacts, not source-code diffs.
+analysis/outputs/deep_audit/**/*.csv -text -diff

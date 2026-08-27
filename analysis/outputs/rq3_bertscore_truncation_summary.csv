@@ -1,0 +1,19 @@
+model,Context_Name,N,AI_truncated_n,Human_truncated_n,Pair_any_truncated_n,AI_excess_total_tokens,Human_excess_total_tokens,Pair_excess_total_tokens,AI_total_tokens,Human_total_tokens,Pair_total_tokens,AI_trunc_rate_%,Human_trunc_rate_%,Pair_any_trunc_rate_%,AI_excess_mean_tokens_if_truncated,Human_excess_mean_tokens_if_truncated,AI_token_loss_%,Human_token_loss_%,Pair_token_loss_%
+Qwen/Qwen2.5-72B-Instruct,File Contents,302,1,16,17,1365,1594,2959,40842,74554,115396,0.33,5.3,5.63,1365.0,99.62,3.34,2.14,2.56
+Qwen/Qwen2.5-72B-Instruct,File Diff,308,0,16,16,0,1594,1594,32550,75280,107830,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.48
+Qwen/Qwen2.5-72B-Instruct,Linked Issue,308,0,16,16,0,1594,1594,31853,75280,107133,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.49
+Qwen/Qwen2.5-72B-Instruct,PR Title,308,0,16,16,0,1594,1594,15943,75280,91223,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.75
+Qwen/Qwen2.5-72B-Instruct,Repo Path,308,0,16,16,0,1594,1594,25476,75280,100756,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.58
+Qwen/Qwen2.5-72B-Instruct,Without File Contents,308,0,16,16,0,1594,1594,39834,75280,115114,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.38
+gpt-5-mini-2025-08-07,File Contents,302,71,16,81,10459,1594,12053,116929,74554,191483,23.51,5.3,26.82,147.31,99.62,8.94,2.14,6.29
+gpt-5-mini-2025-08-07,File Diff,308,37,16,51,4931,1594,6525,92626,75280,167906,12.01,5.19,16.56,133.27,99.62,5.32,2.12,3.89
+gpt-5-mini-2025-08-07,Linked Issue,308,0,16,16,0,1594,1594,69798,75280,145078,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.1
+gpt-5-mini-2025-08-07,PR Title,308,10,16,26,524,1594,2118,89209,75280,164489,3.25,5.19,8.44,52.4,99.62,0.59,2.12,1.29
+gpt-5-mini-2025-08-07,Repo Path,308,19,16,34,1874,1594,3468,95614,75280,170894,6.17,5.19,11.04,98.63,99.62,1.96,2.12,2.03
+gpt-5-mini-2025-08-07,Without File Contents,308,61,16,71,10121,1594,11715,114521,75280,189801,19.81,5.19,23.05,165.92,99.62,8.84,2.12,6.17
+meta-llama/llama-3.1-70b-instruct,File Contents,302,0,16,16,0,1594,1594,21140,74554,95694,0.0,5.3,5.3,0.0,99.62,0.0,2.14,1.67
+meta-llama/llama-3.1-70b-instruct,File Diff,308,0,16,16,0,1594,1594,15719,75280,90999,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.75
+meta-llama/llama-3.1-70b-instruct,Linked Issue,308,0,16,16,0,1594,1594,17473,75280,92753,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.72
+meta-llama/llama-3.1-70b-instruct,PR Title,308,0,16,16,0,1594,1594,10065,75280,85345,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.87
+meta-llama/llama-3.1-70b-instruct,Repo Path,308,0,16,16,0,1594,1594,12590,75280,87870,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.81
+meta-llama/llama-3.1-70b-instruct,Without File Contents,308,0,16,16,0,1594,1594,22588,75280,97868,0.0,5.19,5.19,0.0,99.62,0.0,2.12,1.63

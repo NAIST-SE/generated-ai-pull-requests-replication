@@ -1,0 +1,36 @@
+{
+  "expected": {
+    "cleaned_detection_ai_rows": 5526,
+    "cleaned_detection_human_rows": 308,
+    "excluded_generation_rows": 18,
+    "excluded_rows_present_in_detection": 2,
+    "frozen_detection_ai_rows": 5528,
+    "planned_generation_rows": 5544,
+    "successful_generation_rows": 5526
+  },
+  "key_columns": [
+    "pr_id",
+    "variation",
+    "model"
+  ],
+  "observed": {
+    "cleaned_detection_ai_rows": 5526,
+    "cleaned_detection_human_rows": 308,
+    "excluded_generation_rows": 18,
+    "excluded_rows_present_in_detection": 2,
+    "frozen_detection_ai_rows": 5528,
+    "planned_generation_rows": 5544,
+    "successful_generation_rows": 5526
+  },
+  "output_sha256": {
+    "detection_results.csv": "6af94e923188ebd57023d67f25a79e0f1aac7c760a8b4220a6b0fe292c438c63",
+    "generation_exclusions.csv": "1b9b82be9a52a623787946e002aa9c945c1636081c7580f737b0856b50a032d2"
+  },
+  "source_sha256": {
+    "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3/Qwen_Qwen2.5-72B-Instruct_1771584467.csv": "64bb1bdce1052aa8315e91cf1aaf7d5415f3d1c59096d443980bb2748e8a1dc0",
+    "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3/chatgpt_results_exp_chatgpt_1771584462.csv": "3d8a3adf66ce650aef5c938163915eef39f5f867ff6e07e0027c742c38b21234",
+    "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3/detection_results.csv": "8cd6aaf024a487ac372d95edc9e1b5ce91a98fd2d83af6de5394444722f6471d",
+    "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3/meta-llama_llama-3.1-70b-instruct_1771584467.csv": "45c50cdd23887a2dd25578340e90f9eefbd1071813336a5d6d7e3e1e2dee0f50"
+  },
+  "success_rule": "finish_reason == 'stop', generated_text non-empty, and no known error marker"
+}

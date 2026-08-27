@@ -1,0 +1,7 @@
+view,detector,aggregation,n_complete_prs,statistic,df,p
+operational,ZeroGPT,mean across available generators per PR/context,302,301.21295227097784,5,5.493966107651752e-63
+successful_only,ZeroGPT,mean across available generators per PR/context,302,301.21295227097784,5,5.493966107651752e-63
+operational,ChatGPT Detector RoBERTa,mean across available generators per PR/context,302,127.78240302743598,5,7.032095253053992e-26
+successful_only,ChatGPT Detector RoBERTa,mean across available generators per PR/context,301,120.82154722354062,5,2.1023643314802976e-24
+operational,ChatGPT-QA Detector RoBERTa,mean across available generators per PR/context,302,350.36896877956497,5,1.4576915665386415e-73
+successful_only,ChatGPT-QA Detector RoBERTa,mean across available generators per PR/context,301,313.6037019458945,5,1.1894873741635925e-65

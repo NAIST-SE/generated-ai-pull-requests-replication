@@ -1,0 +1,54 @@
+{
+  "ai_rows_by_model_context": {
+    "Qwen/Qwen2.5-72B-Instruct": {
+      "P-1": 308,
+      "P-2": 308,
+      "P-3": 308,
+      "P-4": 302,
+      "P-5": 308,
+      "P-6": 308
+    },
+    "gpt-5-mini-2025-08-07": {
+      "P-1": 308,
+      "P-2": 308,
+      "P-3": 308,
+      "P-4": 302,
+      "P-5": 308,
+      "P-6": 308
+    },
+    "meta-llama/llama-3.1-70b-instruct": {
+      "P-1": 308,
+      "P-2": 308,
+      "P-3": 308,
+      "P-4": 302,
+      "P-5": 308,
+      "P-6": 308
+    }
+  },
+  "cleaned_input_sha256": "6af94e923188ebd57023d67f25a79e0f1aac7c760a8b4220a6b0fe292c438c63",
+  "cleaned_rows": {
+    "ai": 5526,
+    "human": 308
+  },
+  "contracts": {
+    "bm25_pairwise_rows": 15,
+    "bm25_score_rows": 5526,
+    "bm25_summary_rows": 18,
+    "descriptive_detector_rows": 108,
+    "prelim_file_diff_metric_rows": 9,
+    "prelim_omnibus_rows": 6,
+    "prelim_pairwise_rows": 18,
+    "rq1_f1_extrema_rows": 9,
+    "rq1_friedman_rows": 6,
+    "rq1_pairwise_rows": 270,
+    "rq1_view_comparison_rows": 135,
+    "rq1_view_direction_reversals": 10,
+    "rq1_view_significance_changes": 9
+  },
+  "required_figures": {
+    "bm25_retrieval.pdf": "313daa9cfd658a76a124d14cb60eddc26b7dcf7ad3bd7189e493e602e45fa6ff",
+    "rq1_probability_boxplots_paired.pdf": "2b35a4ab09741b43f761dcd0148673d6f60619a9e97cc47f29c721c0372a266d",
+    "textual_features_boxplots.pdf": "f08c80f27a5bcdeeb125cffdc284cdf376d5438a6155b30192129a40318ae902"
+  },
+  "status": "PASS"
+}

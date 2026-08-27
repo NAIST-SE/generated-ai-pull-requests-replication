@@ -1,0 +1,10 @@
+detector,model,best_f1,best_contexts,worst_f1,worst_contexts
+ChatGPT Detector RoBERTa,Qwen/Qwen2.5-72B-Instruct,0.6311111111111111,PR Title,0.3076923076923077,Without File Contents
+ChatGPT Detector RoBERTa,gpt-5-mini-2025-08-07,0.012903225806451613,PR Title; File Diff,0.0,Repo Path
+ChatGPT Detector RoBERTa,meta-llama/llama-3.1-70b-instruct,0.5821596244131455,File Contents,0.13333333333333333,PR Title
+ChatGPT-QA Detector RoBERTa,Qwen/Qwen2.5-72B-Instruct,0.8625235404896422,File Contents,0.254957507082153,Linked Issue
+ChatGPT-QA Detector RoBERTa,gpt-5-mini-2025-08-07,0.0,Repo Path; PR Title; File Diff; File Contents; Linked Issue; Without File Contents,0.0,Repo Path; PR Title; File Diff; File Contents; Linked Issue; Without File Contents
+ChatGPT-QA Detector RoBERTa,meta-llama/llama-3.1-70b-instruct,0.5339805825242718,File Contents,0.09287925696594428,Linked Issue
+ZeroGPT,Qwen/Qwen2.5-72B-Instruct,0.8133595284872298,File Contents,0.1935483870967742,Linked Issue
+ZeroGPT,gpt-5-mini-2025-08-07,0.44836272040302266,PR Title,0.0641025641025641,File Contents
+ZeroGPT,meta-llama/llama-3.1-70b-instruct,0.20771513353115728,File Contents,0.006472491909385114,Linked Issue

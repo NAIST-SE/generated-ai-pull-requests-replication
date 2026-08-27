@@ -1,0 +1,7 @@
+Context,Metric,N,Mean,Median,Std,Min,Max
+Linked Issue,BERTScore F1,924,0.1281,0.11,0.16,-0.406,0.7658
+Without File Contents,BERTScore F1,924,0.0484,0.0388,0.1428,-0.4789,0.7079
+File Diff,BERTScore F1,924,-0.0465,-0.0427,0.1029,-0.5532,0.3155
+Repo Path,BERTScore F1,924,-0.0649,-0.0504,0.0972,-0.5566,0.1715
+File Contents,BERTScore F1,908,-0.0732,-0.0639,0.0913,-0.5358,0.201
+PR Title,BERTScore F1,924,-0.0761,-0.0701,0.0987,-0.494,0.3926

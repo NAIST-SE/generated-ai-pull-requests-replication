@@ -1,0 +1,16 @@
+{
+  "contexts": {
+    "P-1": "Repo Path",
+    "P-2": "PR Title",
+    "P-3": "File Diff",
+    "P-4": "File Contents",
+    "P-5": "Linked Issue",
+    "P-6": "Without File Contents"
+  },
+  "friedman_estimand": "per-PR/context mean probability across available generators",
+  "input": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_cleaned/detection_results.csv",
+  "input_sha256": "6af94e923188ebd57023d67f25a79e0f1aac7c760a8b4220a6b0fe292c438c63",
+  "operational_failure_policy": "detector failure is probability 0 (not flagged)",
+  "pairwise_estimand": "within-model, within-PR context probability difference",
+  "pairwise_fdr_family": "15 context pairs within each view/detector/model"
+}

@@ -10,7 +10,7 @@ Page order:
   5  – lexical_density.pdf           (appendix, fig:ld_boxplots)
   6  – rouge.pdf                     (main text, fig:rouge_boxplots)
   7  – bertscore.pdf                 (main text, fig:bertscore_boxplots)
-  8  – bm25.pdf                      (main text, fig:bm25_boxplots)
+  8  – bm25_retrieval.pdf            (main text, redesigned BM25 retrieval)
   9  – codebert.pdf                  (main text, fig:codebert_boxplots)
   10 – graphcodebert.pdf             (main text, fig:graphcodebert_boxplots)
 
@@ -34,7 +34,7 @@ PAGE_ORDER = [
     "lexical_density.pdf",
     "rouge.pdf",
     "bertscore.pdf",
-    "bm25.pdf",
+    "bm25_retrieval.pdf",
     "codebert.pdf",
     "graphcodebert.pdf",
 ]

@@ -12,6 +12,14 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
+# Study analyses are authorised only on the project server.  Fail closed so an
+# accidental local invocation cannot recompute or overwrite result artifacts.
+HOST_SHORT="$(hostname -s)"
+if [ "$HOST_SHORT" != "nokogiri" ]; then
+  echo "ERROR: analyses must run on nokogiri (current host: $HOST_SHORT)." >&2
+  exit 1
+fi
+
 # PyTorch's bundled CUDA runtime doesn't find libcuda.so.1 automatically on this
 # system; preloading the real driver library makes torch.cuda.is_available() work.
 LIBCUDA="/usr/lib/x86_64-linux-gnu/libcuda.so.1"
@@ -27,11 +35,12 @@ JUPYTER="${JUPYTER:-jupyter}"
 # kernelspec happens to win. Register once (see run instructions):
 #   python -m ipykernel install --user --name iwadi-main          # main analysis env (torch, matplotlib, ...)
 #   <py312-env>/bin/python -m ipykernel install --user --name iwadi-py312   # taaled + spaCy env
-MAIN_KERNEL="${MAIN_KERNEL:-iwadi-main}"     # word/sentence, ttr, reading_ease, rouge, bm25, bertscore, codebert, graphcodebert
+MAIN_KERNEL="${MAIN_KERNEL:-iwadi-main}"     # rq1, word/sentence, ttr, reading_ease, rouge, bertscore, codebert, graphcodebert
 PY312_KERNEL="${PY312_KERNEL:-iwadi-py312}"  # mtld, lexical_density (taaled/spaCy)
 
-# Python used only to assemble the final PDF (needs matplotlib/pypdf) — the MAIN kernel's env.
-ASSEMBLE_PYTHON="${ASSEMBLE_PYTHON:-python}"
+# Python used for standalone analyses and final PDF assembly.  The system `python`
+# on nokogiri is Python 2.7, so default to the interpreter registered by iwadi-main.
+ASSEMBLE_PYTHON="${ASSEMBLE_PYTHON:-/home/ayo-b/.pyenv/versions/3.12.9/bin/python}"
 
 echo "=== Checking kernels & CUDA ==="
 "$JUPYTER" kernelspec list 2>/dev/null | grep -E "iwadi-main|iwadi-py312" || {
@@ -52,13 +61,13 @@ echo "=== Starting notebook runs ==="
 
 # Light notebooks first, heavy GPU notebooks last
 LIGHT=(
+  rq1_probability_boxplots.ipynb
   analysis_rq2_word_sentence_count.ipynb
   analysis_rq2_reading_ease.ipynb
   analysis_rq2_ttr.ipynb
   analysis_rq2_mtld.ipynb
   analysis_rq2_lexical_density.ipynb
   analysis_rq2_rouge.ipynb
-  analysis_rq2_bm25.ipynb
 )
 
 # BERTScore and CodeBERT/GraphCodeBERT all load large transformer models
@@ -103,6 +112,13 @@ for nb in "${LIGHT[@]}"; do
       run_notebook "$nb" 600 "$MAIN_KERNEL" ;;
   esac
 done
+
+echo ""
+echo "=== Running fixed-corpus BM25 retrieval analysis ==="
+"$ASSEMBLE_PYTHON" deep_audit/analysis_rq2_bm25_retrieval.py \
+  --input ../datasets/temperature_1/run_3_cleaned/detection_results.csv \
+  --output-dir outputs/deep_audit/bm25_retrieval \
+  --figure-output outputs/figures_pdf/bm25_retrieval.pdf
 
 echo ""
 echo "=== Running heavy notebooks (timeout: 2 h each) ==="

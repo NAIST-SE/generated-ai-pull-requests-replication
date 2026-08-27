@@ -1,0 +1,4 @@
+Model,Metric,N,Mean,Median,Std,Min,Max
+meta-llama/llama-3.1-70b-instruct,BERTScore F1,1844,-0.0383,-0.0636,0.1439,-0.4548,0.7202
+gpt-5-mini-2025-08-07,BERTScore F1,1842,0.0045,0.0015,0.1276,-0.5566,0.6102
+Qwen/Qwen2.5-72B-Instruct,BERTScore F1,1842,-0.0077,-0.0329,0.1472,-0.4938,0.7658

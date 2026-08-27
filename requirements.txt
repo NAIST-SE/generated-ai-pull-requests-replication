@@ -25,14 +25,14 @@ accelerate>=0.33.0
 bitsandbytes>=0.43.1
 scikit-posthocs
 numpy
-bitsandbytes>=0.43.1
 matplotlib
 scipy  # paired_stats.py: Wilcoxon signed-rank, rankdata
 statsmodels  # paired_stats.py: Benjamini-Hochberg FDR (multipletests); numpy fallback if absent
 # flash-attn
 rouge_score
 nltk  # word/sentence + ttr notebooks: word_tokenize, sent_tokenize (needs punkt/punkt_tab data)
-rank-bm25  # bm25 notebook: Okapi BM25
+rank-bm25  # fixed-corpus BM25 retrieval analysis
+pypdf  # assemble_textual_features_pdf.py
 # --- MTLD (mtld notebook), Python 3.12 only ---------------------------------
 # NOT installable via a plain `pip install -r`: taaled's build breaks under modern
 # setuptools, and pip build-isolation ignores a setuptools pin here. Install these two

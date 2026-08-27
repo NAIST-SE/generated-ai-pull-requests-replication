@@ -1,0 +1,10 @@
+view,detector,model,variation,context,n_human,n_ai,human_detector_failures,ai_detector_failures,tp,fp,tn,fn,accuracy,precision,recall,f1,specificity
+operational,ZeroGPT,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,0,0,135,0,308,173,0.7191558441558441,1.0,0.4383116883116883,0.6094808126410836,1.0
+operational,ZeroGPT,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0,0,31,0,308,277,0.5503246753246753,1.0,0.10064935064935066,0.18289085545722714,1.0
+operational,ZeroGPT,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0,0,4,0,308,304,0.5064935064935064,1.0,0.012987012987012988,0.02564102564102564,1.0
+operational,ChatGPT Detector RoBERTa,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,45,3,62,0,308,246,0.6006493506493507,1.0,0.2012987012987013,0.33513513513513515,1.0
+operational,ChatGPT Detector RoBERTa,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,45,2,2,0,308,306,0.5032467532467533,1.0,0.006493506493506494,0.012903225806451613,1.0
+operational,ChatGPT Detector RoBERTa,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,45,181,27,0,308,281,0.5438311688311688,1.0,0.08766233766233766,0.16119402985074627,1.0
+operational,ChatGPT-QA Detector RoBERTa,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,45,3,129,0,308,179,0.7094155844155844,1.0,0.41883116883116883,0.5903890160183066,1.0
+operational,ChatGPT-QA Detector RoBERTa,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,45,2,0,0,308,308,0.5,0.0,0.0,0.0,1.0
+operational,ChatGPT-QA Detector RoBERTa,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,45,181,25,0,308,283,0.5405844155844156,1.0,0.08116883116883117,0.15015015015015015,1.0

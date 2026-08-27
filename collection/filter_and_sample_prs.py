@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
-"""
-Filter and sample PRs from the raw JabRef dump.
+"""LEGACY / NON-AUTHORITATIVE preprocessing prototype.
+
+This script's fixed three-tier sample (50 PRs per tier) was not used to construct the
+study's 308-PR dataset and must not be used to reproduce the manuscript. The source of
+truth is ``collection/sampling_and_distribution.ipynb`` with fixed seed 23; see
+``collection/README.md``.
+
+Historical objective: filter and sample PRs for an earlier Phase 2 design.
 
 Objectives:
 - Filter out PRs without any referenced issues AND too short descriptions
 - Stratified sampling by change size (small, medium, large)
-- Select 100 representative PRs
+- Select a fixed, tiered sample (the implementation defaults to 150 PRs)
 - Extract and validate issue references from PR bodies
 - Exclude template issues and external repository references
 - Filter out descriptions that are too short for quality generation
