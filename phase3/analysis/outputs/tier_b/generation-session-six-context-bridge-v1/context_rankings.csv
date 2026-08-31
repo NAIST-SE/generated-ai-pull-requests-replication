@@ -1,0 +1,73 @@
+model_label,model,metric,aggregation,bridge_version,variation,context,n,aggregate_value,rank_descending,is_top
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,current_bridge,P-6,Without File Contents,50,0.0011274326243437,1.0,True
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,current_bridge,P-3,File Diff,50,-0.0107815547380596,2.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,current_bridge,P-4,File Contents,50,-0.0246984371915459,3.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,current_bridge,P-1,Repo Path,50,-0.02924430090934035,4.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,current_bridge,P-5,Linked Issue,50,-0.03262779675424095,5.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,current_bridge,P-2,PR Title,50,-0.033088646829128196,6.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,historical_bridge,P-6,Without File Contents,50,0.0011274326243437,1.0,True
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,historical_bridge,P-3,File Diff,50,-0.0019866952206939,2.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,historical_bridge,P-4,File Contents,50,-0.0090454545570537,3.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,historical_bridge,P-1,Repo Path,50,-0.0115491941105574,4.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,historical_bridge,P-5,Linked Issue,50,-0.03262779675424095,5.0,False
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,historical_bridge,P-2,PR Title,50,-0.04006079025566575,6.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,current_bridge,P-6,Without File Contents,39,-0.0230579543858766,1.0,True
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,current_bridge,P-3,File Diff,39,-0.0343218967318534,2.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,current_bridge,P-1,Repo Path,39,-0.0429294556379318,3.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,current_bridge,P-5,Linked Issue,39,-0.0636668503284454,4.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,current_bridge,P-4,File Contents,39,-0.0638011246919632,5.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,current_bridge,P-2,PR Title,39,-0.0800333991646766,6.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,historical_bridge,P-6,Without File Contents,39,-0.0230579543858766,1.0,True
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,historical_bridge,P-1,Repo Path,39,-0.050455667078495,2.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,historical_bridge,P-3,File Diff,39,-0.0625962018966674,3.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,historical_bridge,P-5,Linked Issue,39,-0.0636668503284454,4.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,historical_bridge,P-4,File Contents,39,-0.0641464740037918,5.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,historical_bridge,P-2,PR Title,39,-0.0724964961409568,6.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,current_bridge,P-6,Without File Contents,50,0.5370011431968482,1.0,True
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,current_bridge,P-3,File Diff,50,0.4999716717686155,2.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,current_bridge,P-2,PR Title,50,0.4761802756871688,3.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,current_bridge,P-5,Linked Issue,50,0.43475746228234174,4.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,current_bridge,P-4,File Contents,50,0.3108661576439731,5.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,current_bridge,P-1,Repo Path,50,0.28230037263329216,6.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,historical_bridge,P-6,Without File Contents,50,0.5370011431968482,1.0,True
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,historical_bridge,P-3,File Diff,50,0.48894466359123506,2.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,historical_bridge,P-2,PR Title,50,0.48327572558577914,3.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,historical_bridge,P-5,Linked Issue,50,0.43475746228234174,4.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,historical_bridge,P-4,File Contents,50,0.2984060542883757,5.0,False
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,historical_bridge,P-1,Repo Path,50,0.21882356670519232,6.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,current_bridge,P-6,Without File Contents,39,0.48509054411134456,1.0,True
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,current_bridge,P-3,File Diff,39,0.41182050672444875,2.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,current_bridge,P-2,PR Title,39,0.40637789978507133,3.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,current_bridge,P-5,Linked Issue,39,0.22645389932653692,4.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,current_bridge,P-4,File Contents,39,0.15961690255514757,5.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,current_bridge,P-1,Repo Path,39,0.11018151923740095,6.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,historical_bridge,P-2,PR Title,39,0.5109238734789229,1.0,True
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,historical_bridge,P-6,Without File Contents,39,0.48509054411134456,2.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,historical_bridge,P-3,File Diff,39,0.44643099441476863,3.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,historical_bridge,P-5,Linked Issue,39,0.22645389932653692,4.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,historical_bridge,P-4,File Contents,39,0.17108024694015184,5.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,historical_bridge,P-1,Repo Path,39,0.1181667348116628,6.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,current_bridge,P-6,Without File Contents,50,0.11673830184088875,1.0,True
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,current_bridge,P-3,File Diff,50,0.1049191606467148,2.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,current_bridge,P-2,PR Title,50,0.10472411231264514,3.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,current_bridge,P-5,Linked Issue,50,0.09776981282357625,4.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,current_bridge,P-1,Repo Path,50,0.0957316737346478,5.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,current_bridge,P-4,File Contents,50,0.0904896866635175,6.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,historical_bridge,P-6,Without File Contents,50,0.11673830184088875,1.0,True
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,historical_bridge,P-3,File Diff,50,0.11269486775267121,2.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,historical_bridge,P-2,PR Title,50,0.11192298770586864,3.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,historical_bridge,P-5,Linked Issue,50,0.09776981282357625,4.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,historical_bridge,P-1,Repo Path,50,0.09576119402985075,5.0,False
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,historical_bridge,P-4,File Contents,50,0.08298898071625341,6.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,current_bridge,P-6,Without File Contents,39,0.146938775510204,1.0,True
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,current_bridge,P-3,File Diff,39,0.1365461847389558,2.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,current_bridge,P-4,File Contents,39,0.1071428571428571,3.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,current_bridge,P-2,PR Title,39,0.1063829787234042,4.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,current_bridge,P-1,Repo Path,39,0.1058823529411764,5.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,current_bridge,P-5,Linked Issue,39,0.1052631578947368,6.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,historical_bridge,P-6,Without File Contents,39,0.146938775510204,1.0,True
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,historical_bridge,P-2,PR Title,39,0.12,2.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,historical_bridge,P-3,File Diff,39,0.1181818181818182,3.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,historical_bridge,P-1,Repo Path,39,0.1081081081081081,4.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,historical_bridge,P-5,Linked Issue,39,0.1052631578947368,5.0,False
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,historical_bridge,P-4,File Contents,39,0.0985915492957746,6.0,False

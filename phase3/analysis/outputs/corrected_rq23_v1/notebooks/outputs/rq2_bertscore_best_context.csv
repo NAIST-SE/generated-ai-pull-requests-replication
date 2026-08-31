@@ -1,0 +1,4 @@
+model,variation,context,n,mean,median
+Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,273,-0.03100881639048423,-0.029448317363858223
+gpt-5-mini-2025-08-07,P-6,Without File Contents,273,-0.0164104718814164,0.0025497048627585173
+meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,273,-0.058678763545026165,-0.07155439257621765

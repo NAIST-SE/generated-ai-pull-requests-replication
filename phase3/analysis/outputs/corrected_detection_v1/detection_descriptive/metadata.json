@@ -1,0 +1,8 @@
+{
+  "human_baseline_policy": "same 308 human rows reused as the negative class in each operational cell",
+  "input": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv",
+  "input_sha256": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+  "operational_failure_policy": "detector failure is prediction False (not flagged)",
+  "primary_view": "operational",
+  "successful_only_policy": "drop detector failures independently within the cell"
+}

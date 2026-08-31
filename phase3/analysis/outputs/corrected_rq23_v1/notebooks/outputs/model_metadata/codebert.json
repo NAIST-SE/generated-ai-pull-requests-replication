@@ -1,0 +1,6 @@
+{
+  "max_length": 512,
+  "model_name": "microsoft/codebert-base",
+  "model_revision": "3b0952feddeffad0063f274080e3c23d75e7eb39",
+  "representation": "first token of last hidden state"
+}

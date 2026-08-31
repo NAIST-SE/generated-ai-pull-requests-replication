@@ -1,0 +1,34 @@
+{
+  "aggregations": {
+    "bertscore_f1": "median",
+    "bm25_reciprocal_rank": "mean",
+    "rougeL_fmeasure": "median"
+  },
+  "bridge_definition": {
+    "current_bridge": "current P1-P4 plus the same fixed corrected P5-P6",
+    "historical_bridge": "historical P1-P4 plus fixed corrected P5-P6"
+  },
+  "complete_prs": {
+    "gpt": 50,
+    "qwen": 39
+  },
+  "created_on_hostname": "nokogiri",
+  "decision_code": "does_not_trigger_complete_rerun",
+  "decision_text": "P6 remains top-ranked in every current bridge cell; this diagnostic does not trigger a complete rerun.",
+  "external_api_calls": false,
+  "git_commit": "baed3dd7a161887e2c1e95c3ce84c2e63b2dab64",
+  "manuscript_modified": false,
+  "new_generation": false,
+  "new_metric_scoring": false,
+  "p6_current_top_in_all_cells": true,
+  "protocol": "generation-session-six-context-bridge-v1",
+  "raw_text_in_outputs": false,
+  "source_sha256": {
+    "corrected_bertscore": "77dbcb28f28ab1c5dfa8433551c51869b8d372f9524e6f5db0f9422b1a8f9031",
+    "corrected_bm25": "b3a2b2576741142032ebf04e637084c2f8dd3ce05f000cbb9a227d240f859c93",
+    "corrected_rouge": "13d50eb9a1223da1f8474ef3cbedb89eaf5c3c565ec44518cff2fb4ccdcdff2b",
+    "main_metrics": "eb576543b1a4d6f1fb5501f3d0dd7853cc981ee41149ab7e1ca9c1e8a140593f",
+    "pair_manifest": "8d2a3c54611a995cc9143ce8b65f600be9a510d3873a80d2e72c7658ef326563",
+    "session_bertscore": "02514c2eb74ecf3a5cc17d31024380f233fb1c0c8d1f5c459a2e8c2c84a2eaec"
+  }
+}

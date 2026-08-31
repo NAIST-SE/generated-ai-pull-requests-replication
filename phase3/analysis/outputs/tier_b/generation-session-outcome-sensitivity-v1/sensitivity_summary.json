@@ -1,0 +1,117 @@
+{
+  "created_at_utc": "2026-08-31T04:31:18.251917+00:00",
+  "detectors": {
+    "cells": 16,
+    "maximum_absolute_f1_change": 0.1989795918367347,
+    "maximum_absolute_flag_rate_change": 0.17948717948717952,
+    "total_binary_flips": 114
+  },
+  "interpretation_guardrails": [
+    "This is a diagnostic on a frozen 50-PR sample, not an equivalence test or replacement for the 308-PR study.",
+    "The 11 missing Qwen P4 cases are non-random with respect to prompt length and were not replaced or imputed.",
+    "Only P1-P4 were regenerated; six-context and P5/P6 claims are not retested.",
+    "Significance changes are secondary to directions, effect sizes, continuous changes, and detector flag/F1 changes."
+  ],
+  "p1_p4_similarity_top_context_changes": [
+    {
+      "changed": true,
+      "current_top_contexts": [
+        "File Diff"
+      ],
+      "historical_top_contexts": [
+        "Repo Path"
+      ],
+      "metric": "bertscore_f1",
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "changed": false,
+      "current_top_contexts": [
+        "File Diff"
+      ],
+      "historical_top_contexts": [
+        "File Diff"
+      ],
+      "metric": "bertscore_f1",
+      "model": "gpt-5-mini-2025-08-07"
+    },
+    {
+      "changed": true,
+      "current_top_contexts": [
+        "File Diff"
+      ],
+      "historical_top_contexts": [
+        "PR Title"
+      ],
+      "metric": "bm25_reciprocal_rank",
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "changed": false,
+      "current_top_contexts": [
+        "File Diff"
+      ],
+      "historical_top_contexts": [
+        "File Diff"
+      ],
+      "metric": "bm25_reciprocal_rank",
+      "model": "gpt-5-mini-2025-08-07"
+    },
+    {
+      "changed": false,
+      "current_top_contexts": [
+        "File Diff"
+      ],
+      "historical_top_contexts": [
+        "File Diff"
+      ],
+      "metric": "rougeL_fmeasure",
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "changed": false,
+      "current_top_contexts": [
+        "File Diff"
+      ],
+      "historical_top_contexts": [
+        "File Diff"
+      ],
+      "metric": "rougeL_fmeasure",
+      "model": "gpt-5-mini-2025-08-07"
+    }
+  ],
+  "protocol": "generation-session-outcome-sensitivity-v1",
+  "scope": {
+    "contexts": [
+      "Repo Path",
+      "PR Title",
+      "File Diff",
+      "File Contents"
+    ],
+    "expected_cell_counts": {
+      "Qwen/Qwen2.5-72B-Instruct|P-1": 50,
+      "Qwen/Qwen2.5-72B-Instruct|P-2": 50,
+      "Qwen/Qwen2.5-72B-Instruct|P-3": 50,
+      "Qwen/Qwen2.5-72B-Instruct|P-4": 39,
+      "gpt-5-mini-2025-08-07|P-1": 50,
+      "gpt-5-mini-2025-08-07|P-2": 50,
+      "gpt-5-mini-2025-08-07|P-3": 50,
+      "gpt-5-mini-2025-08-07|P-4": 50
+    },
+    "models": [
+      "Qwen/Qwen2.5-72B-Instruct",
+      "gpt-5-mini-2025-08-07"
+    ],
+    "p5_p6_retested": false,
+    "successful_pairs": 389,
+    "zerogpt_retested": false
+  },
+  "structural_lexical": {
+    "cells": 56,
+    "direction_reversals": 4,
+    "magnitude_category_changes": 9,
+    "maximum_absolute_cliffs_delta_shift": 0.29153463105477595,
+    "significance_changes": 4,
+    "two_or_more_tier_changes": 0
+  }
+}

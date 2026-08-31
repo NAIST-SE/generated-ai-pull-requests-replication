@@ -1,0 +1,79 @@
+{
+  "assembled_figure_pages": 10,
+  "bm25": {
+    "contrasts": 15,
+    "friedman_tests": 3,
+    "rows": 5322
+  },
+  "context_tests_reconstructed": 162,
+  "descriptive_cells_reconstructed": 171,
+  "generated_similarity_cells": {
+    "bertscore": 18,
+    "rouge": 18
+  },
+  "inputs": {
+    "cell_counts": {
+      "Qwen/Qwen2.5-72B-Instruct|P-1": 308,
+      "Qwen/Qwen2.5-72B-Instruct|P-2": 308,
+      "Qwen/Qwen2.5-72B-Instruct|P-3": 308,
+      "Qwen/Qwen2.5-72B-Instruct|P-4": 302,
+      "Qwen/Qwen2.5-72B-Instruct|P-5": 273,
+      "Qwen/Qwen2.5-72B-Instruct|P-6": 273,
+      "gpt-5-mini-2025-08-07|P-1": 308,
+      "gpt-5-mini-2025-08-07|P-2": 308,
+      "gpt-5-mini-2025-08-07|P-3": 308,
+      "gpt-5-mini-2025-08-07|P-4": 302,
+      "gpt-5-mini-2025-08-07|P-5": 273,
+      "gpt-5-mini-2025-08-07|P-6": 273,
+      "meta-llama/llama-3.1-70b-instruct|P-1": 308,
+      "meta-llama/llama-3.1-70b-instruct|P-2": 308,
+      "meta-llama/llama-3.1-70b-instruct|P-3": 308,
+      "meta-llama/llama-3.1-70b-instruct|P-4": 308,
+      "meta-llama/llama-3.1-70b-instruct|P-5": 273,
+      "meta-llama/llama-3.1-70b-instruct|P-6": 273
+    },
+    "corpus_sha256": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
+    "diff_prs": 308,
+    "diffs_sha256": "45c71d0170fc9343d999998ad6515e9b5b8298f63b66215f4110b3911f681d0c",
+    "rows": {
+      "ai": 5322,
+      "human": 308,
+      "total": 5630
+    }
+  },
+  "metric_columns_reconstructed": 9,
+  "model_metadata": {
+    "bertscore": {
+      "baseline_path": "/home/ayo-b/.pyenv/versions/3.12.9/lib/python3.12/site-packages/bert_score/rescale_baseline/en/microsoft/deberta-xlarge-mnli.tsv",
+      "baseline_sha256": "e9ea1c46dddcf57e19f6e6a57eabcfc38eefa85d4377b39e6b810741be9c2129",
+      "batch_size": 8,
+      "bert_score_version": "0.3.12",
+      "max_length": 512,
+      "model_name": "microsoft/deberta-xlarge-mnli",
+      "model_revision": "5b07a9086c1dbb79981ff7b05b4d1ad83b3af51c",
+      "model_snapshot": "/home/ayo-b/.cache/huggingface/hub/models--microsoft--deberta-xlarge-mnli/snapshots/5b07a9086c1dbb79981ff7b05b4d1ad83b3af51c",
+      "num_layers": 40,
+      "rescale_with_baseline": true
+    },
+    "codebert": {
+      "max_length": 512,
+      "model_name": "microsoft/codebert-base",
+      "model_revision": "3b0952feddeffad0063f274080e3c23d75e7eb39",
+      "representation": "first token of last hidden state"
+    },
+    "graphcodebert": {
+      "data_flow_graph_supplied": false,
+      "max_length": 512,
+      "model_name": "microsoft/graphcodebert-base",
+      "model_revision": "2b0488a7bb0eefc7041f1bb2cad1ab26b0da269d",
+      "representation": "first token of last hidden state"
+    }
+  },
+  "notebooks": {
+    "executed_without_error": 9
+  },
+  "pooled_model_tests_reconstructed": 27,
+  "protocol": "corrected-rq23-v1",
+  "status": "PASS",
+  "verified_at_utc": "2026-08-31T00:19:01.324974+00:00"
+}

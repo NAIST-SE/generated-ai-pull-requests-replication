@@ -1,0 +1,35 @@
+{
+  "builder_git_commit": "596fa383a6f860d86cfb6230cca4d2a19c691408",
+  "corpus_path": "phase3/datasets/temperature_1/run_3_corrected_detection_v1/corpus.csv",
+  "corpus_sha256": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
+  "counts": {
+    "ai": 5322,
+    "human": 308,
+    "over_15000_chars": 0,
+    "total": 5630,
+    "under_250_chars": 1302
+  },
+  "created_at_utc": "2026-08-30T08:57:36.107663+00:00",
+  "policy": {
+    "corrected": "all verified rows from b4-corrected-v3: Llama P-1 through P-6; Qwen/GPT P-5 and P-6",
+    "detector_text_policy": "score every non-empty complete description, including texts under 250 characters",
+    "generation_failure_policy": "exclude non-stop generation rows; enforce frozen cell counts",
+    "human": "all 308 non-empty sampled PR bodies",
+    "qa_pair_policy": "PR title as question and PR description as answer for every human and AI entry",
+    "run_id": "run_3_corrected_detection_v1",
+    "scoring_order": "deterministic shuffle, seed=42",
+    "unchanged_controls": "Qwen and GPT P-1 through P-4 with finish_reason=stop from run_3"
+  },
+  "policy_sha256": "44b880c6fe07fe46eeea45d4f215be8959e004f43790f2b03a6621cecb075fa9",
+  "run_id": "run_3_corrected_detection_v1",
+  "status": "corpus_complete_and_verified",
+  "verified_sources": {
+    "corrected_completion": "7d8226f5b9b5c97afe687b82cae66316652546162a21446daec9caade094f6b1",
+    "corrected_gpt": "5edb3e539d44141c72bacf76fa5c4d28fed8ef256dcc909595fe373a7458934d",
+    "corrected_llama": "e9f97ab7e3b3306e701127fb19dc97c94e7c6767d91568a21febe8b629e38783",
+    "corrected_qwen": "2213022098b797b6b0b224e2724c50cea8459f5621ba082c444ff3c332df1b6b",
+    "old_gpt": "3d8a3adf66ce650aef5c938163915eef39f5f867ff6e07e0027c742c38b21234",
+    "old_qwen": "64bb1bdce1052aa8315e91cf1aaf7d5415f3d1c59096d443980bb2748e8a1dc0",
+    "selected_prs": "d00daddbf1ed5d054bc3d126248673e9487f381f46c3ae64e68af80e1d139a8e"
+  }
+}

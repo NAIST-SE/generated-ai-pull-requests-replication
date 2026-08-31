@@ -1,0 +1,28 @@
+{
+  "bridge_metric_rows": 3204,
+  "complete_prs": {
+    "gpt": 50,
+    "qwen": 39
+  },
+  "decision_code": "does_not_trigger_complete_rerun",
+  "external_api_calls": false,
+  "git_commit": "baed3dd7a161887e2c1e95c3ce84c2e63b2dab64",
+  "headline_cells": 6,
+  "hostname": "nokogiri",
+  "manuscript_modified": false,
+  "new_generation": false,
+  "new_metric_scoring": false,
+  "output_sha256": {
+    "BRIDGE_REPORT.md": "8dfc1d09225134458d6018443b2f96d5cbf3b77845c1bd914c72c4cf77024a41",
+    "analysis_metadata.json": "583bb56f049648bedb22a09fae0d408c02d36ac478f45cc5130228a0372edd33",
+    "bridge_metric_rows.csv": "03559f8830143e4815bb93f774b9d2ae7c31e978ee4f856118497b92b4fa308b",
+    "context_rankings.csv": "74ff129124aa038a9c14e92653ca20216fadb973b4a79d198c45612bc4417b62",
+    "context_version_comparison.csv": "4d363073467db303caec7bb968d7e0b412e4a9a3354bf4b214f6645d118025dc",
+    "coverage.csv": "e5c90ff6c293a6ae98a98b6c1c343921c56493daed1419616887ead64144dfee",
+    "headline_stability.csv": "27ed1fcde136b144ccfcce9dc79b12f3b9e83569d5593c5c7e16a65f09b69f0b"
+  },
+  "protocol": "generation-session-six-context-bridge-v1",
+  "ranking_rows": 72,
+  "raw_text_in_outputs": false,
+  "status": "complete_and_verified"
+}

@@ -1,0 +1,136 @@
+{
+  "ai_rows_by_model_context": {
+    "Qwen/Qwen2.5-72B-Instruct": {
+      "P-1": 308,
+      "P-2": 308,
+      "P-3": 308,
+      "P-4": 302,
+      "P-5": 273,
+      "P-6": 273
+    },
+    "gpt-5-mini-2025-08-07": {
+      "P-1": 308,
+      "P-2": 308,
+      "P-3": 308,
+      "P-4": 302,
+      "P-5": 273,
+      "P-6": 273
+    },
+    "meta-llama/llama-3.1-70b-instruct": {
+      "P-1": 308,
+      "P-2": 308,
+      "P-3": 308,
+      "P-4": 308,
+      "P-5": 273,
+      "P-6": 273
+    }
+  },
+  "all_detector_calls_successful": true,
+  "contracts": {
+    "descriptive": {
+      "all_54_cells_recomputed": true,
+      "operational_equals_successful_only": true,
+      "prelim_metric_cells": 9,
+      "rq1_extrema_cells": 9
+    },
+    "detector_inputs": {
+      "ChatGPT Detector RoBERTa": {
+        "failed": 0,
+        "input_mode": "single",
+        "max_input_tokens": 1877,
+        "max_used_tokens": 512,
+        "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+        "revision": "d2b342c61775d5dd0221808a79983ed3b86ffd86",
+        "successful": 5630,
+        "truncated": 274,
+        "truncated_by_source": {
+          "Human": 16,
+          "Qwen/Qwen2.5-72B-Instruct": 1,
+          "gpt-5-mini-2025-08-07": 257,
+          "meta-llama/llama-3.1-70b-instruct": 0
+        },
+        "truncated_pct_of_5630": 4.8667850799289525
+      },
+      "ChatGPT-QA Detector RoBERTa": {
+        "failed": 0,
+        "input_mode": "pair",
+        "max_input_tokens": 1884,
+        "max_used_tokens": 512,
+        "model": "Hello-SimpleAI/chatgpt-qa-detector-roberta",
+        "revision": "25aad95e922d92631f86164642a3db104deee087",
+        "successful": 5630,
+        "truncated": 302,
+        "truncated_by_source": {
+          "Human": 19,
+          "Qwen/Qwen2.5-72B-Instruct": 1,
+          "gpt-5-mini-2025-08-07": 282,
+          "meta-llama/llama-3.1-70b-instruct": 0
+        },
+        "truncated_pct_of_5630": 5.3641207815275305
+      },
+      "ZeroGPT": {
+        "failed": 0,
+        "input_mode": "single",
+        "max_input_tokens": null,
+        "max_used_tokens": null,
+        "model": "ZeroGPT proprietary service",
+        "revision": "not exposed by response",
+        "successful": 5630,
+        "truncated": 0,
+        "truncated_by_source": {
+          "Human": 0,
+          "Qwen/Qwen2.5-72B-Instruct": 0,
+          "gpt-5-mini-2025-08-07": 0,
+          "meta-llama/llama-3.1-70b-instruct": 0
+        },
+        "truncated_pct_of_5630": 0.0
+      }
+    },
+    "preliminary_inference": {
+      "bh_family_size": 9,
+      "cochran_tests_recomputed": 3,
+      "mcnemar_tests_recomputed": 9,
+      "operational_equals_successful_only": true
+    },
+    "rq1_inference": {
+      "bh_families": 9,
+      "complete_prs_by_detector": {
+        "ChatGPT Detector RoBERTa": 273,
+        "ChatGPT-QA Detector RoBERTa": 273,
+        "ZeroGPT": 273
+      },
+      "friedman_tests_recomputed": 3,
+      "operational_equals_successful_only": true,
+      "paired_contrasts_recomputed": 135
+    }
+  },
+  "corpus_sha256": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
+  "figure_sha256": {
+    "pdf": "07f0b8a0da6a31f881e8bf7eee210cd30cf21552d2840c49d727581326351af7",
+    "png": "2ba7ccd8391047fd571ebad89457c902ee9584f868896a01fa788eb7faa10648"
+  },
+  "input_sha256": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+  "output_sha256": {
+    "detection_descriptive/detector_metrics_by_view_model_context.csv": "b423bd7879758cd7a5703ea0c513fa0fcc0eaf9e93f085baa951dba13853dadd",
+    "detection_descriptive/metadata.json": "5390e3c01cbbc53b028550603a567600e567d2aa8115a86edd3db4baaaaacdae",
+    "detection_descriptive/prelim_file_diff_metrics.csv": "aa2083b833820bb3dedf2008b6fade4481f0380b3c3d6d7997cdf2a1d49c8134",
+    "detection_descriptive/rq1_f1_extrema.csv": "465444641ce0733bc97b4eafd394ca3bfe4a887d217b9d931e2eedab8c74242a",
+    "figures/metadata.json": "5ecf6b7e16bd5cab0d0164e38972bbe549c5954f3e82f2d58faebd958b38a4d2",
+    "figures/rq1_probability_boxplots_paired.pdf": "07f0b8a0da6a31f881e8bf7eee210cd30cf21552d2840c49d727581326351af7",
+    "figures/rq1_probability_boxplots_paired.png": "2ba7ccd8391047fd571ebad89457c902ee9584f868896a01fa788eb7faa10648",
+    "prelim/metadata.json": "01993c17a2e303f5ce9a4643db361aed249f20ad5ea88e7e510c5536f6073883",
+    "prelim/prelim_cochrans_q.csv": "b6063790d348a9a33d5c01d4631547bb7d6fd539f9855569a944b0462bf6bf0a",
+    "prelim/prelim_mcnemar_pairwise.csv": "5023e1394f75b5efb41fe15e1903697c43d9f6e6217dd97e0ea8d9045b178416",
+    "rq1/metadata.json": "a089ebc314700a91916a8db0f24dec4d4e662d6998c9b2ba979063c08212b4b7",
+    "rq1/rq1_friedman.csv": "3adca665aafd87f03e37824c9414eb469f65cf836c8b70c0ed44709edd5c914a",
+    "rq1/rq1_model_context_pairwise.csv": "c7e6eebfcd8bb834696806daa82d859b762f29e10ef5f5fa5abfae2540d6cfd1",
+    "rq1/rq1_operational_vs_successful_only.csv": "fd367d9492608b6e57f51b04279fb18bca7362589f51fe61c13e6ec358395af7"
+  },
+  "rows": {
+    "ai": 5322,
+    "human": 308,
+    "total": 5630
+  },
+  "status": "PASS",
+  "verifier": "independent full recomputation of Preliminary-RQ and RQ1"
+}

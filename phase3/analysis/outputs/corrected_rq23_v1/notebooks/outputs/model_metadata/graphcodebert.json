@@ -1,0 +1,7 @@
+{
+  "data_flow_graph_supplied": false,
+  "max_length": 512,
+  "model_name": "microsoft/graphcodebert-base",
+  "model_revision": "2b0488a7bb0eefc7041f1bb2cad1ab26b0da269d",
+  "representation": "first token of last hidden state"
+}

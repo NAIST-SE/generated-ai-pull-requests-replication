@@ -1,0 +1,5 @@
+Model,Metric,N,Mean,Median,Std,Min,Max,Q1,Q3
+Human,CodeBERT Similarity,308,0.9776,0.9861,0.0222,0.8515,0.9951,0.9758,0.99
+meta-llama/llama-3.1-70b-instruct,CodeBERT Similarity,1778,0.947,0.9484,0.0241,0.867,0.9977,0.9303,0.9651
+gpt-5-mini-2025-08-07,CodeBERT Similarity,1772,0.9818,0.9866,0.0154,0.8651,0.9956,0.98,0.9906
+Qwen/Qwen2.5-72B-Instruct,CodeBERT Similarity,1772,0.9594,0.9606,0.0154,0.8947,0.9933,0.9494,0.9714

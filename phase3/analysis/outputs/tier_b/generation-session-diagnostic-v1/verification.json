@@ -1,0 +1,167 @@
+{
+  "failed_rows": 11,
+  "failure_audit_sha256": "a7b1d08b7fa43b925d1e7bef71d63e5fabf2e1bdf721e78caa67425b0e125ac7",
+  "failure_interpretation": "Failures remain part of the frozen sample; no PR replacement, prompt truncation, or provider substitution was performed.",
+  "git_commit": "baed3dd7a161887e2c1e95c3ce84c2e63b2dab64",
+  "models": {
+    "gpt": {
+      "failed_rows": 0,
+      "failure_records": [],
+      "file_sha256": "e0da1ce91f000054e310910e3c97f34734aaf0d4d343e846149d14fe1cab0124",
+      "pr_count": 50,
+      "rows": 200,
+      "successful_rows": 200,
+      "system_fingerprints": [],
+      "variations": [
+        "P-1",
+        "P-2",
+        "P-3",
+        "P-4"
+      ]
+    },
+    "qwen": {
+      "failed_rows": 11,
+      "failure_records": [
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 62011,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "MDExOlB1bGxSZXF1ZXN0MzQxNDM1NjYy",
+          "prompt_sha256": "cf703eec1bd0b7d68be5e682a0b4c5946fb5ba63747d8076b918a022a4dc932d",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 35339,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "MDExOlB1bGxSZXF1ZXN0Mzc2MjM2Mzc1",
+          "prompt_sha256": "6bcd035feac292a6f9cf9bd869fce867e0b98e23ac0485014d3d12c3a0a77ead",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 85210,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "MDExOlB1bGxSZXF1ZXN0NTgyMzYxOTQ3",
+          "prompt_sha256": "9da423d5b25f88d6df7d828ee422e34d421346a4d5486641e172fe4ae7575fb2",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 35030,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "MDExOlB1bGxSZXF1ZXN0ODY2MjczMDE=",
+          "prompt_sha256": "8ade5d36e560f8b7e2f5d26bad3b30d969a260b55d574f2e18e8986313614f3e",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 33979,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "PR_kwDOAQ0TF840yO-G",
+          "prompt_sha256": "ca41dcb644570f14c15611fd817fc43deadd5d8ddda5b34bb003c59a66095c66",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 66609,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "PR_kwDOAQ0TF841rR7d",
+          "prompt_sha256": "1e2e2c78f76f00be951c909c4ab3d0cfb0983fcb1dbfa189213542a1bba5b164",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 34786,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "PR_kwDOAQ0TF842CEhF",
+          "prompt_sha256": "a290cecc013733fd7d3ff158b746d52ffaadbba290871ffa199fb9a433f954c7",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 75066,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "PR_kwDOAQ0TF843c15G",
+          "prompt_sha256": "7562f54058acec7db21901f56b4a2b44432831680c1cb365be2a8bff28c07777",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 67568,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "PR_kwDOAQ0TF84uQHLA",
+          "prompt_sha256": "c46b9484c0832ab5a08109ea451ab0fe3eca286d84e6016117ac095fc35e402c",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 81532,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "PR_kwDOAQ0TF84wSNBE",
+          "prompt_sha256": "0fd566e6691750f4e1aa0a86c8f1de7746b3c2585ea0761fa13e19573c69a8de",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        },
+        {
+          "category": "api_error_marker",
+          "finish_reason": "unknown",
+          "historical_prompt_token_count": 57691,
+          "model_label": "qwen",
+          "persistent_after_all_passes": true,
+          "pr_id": "PR_kwDOAQ0TF85CKVyy",
+          "prompt_sha256": "b7e2ca750e99f5d885e87b722da92009fe0b29886d44a519c2a7daf9ab383905",
+          "retry_passes_configured": 3,
+          "variation": "P-4"
+        }
+      ],
+      "file_sha256": "3f84cf2fe22213a39e3faefa6c3b7722ca6617458a774c901e7cb0f69e5b7428",
+      "pr_count": 50,
+      "rows": 200,
+      "successful_rows": 189,
+      "system_fingerprints": [],
+      "variations": [
+        "P-1",
+        "P-2",
+        "P-3",
+        "P-4"
+      ]
+    }
+  },
+  "prompt_preflight_sha256": "8b72973abde9a3a5c80539f9aa950516e3afd4d47cbe11f07be05fea7570f0d3",
+  "protocol_version": "generation-session-diagnostic-v1",
+  "sample_manifest_sha256": "f0f657743b8464a283854dfbe949101bfdecc0f2718930404a2196efe71b2234",
+  "status": "partial_generation_with_verified_failures",
+  "successful_rows": 389,
+  "total_rows": 400,
+  "verified_at_utc": "2026-08-31T03:09:20.410154+00:00"
+}

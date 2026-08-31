@@ -1,0 +1,40 @@
+{
+  "batch_size": 32,
+  "created_at_utc": "2026-08-31T04:31:15.033488+00:00",
+  "current_truncated_rows": 43,
+  "detectors": {
+    "roberta": {
+      "input_mode": "single",
+      "max_length": 512,
+      "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+      "revision": "d2b342c61775d5dd0221808a79983ed3b86ffd86",
+      "threshold": 0.5
+    },
+    "roberta-qa": {
+      "input_mode": "pair",
+      "max_length": 512,
+      "model": "Hello-SimpleAI/chatgpt-qa-detector-roberta",
+      "revision": "25aad95e922d92631f86164642a3db104deee087",
+      "threshold": 0.5
+    }
+  },
+  "gpu": "NVIDIA TITAN RTX",
+  "historical_truncated_rows": 41,
+  "human_rows": 100,
+  "human_scores_sha256": "dddcf668013f9c6f5ed8a73815dab1d1ac4ec9fc986778cc3a18d30822a98af5",
+  "protocol": "generation-session-outcome-sensitivity-v1",
+  "raw_text_in_outputs": false,
+  "scores_sha256": "4ddd31e60923bcc51dcd1c5d9a56babcc584232615ac9fd9686a3662fd21b6ff",
+  "source_sha256": {
+    "corrected_detector_completion": "a2b6d050d526ed941cc27023e767de0789c8faa117339ad7454d54c65a23b001",
+    "corrected_detector_corpus": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+    "diagnostic_verification": "229352273082f1531820185c2914c3049098f9f37f033a08940dabe67849a05a",
+    "gpt_current": "e0da1ce91f000054e310910e3c97f34734aaf0d4d343e846149d14fe1cab0124",
+    "qwen_current": "3f84cf2fe22213a39e3faefa6c3b7722ca6617458a774c901e7cb0f69e5b7428",
+    "rq2_completion": "bdd1866d1310a424c50b28a299435bda68bb3dc8f4eeb017f062ada42e9a08b5",
+    "sample_manifest": "f0f657743b8464a283854dfbe949101bfdecc0f2718930404a2196efe71b2234"
+  },
+  "stage": "local_detectors",
+  "versioned_ai_rows": 1556,
+  "zerogpt_included": false
+}

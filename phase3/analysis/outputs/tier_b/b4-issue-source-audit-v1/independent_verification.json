@@ -1,0 +1,23 @@
+{
+  "api_verified": true,
+  "checks": {
+    "api_identity_and_type": "pass",
+    "artifact_types": "pass",
+    "genuine_issue_filter": "pass",
+    "genuine_issue_title_body_nonempty": "pass",
+    "hashes": "pass",
+    "reference_evidence": "pass",
+    "regeneration_hashes_and_prompt_blocks": "pass"
+  },
+  "output_dir": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/tier_b/b4-issue-source-audit-v1",
+  "recorded_output_hashes_verified": 9,
+  "row_counts": {
+    "artifact_manifest.csv": 352,
+    "excluded_prs.csv": 35,
+    "genuine_issue_manifest.csv": 293,
+    "pr_eligibility.csv": 308,
+    "regeneration_sources.jsonl": 273
+  },
+  "status": "verified",
+  "verified_at_utc": "2026-08-29T16:18:09.295589+00:00"
+}

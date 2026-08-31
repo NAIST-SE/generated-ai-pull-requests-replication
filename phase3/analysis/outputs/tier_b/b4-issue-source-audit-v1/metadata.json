@@ -1,0 +1,24 @@
+{
+  "api_verified": true,
+  "created_at_utc": "2026-08-29T16:17:43.127425+00:00",
+  "hostname": "nokogiri",
+  "input_paths": {
+    "sampled": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/selected_prs_sampled.csv",
+    "source": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/selected_prs_with_related_issues.csv"
+  },
+  "input_sha256": {
+    "sampled": "d00daddbf1ed5d054bc3d126248673e9487f381f46c3ae64e68af80e1d139a8e",
+    "source": "c965da8ea751d7c0e9114a8bc6aa6fb6ae925f8a36a8c4cfcb4a86415e4120f2"
+  },
+  "pandas": "2.3.1",
+  "protocol_version": "b4-issue-source-audit-v1",
+  "python": "3.12.9 (main, Aug 12 2025, 23:22:19) [GCC 11.4.0]",
+  "requests": "2.32.4",
+  "source_checks": {
+    "copied_pr_bodies_verified": 308,
+    "copied_pr_titles_verified": 308,
+    "source_rows": 308
+  },
+  "token_path_recorded": "/mnt/ext-hdd1/ayo/pi-agent-harness-packages/tokens.txt",
+  "token_values_recorded": false
+}

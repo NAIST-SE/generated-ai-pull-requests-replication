@@ -1,0 +1,9 @@
+Model,Metric,N,Mean,Median,Std,Min,Max,Q1,Q3
+Human,Word Count,308,113.16,107.5,65.7,2,308,65.0,158.25
+Qwen/Qwen2.5-72B-Instruct,Word Count,1772,70.76,67.0,38.56,18,1226,51.0,84.0
+gpt-5-mini-2025-08-07,Word Count,1772,209.49,200.0,93.29,29,733,142.75,265.0
+meta-llama/llama-3.1-70b-instruct,Word Count,1778,33.3,29.0,20.41,2,150,19.0,44.75
+Human,Sentence Count,308,5.85,5.0,4.04,1,19,3.0,9.0
+Qwen/Qwen2.5-72B-Instruct,Sentence Count,1772,3.83,4.0,2.3,1,71,3.0,4.0
+gpt-5-mini-2025-08-07,Sentence Count,1772,12.0,11.0,5.82,1,50,8.0,16.0
+meta-llama/llama-3.1-70b-instruct,Sentence Count,1778,1.93,1.0,1.21,1,8,1.0,3.0

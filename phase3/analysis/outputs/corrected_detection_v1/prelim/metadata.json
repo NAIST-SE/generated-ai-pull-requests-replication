@@ -1,0 +1,12 @@
+{
+  "context": "P-3",
+  "input": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv",
+  "input_sha256": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+  "models": [
+    "Qwen/Qwen2.5-72B-Instruct",
+    "gpt-5-mini-2025-08-07",
+    "meta-llama/llama-3.1-70b-instruct"
+  ],
+  "omnibus": "Cochran's Q per detector and view",
+  "post_hoc": "exact McNemar; BH-FDR separately over nine tests per view"
+}

@@ -1,0 +1,18 @@
+{
+  "created_at_utc": "2026-08-31T04:31:18.253176+00:00",
+  "merged_metric_rows": 778,
+  "output_sha256": {
+    "SENSITIVITY_REPORT.md": "aac6ef89e6447c63f3095fcac10fe71a308f7fca8e92870783faf3b871f85fb3",
+    "detector_historical_vs_current.csv": "d98576720608e5ac4d40cb54c48f03eb15110f2cd00a3a7e0cba63ac0ff6b351",
+    "detector_performance.csv": "9ad120605e5661c9eb6a2e9399f6523f2b8e6fc6349adee4e2c4bad63dffd5cc",
+    "detector_performance_stability.csv": "bd6191ea7c19df95b02c641b74ff483dc2cb1e6c06b7780d81a09ed7fd31d2c2",
+    "historical_vs_current_outcomes.csv": "d37c4caf8980a61e6c8152319fa9160bf3d994b8551539e62f6502359ff8704b",
+    "p1_p4_similarity_rankings.csv": "e4bb21f5f3a4e475d406583b50809da8f3485856f91f22e69ae953811fa67e46",
+    "sensitivity_summary.json": "d9335653e714d33d893f047e8c63511a39d7278f34bcbbb70a6c73e4a3768d7e",
+    "structural_lexical_human_ai.csv": "8c02236e9e254e73dfb70d788da2ca000a060aca3c6c9d0fe0e2e1728c5d9b33",
+    "structural_lexical_stability.csv": "5d80e8c7f775b40bbc79094cbac5bbdd8f69584be5fbb3499f31ac16075cda1d"
+  },
+  "protocol": "generation-session-outcome-sensitivity-v1",
+  "raw_text_in_outputs": false,
+  "stage": "analysis"
+}

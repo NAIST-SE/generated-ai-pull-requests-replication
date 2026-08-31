@@ -1,0 +1,109 @@
+{
+  "expected_issue_prs_per_model": 273,
+  "expected_llama_control_prs": 308,
+  "expected_manifest_sha256": "bdeb1d70b03c46d9f54e8775bb816d71183d486a5e55d9f76f992ab7938b49dc",
+  "expected_sampled_prs_sha256": "d00daddbf1ed5d054bc3d126248673e9487f381f46c3ae64e68af80e1d139a8e",
+  "full_273_issue_308_control_run": true,
+  "git_branch": "revision/co-author-review",
+  "git_commit": "90e85066f72a6632345534058a16d4551f069293",
+  "hostname": "nokogiri",
+  "integrity_gates": {
+    "all_finish_reasons_stop": true,
+    "control_prompts_exclude_audited_issue_blocks": true,
+    "decoding_and_request_seed_match": true,
+    "eligible_issue_pr_set_matches_requested_limit": true,
+    "generator_issue_pr_sets_identical": true,
+    "issue_blocks_match_frozen_manifest": true,
+    "llama_control_pr_set_matches_requested_limit": true,
+    "no_empty_error_or_mock_outputs": true,
+    "p4_truncation_within_approved_budget": true,
+    "p5_p6_issue_blocks_identical": true,
+    "positive_token_counts": true,
+    "prompt_hashes_match": true,
+    "provider_model_precision_match": true,
+    "required_contexts_complete": true,
+    "sampled_and_issue_sources_hash_pinned": true,
+    "truncated_p4_completion_cap_match": true,
+    "unique_pr_context_pairs": true
+  },
+  "manifest_path": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/tier_b/b4-issue-source-audit-v1/regeneration_sources.jsonl",
+  "manifest_sha256": "bdeb1d70b03c46d9f54e8775bb816d71183d486a5e55d9f76f992ab7938b49dc",
+  "model_api_calls_expected": 2870,
+  "outputs": {
+    "gpt": {
+      "control_prs": 0,
+      "finish_reasons": {
+        "stop": 546
+      },
+      "issue_prs": 273,
+      "model": "gpt-5-mini-2025-08-07",
+      "p4_file_token_budget": null,
+      "p4_truncated_rows": 0,
+      "path": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/b4-corrected-v3/chatgpt_results_b4-corrected-v3.csv",
+      "precision": "auto",
+      "provider": "OpenAI",
+      "rows": 546,
+      "sha256": "5edb3e539d44141c72bacf76fa5c4d28fed8ef256dcc909595fe373a7458934d",
+      "system_fingerprints": [],
+      "truncated_p4_completion_token_cap": null,
+      "variations": [
+        "P-5",
+        "P-6"
+      ]
+    },
+    "llama": {
+      "control_prs": 308,
+      "finish_reasons": {
+        "stop": 1778
+      },
+      "issue_prs": 273,
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "p4_file_token_budget": 90000,
+      "p4_truncated_rows": 7,
+      "path": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/b4-corrected-v3/meta-llama_llama-3.1-70b-instruct_b4-corrected-v3.csv",
+      "precision": "bf16",
+      "provider": "coreweave",
+      "rows": 1778,
+      "sha256": "e9f97ab7e3b3306e701127fb19dc97c94e7c6767d91568a21febe8b629e38783",
+      "system_fingerprints": [
+        "vllm-0.22.1.dev0+g0b3ba88f1.d20260529-tp8-401b0715"
+      ],
+      "truncated_p4_completion_token_cap": 4096,
+      "variations": [
+        "P-1",
+        "P-2",
+        "P-3",
+        "P-4",
+        "P-5",
+        "P-6"
+      ]
+    },
+    "qwen": {
+      "control_prs": 0,
+      "finish_reasons": {
+        "stop": 546
+      },
+      "issue_prs": 273,
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "p4_file_token_budget": null,
+      "p4_truncated_rows": 0,
+      "path": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/b4-corrected-v3/Qwen_Qwen2.5-72B-Instruct_b4-corrected-v3.csv",
+      "precision": "bf16",
+      "provider": "novita",
+      "rows": 546,
+      "sha256": "2213022098b797b6b0b224e2724c50cea8459f5621ba082c444ff3c332df1b6b",
+      "system_fingerprints": [],
+      "truncated_p4_completion_token_cap": null,
+      "variations": [
+        "P-5",
+        "P-6"
+      ]
+    }
+  },
+  "protocol_version": "b4-corrected-generation-v3.2",
+  "sampled_prs_path": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/selected_prs_sampled.csv",
+  "sampled_prs_sha256": "d00daddbf1ed5d054bc3d126248673e9487f381f46c3ae64e68af80e1d139a8e",
+  "status": "complete_and_verified",
+  "total_rows": 2870,
+  "verified_at_utc": "2026-08-30T03:25:28.836685+00:00"
+}

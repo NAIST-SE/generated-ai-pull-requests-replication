@@ -1,0 +1,39 @@
+{
+  "baseline_sha256": "e9ea1c46dddcf57e19f6e6a57eabcfc38eefa85d4377b39e6b810741be9c2129",
+  "batch_size": 8,
+  "candidate_truncated_rows": 39,
+  "chunk_size": 64,
+  "created_at_utc": "2026-08-31T04:30:57.504778+00:00",
+  "gpu": "NVIDIA TITAN RTX",
+  "historical_validation": {
+    "label": "historical_bertscore_f1",
+    "max_abs_difference": 2.5779008865356445e-06,
+    "rows": 389
+  },
+  "historical_validation_tolerance": 5e-06,
+  "historical_validation_tolerance_rationale": "A fail-closed audit at 2e-6 found one of 389 historical values outside that bound: absolute difference 2.5779008865356445e-06; all other values passed. The 5e-6 bound accommodates this float32/GPU-scale recomputation difference without changing any reported precision or substantive interpretation.",
+  "idf": false,
+  "model_config_sha256": "4d1e27d6929862798fb1f866788756b0a39986d3ea7b25f96b0413d725036cb0",
+  "model_name": "microsoft/deberta-xlarge-mnli",
+  "model_revision": "5b07a9086c1dbb79981ff7b05b4d1ad83b3af51c",
+  "num_layers": 40,
+  "output_sha256": "02514c2eb74ecf3a5cc17d31024380f233fb1c0c8d1f5c459a2e8c2c84a2eaec",
+  "pair_any_truncated_rows": 63,
+  "protocol": "generation-session-outcome-sensitivity-v1",
+  "raw_text_in_outputs": false,
+  "reference_truncated_rows": 28,
+  "rescale_with_baseline": true,
+  "rows": 778,
+  "source_sha256": {
+    "corrected_detector_completion": "a2b6d050d526ed941cc27023e767de0789c8faa117339ad7454d54c65a23b001",
+    "corrected_detector_corpus": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+    "diagnostic_verification": "229352273082f1531820185c2914c3049098f9f37f033a08940dabe67849a05a",
+    "gpt_current": "e0da1ce91f000054e310910e3c97f34734aaf0d4d343e846149d14fe1cab0124",
+    "qwen_current": "3f84cf2fe22213a39e3faefa6c3b7722ca6617458a774c901e7cb0f69e5b7428",
+    "rq2_completion": "bdd1866d1310a424c50b28a299435bda68bb3dc8f4eeb017f062ada42e9a08b5",
+    "sample_manifest": "f0f657743b8464a283854dfbe949101bfdecc0f2718930404a2196efe71b2234"
+  },
+  "stage": "bertscore",
+  "tokenizer_max_length": 512,
+  "torch_version": "2.10.0+cu128"
+}

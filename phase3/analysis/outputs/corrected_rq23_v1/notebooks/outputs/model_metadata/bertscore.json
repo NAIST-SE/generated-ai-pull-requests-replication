@@ -1,0 +1,12 @@
+{
+  "baseline_path": "/home/ayo-b/.pyenv/versions/3.12.9/lib/python3.12/site-packages/bert_score/rescale_baseline/en/microsoft/deberta-xlarge-mnli.tsv",
+  "baseline_sha256": "e9ea1c46dddcf57e19f6e6a57eabcfc38eefa85d4377b39e6b810741be9c2129",
+  "batch_size": 8,
+  "bert_score_version": "0.3.12",
+  "max_length": 512,
+  "model_name": "microsoft/deberta-xlarge-mnli",
+  "model_revision": "5b07a9086c1dbb79981ff7b05b4d1ad83b3af51c",
+  "model_snapshot": "/home/ayo-b/.cache/huggingface/hub/models--microsoft--deberta-xlarge-mnli/snapshots/5b07a9086c1dbb79981ff7b05b4d1ad83b3af51c",
+  "num_layers": 40,
+  "rescale_with_baseline": true
+}

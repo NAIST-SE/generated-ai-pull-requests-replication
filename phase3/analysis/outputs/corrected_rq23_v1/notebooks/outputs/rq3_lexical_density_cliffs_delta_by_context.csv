@@ -1,0 +1,4 @@
+Model,Repo Path,PR Title,File Diff,File Contents,Linked Issue,Without File Contents
+Qwen/Qwen2.5-72B-Instruct,-0.198 (S) ***,-0.472 (M) ***,-0.044 (N) n.s.,-0.444 (M) ***,-0.213 (S) ***,0.083 (N) **
+gpt-5-mini-2025-08-07,-0.908 (L) ***,-0.841 (L) ***,-0.849 (L) ***,-0.913 (L) ***,-0.775 (L) ***,-0.851 (L) ***
+meta-llama/llama-3.1-70b-instruct,-0.834 (L) ***,-0.634 (L) ***,-0.753 (L) ***,-0.852 (L) ***,-0.618 (L) ***,-0.391 (M) ***

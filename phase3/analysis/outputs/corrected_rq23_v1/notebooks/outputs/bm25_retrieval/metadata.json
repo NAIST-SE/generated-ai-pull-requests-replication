@@ -1,0 +1,16 @@
+{
+  "bm25": {
+    "b": 0.75,
+    "implementation": "rank_bm25.BM25Okapi",
+    "k1": 1.5
+  },
+  "corpus_documents": 308,
+  "figure": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/figures_pdf/bm25_retrieval.pdf",
+  "input": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_corrected_detection_v1/corpus.csv",
+  "input_sha256": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
+  "post_hoc_family": "15 Linked Issue vs other-context comparisons; one BH-FDR family",
+  "relevant_document": "human description for the same normalized_pr_id",
+  "tie_policy": "average rank",
+  "token_pattern": "[A-Za-z0-9_]+",
+  "tokenizer": "lowercase ASCII alphanumeric-and-underscore regex"
+}

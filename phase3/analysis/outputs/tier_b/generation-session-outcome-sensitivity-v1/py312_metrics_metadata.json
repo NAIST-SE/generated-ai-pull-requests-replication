@@ -1,0 +1,47 @@
+{
+  "content_pos": [
+    "ADJ",
+    "ADV",
+    "NOUN",
+    "PROPN",
+    "VERB"
+  ],
+  "created_at_utc": "2026-08-31T03:58:18.993486+00:00",
+  "historical_validation_tolerance": 1e-10,
+  "historical_validations": [
+    {
+      "label": "historical_mtld_original",
+      "max_abs_difference": 2.842170943040401e-14,
+      "rows": 389
+    },
+    {
+      "label": "historical_mtld_bidir",
+      "max_abs_difference": 2.842170943040401e-14,
+      "rows": 389
+    },
+    {
+      "label": "historical_lexical_density",
+      "max_abs_difference": 5.551115123125783e-17,
+      "rows": 389
+    }
+  ],
+  "mtld_implementation": "TAALED lexdiv: mtldo and mtld; <10 tokens undefined",
+  "output_sha256": "16a5520c77bb78c68ebd68af572fa19a842ef7957c20c702e022c1c58d41fa9f",
+  "protocol": "generation-session-outcome-sensitivity-v1",
+  "raw_text_in_outputs": false,
+  "rows": 778,
+  "source_sha256": {
+    "corrected_detector_completion": "a2b6d050d526ed941cc27023e767de0789c8faa117339ad7454d54c65a23b001",
+    "corrected_detector_corpus": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+    "diagnostic_verification": "229352273082f1531820185c2914c3049098f9f37f033a08940dabe67849a05a",
+    "gpt_current": "e0da1ce91f000054e310910e3c97f34734aaf0d4d343e846149d14fe1cab0124",
+    "qwen_current": "3f84cf2fe22213a39e3faefa6c3b7722ca6617458a774c901e7cb0f69e5b7428",
+    "rq2_completion": "bdd1866d1310a424c50b28a299435bda68bb3dc8f4eeb017f062ada42e9a08b5",
+    "sample_manifest": "f0f657743b8464a283854dfbe949101bfdecc0f2718930404a2196efe71b2234"
+  },
+  "spacy_model": "core_web_sm",
+  "spacy_model_version": "3.8.0",
+  "spacy_version": "3.8.14",
+  "stage": "py312_metrics",
+  "unique_texts_processed": 828
+}

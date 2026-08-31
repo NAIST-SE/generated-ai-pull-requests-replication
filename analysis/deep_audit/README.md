@@ -1,4 +1,10 @@
-# Deep-audit remediation analyses
+# Deep-audit remediation analyses (historical pre-B4)
+
+> **Historical provenance only.** This flat-layout pipeline and its 5,526-AI-row outputs predate
+> the genuine-issue source audit. They are retained to document the revision history but do not
+> produce the current manuscript results. Use the corrected code under `phase3/` and the
+> authoritative corpus at
+> `datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv`.
 
 These scripts implement the post-audit data-integrity and statistical repairs used by
 the revised manuscript. The study team executed them only on `nokogiri`; the checked-in

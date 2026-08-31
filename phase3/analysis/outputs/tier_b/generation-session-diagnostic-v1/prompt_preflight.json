@@ -1,0 +1,61 @@
+{
+  "all_prompts_exact": true,
+  "by_model_context": [
+    {
+      "exact_matches": 50,
+      "model_label": "gpt",
+      "pairs": 50,
+      "variation": "P-1"
+    },
+    {
+      "exact_matches": 50,
+      "model_label": "gpt",
+      "pairs": 50,
+      "variation": "P-2"
+    },
+    {
+      "exact_matches": 50,
+      "model_label": "gpt",
+      "pairs": 50,
+      "variation": "P-3"
+    },
+    {
+      "exact_matches": 50,
+      "model_label": "gpt",
+      "pairs": 50,
+      "variation": "P-4"
+    },
+    {
+      "exact_matches": 50,
+      "model_label": "qwen",
+      "pairs": 50,
+      "variation": "P-1"
+    },
+    {
+      "exact_matches": 50,
+      "model_label": "qwen",
+      "pairs": 50,
+      "variation": "P-2"
+    },
+    {
+      "exact_matches": 50,
+      "model_label": "qwen",
+      "pairs": 50,
+      "variation": "P-3"
+    },
+    {
+      "exact_matches": 50,
+      "model_label": "qwen",
+      "pairs": 50,
+      "variation": "P-4"
+    }
+  ],
+  "checked_pairs": 400,
+  "created_at_utc": "2026-08-31T02:02:09.986137+00:00",
+  "expected_pairs": 400,
+  "git_commit": "baed3dd7a161887e2c1e95c3ce84c2e63b2dab64",
+  "prompt_mismatch_count": 0,
+  "prompt_set_sha256": "5ce55e7b91a64ebab859c2dda66e0f5bf9a840deb86e26e74c198271bce258b0",
+  "protocol_version": "generation-session-diagnostic-v1",
+  "sample_manifest_sha256": "f0f657743b8464a283854dfbe949101bfdecc0f2718930404a2196efe71b2234"
+}

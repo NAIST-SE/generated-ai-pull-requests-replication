@@ -1,0 +1,29 @@
+{
+  "corpus_sha256": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
+  "counts": {
+    "ai": 5322,
+    "human": 308,
+    "total": 5630,
+    "under_250_chars_scored": 1302
+  },
+  "detection_results_path": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv",
+  "detection_results_sha256": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+  "detector_result_sha256": {
+    "roberta": "ac2879fce28bcd5098bff9dd17dbe30b7e5fc9789fe088116fed7c1d1d9b9e95",
+    "roberta-qa": "45dfeb0ddcced331e915bee27eb080848f921c074f178687f7d252dc1bc27efc",
+    "zerogpt": "02b8023c6b91c9f29056c0d422fb47766604669bfbd6d321e7f045439223411c"
+  },
+  "integrity_gates": {
+    "all_entries_scored_including_short_texts": true,
+    "all_probabilities_finite_and_in_range": true,
+    "all_three_detectors_complete": true,
+    "corpus_hash_matches": true,
+    "no_duplicate_entry_keys": true,
+    "pinned_roberta_revisions": true,
+    "qa_detector_uses_pr_title_description_pair": true,
+    "zero_pipeline_text_truncation_for_zerogpt": true
+  },
+  "run_id": "run_3_corrected_detection_v1",
+  "status": "complete_and_verified",
+  "verified_at_utc": "2026-08-30T22:43:15.447657+00:00"
+}

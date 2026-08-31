@@ -1,0 +1,5 @@
+Model,Metric,N,Mean,Median,Std,Min,Max,Q1,Q3
+Human,GraphCodeBERT Similarity,308,0.7093,0.7078,0.0546,0.567,0.8602,0.673,0.7465
+meta-llama/llama-3.1-70b-instruct,GraphCodeBERT Similarity,1778,0.7324,0.7334,0.0562,0.5067,0.8808,0.6956,0.7727
+gpt-5-mini-2025-08-07,GraphCodeBERT Similarity,1772,0.7421,0.7446,0.0582,0.5196,0.9157,0.7021,0.7837
+Qwen/Qwen2.5-72B-Instruct,GraphCodeBERT Similarity,1772,0.7366,0.7358,0.055,0.5754,0.8883,0.6969,0.7785

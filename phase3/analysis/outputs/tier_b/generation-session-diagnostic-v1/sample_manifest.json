@@ -1,0 +1,101 @@
+{
+  "audited_issue_pr_count": 273,
+  "complete_case_population_pr_ids_sha256": "abcd1b315c1dc66ac0fc65bfca343d18ba6c3ddfc5582006580409c1791a026f",
+  "complete_case_population_size": 267,
+  "created_at_utc": "2026-08-31T02:01:43.613550+00:00",
+  "git_commit": "baed3dd7a161887e2c1e95c3ce84c2e63b2dab64",
+  "models": [
+    "Qwen/Qwen2.5-72B-Instruct",
+    "gpt-5-mini-2025-08-07"
+  ],
+  "population_definition": "Hash-pinned genuine-issue PRs with one successful historical Qwen and GPT description in every P1-P4 context",
+  "protocol_version": "generation-session-diagnostic-v1",
+  "sample_size": 50,
+  "selected_pr_ids": [
+    "MDExOlB1bGxSZXF1ZXN0MTE3NDg1ODY3",
+    "MDExOlB1bGxSZXF1ZXN0MTEyNjM0MjEx",
+    "MDExOlB1bGxSZXF1ZXN0MTQ1OTY2NDc5",
+    "MDExOlB1bGxSZXF1ZXN0MTQ4NDc5NzAw",
+    "MDExOlB1bGxSZXF1ZXN0MTQ5ODExMTY2",
+    "MDExOlB1bGxSZXF1ZXN0MTU3MjI0NDYx",
+    "MDExOlB1bGxSZXF1ZXN0MTYwNDk0NTcy",
+    "MDExOlB1bGxSZXF1ZXN0MTYwODgyNjkw",
+    "MDExOlB1bGxSZXF1ZXN0MTc4NjE0OTA5",
+    "MDExOlB1bGxSZXF1ZXN0MTg2MTk5NjI1",
+    "MDExOlB1bGxSZXF1ZXN0MjAxMDE0MDA2",
+    "MDExOlB1bGxSZXF1ZXN0MjY1NzQzNTE5",
+    "MDExOlB1bGxSZXF1ZXN0MjY2MTQ1NzM2",
+    "MDExOlB1bGxSZXF1ZXN0Mjc0OTk2Njc5",
+    "MDExOlB1bGxSZXF1ZXN0MzA3MDg4NTUx",
+    "MDExOlB1bGxSZXF1ZXN0MzQxNDM1NjYy",
+    "MDExOlB1bGxSZXF1ZXN0MzQxODgwNzI4",
+    "MDExOlB1bGxSZXF1ZXN0MzY4NjAxMTg4",
+    "MDExOlB1bGxSZXF1ZXN0Mzc2MjM2Mzc1",
+    "MDExOlB1bGxSZXF1ZXN0Mzc4NDE1MDc4",
+    "MDExOlB1bGxSZXF1ZXN0NDA2MDA0NDE4",
+    "MDExOlB1bGxSZXF1ZXN0NDc4MTQ3MTQx",
+    "MDExOlB1bGxSZXF1ZXN0NTI1ODMwMTg1",
+    "MDExOlB1bGxSZXF1ZXN0NTIwODA2ODY5",
+    "MDExOlB1bGxSZXF1ZXN0NTM4MjQ0MTMx",
+    "MDExOlB1bGxSZXF1ZXN0NTU3MjU1Mzgx",
+    "MDExOlB1bGxSZXF1ZXN0NTYyNTE4NDk=",
+    "MDExOlB1bGxSZXF1ZXN0NTc3MDAzMTU1",
+    "MDExOlB1bGxSZXF1ZXN0NTgyMzYxOTQ3",
+    "MDExOlB1bGxSZXF1ZXN0Njc1NDI0MTU=",
+    "MDExOlB1bGxSZXF1ZXN0NjcwNTU3MTQ=",
+    "MDExOlB1bGxSZXF1ZXN0NjgyNzkxMjI=",
+    "MDExOlB1bGxSZXF1ZXN0NzA1MzM2NjE1",
+    "MDExOlB1bGxSZXF1ZXN0NzE4OTc3MDQ=",
+    "MDExOlB1bGxSZXF1ZXN0NzMyMDE4MTA=",
+    "MDExOlB1bGxSZXF1ZXN0Nzc2MTUxNDk=",
+    "MDExOlB1bGxSZXF1ZXN0ODU2NzMxMTY=",
+    "MDExOlB1bGxSZXF1ZXN0ODY2MjczMDE=",
+    "MDExOlB1bGxSZXF1ZXN0ODY2NDk0Nzk=",
+    "MDExOlB1bGxSZXF1ZXN0ODgyNTc2NzY=",
+    "MDExOlB1bGxSZXF1ZXN0OTI1MzkxNTc=",
+    "PR_kwDOAQ0TF840yO-G",
+    "PR_kwDOAQ0TF841rR7d",
+    "PR_kwDOAQ0TF842CEhF",
+    "PR_kwDOAQ0TF843-MmD",
+    "PR_kwDOAQ0TF843c15G",
+    "PR_kwDOAQ0TF84_olaD",
+    "PR_kwDOAQ0TF84uQHLA",
+    "PR_kwDOAQ0TF84wSNBE",
+    "PR_kwDOAQ0TF85CKVyy"
+  ],
+  "selected_pr_ids_sha256": "31aafd8f05c8098a768a90f5abd38dcdfca275d6778adf424aeda69614685a3c",
+  "selection_seed": 20260831,
+  "sources": {
+    "issue_manifest": {
+      "bytes": 1276764,
+      "path": "phase3/analysis/outputs/tier_b/b4-issue-source-audit-v1/regeneration_sources.jsonl",
+      "sha256": "bdeb1d70b03c46d9f54e8775bb816d71183d486a5e55d9f76f992ab7938b49dc"
+    },
+    "old_gpt": {
+      "bytes": 48053138,
+      "path": "phase3/datasets/temperature_1/run_3/chatgpt_results_exp_chatgpt_1771584462.csv",
+      "sha256": "3d8a3adf66ce650aef5c938163915eef39f5f867ff6e07e0027c742c38b21234"
+    },
+    "old_qwen": {
+      "bytes": 39065590,
+      "path": "phase3/datasets/temperature_1/run_3/Qwen_Qwen2.5-72B-Instruct_1771584467.csv",
+      "sha256": "64bb1bdce1052aa8315e91cf1aaf7d5415f3d1c59096d443980bb2748e8a1dc0"
+    },
+    "pr_files": {
+      "bytes": 46080571,
+      "path": "phase3/datasets/selected_prs_with_diffs_and_file_contents.csv",
+      "sha256": "45c71d0170fc9343d999998ad6515e9b5b8298f63b66215f4110b3911f681d0c"
+    },
+    "selected_prs": {
+      "bytes": 646201,
+      "path": "phase3/datasets/selected_prs_sampled.csv",
+      "sha256": "d00daddbf1ed5d054bc3d126248673e9487f381f46c3ae64e68af80e1d139a8e"
+    }
+  },
+  "variations": [
+    "P-1",
+    "P-2",
+    "P-3",
+    "P-4"
+  ]
+}

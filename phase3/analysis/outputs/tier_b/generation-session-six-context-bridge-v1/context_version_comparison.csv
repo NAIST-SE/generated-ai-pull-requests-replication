@@ -1,0 +1,37 @@
+model_label,model,metric,aggregation,variation,context,n,aggregate_value_historical,rank_descending_historical,is_top_historical,aggregate_value_current,rank_descending_current,is_top_current,aggregate_change,rank_change
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,P-1,Repo Path,50,-0.0115491941105574,4.0,False,-0.02924430090934035,4.0,False,-0.01769510679878295,0.0
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,P-2,PR Title,50,-0.04006079025566575,6.0,False,-0.033088646829128196,6.0,False,0.006972143426537555,0.0
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,P-3,File Diff,50,-0.0019866952206939,2.0,False,-0.0107815547380596,2.0,False,-0.008794859517365701,0.0
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,P-4,File Contents,50,-0.0090454545570537,3.0,False,-0.0246984371915459,3.0,False,-0.0156529826344922,0.0
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,P-5,Linked Issue,50,-0.03262779675424095,5.0,False,-0.03262779675424095,5.0,False,0.0,0.0
+gpt,gpt-5-mini-2025-08-07,bertscore_f1,median,P-6,Without File Contents,50,0.0011274326243437,1.0,True,0.0011274326243437,1.0,True,0.0,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,P-1,Repo Path,39,-0.050455667078495,2.0,False,-0.0429294556379318,3.0,False,0.007526211440563195,1.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,P-2,PR Title,39,-0.0724964961409568,6.0,False,-0.0800333991646766,6.0,False,-0.0075369030237198015,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,P-3,File Diff,39,-0.0625962018966674,3.0,False,-0.0343218967318534,2.0,False,0.028274305164813995,-1.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,P-4,File Contents,39,-0.0641464740037918,5.0,False,-0.0638011246919632,5.0,False,0.0003453493118285994,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,P-5,Linked Issue,39,-0.0636668503284454,4.0,False,-0.0636668503284454,4.0,False,0.0,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bertscore_f1,median,P-6,Without File Contents,39,-0.0230579543858766,1.0,True,-0.0230579543858766,1.0,True,0.0,0.0
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,P-1,Repo Path,50,0.21882356670519232,6.0,False,0.28230037263329216,6.0,False,0.06347680592809984,0.0
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,P-2,PR Title,50,0.48327572558577914,3.0,False,0.4761802756871688,3.0,False,-0.007095449898610329,0.0
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,P-3,File Diff,50,0.48894466359123506,2.0,False,0.4999716717686155,2.0,False,0.011027008177380448,0.0
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,P-4,File Contents,50,0.2984060542883757,5.0,False,0.3108661576439731,5.0,False,0.012460103355597385,0.0
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,P-5,Linked Issue,50,0.43475746228234174,4.0,False,0.43475746228234174,4.0,False,0.0,0.0
+gpt,gpt-5-mini-2025-08-07,bm25_reciprocal_rank,mean,P-6,Without File Contents,50,0.5370011431968482,1.0,True,0.5370011431968482,1.0,True,0.0,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,P-1,Repo Path,39,0.1181667348116628,6.0,False,0.11018151923740095,6.0,False,-0.00798521557426185,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,P-2,PR Title,39,0.5109238734789229,1.0,True,0.40637789978507133,3.0,False,-0.10454597369385155,2.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,P-3,File Diff,39,0.44643099441476863,3.0,False,0.41182050672444875,2.0,False,-0.03461048769031988,-1.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,P-4,File Contents,39,0.17108024694015184,5.0,False,0.15961690255514757,5.0,False,-0.011463344385004265,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,P-5,Linked Issue,39,0.22645389932653692,4.0,False,0.22645389932653692,4.0,False,0.0,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,bm25_reciprocal_rank,mean,P-6,Without File Contents,39,0.48509054411134456,2.0,False,0.48509054411134456,1.0,True,0.0,-1.0
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,P-1,Repo Path,50,0.09576119402985075,5.0,False,0.0957316737346478,5.0,False,-2.952029520295052e-05,0.0
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,P-2,PR Title,50,0.11192298770586864,3.0,False,0.10472411231264514,3.0,False,-0.007198875393223503,0.0
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,P-3,File Diff,50,0.11269486775267121,2.0,False,0.1049191606467148,2.0,False,-0.007775707105956403,0.0
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,P-4,File Contents,50,0.08298898071625341,6.0,False,0.0904896866635175,6.0,False,0.007500705947264097,0.0
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,P-5,Linked Issue,50,0.09776981282357625,4.0,False,0.09776981282357625,4.0,False,0.0,0.0
+gpt,gpt-5-mini-2025-08-07,rougeL_fmeasure,median,P-6,Without File Contents,50,0.11673830184088875,1.0,True,0.11673830184088875,1.0,True,0.0,0.0
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,P-1,Repo Path,39,0.1081081081081081,4.0,False,0.1058823529411764,5.0,False,-0.0022257551669317005,1.0
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,P-2,PR Title,39,0.12,2.0,False,0.1063829787234042,4.0,False,-0.013617021276595795,2.0
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,P-3,File Diff,39,0.1181818181818182,3.0,False,0.1365461847389558,2.0,False,0.018364366557137607,-1.0
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,P-4,File Contents,39,0.0985915492957746,6.0,False,0.1071428571428571,3.0,False,0.008551307847082495,-3.0
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,P-5,Linked Issue,39,0.1052631578947368,5.0,False,0.1052631578947368,6.0,False,0.0,1.0
+qwen,Qwen/Qwen2.5-72B-Instruct,rougeL_fmeasure,median,P-6,Without File Contents,39,0.146938775510204,1.0,True,0.146938775510204,1.0,True,0.0,0.0

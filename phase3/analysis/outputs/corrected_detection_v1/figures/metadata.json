@@ -1,0 +1,12 @@
+{
+  "figure_policy": "operational rows; all corrected detector calls must be successful",
+  "input": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv",
+  "input_sha256": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+  "maximum_brackets_per_panel": 5,
+  "pairwise": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/corrected_detection_v1/rq1/rq1_model_context_pairwise.csv",
+  "pairwise_sha256": "c7e6eebfcd8bb834696806daa82d859b762f29e10ef5f5fa5abfae2540d6cfd1",
+  "panels": 9,
+  "pdf_sha256": "07f0b8a0da6a31f881e8bf7eee210cd30cf21552d2840c49d727581326351af7",
+  "png_sha256": "2ba7ccd8391047fd571ebad89457c902ee9584f868896a01fa788eb7faa10648",
+  "significant_contrasts": 106
+}

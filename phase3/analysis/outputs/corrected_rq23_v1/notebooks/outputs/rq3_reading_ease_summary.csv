@@ -1,0 +1,5 @@
+Model,Metric,N,Mean,Median,Std,Min,Max,Q1,Q3
+Human,Flesch Kincaid Grade Level,308,11.15,11.07,3.87,-3.01,44.19,9.5,12.94
+Qwen/Qwen2.5-72B-Instruct,Flesch Kincaid Grade Level,1772,12.92,12.96,2.15,5.92,26.05,11.52,14.34
+gpt-5-mini-2025-08-07,Flesch Kincaid Grade Level,1772,13.35,13.07,3.25,6.34,87.9,11.62,14.69
+meta-llama/llama-3.1-70b-instruct,Flesch Kincaid Grade Level,1778,13.52,13.25,3.98,0.72,60.4,10.95,15.91

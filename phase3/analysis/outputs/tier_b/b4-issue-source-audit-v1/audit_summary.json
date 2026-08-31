@@ -1,0 +1,30 @@
+{
+  "api_verified": true,
+  "artifacts": 352,
+  "eligible_prs": 273,
+  "empty_field_rows": {
+    "excluded_pull_bodies": 3,
+    "excluded_pull_titles": 0,
+    "genuine_issue_bodies": 0,
+    "genuine_issue_titles": 0
+  },
+  "excluded_prs": 35,
+  "issue_only_prs": 253,
+  "issues": 293,
+  "mixed_prs": 20,
+  "multi_artifact_prs": 31,
+  "multi_genuine_issue_prs": 14,
+  "protocol_version": "b4-issue-source-audit-v1",
+  "pull_only_prs": 35,
+  "pull_requests": 59,
+  "reference_evidence_counts": {
+    "closing_keyword": 188,
+    "explicit_issue_url": 47,
+    "explicit_pull_url": 1,
+    "number_reference": 116
+  },
+  "source_rows": 308,
+  "status": "complete",
+  "stored_body_current_matches": 352,
+  "stored_title_current_matches": 352
+}

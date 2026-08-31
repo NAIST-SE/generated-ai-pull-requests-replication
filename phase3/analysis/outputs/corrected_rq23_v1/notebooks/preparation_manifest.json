@@ -1,0 +1,95 @@
+{
+  "corpus": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_corrected_detection_v1/corpus.csv",
+  "corpus_sha256": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
+  "diffs": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/selected_prs_with_diffs_and_file_contents.csv",
+  "diffs_sha256": "45c71d0170fc9343d999998ad6515e9b5b8298f63b66215f4110b3911f681d0c",
+  "notebooks": [
+    {
+      "kernel": "iwadi-main",
+      "name": "analysis_rq2_word_sentence_count.ipynb",
+      "prepared_sha256": "d5f4d66494603928c9c8a5641307f90e914fddcff5c1d6488cea27ad1e38fb30",
+      "row_level_export_added": true,
+      "self_baseline_removed": false,
+      "source_sha256": "273e934c0b392f46aa114c6163072d5c36574a8161e01385cb0137a2c8313ed3",
+      "transformer_pinned": false
+    },
+    {
+      "kernel": "iwadi-main",
+      "name": "analysis_rq2_reading_ease.ipynb",
+      "prepared_sha256": "1afe67900c9ba29a6f48d1a694ee8069b7c197d6dcbaa26cfce2f4f3a9e7b2e9",
+      "row_level_export_added": true,
+      "self_baseline_removed": false,
+      "source_sha256": "8e73e8e1c2955ab4516026d846aaefc8a5c0855e3e82ddb76b79cec9b1e1547f",
+      "transformer_pinned": false
+    },
+    {
+      "kernel": "iwadi-main",
+      "name": "analysis_rq2_ttr.ipynb",
+      "prepared_sha256": "63c1bfda1f00bb273bd5c52319fea24c2c305f56675f4d07cfb0babfbe61a246",
+      "row_level_export_added": true,
+      "self_baseline_removed": false,
+      "source_sha256": "ba9e409fe04ecd1d622e3056272bdde024560635c1e411bcb04e2dac643c4c4d",
+      "transformer_pinned": false
+    },
+    {
+      "kernel": "iwadi-py312",
+      "name": "analysis_rq2_mtld.ipynb",
+      "prepared_sha256": "e262781e04c01c60269d6da4a1c0fb2dca505e52dfbcae6367ed12bc2516a013",
+      "row_level_export_added": true,
+      "self_baseline_removed": false,
+      "source_sha256": "8c246acb98352af2e35949e11215e68bdd4da12238bd6ff99ebd64da16f1b83a",
+      "transformer_pinned": false
+    },
+    {
+      "kernel": "iwadi-py312",
+      "name": "analysis_rq2_lexical_density.ipynb",
+      "prepared_sha256": "10d3d08c5d1c4e51cd6f27c730b5fc01b28c83997dc58c404b01f7d855ff20f2",
+      "row_level_export_added": true,
+      "self_baseline_removed": false,
+      "source_sha256": "713f5e5c0a73f5023bffdc80944f6a7abffcacc41f435a09e6cddcfaed2a2116",
+      "transformer_pinned": false
+    },
+    {
+      "kernel": "iwadi-main",
+      "name": "analysis_rq2_rouge.ipynb",
+      "prepared_sha256": "ae76450f3baee1bd588e38f8ae82dafb7820d9b6537a47a6ed5a97e9f2163164",
+      "row_level_export_added": true,
+      "self_baseline_removed": true,
+      "source_sha256": "23a2575527a680a905ce1590873313dc396817d573f6c2622024c688f3741840",
+      "transformer_pinned": false
+    },
+    {
+      "kernel": "iwadi-main",
+      "name": "analysis_rq2_bertscore.ipynb",
+      "prepared_sha256": "8769355b835feab86239be120d6b23cc32c22ab7857e7f79f12452a2d97d4518",
+      "row_level_export_added": true,
+      "self_baseline_removed": true,
+      "source_sha256": "601131c152029674d1b5c27669ac4d931597447c50b144631c7ad63e86ac42ff",
+      "transformer_pinned": true
+    },
+    {
+      "kernel": "iwadi-main",
+      "name": "analysis_rq3_codebert.ipynb",
+      "prepared_sha256": "dd99cbdc65112cc741f65d98500cc7e0a2875cc2f3869d2d5bac22313a2a434f",
+      "row_level_export_added": true,
+      "self_baseline_removed": false,
+      "source_sha256": "e3114d74fde1e4b33faf9364b803ed7277fac4e39785c6125e495696ddcff495",
+      "transformer_pinned": true
+    },
+    {
+      "kernel": "iwadi-main",
+      "name": "analysis_rq3_graphcodebert.ipynb",
+      "prepared_sha256": "76f96770216bd5463aabb1240705fdc4e16aa74e5d60d3e1ad18566e26590a6d",
+      "row_level_export_added": true,
+      "self_baseline_removed": false,
+      "source_sha256": "7d274791b6cafce86f819c0a229b4a7306997211749fefbc3a62f17ff32c0d40",
+      "transformer_pinned": true
+    }
+  ],
+  "protocol": "corrected-rq23-v1",
+  "transformers": {
+    "microsoft/codebert-base": "3b0952feddeffad0063f274080e3c23d75e7eb39",
+    "microsoft/deberta-xlarge-mnli": "5b07a9086c1dbb79981ff7b05b4d1ad83b3af51c",
+    "microsoft/graphcodebert-base": "2b0488a7bb0eefc7041f1bb2cad1ab26b0da269d"
+  }
+}

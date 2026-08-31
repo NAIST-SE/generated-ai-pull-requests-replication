@@ -1,0 +1,4 @@
+Model,Metric,N pairs,Human Median,Model Median,Wilcoxon p,Cliff's Delta,Rank-Biserial,Effect Size,adj_Wilcoxon p,sig,Sig
+Qwen/Qwen2.5-72B-Instruct,Lexical Density,308,0.5563492063492064,0.5854316890850628,4.45069889452515e-07,-0.2867,-0.3319,Small,4.45069889452515e-07,True,***
+gpt-5-mini-2025-08-07,Lexical Density,308,0.5563492063492064,0.6944696599787334,1.1876154782598074e-47,-0.8976,-0.9533,Large,3.5628464347794222e-47,True,***
+meta-llama/llama-3.1-70b-instruct,Lexical Density,308,0.5563492063492064,0.6765213530096809,1.7909660103034696e-45,-0.8224,-0.9304,Large,2.6864490154552043e-45,True,***
