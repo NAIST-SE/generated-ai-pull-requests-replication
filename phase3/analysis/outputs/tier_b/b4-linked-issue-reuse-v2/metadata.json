@@ -1,0 +1,138 @@
+{
+  "analysis_git_branch": "agent/b4-linked-issue-reuse",
+  "analysis_git_commit": "9f8bf9239aeb36a358033d2159bab2f35a7fe21b",
+  "analysis_git_status_porcelain": "",
+  "analysis_repo_root": "/mnt/ext-hdd1/ayo/agent-worktrees/b4-linked-issue-reuse",
+  "bertscore": {
+    "batch_size": 8,
+    "chunk_size": 128,
+    "device": "cuda",
+    "executed": true,
+    "generated_truncated_count": 249,
+    "idf": false,
+    "lang": "en",
+    "model_type": "microsoft/deberta-xlarge-mnli",
+    "pair_truncated_count": 1418,
+    "rescale_with_baseline": true,
+    "source_truncated_count": 1235,
+    "tokenizer_max_length": 512
+  },
+  "bm25": {
+    "b": 0.75,
+    "corpus_documents": 273,
+    "implementation": "rank_bm25.BM25Okapi",
+    "k1": 1.5,
+    "tie_policy": "average rank"
+  },
+  "context_exposure": {
+    "issue_exposed": [
+      "P-5",
+      "P-6"
+    ],
+    "issue_unexposed": [
+      "P-1",
+      "P-2",
+      "P-3",
+      "P-4"
+    ]
+  },
+  "description_diagnostics": {
+    "clean_ai_rows": 4902,
+    "corrected_corpus_text_hash_mismatches": 0,
+    "description_rows": 5175,
+    "generated_text_mismatches": 0,
+    "human_rows": 273,
+    "non_stop_clean_rows": 0
+  },
+  "generation_protocol_version": "b4-corrected-generation-v3.2",
+  "generation_session_boundary": {
+    "interpretation": "information-transfer robustness analysis, not an isolated causal context effect",
+    "llama": "corrected-v3.2 P-1--P-6 under the pinned CoreWeave route",
+    "qwen_gpt": "unchanged run-3 P-1--P-4 controls versus corrected-v3.2 P-5/P-6"
+  },
+  "host": "nokogiri",
+  "input_git_branch": "revision/co-author-review",
+  "input_git_commit": "483f180378226912abd2a43a8daf660cac86b1d4",
+  "input_repo_root": "/mnt/ext-hdd1/ayo/llm-in-prs",
+  "input_sha256": {
+    "corrected_corpus": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
+    "corrected_corpus_manifest": "546ab556c1b7e5030f72d8e86a29d009e31e069fbb98dad613ddd209ebe9c9a9",
+    "generation_corrected_completion": "7d8226f5b9b5c97afe687b82cae66316652546162a21446daec9caade094f6b1",
+    "generation_corrected_gpt": "5edb3e539d44141c72bacf76fa5c4d28fed8ef256dcc909595fe373a7458934d",
+    "generation_corrected_llama": "e9f97ab7e3b3306e701127fb19dc97c94e7c6767d91568a21febe8b629e38783",
+    "generation_corrected_qwen": "2213022098b797b6b0b224e2724c50cea8459f5621ba082c444ff3c332df1b6b",
+    "generation_old_gpt": "3d8a3adf66ce650aef5c938163915eef39f5f867ff6e07e0027c742c38b21234",
+    "generation_old_qwen": "64bb1bdce1052aa8315e91cf1aaf7d5415f3d1c59096d443980bb2748e8a1dc0",
+    "generation_selected_prs": "d00daddbf1ed5d054bc3d126248673e9487f381f46c3ae64e68af80e1d139a8e",
+    "issue_manifest": "bdeb1d70b03c46d9f54e8775bb816d71183d486a5e55d9f76f992ab7938b49dc"
+  },
+  "issue_source_diagnostics": {
+    "duplicate_rendered_block_groups": 8,
+    "genuine_issue_artifacts": 293,
+    "issue_source_records": 273,
+    "maximum_rendered_block_multiplicity": 2,
+    "rendered_issue_count_distribution": {
+      "1": 259,
+      "2": 10,
+      "3": 2,
+      "4": 2
+    },
+    "unique_issue_artifacts": 284,
+    "unique_rendered_issue_blocks": 265
+  },
+  "packages": {
+    "bert-score": "0.3.13",
+    "numpy": "2.3.2",
+    "pandas": "2.3.1",
+    "rank-bm25": "0.2.2",
+    "rouge-score": "0.1.2",
+    "scipy": "1.17.0",
+    "statsmodels": "0.14.6",
+    "torch": "2.10.0",
+    "transformers": "5.0.0"
+  },
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "primary_outcome": "conservative_normalized occurrence-level generated 5-gram containment",
+  "prompt_diagnostics": {
+    "across_model_source_mismatches": 0,
+    "eligible_ai_rows": 4902,
+    "exposed_prompt_rows": 1638,
+    "manifest_source_mismatches": 0,
+    "model_context_counts": {
+      "Qwen/Qwen2.5-72B-Instruct|P-1": 273,
+      "Qwen/Qwen2.5-72B-Instruct|P-2": 273,
+      "Qwen/Qwen2.5-72B-Instruct|P-3": 273,
+      "Qwen/Qwen2.5-72B-Instruct|P-4": 267,
+      "Qwen/Qwen2.5-72B-Instruct|P-5": 273,
+      "Qwen/Qwen2.5-72B-Instruct|P-6": 273,
+      "gpt-5-mini-2025-08-07|P-1": 273,
+      "gpt-5-mini-2025-08-07|P-2": 273,
+      "gpt-5-mini-2025-08-07|P-3": 273,
+      "gpt-5-mini-2025-08-07|P-4": 267,
+      "gpt-5-mini-2025-08-07|P-5": 273,
+      "gpt-5-mini-2025-08-07|P-6": 273,
+      "meta-llama/llama-3.1-70b-instruct|P-1": 273,
+      "meta-llama/llama-3.1-70b-instruct|P-2": 273,
+      "meta-llama/llama-3.1-70b-instruct|P-3": 273,
+      "meta-llama/llama-3.1-70b-instruct|P-4": 273,
+      "meta-llama/llama-3.1-70b-instruct|P-5": 273,
+      "meta-llama/llama-3.1-70b-instruct|P-6": 273
+    },
+    "prompt_hash_mismatches": 0,
+    "unique_prs": 273,
+    "within_pr_model_source_mismatches": 0
+  },
+  "protocol_version": "b4-linked-issue-reuse-v2",
+  "python": "3.12.9 (main, Aug 12 2025, 23:22:19) [GCC 11.4.0]",
+  "rouge": {
+    "metric": "rougeL",
+    "use_stemmer": false
+  },
+  "started_or_completed_at_utc": "2026-08-31T13:38:33.059963+00:00",
+  "unrelated_issue_control": {
+    "same_hash_candidate_rows_excluded": 16,
+    "same_issue_sha256_excluded": true,
+    "selection": "closest normalized-token length from another PR, deterministic SHA-256/PR-ID tie break",
+    "source_prs_with_same_hash_candidate_excluded": 16
+  }
+}

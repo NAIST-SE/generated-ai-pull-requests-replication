@@ -15,8 +15,9 @@ current manuscript results.
 - Experiment repository: `JosephAyo/llm-in-prs`
 - Branch: `revision/co-author-review`
 - Corrected RQ2/RQ3 execution commit: `baed3dd7a161887e2c1e95c3ce84c2e63b2dab64`
-- Publicly synchronized code head: `483f180` (`f07e747` adds the session diagnostics;
-  `483f180` corrects detector/B4 status documentation)
+- Publicly synchronized code head: `9f8bf92` (`f07e747` adds the session diagnostics;
+  `483f180` corrects detector/B4 status documentation; `9f8bf92` adds the corrected linked-issue
+  reuse analysis and independent verifier)
 - Heavy analyses were executed and verified on `nokogiri`; the workstation performed only
   copying, hashing, documentation adaptation, and public-package integrity checks.
 
@@ -36,6 +37,8 @@ current manuscript results.
 | Session diagnostic verification | `229352273082f1531820185c2914c3049098f9f37f033a08940dabe67849a05a` |
 | Outcome-sensitivity completion | `804d6bbb8effe44e5a9805ab5310576518da1573a2c7c825b5be868ddad9b64f` |
 | Six-context bridge completion | `29cd3172dae3214297b2c624f99f1426794fb1c09ab539caa50047078c5ef89b` |
+| Corrected B4 reuse completion | `44ed053466fa9fa9f527cc00df3703023bcd34802caee1f08c1b00f1d44ac4e8` |
+| Corrected B4 independent verification | `d579b3d5fb20442c538408f3a61cab31264a882d3a57e2d24cb29425d2829111` |
 
 The embedded completion and verification files provide finer-grained hashes for their result
 families.
@@ -66,7 +69,9 @@ Included:
 - corrected source code and immutable model/configuration metadata;
 - verified numeric/hashed result packages;
 - executed notebooks and figures;
-- genuine-issue audit outputs needed to reproduce corrected generation; and
+- genuine-issue audit outputs needed to reproduce corrected generation;
+- corrected B4 linked-issue reuse source, complete numeric/text-bearing outputs, and independent
+  verification; and
 - raw-text-free generation-session diagnostics.
 
 Excluded:
@@ -80,6 +85,12 @@ Excluded:
   manifests); and
 - `b4-linked-issue-reuse-v1`, because it was executed before the genuine-issue audit and is not
   valid evidence for the corrected construct.
+
+The corrected `b4-linked-issue-reuse-v2` package is intentionally included. Five of its audit
+artifacts contain public JabRef issue/PR text, generated descriptions already represented in the
+public corpus, or exact matched spans. Their publication was explicitly authorized on 2026-09-01;
+no API credentials, operational logs, full generation prompts, diffs, or file-content snapshots
+are included.
 
 `phase3/analysis/outputs/corrected_rq23_v1/completion.json` is preserved from the complete server
 run. Its source-package hash list includes one Python bytecode file; that bytecode is deliberately

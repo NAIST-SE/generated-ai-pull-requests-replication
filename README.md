@@ -62,6 +62,7 @@ omitted temperature and used OpenAI's model-default decoding behaviour.
 │       ├── corrected_rq23/         # Final RQ2/RQ3 pipeline and verifier
 │       ├── deep_audit/              # Corrected Prelim-RQ/RQ1 analyses
 │       ├── b4_issue_source_audit/   # Genuine-issue provenance audit
+│       ├── b4_linked_issue_reuse/   # Corrected B4 metrics, tests, and verifier
 │       ├── generation_session_*     # Session diagnostics and robustness bridge
 │       └── outputs/                 # Verified precomputed result packages
 ├── datasets/
@@ -106,6 +107,9 @@ and Python bytecode are intentionally excluded.
   exports, figures, reconstructed verification tables, and completion manifest;
 - `phase3/analysis/outputs/tier_b/b4-issue-source-audit-v1/` — verified 273-PR genuine-issue
   population and regeneration manifest;
+- `phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/` — corrected prompt-exact
+  linked-issue reuse scores, five predeclared statistical families, text-bearing inspection
+  artifacts, completion hashes, and independent verification;
 - `phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/` — raw-text-free diagnostic
   comparisons only (the newly generated descriptions are deliberately excluded);
 - `phase3/analysis/outputs/tier_b/generation-session-outcome-sensitivity-v1/` — verified
@@ -114,9 +118,14 @@ and Python bytecode are intentionally excluded.
   six-context headline bridge.
 
 The old `b4-linked-issue-reuse-v1` execution is not published because it predates the
-genuine-issue audit. A corrected linked-issue reuse analysis must use the 273-PR manifest and a
-new protocol version. B1 modern-detector and B2 human-coding results will be added only after
-their respective protocols are completed and independently verified.
+genuine-issue audit. The published corrected v2 analysis uses the 273-PR prompt-exact manifest,
+4,902 AI-generated descriptions, and 273 historical human descriptions. Under P-5, median
+normalized exact five-token containment is 1.20%--1.96% across generators and exceeds every
+issue-unexposed control in the 12 predeclared corrected contrasts. P-6 transfer is weaker and
+sparser. These results support limited issue-text transfer, not plagiarism, wholesale copying,
+description quality, or a causal effect of adding issue text. B1 modern-detector and B2
+human-coding results will be added only after their respective protocols are completed and
+independently verified.
 
 ## Reproducing the corrected workflow
 
@@ -174,6 +183,22 @@ bash corrected_rq23/run_pipeline.sh
 
 The full execution is GPU/server work. Precomputed notebooks and outputs are included so the
 reported values can be audited without rerunning the models.
+
+### Corrected linked-issue reuse analysis
+
+Synthetic tests may run on any host:
+
+```bash
+cd phase3/analysis/b4_linked_issue_reuse
+python -m unittest -v test_b4_metrics.py test_b4_pipeline_synthetic.py
+```
+
+Study-data execution is fail-closed to the configured Nokogiri server. The curated public package
+includes the exact source code and complete verified v2 outputs; the raw corrected generation
+exports remain excluded because their descriptions already appear in the corrected public corpus
+and their large stored prompts are not needed to audit the published scores. Run
+`verify_public_package.py` to validate all 20 B4 output hashes and the independent verification
+record without recomputing study metrics.
 
 ### Integrity-only public-package check
 

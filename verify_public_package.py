@@ -42,6 +42,10 @@ HASHES = {
         "804d6bbb8effe44e5a9805ab5310576518da1573a2c7c825b5be868ddad9b64f",
     "phase3/analysis/outputs/tier_b/generation-session-six-context-bridge-v1/completion.json":
         "29cd3172dae3214297b2c624f99f1426794fb1c09ab539caa50047078c5ef89b",
+    "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/completion.json":
+        "44ed053466fa9fa9f527cc00df3703023bcd34802caee1f08c1b00f1d44ac4e8",
+    "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/verification_report.json":
+        "d579b3d5fb20442c538408f3a61cab31264a882d3a57e2d24cb29425d2829111",
 }
 
 MODELS = (
@@ -195,6 +199,16 @@ def main() -> int:
             "decision_code",
             "does_not_trigger_complete_rerun",
         ),
+        (
+            "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/completion.json",
+            "status",
+            "complete",
+        ),
+        (
+            "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/verification_report.json",
+            "status",
+            "verified",
+        ),
     )
     for relative, key, expected_value in status_specs:
         actual = load_json(relative).get(key)
@@ -213,6 +227,72 @@ def main() -> int:
                 f"expected {expected_value}"
             )
     checks["completion_markers"] = len(status_specs)
+
+    b4_dir = ROOT / "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2"
+    b4_completion = load_json(
+        "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/completion.json"
+    )
+    expected_b4_counts = {
+        "description_rows": 5175,
+        "prompt_exact_issue_documents": 273,
+        "lexical_score_rows": 10350,
+        "component_score_rows": 20700,
+        "bm25_score_rows": 5175,
+        "bertscore_rows": 5175,
+    }
+    for key, expected_value in expected_b4_counts.items():
+        actual = b4_completion.get("counts", {}).get(key)
+        if actual != expected_value:
+            failures.append(
+                f"B4 completion has counts.{key}={actual!r}; expected {expected_value}"
+            )
+    b4_hashes = b4_completion.get("output_sha256", {})
+    if len(b4_hashes) != 20:
+        failures.append(f"B4 completion anchors {len(b4_hashes)} outputs, expected 20")
+    for name, expected in b4_hashes.items():
+        path = b4_dir / name
+        if not path.is_file():
+            failures.append(f"missing B4 output: {name}")
+            continue
+        actual = sha256(path)
+        if actual != expected:
+            failures.append(
+                f"SHA-256 mismatch for B4 output {name}: expected {expected}, got {actual}"
+            )
+    if not all(b4_completion.get("integrity_gates", {}).values()):
+        failures.append("one or more recorded B4 integrity gates are false")
+    b4_verification = load_json(
+        "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/verification_report.json"
+    )
+    if b4_verification.get("recorded_output_hashes_verified") != 20:
+        failures.append("B4 independent verifier did not record all 20 output hashes")
+    if b4_verification.get("completion_sha256") != HASHES[
+        "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/completion.json"
+    ]:
+        failures.append("B4 verification report does not anchor the published completion file")
+    checks["b4_output_hashes"] = len(b4_hashes)
+    checks["b4_counts"] = expected_b4_counts
+
+    authorized_text_artifacts = {
+        "description_manifest.csv": {"qa_question"},
+        "prompt_exact_issue_sources.csv": {"issue_text", "issue_title", "issue_body"},
+        "high_overlap_inspection_sample.csv": {
+            "description_text", "issue_text", "span_text"
+        },
+        "longest_shared_spans.csv": {"span_text"},
+        "unrelated_issue_matches.csv": {"unrelated_issue_text"},
+    }
+    for name, expected_columns in authorized_text_artifacts.items():
+        path = b4_dir / name
+        if not path.is_file():
+            failures.append(f"missing authorized B4 text-bearing artifact: {name}")
+            continue
+        missing_columns = expected_columns - csv_header(path)
+        if missing_columns:
+            failures.append(
+                f"B4 text-bearing artifact {name} lacks columns {sorted(missing_columns)}"
+            )
+    checks["authorized_b4_text_bearing_artifacts"] = len(authorized_text_artifacts)
 
     forbidden_paths = []
     for path in (ROOT / "phase3").rglob("*"):
@@ -276,6 +356,8 @@ def main() -> int:
         "5,322 successful AI descriptions",
         "retained for historical provenance only",
         "b4-linked-issue-reuse-v1",
+        "b4-linked-issue-reuse-v2",
+        "1.20%--1.96%",
     )
     for phrase in required_readme:
         if phrase not in readme:

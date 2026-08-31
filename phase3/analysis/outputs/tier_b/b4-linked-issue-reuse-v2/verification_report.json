@@ -1,0 +1,73 @@
+{
+  "checks": {
+    "bertscore_finite_and_complete": "pass",
+    "bm25_independent_reconstruction": "pass",
+    "description_corpus_agreement": "pass",
+    "duplicate_issue_block_audit": "pass",
+    "frozen_input_hashes": "pass",
+    "issue_manifest_agreement": "pass",
+    "predeclared_statistics_independent_reconstruction": "pass",
+    "primary_5gram_independent_reconstruction": "pass",
+    "unrelated_control_distinct_hash_and_deterministic": "pass"
+  },
+  "completion_sha256": "44ed053466fa9fa9f527cc00df3703023bcd34802caee1f08c1b00f1d44ac4e8",
+  "metadata_sha256": "09cbbf7fc538188e863fc7c7a421e4e1a6a444d893c7adb03b2de0234ac88151",
+  "output_dir": "/mnt/ext-hdd1/ayo/agent-worktrees/b4-linked-issue-reuse/phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2",
+  "protocol_version": "b4-linked-issue-reuse-v2",
+  "recorded_output_hashes_verified": 20,
+  "row_counts": {
+    "bertscore_scores.csv": 5175,
+    "bertscore_summary.csv": 76,
+    "bm25_retrieval_scores.csv": 5175,
+    "bm25_summary.csv": 76,
+    "component_scores.csv": 20700,
+    "description_manifest.csv": 5175,
+    "high_overlap_inspection_sample.csv": 190,
+    "lexical_scores.csv": 10350,
+    "lexical_summary.csv": 114,
+    "longest_shared_spans.csv": 10350,
+    "metrics_long.csv": 93150,
+    "prompt_exact_issue_sources.csv": 273,
+    "stats_p5_vs_p6_5gram.csv": 3,
+    "stats_primary_p5_5gram.csv": 12,
+    "stats_secondary_bertscore_p5.csv": 12,
+    "stats_secondary_bm25_p5.csv": 12,
+    "stats_secondary_p6_5gram.csv": 12,
+    "unrelated_issue_matches.csv": 273,
+    "unrelated_issue_scores.csv": 5175
+  },
+  "statistical_tables": {
+    "p5_vs_p6_5gram": {
+      "max_n": 273,
+      "min_n": 273,
+      "reconstructed": true,
+      "rows": 3
+    },
+    "primary_p5_5gram": {
+      "max_n": 273,
+      "min_n": 267,
+      "reconstructed": true,
+      "rows": 12
+    },
+    "secondary_bertscore_p5": {
+      "max_n": 273,
+      "min_n": 267,
+      "reconstructed": true,
+      "rows": 12
+    },
+    "secondary_bm25_p5": {
+      "max_n": 273,
+      "min_n": 267,
+      "reconstructed": true,
+      "rows": 12
+    },
+    "secondary_p6_5gram": {
+      "max_n": 273,
+      "min_n": 267,
+      "reconstructed": true,
+      "rows": 12
+    }
+  },
+  "status": "verified",
+  "verified_at_utc": "2026-08-31T13:40:40.789222+00:00"
+}

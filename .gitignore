@@ -16,6 +16,8 @@ note.txt
 *.json
 !analysis/outputs/deep_audit/**/*.json
 !datasets/temperature_1/run_3_cleaned/*.json
+!phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/*.csv
+!phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/*.json
 *.log
 **/env/**
 *.venv/**

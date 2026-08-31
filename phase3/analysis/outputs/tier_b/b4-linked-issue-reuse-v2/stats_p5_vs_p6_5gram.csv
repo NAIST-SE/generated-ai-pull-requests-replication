@@ -1,0 +1,4 @@
+family,metric,model,exposed_context,control_context,sign,n,median_exposed,median_control,cliffs_delta,cliffs_magnitude,rank_biserial,wilcoxon_stat,p,adj_p,sig
+p5_vs_p6_exposed_contexts_3_tests,ngram_5_containment,Qwen/Qwen2.5-72B-Instruct,P-5,P-6,positive effect sizes favour exposed_context,273,0.012048192771084338,0.0,0.4038159642555247,Medium,0.8994565217391305,647.5,5.70102843994032e-23,1.710308531982096e-22,True
+p5_vs_p6_exposed_contexts_3_tests,ngram_5_containment,gpt-5-mini-2025-08-07,P-5,P-6,positive effect sizes favour exposed_context,273,0.015267175572519083,0.0,0.46198124220102244,Medium,0.7157959687371452,3454.5,3.417083376601397e-20,5.125625064902096e-20,True
+p5_vs_p6_exposed_contexts_3_tests,ngram_5_containment,meta-llama/llama-3.1-70b-instruct,P-5,P-6,positive effect sizes favour exposed_context,273,0.0196078431372549,0.0,0.26827141112855396,Small,0.5762749445676275,2866.5,1.544051148660611e-10,1.544051148660611e-10,True

@@ -1,0 +1,45 @@
+{
+  "completed_at_utc": "2026-08-31T13:38:34.650453+00:00",
+  "counts": {
+    "bertscore_rows": 5175,
+    "bm25_score_rows": 5175,
+    "component_score_rows": 20700,
+    "description_rows": 5175,
+    "lexical_score_rows": 10350,
+    "prompt_exact_issue_documents": 273
+  },
+  "integrity_gates": {
+    "corrected_corpus_raw_text_match": true,
+    "frozen_inputs_unchanged": true,
+    "input_hashes_match": true,
+    "p5_p6_source_match_within_pr_model": true,
+    "prompt_md5_match": true,
+    "source_match_across_models": true,
+    "source_match_frozen_issue_manifest": true,
+    "unrelated_control_excludes_identical_issue_hash": true
+  },
+  "output_sha256": {
+    "bertscore_scores.csv": "0c9d2c9f1c3a0b7bcaea4c7430ddd6fa9c6bc7daaefd012b679a4020934b2b40",
+    "bertscore_summary.csv": "d97215911302501958148ecdaadd6ca4513c824352d9168100108449100fb5fc",
+    "bm25_retrieval_scores.csv": "5227cc032efd2db2641fad3e5c0830632434dd7b11293cb94fd3b0b53eaf0ffd",
+    "bm25_summary.csv": "cd58c96a8ebc01c52aa97d22fc3ce273ae2d1b3eb93af9ed7c36f44039fcfb56",
+    "component_scores.csv": "ef9a0d01f6db1b7387ec031596733dae97d4358accd3b26947776ac34a9e1ca3",
+    "description_manifest.csv": "a05a73c39f4cc86b044034d948bc030b50131ba370203023c5b109c1f5a23060",
+    "high_overlap_inspection_sample.csv": "7a99ff2d2f90d578236d7b9261d7007513432e9efab03055b0f322fec72cc55a",
+    "lexical_scores.csv": "1ce27891c99e56a52a5e776ab90ff6f1b9270e347e6b6e28ba6a4829ec328ba6",
+    "lexical_summary.csv": "2b6fc637ef3ab8b447789daff958a538dd15bdb11cdc0fbd507bd69d8fd24b23",
+    "longest_shared_spans.csv": "565d9490d907daf44aea0bbfab633770649b29d2e050ba3099a308205f68b1e9",
+    "metadata.json": "09cbbf7fc538188e863fc7c7a421e4e1a6a444d893c7adb03b2de0234ac88151",
+    "metrics_long.csv": "aa80b5c287a7a20a90ffd9292fe90dbd53088257dbac7ca60a8c3a514ec6c550",
+    "prompt_exact_issue_sources.csv": "c6352b2285bbdd2aa8d05e0c6d646165e9dbeb2c739cc3bbd2903d2acd802a40",
+    "stats_p5_vs_p6_5gram.csv": "8a59860dca0d5fdf1e4e4aecd870b0e9eb7ae9a0911b3445d58c7c55e9e6cbbd",
+    "stats_primary_p5_5gram.csv": "90dea447081053a0bd2d5902c4e53db7610602b3e99301fa5423cde5de15f1d0",
+    "stats_secondary_bertscore_p5.csv": "39280ef340a57af888a9770e5388f554b9e30a551acfe4c0d9b3e9c91e7233c6",
+    "stats_secondary_bm25_p5.csv": "8664fe8a84fdbab04ee52c91174ebe634e3f59e6ae3edfba6c117fcabb6164fa",
+    "stats_secondary_p6_5gram.csv": "98871b196322a82eb531c8d39df3aff6868c5735d4b4a3ff8de04bcb3e7fd8db",
+    "unrelated_issue_matches.csv": "aae9fcbd0958db2a85e0969305f1795f9b929f5ccad96aa1a908ef6cb2987e66",
+    "unrelated_issue_scores.csv": "d88c172f3c9bc2c0d0b2be5e76e97c957b150189b6fda249711e2b12637b5f29"
+  },
+  "protocol_version": "b4-linked-issue-reuse-v2",
+  "status": "complete"
+}
