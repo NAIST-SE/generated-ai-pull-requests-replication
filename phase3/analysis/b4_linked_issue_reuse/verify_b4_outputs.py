@@ -131,7 +131,7 @@ def ngram_containment(source: list[str], generated: list[str], n: int) -> float:
     return matched / total
 
 
-def independent_rank_biserial(exposed: np.ndarray, control: np.ndarray) -> float:
+def matched_pairs_rank_biserial(exposed: np.ndarray, control: np.ndarray) -> float:
     difference = exposed - control
     difference = difference[~np.isnan(difference)]
     difference = difference[difference != 0]
@@ -217,7 +217,7 @@ def verify_stats(
                     "n": len(aligned),
                     "median_exposed": float(np.median(exposed_values)),
                     "median_control": float(np.median(control_values)),
-                    "rank_biserial": independent_rank_biserial(
+                    "rank_biserial": matched_pairs_rank_biserial(
                         exposed_values, control_values
                     ),
                     "wilcoxon_stat": float(statistic),

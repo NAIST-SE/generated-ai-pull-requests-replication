@@ -25,8 +25,10 @@ unchanged for audit comparison. All execution copies and outputs are retained un
   NLTK sentence segmentation and TTR, `textstat` FKGL, `taaled` MTLD, and spaCy lexical density.
 - Human/AI inferential comparisons remain paired by PR. AI values are compared per
   model/context, or averaged across the contexts available for that model/PR for the pooled
-  estimand. Wilcoxon signed-rank, Cliff's delta, matched-pairs rank-biserial correlation, and
-  BH-FDR are independently reconstructed from the exported row-level values.
+  estimand. Wilcoxon signed-rank, matched-pairs rank-biserial correlation, and BH-FDR are
+  independently reconstructed from the exported row-level values. The archived tables retain
+  ordinary Cliff's delta only as an unpaired marginal sensitivity; it is not the primary effect
+  size, and its magnitude labels do not apply to rank-biserial correlation.
 - ROUGE and BERTScore are generated-to-reference similarity measures. The human description for
   the same PR is the reference; human-self values are not treated as a sampled baseline
   distribution and no effect size against the artificial value 1 is reported.

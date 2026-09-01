@@ -3,7 +3,8 @@ paired_stats.py -- shared statistics helpers for the TSE revision (Tier-A).
 
 Addresses the co-author review:
   * paired human/AI comparisons  -> Wilcoxon signed-rank (not Mann-Whitney U)
-  * matched-pairs rank-biserial effect size reported alongside Cliff's delta
+  * matched-pairs rank-biserial as the primary paired effect size
+  * ordinary Cliff's delta retained only as an unpaired marginal sensitivity
   * a single Benjamini-Hochberg (FDR) correction across a test family
   * a real per-cell p-value (replacing the blanket "all Mann-Whitney p < .001")
 
@@ -14,8 +15,10 @@ matched arrays to scipy.stats.mannwhitneyu, which assumes *independent* samples 
 discards the pairing. Wilcoxon signed-rank on the per-PR differences is the correct
 test and is already used elsewhere in the paper (generation-stability analysis).
 
-Sign convention (kept identical to the original notebooks):
-  cliffs_delta(human, ai) > 0  ==>  human values tend to exceed AI values.
+Sign convention:
+  matched_pairs_rank_biserial(human, ai) > 0  ==>  human values tend to exceed AI values.
+The retained cliffs_delta helper uses the same sign, but it compares all cross-sample
+pairs and therefore does not preserve the within-PR matching.
 """
 from __future__ import annotations
 
@@ -34,11 +37,13 @@ except Exception:  # pragma: no cover
 # Effect sizes
 # --------------------------------------------------------------------------- #
 def cliffs_delta(a, b):
-    """Cliff's delta (stochastic dominance) of `a` vs `b`.
+    """Ordinary, unpaired Cliff's delta (stochastic dominance) of `a` vs `b`.
 
     Exact, O((m+n) log n) via searchsorted. Matches the O(m*n) reference
     implementation used in the original notebooks:
         delta = ( #(a > b) - #(a < b) ) / (m * n)
+    This is retained to reproduce archived outputs and must not be interpreted as
+    the primary effect size for within-PR paired comparisons.
     """
     a = np.asarray(a, dtype=float)
     b = np.asarray(b, dtype=float)
@@ -105,11 +110,13 @@ def align_pairs(human_df, ai_df, value_col, key="normalized_pr_id"):
 
 
 def paired_test(human_vals, ai_vals):
-    """Wilcoxon signed-rank on aligned pairs, plus effect sizes.
+    """Wilcoxon signed-rank on aligned pairs, plus effect-size diagnostics.
 
     `human_vals` and `ai_vals` must already be aligned by PR (same order).
-    Returns a dict with n, medians, cliffs_delta (+magnitude), rank_biserial,
-    the Wilcoxon statistic, and the raw two-sided p-value.
+    The primary effect size is `rank_biserial`. `cliffs_delta` and its magnitude
+    category are retained only for reproducing archived unpaired sensitivities.
+    The function also returns n, medians, the Wilcoxon statistic, and the raw
+    two-sided p-value.
     """
     h = np.asarray(human_vals, float)
     a = np.asarray(ai_vals, float)

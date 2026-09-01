@@ -61,9 +61,9 @@ the discrepancy is below the study's reported precision.
 
 For each model and P1--P4 context:
 
-1. Structural/lexical human-versus-AI comparisons use paired Wilcoxon tests,
-   Cliff's delta (positive means human values tend to be larger), and matched-pair
-   rank-biserial correlation. BH-FDR is applied across the eight model-by-context
+1. Structural/lexical human-versus-AI comparisons use paired Wilcoxon tests and
+   matched-pairs rank-biserial correlation (positive means human values tend to be
+   larger). BH-FDR is applied across the eight model-by-context
    cells separately for each metric and generation version.
 2. Historical-versus-current values use direct per-PR paired differences. The
    diagnostic reports medians, the median current-minus-historical change with a
@@ -75,10 +75,10 @@ For each model and P1--P4 context:
    is recomputed against the same corresponding human PRs for both versions.
 
 No arbitrary equivalence margin is imposed after seeing the data. The report
-flags transparent qualitative changes: Cliff-delta direction reversals, magnitude
-category changes at the study's existing 0.147/0.33/0.474 thresholds, changes in
-the top-ranked P1--P4 context, and detector flag/F1 changes. Significance changes
-are reported but are not treated as the primary evidence of instability.
+also retains the original Cliff-delta direction and magnitude-category diagnostics
+as unpaired marginal sensitivities; these do not replace the paired rank-biserial
+interpretation. Changes in the top-ranked P1--P4 context and detector flag/F1 changes
+are also reported. Significance changes are not treated as the primary evidence of instability.
 
 ## Server run
 

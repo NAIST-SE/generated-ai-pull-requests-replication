@@ -32,7 +32,8 @@ robustness analysis, not as an isolated causal effect of adding issue prose.
 The confirmatory metric is conservative-normalized occurrence-level generated 5-gram
 containment. The primary family is P-5 versus P-1--P-4 for each generator, with one BH
 correction across 12 paired Wilcoxon tests. Matched-pairs rank-biserial correlation is the native
-paired effect size; Cliff's delta is retained only for continuity. Separate secondary families
+paired effect size; ordinary Cliff's delta is retained in the frozen outputs only as an unpaired
+marginal sensitivity and is not used for confirmatory interpretation. Separate secondary families
 cover P-6, P-5 versus P-6, BERTScore F1, and BM25 reciprocal rank. Alternative n-grams,
 ROUGE-L, longest spans, title/body attribution, raw-view scores, human baselines, and the
 closest-length unrelated-issue baseline are descriptive robustness evidence.
