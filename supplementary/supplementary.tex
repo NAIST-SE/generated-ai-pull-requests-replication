@@ -106,8 +106,10 @@ score and Repo Path the lowest. Model-specific F1 ranges are 0.493--0.820 for Qw
 generator and context sensitivity rather than supplying a universal context ordering.
 
 All 5,630 \binocularsDetector~calls succeeded; 268 inputs (4.76\%) were truncated at 512 tokens.
-The public replication package provides the exact analysis source, aggregate tables, independent
-verification, and sanitized source/model/environment provenance. The relevant package list is
+The public replication package provides the exact analysis source, the unchanged 22,520-row
+record-level score table, aggregate tables, independent verification, and sanitized
+source/model/environment provenance. Detector scores and predicted labels are experimental
+measurements, not evidence of the authorship of any real pull request. The relevant package list is
 not represented as a complete transitive lock, and the complete run was not independently
 repeated on CUDA. The results therefore remain tied to the recorded model revisions, global
 threshold, and Apple-MPS implementation.

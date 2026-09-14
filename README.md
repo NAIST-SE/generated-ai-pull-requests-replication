@@ -110,8 +110,9 @@ and Python bytecode are intentionally excluded.
 - `phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/` — corrected prompt-exact
   linked-issue reuse scores, five predeclared statistical families, text-bearing inspection
   artifacts, completion hashes, and independent verification;
-- `phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/` — post-hoc Binoculars aggregate
-  results, sanitized source/model/environment provenance, and independent verification;
+- `phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/` — post-hoc Binoculars record-level
+  scores, aggregate results, sanitized source/model/environment provenance, and independent
+  verification;
 - `phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/` — raw-text-free diagnostic
   comparisons only (the newly generated descriptions are deliberately excluded);
 - `phase3/analysis/outputs/tier_b/generation-session-outcome-sensitivity-v1/` — verified
@@ -181,12 +182,14 @@ replication package. The two RoBERTa detectors use the pinned revisions document
 ### Post-hoc Binoculars robustness check
 
 The exact B1 analysis implementation is under `phase3/detection/b1_modern/`, and the precomputed
-aggregate outputs are under `phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/`. The output
+record-level scores and aggregate outputs are under
+`phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/`. The output
 README documents the Apple-MPS execution route, frozen Falcon revisions, published threshold,
 analysis policy, result summary, and publication boundary. The package deliberately excludes the
-blinded handoff, private re-identification map, operational logs, returned archive, and
-record-level combined score table. Fast-DetectGPT code is retained only as a dormant contingency;
-it is not part of the reported analysis.
+blinded handoff, private re-identification map, operational logs, and returned archive. The
+published score table contains no raw text, and its detector labels must not be interpreted as
+evidence of real-world PR authorship. Fast-DetectGPT code is retained only as a dormant
+contingency; it is not part of the reported analysis.
 
 ### Corrected RQ2/RQ3 analyses
 

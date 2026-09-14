@@ -49,7 +49,7 @@ HASHES = {
     "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/analysis_verification.json":
         "82568546f598fc35f59150ef952b2b6009720b416b449aef18b677a9e6bf67b3",
     "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/provenance/public-provenance.json":
-        "45380342e80f6447126c0c0d30207493042e0de282d1a50797fcf4f5ccd37df2",
+        "b16fa090b36168f78554250b5c821ea2796c40f7b19d5d4c9d6ef60b59bef80c",
     "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/provenance/binoculars-package-inventory.txt":
         "573bc368b8510100481cad4a015872488fd5d6fe5f7c6cfcec01ff53b3a9f524",
 }
@@ -325,25 +325,41 @@ def main() -> int:
                 f"B1 verification has {key}={actual!r}; expected {expected_value!r}"
             )
 
-    b1_public_hashes = {
-        name: expected
-        for name, expected in b1_metadata.get("output_hashes", {}).items()
-        if name != "all_detector_scores.csv"
-    }
-    if len(b1_public_hashes) != 8:
+    b1_public_hashes = b1_metadata.get("output_hashes", {})
+    if len(b1_public_hashes) != 9:
         failures.append(
-            f"B1 metadata exposes {len(b1_public_hashes)} aggregate output hashes, expected 8"
+            f"B1 metadata exposes {len(b1_public_hashes)} output hashes, expected 9"
         )
     for name, expected in b1_public_hashes.items():
         path = b1_dir / name
         if not path.is_file():
-            failures.append(f"missing public B1 aggregate output: {name}")
+            failures.append(f"missing public B1 output: {name}")
             continue
         actual = sha256(path)
         if actual != expected:
             failures.append(
                 f"SHA-256 mismatch for B1 output {name}: expected {expected}, got {actual}"
             )
+
+    b1_scores = load_csv(f"{b1_relative}/all_detector_scores.csv")
+    if len(b1_scores) != 22520:
+        failures.append(f"B1 row-level score table has {len(b1_scores)} rows, expected 22520")
+    b1_score_detectors = Counter(row.get("detector_key") for row in b1_scores)
+    expected_score_detectors = {
+        "binoculars": 5630,
+        "roberta": 5630,
+        "roberta-qa": 5630,
+        "zerogpt": 5630,
+    }
+    if b1_score_detectors != expected_score_detectors:
+        failures.append(
+            f"B1 row-level detector counts are {dict(b1_score_detectors)!r}; "
+            f"expected {expected_score_detectors!r}"
+        )
+    if len({row.get("description_id") for row in b1_scores}) != 5630:
+        failures.append("B1 row-level score table does not contain 5,630 unique descriptions")
+    if any(row.get("success") != "True" for row in b1_scores):
+        failures.append("B1 row-level score table contains an unsuccessful detector row")
 
     b1_performance = load_csv(f"{b1_relative}/performance.csv")
     b1_pooled = [
@@ -377,13 +393,13 @@ def main() -> int:
         failures.append("B1 public provenance does not record Fast-DetectGPT as deferred")
     if b1_provenance.get("publication_boundary", {}).get(
         "record_level_combined_scores_included"
-    ) is not False:
-        failures.append("B1 public provenance does not record the row-level score exclusion")
-    checks["b1_aggregate_output_hashes"] = len(b1_public_hashes)
+    ) is not True:
+        failures.append("B1 public provenance does not record the row-level score publication")
+    checks["b1_output_hashes"] = len(b1_public_hashes)
     checks["b1_verification"] = {
         "detectors": b1_verification.get("detector_count"),
         "verified_score_rows": b1_verification.get("score_rows"),
-        "public_row_level_scores": False,
+        "public_row_level_scores": True,
     }
 
     forbidden_paths = []
@@ -407,7 +423,6 @@ def main() -> int:
         "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/gpt_current.csv",
         "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/qwen_current.csv",
         "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/smoke",
-        "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/all_detector_scores.csv",
         "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/external-input",
     )
     present_exclusions = [relative for relative in must_be_absent if (ROOT / relative).exists()]
@@ -455,6 +470,9 @@ def main() -> int:
         "1.20%--1.96%",
         "post-hoc B1 analysis",
         "Fast-DetectGPT was not run",
+        "record-level scores",
+        "must not be interpreted as",
+        "evidence of real-world PR authorship",
     )
     for phrase in required_readme:
         if phrase not in readme:

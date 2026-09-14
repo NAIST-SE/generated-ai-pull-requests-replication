@@ -41,6 +41,7 @@ current manuscript results.
 | Corrected B4 reuse completion | `44ed053466fa9fa9f527cc00df3703023bcd34802caee1f08c1b00f1d44ac4e8` |
 | Corrected B4 independent verification | `d579b3d5fb20442c538408f3a61cab31264a882d3a57e2d24cb29425d2829111` |
 | B1 Binoculars analysis metadata | `0d5b989c12cbdc2944fc5a1fbc62cff3a3e9c9a8e7aa395b0245a68c3069f13f` |
+| B1 four-detector record-level scores | `a63bc80f5a319e2c0ec80b6010a405794f75e53ffb6339b4f268deebeffd7396` |
 
 The embedded completion and verification files provide finer-grained hashes for their result
 families.
@@ -75,8 +76,8 @@ Included:
 - corrected B4 linked-issue reuse source, complete numeric/text-bearing outputs, and independent
   verification;
 - raw-text-free generation-session diagnostics; and
-- exact B1 Binoculars source, aggregate text-free results, independent verification, and
-  sanitized reproducibility metadata.
+- exact B1 Binoculars source, record-level and aggregate text-free results, independent
+  verification, and sanitized reproducibility metadata.
 
 Excluded:
 
@@ -90,7 +91,7 @@ Excluded:
 - `b4-linked-issue-reuse-v1`, because it was executed before the genuine-issue audit and is not
   valid evidence for the corrected construct; and
 - B1 blinded handoff files, the private re-identification map, collaborator archive, operational
-  logs, screenshots, internal approval record, and record-level four-detector score table.
+  logs, screenshots, and internal approval record.
 
 The corrected `b4-linked-issue-reuse-v2` package is intentionally included. Five of its audit
 artifacts contain public JabRef issue/PR text, generated descriptions already represented in the

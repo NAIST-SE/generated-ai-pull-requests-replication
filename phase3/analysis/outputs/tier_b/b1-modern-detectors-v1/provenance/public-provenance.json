@@ -70,7 +70,7 @@
     "independent_reconstruction": "PASS"
   },
   "publication_boundary": {
-    "record_level_combined_scores_included": false,
+    "record_level_combined_scores_included": true,
     "raw_text_or_prompts_included": false,
     "private_handoff_materials_included": false
   }
