@@ -1,0 +1,77 @@
+{
+  "run_id": "b1-modern-detectors-v1",
+  "status": "complete_and_independently_verified",
+  "scope": {
+    "analysis_detector": "binoculars",
+    "comparison_detectors": [
+      "zerogpt",
+      "roberta",
+      "roberta-qa"
+    ],
+    "fast_detectgpt": "deferred_unless_requested_in_tse_revision"
+  },
+  "experiment_source": {
+    "repository": "https://github.com/JosephAyo/llm-in-prs",
+    "branch": "revision/co-author-review",
+    "commit": "492923572940e19611ebe612d6c689c2b11877f1"
+  },
+  "detector_source": {
+    "official_repository": "https://github.com/ahans30/Binoculars",
+    "official_commit": "c8ae2f90d50ee696418bc71d8d9e5020e5f9d7b8",
+    "reviewed_mps_fork": "https://github.com/raux/Binoculars",
+    "reviewed_mps_commit": "ced95d40b6b819cc6f46d9ddf81baf21741fe618",
+    "runner_sha256": "2ffa5164e8098a197a73653c8c29c5b7390e8a6b82501463e9ed8093acce2591",
+    "detector_sha256": "2949f1fe1fefd7230aacd244ebbb19d77d12d92b0147ec4cfeaaf603be3be121"
+  },
+  "models": {
+    "observer": {
+      "id": "tiiuae/falcon-7b",
+      "revision": "ec89142b67d748a1865ea4451372db8313ada0d8"
+    },
+    "performer": {
+      "id": "tiiuae/falcon-7b-instruct",
+      "revision": "8782b5c5d8c9290412416618f36a133653e85285"
+    }
+  },
+  "configuration": {
+    "precision": "bfloat16",
+    "max_length": 512,
+    "mode": "low-fpr",
+    "threshold": 0.8536432310785527,
+    "prediction_rule": "raw_score < threshold",
+    "analysis_score": "negative raw score; higher is more AI-like",
+    "threshold_tuned_on_study_data": false
+  },
+  "environment": {
+    "python": "3.10.21",
+    "package_inventory_sha256": "573bc368b8510100481cad4a015872488fd5d6fe5f7c6cfcec01ff53b3a9f524",
+    "inventory_scope": "reported relevant packages, not a complete transitive lock"
+  },
+  "hardware": {
+    "model": "Mac16,11",
+    "chip": "Apple M4 Pro",
+    "memory_gb": 64,
+    "macos": "26.5.2",
+    "device": "mps"
+  },
+  "input": {
+    "descriptions": 5630,
+    "human": 308,
+    "ai": 5322,
+    "corpus_sha256": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306"
+  },
+  "verification": {
+    "full_run_successes": 5630,
+    "full_run_failures": 0,
+    "smoke_records": 10,
+    "smoke_repetitions": 2,
+    "smoke_max_absolute_score_difference": 0.0,
+    "bootstrap_replicates": 2000,
+    "independent_reconstruction": "PASS"
+  },
+  "publication_boundary": {
+    "record_level_combined_scores_included": false,
+    "raw_text_or_prompts_included": false,
+    "private_handoff_materials_included": false
+  }
+}

@@ -1,0 +1,3 @@
+subset,detector,aggregation,n_complete_prs,statistic,df,p
+successful_only,binoculars,mean across available generators per PR/context,273,266.9612768184197,5,1.2573544539140005e-55
+strict_common_all_detectors,binoculars,mean across available generators per PR/context,273,266.9612768184197,5,1.2573544539140005e-55

@@ -1,0 +1,22 @@
+{
+  "analysis_metadata_sha256": "0d5b989c12cbdc2944fc5a1fbc62cff3a3e9c9a8e7aa395b0245a68c3069f13f",
+  "bootstrap_replicates": 2000,
+  "detector_count": 4,
+  "independence": "does not import production analysis or paired-statistics code",
+  "run_id": "b1-modern-detectors-v1",
+  "score_rows": 22520,
+  "status": "PASS",
+  "strict_common_description_count": 5630,
+  "verified_at_utc": "2026-09-14T02:59:06.448452+00:00",
+  "verified_output_hashes": {
+    "all_detector_scores.csv": "a63bc80f5a319e2c0ec80b6010a405794f75e53ffb6339b4f268deebeffd7396",
+    "failure_and_truncation_rates.csv": "329ad8fdae845553a1f779bad5b94b50eea578248fc348f8315930ec03eca8d4",
+    "paired_modern_vs_existing_recall.csv": "3d8e733d6a20e5f7fc76352d45806b045c0693f6fb5bd70bceb74b4abe094482",
+    "paired_modern_vs_existing_specificity.csv": "d9280c3011406bd08e4a5cc1a9dc73291c9922292f5a34046ce1fc88732ff2a3",
+    "pairwise_detector_agreement.csv": "d387ae9cc4bfaf6d003747b010d588a98b8b15ad6392a6cfd9584a0eba147c22",
+    "performance.csv": "f14e28fa4310b92732c69963c1b17c61d1950c0bdab4a48a6c9c16d52ec465aa",
+    "rq1_friedman.csv": "a59b44b52302772885ce75a0734e589d233b24cd431c8ecc4fef5a9098693246",
+    "rq1_generator_context_descriptive.csv": "dd1d5963074dd28767cebb0731f37ab2ba118d7be94b9c7fa9cd4d53d43a4c37",
+    "rq1_pooled_context_pairwise.csv": "3dae6e38422e79f520494633476a0ca3d8e6864aa7e657bfdea205a18d8fd6b9"
+  }
+}

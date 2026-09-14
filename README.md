@@ -110,6 +110,8 @@ and Python bytecode are intentionally excluded.
 - `phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/` — corrected prompt-exact
   linked-issue reuse scores, five predeclared statistical families, text-bearing inspection
   artifacts, completion hashes, and independent verification;
+- `phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/` — post-hoc Binoculars aggregate
+  results, sanitized source/model/environment provenance, and independent verification;
 - `phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/` — raw-text-free diagnostic
   comparisons only (the newly generated descriptions are deliberately excluded);
 - `phase3/analysis/outputs/tier_b/generation-session-outcome-sensitivity-v1/` — verified
@@ -123,9 +125,12 @@ genuine-issue audit. The published corrected v2 analysis uses the 273-PR prompt-
 normalized exact five-token containment is 1.20%--1.96% across generators and exceeds every
 issue-unexposed control in the 12 predeclared corrected contrasts. P-6 transfer is weaker and
 sparser. These results support limited issue-text transfer, not plagiarism, wholesale copying,
-description quality, or a causal effect of adding issue text. B1 modern-detector and B2
-human-coding results will be added only after their respective protocols are completed and
-independently verified.
+description quality, or a causal effect of adding issue text. The post-hoc B1 analysis adds
+Binoculars to the three pre-specified detectors on the same 5,630-description corpus. Binoculars
+has pooled recall 0.290, specificity 0.987, and strongly generator-dependent recall
+(0.015--0.597); it does not overturn the conclusion that detector behaviour depends on generator
+and context. Fast-DetectGPT was not run and remains deferred unless a TSE revision requests it.
+B2 human-coding materials will be added separately after their publication boundary is approved.
 
 ## Reproducing the corrected workflow
 
@@ -172,6 +177,16 @@ bash run_corrected_detection_pipeline.sh
 ZeroGPT requires a token file supplied at runtime. Token values and API logs are never part of the
 replication package. The two RoBERTa detectors use the pinned revisions documented in
 `phase3/detection/corrected_rerun/README.md`.
+
+### Post-hoc Binoculars robustness check
+
+The exact B1 analysis implementation is under `phase3/detection/b1_modern/`, and the precomputed
+aggregate outputs are under `phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/`. The output
+README documents the Apple-MPS execution route, frozen Falcon revisions, published threshold,
+analysis policy, result summary, and publication boundary. The package deliberately excludes the
+blinded handoff, private re-identification map, operational logs, returned archive, and
+record-level combined score table. Fast-DetectGPT code is retained only as a dormant contingency;
+it is not part of the reported analysis.
 
 ### Corrected RQ2/RQ3 analyses
 

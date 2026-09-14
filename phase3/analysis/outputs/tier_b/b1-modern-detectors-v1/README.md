@@ -1,0 +1,73 @@
+# Post-hoc Binoculars robustness package
+
+This directory documents the B1 post-hoc robustness check for the detector analyses in the
+study. Binoculars is added to the three pre-specified detectors; it does not replace them or
+retroactively enter their original confirmatory test families.
+
+## Scope
+
+- Frozen input: 5,630 descriptions (5,322 AI-generated and 308 human-written), identical to the
+  corrected three-detector corpus.
+- Active additional detector: Binoculars only.
+- Deferred contingency: Fast-DetectGPT was not run and is not part of the reported results. It
+  remains dormant unless a TSE revision explicitly requests it.
+- Experiment source: `JosephAyo/llm-in-prs`, branch `revision/co-author-review`, commit
+  `492923572940e19611ebe612d6c689c2b11877f1`.
+
+## Detector and execution provenance
+
+The run used the official Binoculars Falcon-7B/Falcon-7B-Instruct pair, BF16 precision, a
+512-token limit, and the authors' low-false-positive-rate threshold. The model revisions, source
+commits, hardware, package inventory hash, and repeated-smoke outcome are recorded in
+`provenance/public-provenance.json`. The reviewed collaborator fork changed device and memory
+handling for Apple MPS; it did not change the detector formula, model pair, threshold, or input
+text. Two independent repetitions of the ten frozen smoke records reproduced the submitted
+scores exactly.
+
+## Analysis
+
+All 5,630 records were scored successfully. The comparative analysis joins Binoculars with the
+three corrected original detectors on the same description identifiers. It reports:
+
+- threshold metrics and 95% percentile intervals from 2,000 PR-clustered bootstrap replicates;
+- paired Binoculars-minus-existing recall and specificity differences with PR-clustered
+  intervals;
+- binary agreement by entry type, generator, and context;
+- a six-context Friedman test on per-PR/context means across available generators; and
+- 15 paired Wilcoxon context contrasts with a separate Benjamini-Hochberg correction.
+
+No missing score is imputed. The successful-only and strict four-detector common sets are both
+the complete 5,630-description corpus.
+
+## Main result
+
+Binoculars detects 1,546 of 5,322 AI descriptions (recall 0.290) and flags four of 308 human
+descriptions (specificity 0.987). Recall varies sharply by generator: 0.597 for Qwen, 0.259 for
+Llama, and 0.015 for GPT-5-mini. Its pooled recall is modestly higher than the three pre-specified
+detectors, but its pooled AUROC (0.737) is below both RoBERTa detectors. Context ranks differ
+significantly, and model-specific F1 ranges remain wide. The result therefore strengthens the
+study's bounded conclusion: detector behaviour depends on generator and context, so none of the
+tested tools provides reliable standalone evidence of authorship across the studied conditions.
+
+## Included files
+
+- `performance.csv`: pooled, generator, and generator-context threshold/ranking metrics.
+- `paired_modern_vs_existing_recall.csv`: paired recall differences.
+- `paired_modern_vs_existing_specificity.csv`: paired human-specificity differences.
+- `pairwise_detector_agreement.csv`: binary agreement summaries.
+- `failure_and_truncation_rates.csv`: success and truncation summaries.
+- `rq1_friedman.csv`: pooled six-context omnibus result.
+- `rq1_generator_context_descriptive.csv`: Binoculars score distributions by generator/context.
+- `rq1_pooled_context_pairwise.csv`: the 15 pooled context contrasts.
+- `metadata.json`: exact analysis policies and original output hashes.
+- `analysis_verification.json`: independent reconstruction receipt (`PASS`).
+- `provenance/public-provenance.json`: sanitized source, model, environment, and execution record.
+- `provenance/binoculars-package-inventory.txt`: relevant package versions reported from the
+  retained environment; this is not represented as a complete transitive lock.
+
+## Deliberately excluded
+
+The public package excludes the blinded handoff archive, re-identification map, returned ZIP,
+operational logs, screenshots, internal approval record, and the record-level 22,520-row combined
+score table. The latter contains no raw text, but it remains outside the public repository pending
+separate publication approval. Its immutable hash remains in the independent verification receipt.

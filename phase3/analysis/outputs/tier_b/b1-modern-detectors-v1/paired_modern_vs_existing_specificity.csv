@@ -1,0 +1,4 @@
+modern_detector,existing_detector,n_descriptions,n_prs,modern_specificity,existing_specificity,specificity_difference_modern_minus_existing,difference_ci_low,difference_ci_high,modern_only_ai,existing_only_ai,bootstrap_valid_replicates
+binoculars,zerogpt,308,308,0.987012987012987,1.0,-0.012987012987012991,-0.025974025974025983,-0.0032467532467532756,4,0,2000
+binoculars,roberta,308,308,0.987012987012987,1.0,-0.012987012987012991,-0.025974025974025983,-0.0032467532467532756,4,0,2000
+binoculars,roberta-qa,308,308,0.987012987012987,1.0,-0.012987012987012991,-0.02922077922077926,-0.0032467532467532756,4,0,2000

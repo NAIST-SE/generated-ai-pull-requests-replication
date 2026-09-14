@@ -1,0 +1,181 @@
+detector_a,detector_b,stratum_type,generator,context_code,context,n_descriptions,n_prs,both_ai,a_only_ai,b_only_ai,both_not_ai,agreement_rate
+binoculars,zerogpt,overall,all,all,all,5630,308,656,894,566,3514,0.7406749555950266
+binoculars,zerogpt,entry_type,human,all,all,308,308,0,4,0,304,0.987012987012987
+binoculars,zerogpt,entry_type,ai,all,all,5322,308,656,890,566,3210,0.7264186396091695
+binoculars,zerogpt,generator,Qwen/Qwen2.5-72B-Instruct,all,all,1772,308,620,438,204,510,0.6376975169300225
+binoculars,zerogpt,generator,gpt-5-mini-2025-08-07,all,all,1772,308,8,19,357,1388,0.7878103837471784
+binoculars,zerogpt,generator,meta-llama/llama-3.1-70b-instruct,all,all,1778,308,28,433,5,1312,0.7536557930258717
+binoculars,zerogpt,context,all,P-1,Repo Path,924,308,71,63,175,615,0.7424242424242424
+binoculars,zerogpt,context,all,P-2,PR Title,924,308,66,305,101,452,0.5606060606060606
+binoculars,zerogpt,context,all,P-3,File Diff,924,308,111,138,67,608,0.7781385281385281
+binoculars,zerogpt,context,all,P-4,File Contents,912,308,187,129,48,548,0.805921052631579
+binoculars,zerogpt,context,all,P-5,Linked Issue,819,273,97,100,105,517,0.7496947496947497
+binoculars,zerogpt,context,all,P-6,Without File Contents,819,273,124,155,70,470,0.7252747252747253
+binoculars,zerogpt,generator_context,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,69,33,82,124,0.6266233766233766
+binoculars,zerogpt,generator_context,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,60,157,6,85,0.4707792207792208
+binoculars,zerogpt,generator_context,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,111,87,23,87,0.6428571428571429
+binoculars,zerogpt,generator_context,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,170,38,36,58,0.7549668874172185
+binoculars,zerogpt,generator_context,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,273,273,92,56,29,96,0.6886446886446886
+binoculars,zerogpt,generator_context,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,273,273,118,67,28,60,0.652014652014652
+binoculars,zerogpt,generator_context,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,1,4,92,211,0.6883116883116883
+binoculars,zerogpt,generator_context,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,4,11,95,198,0.6558441558441559
+binoculars,zerogpt,generator_context,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0,0,44,264,0.8571428571428571
+binoculars,zerogpt,generator_context,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0,0,11,291,0.9635761589403974
+binoculars,zerogpt,generator_context,gpt-5-mini-2025-08-07,P-5,Linked Issue,273,273,3,2,74,194,0.7216117216117216
+binoculars,zerogpt,generator_context,gpt-5-mini-2025-08-07,P-6,Without File Contents,273,273,0,2,41,230,0.8424908424908425
+binoculars,zerogpt,generator_context,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,1,26,1,280,0.9123376623376623
+binoculars,zerogpt,generator_context,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,2,137,0,169,0.5551948051948052
+binoculars,zerogpt,generator_context,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0,51,0,257,0.8344155844155844
+binoculars,zerogpt,generator_context,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,308,308,17,91,1,199,0.7012987012987013
+binoculars,zerogpt,generator_context,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,273,273,2,42,2,227,0.8388278388278388
+binoculars,zerogpt,generator_context,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,273,273,6,86,1,180,0.6813186813186813
+binoculars,roberta,overall,all,all,all,5630,308,663,887,489,3591,0.7555950266429841
+binoculars,roberta,entry_type,human,all,all,308,308,0,4,0,304,0.987012987012987
+binoculars,roberta,entry_type,ai,all,all,5322,308,663,883,489,3287,0.7422021796317174
+binoculars,roberta,generator,Qwen/Qwen2.5-72B-Instruct,all,all,1772,308,416,642,218,496,0.5146726862302483
+binoculars,roberta,generator,gpt-5-mini-2025-08-07,all,all,1772,308,2,25,5,1740,0.9830699774266366
+binoculars,roberta,generator,meta-llama/llama-3.1-70b-instruct,all,all,1778,308,245,216,266,1051,0.7289088863892014
+binoculars,roberta,context,all,P-1,Repo Path,924,308,36,98,109,681,0.775974025974026
+binoculars,roberta,context,all,P-2,PR Title,924,308,265,106,132,421,0.7424242424242424
+binoculars,roberta,context,all,P-3,File Diff,924,308,56,193,49,626,0.7380952380952381
+binoculars,roberta,context,all,P-4,File Contents,912,308,145,171,84,512,0.7203947368421053
+binoculars,roberta,context,all,P-5,Linked Issue,819,273,85,112,72,550,0.7753357753357754
+binoculars,roberta,context,all,P-6,Without File Contents,819,273,76,203,43,497,0.6996336996336996
+binoculars,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,23,79,50,156,0.5811688311688312
+binoculars,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,160,57,55,36,0.6363636363636364
+binoculars,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,38,160,24,86,0.4025974025974026
+binoculars,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,76,132,35,59,0.4470198675496689
+binoculars,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,273,273,71,77,43,82,0.5604395604395604
+binoculars,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,273,273,48,137,11,77,0.45787545787545786
+binoculars,roberta,generator_context,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0,5,0,303,0.9837662337662337
+binoculars,roberta,generator_context,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,2,13,0,293,0.9577922077922078
+binoculars,roberta,generator_context,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0,0,2,306,0.9935064935064936
+binoculars,roberta,generator_context,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0,0,1,301,0.9966887417218543
+binoculars,roberta,generator_context,gpt-5-mini-2025-08-07,P-5,Linked Issue,273,273,0,5,0,268,0.9816849816849816
+binoculars,roberta,generator_context,gpt-5-mini-2025-08-07,P-6,Without File Contents,273,273,0,2,2,269,0.9853479853479854
+binoculars,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,13,14,59,222,0.762987012987013
+binoculars,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,103,36,77,92,0.6331168831168831
+binoculars,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,18,33,23,234,0.8181818181818182
+binoculars,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,308,308,69,39,48,152,0.7175324675324676
+binoculars,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,273,273,14,30,29,200,0.7838827838827839
+binoculars,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,273,273,28,64,30,151,0.6556776556776557
+binoculars,roberta-qa,overall,all,all,all,5630,308,940,610,502,3578,0.8024866785079929
+binoculars,roberta-qa,entry_type,human,all,all,308,308,0,4,0,304,0.987012987012987
+binoculars,roberta-qa,entry_type,ai,all,all,5322,308,940,606,502,3274,0.7918075911311537
+binoculars,roberta-qa,generator,Qwen/Qwen2.5-72B-Instruct,all,all,1772,308,753,305,376,338,0.6156884875846501
+binoculars,roberta-qa,generator,gpt-5-mini-2025-08-07,all,all,1772,308,0,27,1,1744,0.9841986455981941
+binoculars,roberta-qa,generator,meta-llama/llama-3.1-70b-instruct,all,all,1778,308,187,274,125,1192,0.7755905511811023
+binoculars,roberta-qa,context,all,P-1,Repo Path,924,308,49,85,110,680,0.788961038961039
+binoculars,roberta-qa,context,all,P-2,PR Title,924,308,235,136,84,469,0.7619047619047619
+binoculars,roberta-qa,context,all,P-3,File Diff,924,308,130,119,61,614,0.8051948051948052
+binoculars,roberta-qa,context,all,P-4,File Contents,912,308,236,80,91,505,0.8125
+binoculars,roberta-qa,context,all,P-5,Linked Issue,819,273,127,70,81,541,0.8156288156288156
+binoculars,roberta-qa,context,all,P-6,Without File Contents,819,273,163,116,75,465,0.7667887667887668
+binoculars,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,39,63,86,120,0.5162337662337663
+binoculars,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,180,37,62,29,0.6785714285714286
+binoculars,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,117,81,48,62,0.5811688311688312
+binoculars,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,179,29,68,26,0.6788079470198676
+binoculars,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,273,273,112,36,62,63,0.6410256410256411
+binoculars,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,273,273,126,59,50,38,0.6007326007326007
+binoculars,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0,5,0,303,0.9837662337662337
+binoculars,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0,15,1,292,0.948051948051948
+binoculars,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0,0,0,308,1.0
+binoculars,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0,0,0,302,1.0
+binoculars,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-5,Linked Issue,273,273,0,5,0,268,0.9816849816849816
+binoculars,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-6,Without File Contents,273,273,0,2,0,271,0.9926739926739927
+binoculars,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,10,17,24,257,0.8668831168831169
+binoculars,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,55,84,21,148,0.6590909090909091
+binoculars,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,13,38,13,244,0.8344155844155844
+binoculars,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,308,308,57,51,23,177,0.7597402597402597
+binoculars,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,273,273,15,29,19,210,0.8241758241758241
+binoculars,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,273,273,37,55,25,156,0.706959706959707
+zerogpt,roberta,overall,all,all,all,5630,308,285,937,867,3541,0.6795737122557727
+zerogpt,roberta,entry_type,human,all,all,308,308,0,0,0,308,1.0
+zerogpt,roberta,entry_type,ai,all,all,5322,308,285,937,867,3233,0.6610296880871853
+zerogpt,roberta,generator,Qwen/Qwen2.5-72B-Instruct,all,all,1772,308,266,558,368,580,0.47742663656884876
+zerogpt,roberta,generator,gpt-5-mini-2025-08-07,all,all,1772,308,1,364,6,1401,0.791196388261851
+zerogpt,roberta,generator,meta-llama/llama-3.1-70b-instruct,all,all,1778,308,18,15,493,1252,0.7142857142857143
+zerogpt,roberta,context,all,P-1,Repo Path,924,308,24,222,121,557,0.6287878787878788
+zerogpt,roberta,context,all,P-2,PR Title,924,308,51,116,346,411,0.5
+zerogpt,roberta,context,all,P-3,File Diff,924,308,29,149,76,670,0.7564935064935064
+zerogpt,roberta,context,all,P-4,File Contents,912,308,90,145,139,538,0.6885964912280702
+zerogpt,roberta,context,all,P-5,Linked Issue,819,273,57,145,100,517,0.7008547008547008
+zerogpt,roberta,context,all,P-6,Without File Contents,819,273,34,160,85,540,0.7008547008547008
+zerogpt,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,24,127,49,108,0.42857142857142855
+zerogpt,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,49,17,166,76,0.40584415584415584
+zerogpt,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,29,105,33,141,0.551948051948052
+zerogpt,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,74,132,37,59,0.44039735099337746
+zerogpt,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,273,273,57,64,57,95,0.5567765567765568
+zerogpt,roberta,generator_context,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,273,273,33,113,26,101,0.4908424908424908
+zerogpt,roberta,generator_context,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0,93,0,215,0.698051948051948
+zerogpt,roberta,generator_context,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,1,98,1,208,0.6785714285714286
+zerogpt,roberta,generator_context,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0,44,2,262,0.8506493506493507
+zerogpt,roberta,generator_context,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0,11,1,290,0.9602649006622517
+zerogpt,roberta,generator_context,gpt-5-mini-2025-08-07,P-5,Linked Issue,273,273,0,77,0,196,0.717948717948718
+zerogpt,roberta,generator_context,gpt-5-mini-2025-08-07,P-6,Without File Contents,273,273,0,41,2,230,0.8424908424908425
+zerogpt,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,0,2,72,234,0.7597402597402597
+zerogpt,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,1,1,179,127,0.4155844155844156
+zerogpt,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0,0,41,267,0.8668831168831169
+zerogpt,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,308,308,16,2,101,189,0.6655844155844156
+zerogpt,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,273,273,0,4,43,226,0.8278388278388278
+zerogpt,roberta,generator_context,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,273,273,1,6,57,209,0.7692307692307693
+zerogpt,roberta-qa,overall,all,all,all,5630,308,621,601,821,3587,0.7474245115452931
+zerogpt,roberta-qa,entry_type,human,all,all,308,308,0,0,0,308,1.0
+zerogpt,roberta-qa,entry_type,ai,all,all,5322,308,621,601,821,3279,0.7328072153325818
+zerogpt,roberta-qa,generator,Qwen/Qwen2.5-72B-Instruct,all,all,1772,308,597,227,532,416,0.5716704288939052
+zerogpt,roberta-qa,generator,gpt-5-mini-2025-08-07,all,all,1772,308,0,365,1,1406,0.7934537246049661
+zerogpt,roberta-qa,generator,meta-llama/llama-3.1-70b-instruct,all,all,1778,308,24,9,288,1457,0.8329583802024747
+zerogpt,roberta-qa,context,all,P-1,Repo Path,924,308,73,173,86,592,0.7196969696969697
+zerogpt,roberta-qa,context,all,P-2,PR Title,924,308,60,107,259,498,0.6038961038961039
+zerogpt,roberta-qa,context,all,P-3,File Diff,924,308,97,81,94,652,0.8106060606060606
+zerogpt,roberta-qa,context,all,P-4,File Contents,912,308,193,42,134,543,0.8070175438596491
+zerogpt,roberta-qa,context,all,P-5,Linked Issue,819,273,97,105,111,506,0.7362637362637363
+zerogpt,roberta-qa,context,all,P-6,Without File Contents,819,273,101,93,137,488,0.7191697191697192
+zerogpt,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,71,80,54,103,0.564935064935065
+zerogpt,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,59,7,183,59,0.38311688311688313
+zerogpt,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,97,37,68,106,0.6590909090909091
+zerogpt,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,178,28,69,27,0.6788079470198676
+zerogpt,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,273,273,95,26,79,73,0.6153846153846154
+zerogpt,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,273,273,97,49,79,48,0.5311355311355311
+zerogpt,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0,93,0,215,0.698051948051948
+zerogpt,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0,99,1,208,0.6753246753246753
+zerogpt,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0,44,0,264,0.8571428571428571
+zerogpt,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0,11,0,291,0.9635761589403974
+zerogpt,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-5,Linked Issue,273,273,0,77,0,196,0.717948717948718
+zerogpt,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-6,Without File Contents,273,273,0,41,0,232,0.8498168498168498
+zerogpt,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,2,0,32,274,0.8961038961038961
+zerogpt,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,1,1,75,231,0.7532467532467533
+zerogpt,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,0,0,26,282,0.9155844155844156
+zerogpt,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,308,308,15,3,65,225,0.7792207792207793
+zerogpt,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,273,273,2,2,32,237,0.8754578754578755
+zerogpt,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,273,273,4,3,58,208,0.7765567765567766
+roberta,roberta-qa,overall,all,all,all,5630,308,743,409,699,3779,0.8031971580817051
+roberta,roberta-qa,entry_type,human,all,all,308,308,0,0,0,308,1.0
+roberta,roberta-qa,entry_type,ai,all,all,5322,308,743,409,699,3471,0.7918075911311537
+roberta,roberta-qa,generator,Qwen/Qwen2.5-72B-Instruct,all,all,1772,308,523,111,606,532,0.595372460496614
+roberta,roberta-qa,generator,gpt-5-mini-2025-08-07,all,all,1772,308,0,7,1,1764,0.9954853273137697
+roberta,roberta-qa,generator,meta-llama/llama-3.1-70b-instruct,all,all,1778,308,220,291,92,1175,0.7845894263217098
+roberta,roberta-qa,context,all,P-1,Repo Path,924,308,65,80,94,685,0.8116883116883117
+roberta,roberta-qa,context,all,P-2,PR Title,924,308,265,132,54,473,0.7987012987012987
+roberta,roberta-qa,context,all,P-3,File Diff,924,308,55,50,136,683,0.7987012987012987
+roberta,roberta-qa,context,all,P-4,File Contents,912,308,167,62,160,523,0.756578947368421
+roberta,roberta-qa,context,all,P-5,Linked Issue,819,273,103,54,105,557,0.8058608058608059
+roberta,roberta-qa,context,all,P-6,Without File Contents,819,273,88,31,150,550,0.778998778998779
+roberta,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-1,Repo Path,308,308,43,30,82,153,0.6363636363636364
+roberta,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-2,PR Title,308,308,193,22,49,44,0.7694805194805194
+roberta,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-3,File Diff,308,308,41,21,124,122,0.5292207792207793
+roberta,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-4,File Contents,302,302,107,4,140,51,0.5231788079470199
+roberta,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-5,Linked Issue,273,273,87,27,87,72,0.5824175824175825
+roberta,roberta-qa,generator_context,Qwen/Qwen2.5-72B-Instruct,P-6,Without File Contents,273,273,52,7,124,90,0.5201465201465202
+roberta,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-1,Repo Path,308,308,0,0,0,308,1.0
+roberta,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-2,PR Title,308,308,0,2,1,305,0.9902597402597403
+roberta,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-3,File Diff,308,308,0,2,0,306,0.9935064935064936
+roberta,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-4,File Contents,302,302,0,1,0,301,0.9966887417218543
+roberta,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-5,Linked Issue,273,273,0,0,0,273,1.0
+roberta,roberta-qa,generator_context,gpt-5-mini-2025-08-07,P-6,Without File Contents,273,273,0,2,0,271,0.9926739926739927
+roberta,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-1,Repo Path,308,308,22,50,12,224,0.7987012987012987
+roberta,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-2,PR Title,308,308,72,108,4,124,0.6363636363636364
+roberta,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-3,File Diff,308,308,14,27,12,255,0.8733766233766234
+roberta,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-4,File Contents,308,308,60,57,20,171,0.75
+roberta,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-5,Linked Issue,273,273,16,27,18,212,0.8351648351648352
+roberta,roberta-qa,generator_context,meta-llama/llama-3.1-70b-instruct,P-6,Without File Contents,273,273,36,22,26,189,0.8241758241758241

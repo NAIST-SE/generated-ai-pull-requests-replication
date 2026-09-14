@@ -1,0 +1,46 @@
+{
+  "accepted_scores_sha256": "e58005ea7abd5686e791fbda12a8f74642fd2ed7a79162df5913516cce6c4e8e",
+  "analysis_source_hashes": {
+    "analyse.py": "1502c5e16b93e9c90760cd87adaa347171212fcfe33e0042aa5dcc64530fe8c0",
+    "paired_stats.py": "15e72a49e385004152ee62f4527082428dbd05849f899ecc7de09df3af78a2ec",
+    "verify_analysis.py": "ba54a804029319fdb43535fdc5aa61ca1aa3991d7f4f4684dbf301ca396c5c8a"
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 42,
+  "continuous_score_policy": "higher ai_score is more AI-like: -raw Binoculars ratio and the verified original-detector AI probabilities; no threshold was tuned",
+  "created_at_utc": "2026-09-14T02:55:14.102028+00:00",
+  "detector_set": [
+    "binoculars",
+    "roberta",
+    "roberta-qa",
+    "zerogpt"
+  ],
+  "failure_policy": "successful-only primary; strict common subset sensitivity; no imputation",
+  "input_manifest_sha256": "712f6a8bfc1b8429e2b0189210a18f2e5dae2669e4f4a9cd26dfc2d0e4980ab6",
+  "original_detector_provenance": {
+    "results_path": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv",
+    "results_sha256": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91",
+    "verification_path": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/corrected_detection_v1/verification_report.json",
+    "verification_sha256": "6b8bb6cbc056de2f7408352d80730b311bf0eab4fd4e74fa1ce2575e8a4ac074"
+  },
+  "output_hashes": {
+    "all_detector_scores.csv": "a63bc80f5a319e2c0ec80b6010a405794f75e53ffb6339b4f268deebeffd7396",
+    "failure_and_truncation_rates.csv": "329ad8fdae845553a1f779bad5b94b50eea578248fc348f8315930ec03eca8d4",
+    "paired_modern_vs_existing_recall.csv": "3d8e733d6a20e5f7fc76352d45806b045c0693f6fb5bd70bceb74b4abe094482",
+    "paired_modern_vs_existing_specificity.csv": "d9280c3011406bd08e4a5cc1a9dc73291c9922292f5a34046ce1fc88732ff2a3",
+    "pairwise_detector_agreement.csv": "d387ae9cc4bfaf6d003747b010d588a98b8b15ad6392a6cfd9584a0eba147c22",
+    "performance.csv": "f14e28fa4310b92732c69963c1b17c61d1950c0bdab4a48a6c9c16d52ec465aa",
+    "rq1_friedman.csv": "a59b44b52302772885ce75a0734e589d233b24cd431c8ecc4fef5a9098693246",
+    "rq1_generator_context_descriptive.csv": "dd1d5963074dd28767cebb0731f37ab2ba118d7be94b9c7fa9cd4d53d43a4c37",
+    "rq1_pooled_context_pairwise.csv": "3dae6e38422e79f520494633476a0ca3d8e6864aa7e657bfdea205a18d8fd6b9"
+  },
+  "paired_detector_policy": "modern-minus-existing recall and specificity differences with PR-clustered percentile intervals; no row-independent pooled McNemar test",
+  "performance_ci": "95% percentile cluster bootstrap by PR; 2000 replicates; deterministic per-view seeds derived from base seed 42",
+  "rq1_friedman": "per-PR/context mean across available generators; six-context complete cases",
+  "rq1_generator_context_policy": "descriptive only; no unplanned generator-specific inference",
+  "rq1_pooled_fdr_family": "15 context pairs within each subset/detector",
+  "run_id": "b1-modern-detectors-v1",
+  "strict_common_description_count": 5630,
+  "strict_common_detector_count": 4,
+  "strict_common_scores_sha256": "e58005ea7abd5686e791fbda12a8f74642fd2ed7a79162df5913516cce6c4e8e"
+}

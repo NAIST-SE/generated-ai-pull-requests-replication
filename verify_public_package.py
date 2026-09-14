@@ -46,6 +46,12 @@ HASHES = {
         "44ed053466fa9fa9f527cc00df3703023bcd34802caee1f08c1b00f1d44ac4e8",
     "phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/verification_report.json":
         "d579b3d5fb20442c538408f3a61cab31264a882d3a57e2d24cb29425d2829111",
+    "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/analysis_verification.json":
+        "82568546f598fc35f59150ef952b2b6009720b416b449aef18b677a9e6bf67b3",
+    "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/provenance/public-provenance.json":
+        "45380342e80f6447126c0c0d30207493042e0de282d1a50797fcf4f5ccd37df2",
+    "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/provenance/binoculars-package-inventory.txt":
+        "573bc368b8510100481cad4a015872488fd5d6fe5f7c6cfcec01ff53b3a9f524",
 }
 
 MODELS = (
@@ -209,6 +215,11 @@ def main() -> int:
             "status",
             "verified",
         ),
+        (
+            "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/provenance/public-provenance.json",
+            "status",
+            "complete_and_independently_verified",
+        ),
     )
     for relative, key, expected_value in status_specs:
         actual = load_json(relative).get(key)
@@ -294,6 +305,87 @@ def main() -> int:
             )
     checks["authorized_b4_text_bearing_artifacts"] = len(authorized_text_artifacts)
 
+    b1_relative = "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1"
+    b1_dir = ROOT / b1_relative
+    b1_metadata = load_json(f"{b1_relative}/metadata.json")
+    b1_verification = load_json(f"{b1_relative}/analysis_verification.json")
+    b1_provenance = load_json(f"{b1_relative}/provenance/public-provenance.json")
+
+    if b1_verification.get("status") != "PASS":
+        failures.append("B1 independent verification status is not PASS")
+    for key, expected_value in (
+        ("detector_count", 4),
+        ("score_rows", 22520),
+        ("strict_common_description_count", 5630),
+        ("bootstrap_replicates", 2000),
+    ):
+        actual = b1_verification.get(key)
+        if actual != expected_value:
+            failures.append(
+                f"B1 verification has {key}={actual!r}; expected {expected_value!r}"
+            )
+
+    b1_public_hashes = {
+        name: expected
+        for name, expected in b1_metadata.get("output_hashes", {}).items()
+        if name != "all_detector_scores.csv"
+    }
+    if len(b1_public_hashes) != 8:
+        failures.append(
+            f"B1 metadata exposes {len(b1_public_hashes)} aggregate output hashes, expected 8"
+        )
+    for name, expected in b1_public_hashes.items():
+        path = b1_dir / name
+        if not path.is_file():
+            failures.append(f"missing public B1 aggregate output: {name}")
+            continue
+        actual = sha256(path)
+        if actual != expected:
+            failures.append(
+                f"SHA-256 mismatch for B1 output {name}: expected {expected}, got {actual}"
+            )
+
+    b1_performance = load_csv(f"{b1_relative}/performance.csv")
+    b1_pooled = [
+        row for row in b1_performance
+        if row.get("subset") == "successful_only"
+        and row.get("detector") == "binoculars"
+        and row.get("view_level") == "pooled"
+    ]
+    if len(b1_pooled) != 1:
+        failures.append(f"B1 performance has {len(b1_pooled)} pooled Binoculars rows, expected 1")
+    else:
+        pooled = b1_pooled[0]
+        expected_values = {
+            "n_human": "308",
+            "n_ai": "5322",
+            "tp": "1546",
+            "fp": "4",
+        }
+        for key, expected_value in expected_values.items():
+            if pooled.get(key) != expected_value:
+                failures.append(
+                    f"B1 pooled performance has {key}={pooled.get(key)!r}; "
+                    f"expected {expected_value!r}"
+                )
+
+    if b1_provenance.get("scope", {}).get("analysis_detector") != "binoculars":
+        failures.append("B1 public provenance does not identify Binoculars as the analysis detector")
+    if b1_provenance.get("scope", {}).get("fast_detectgpt") != (
+        "deferred_unless_requested_in_tse_revision"
+    ):
+        failures.append("B1 public provenance does not record Fast-DetectGPT as deferred")
+    if b1_provenance.get("publication_boundary", {}).get(
+        "record_level_combined_scores_included"
+    ) is not False:
+        failures.append("B1 public provenance does not record the row-level score exclusion")
+    checks["b1_aggregate_output_hashes"] = len(b1_public_hashes)
+    checks["b1_verification"] = {
+        "detectors": b1_verification.get("detector_count"),
+        "verified_score_rows": b1_verification.get("score_rows"),
+        "public_row_level_scores": False,
+    }
+
     forbidden_paths = []
     for path in (ROOT / "phase3").rglob("*"):
         if not path.is_file():
@@ -315,6 +407,8 @@ def main() -> int:
         "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/gpt_current.csv",
         "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/qwen_current.csv",
         "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/smoke",
+        "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/all_detector_scores.csv",
+        "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/external-input",
     )
     present_exclusions = [relative for relative in must_be_absent if (ROOT / relative).exists()]
     if present_exclusions:
@@ -335,6 +429,7 @@ def main() -> int:
         "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1",
         "phase3/analysis/outputs/tier_b/generation-session-outcome-sensitivity-v1",
         "phase3/analysis/outputs/tier_b/generation-session-six-context-bridge-v1",
+        "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1",
     )
     unsafe_csvs: dict[str, list[str]] = {}
     scanned_csvs = 0
@@ -358,12 +453,16 @@ def main() -> int:
         "b4-linked-issue-reuse-v1",
         "b4-linked-issue-reuse-v2",
         "1.20%--1.96%",
+        "post-hoc B1 analysis",
+        "Fast-DetectGPT was not run",
     )
     for phrase in required_readme:
         if phrase not in readme:
             failures.append(f"README is missing required boundary text: {phrase!r}")
     if "Without File Contents" not in supplementary:
         failures.append("supplementary TeX is missing the Without File Contents context")
+    if "Post-hoc Binoculars Robustness Check" not in supplementary:
+        failures.append("supplementary TeX is missing the post-hoc Binoculars results")
     for stale in ("peak median F1 of 0.136", "Linked Issue consistently yielded the highest"):
         if stale in supplementary:
             failures.append(f"supplementary TeX retains stale claim: {stale!r}")

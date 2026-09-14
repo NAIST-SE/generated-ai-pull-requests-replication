@@ -10,6 +10,8 @@ Authoritative entry points:
 - corrected original-detector rerun: `../run_corrected_detection_pipeline.sh` and
   `detection/corrected_rerun/`;
 - corrected Prelim-RQ/RQ1 analysis: `analysis/deep_audit/`;
+- post-hoc Binoculars robustness source: `detection/b1_modern/`, with verified aggregate outputs
+  under `analysis/outputs/tier_b/b1-modern-detectors-v1/`;
 - corrected RQ2/RQ3 analysis: `analysis/corrected_rq23/`;
 - genuine-issue audit: `analysis/b4_issue_source_audit/`; and
 - generation-session diagnostics: `analysis/generation_session_*`.

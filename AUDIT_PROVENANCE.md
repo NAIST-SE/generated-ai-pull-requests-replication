@@ -15,7 +15,8 @@ current manuscript results.
 - Experiment repository: `JosephAyo/llm-in-prs`
 - Branch: `revision/co-author-review`
 - Corrected RQ2/RQ3 execution commit: `baed3dd7a161887e2c1e95c3ce84c2e63b2dab64`
-- Publicly synchronized code head: `9f8bf92` (`f07e747` adds the session diagnostics;
+- Verified B1 Binoculars analysis commit: `492923572940e19611ebe612d6c689c2b11877f1`
+- Prior publicly synchronized code head: `9f8bf92` (`f07e747` adds the session diagnostics;
   `483f180` corrects detector/B4 status documentation; `9f8bf92` adds the corrected linked-issue
   reuse analysis and independent verifier)
 - Heavy analyses were executed and verified on `nokogiri`; the workstation performed only
@@ -39,6 +40,7 @@ current manuscript results.
 | Six-context bridge completion | `29cd3172dae3214297b2c624f99f1426794fb1c09ab539caa50047078c5ef89b` |
 | Corrected B4 reuse completion | `44ed053466fa9fa9f527cc00df3703023bcd34802caee1f08c1b00f1d44ac4e8` |
 | Corrected B4 independent verification | `d579b3d5fb20442c538408f3a61cab31264a882d3a57e2d24cb29425d2829111` |
+| B1 Binoculars analysis metadata | `0d5b989c12cbdc2944fc5a1fbc62cff3a3e9c9a8e7aa395b0245a68c3069f13f` |
 
 The embedded completion and verification files provide finer-grained hashes for their result
 families.
@@ -71,8 +73,10 @@ Included:
 - executed notebooks and figures;
 - genuine-issue audit outputs needed to reproduce corrected generation;
 - corrected B4 linked-issue reuse source, complete numeric/text-bearing outputs, and independent
-  verification; and
-- raw-text-free generation-session diagnostics.
+  verification;
+- raw-text-free generation-session diagnostics; and
+- exact B1 Binoculars source, aggregate text-free results, independent verification, and
+  sanitized reproducibility metadata.
 
 Excluded:
 
@@ -82,9 +86,11 @@ Excluded:
 - newly generated diagnostic description CSVs and smoke outputs;
 - raw corrected generation CSVs containing large stored prompts (their descriptions are already
   present in the corrected corpus and their hashes are preserved in the generation/corpus
-  manifests); and
+  manifests);
 - `b4-linked-issue-reuse-v1`, because it was executed before the genuine-issue audit and is not
-  valid evidence for the corrected construct.
+  valid evidence for the corrected construct; and
+- B1 blinded handoff files, the private re-identification map, collaborator archive, operational
+  logs, screenshots, internal approval record, and record-level four-detector score table.
 
 The corrected `b4-linked-issue-reuse-v2` package is intentionally included. Five of its audit
 artifacts contain public JabRef issue/PR text, generated descriptions already represented in the
