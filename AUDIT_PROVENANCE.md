@@ -46,6 +46,16 @@ current manuscript results.
 The embedded completion and verification files provide finer-grained hashes for their result
 families.
 
+## RQ3 retrieval/calibration publication
+
+The 2026-09-17 export adds the verified retrieval and calibration results used by the
+manuscript. See `RQ3_PUBLICATION.md` and `rq3_publication_manifest.json` for the exact
+source snapshots, 61 byte-identical published artifacts, and ten explicitly omitted
+embedding/transformation caches. Original completion manifests remain unchanged.
+No model inference or statistical analysis was rerun for publication. The experiment
+checkout's RQ3 extension was untracked; executed-source hashes, not an invented Git
+commit, establish provenance. This export adds no raw text or private B2 records.
+
 ## Corrected data lineage
 
 The genuine-issue audit decomposed the historical aggregated artifact fields, checked every

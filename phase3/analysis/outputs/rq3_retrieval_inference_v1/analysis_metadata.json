@@ -1,0 +1,51 @@
+{
+  "analysis": {
+    "ai_pooling": "mean across available contexts within model and PR",
+    "bootstrap": {
+      "base_seed": 20260914,
+      "estimand": "human MRR minus AI MRR",
+      "method": "paired percentile bootstrap",
+      "resamples": 20000
+    },
+    "effect_size": "matched-pairs rank-biserial; positive means human > AI",
+    "multiple_comparison_correction": {
+      "context": "BH across 18 model-context comparisons within encoder",
+      "pooled": "BH across three generators within encoder"
+    },
+    "paired_test": "two-sided Wilcoxon signed-rank by PR",
+    "primary_outcome": "per-description reciprocal rank of the correct PR diff",
+    "recall_inference": "descriptive only"
+  },
+  "created_at_utc": "2026-09-14T07:55:40.876714+00:00",
+  "host": "Ayobamis-MacBook-Pro.local",
+  "packages": {
+    "numpy": "2.0.2",
+    "paired_stats": "/Users/ayo/Documents/ayo-workspace/iwadi/llm-in-prs/phase3/analysis/paired_stats.py",
+    "paired_stats_sha256": "15e72a49e385004152ee62f4527082428dbd05849f899ecc7de09df3af78a2ec",
+    "pandas": "2.3.3",
+    "pip": "21.2.4",
+    "scipy": "1.13.1",
+    "statsmodels": "0.14.6"
+  },
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "population": {
+    "ai_descriptions": 5322,
+    "candidate_diffs": 308,
+    "human_descriptions": 308
+  },
+  "protocol": "rq3-retrieval-inference-v1",
+  "python": "3.9.6 (default, Oct 17 2025, 17:15:53) \n[Clang 17.0.0 (clang-1700.4.4.1)]",
+  "random_retrieval_reference": {
+    "expected_mean_rank": 154.5,
+    "expected_mrr": 0.020483564759898876,
+    "recall_at_1": 0.003246753246753247,
+    "recall_at_10": 0.032467532467532464,
+    "recall_at_5": 0.016233766233766232
+  },
+  "source_hashes": {
+    "completion.json": "032e69cac929ee2745aaed5b3d78b04a096cb7f83a138b95cdd6dc76eff5926e",
+    "row_level/codebert_calibration.csv": "90038f1deec7449427c5ac012a0320ad9b16e1f5c0d66d6c080aab80a1add17e",
+    "row_level/graphcodebert_calibration.csv": "571760f6e4c05c077372b5c390bc9fdf950c41a5a47b58a56d1d3daee1ca7f79"
+  },
+  "source_root": "/Users/ayo/Documents/ayo-workspace/iwadi/llm-in-prs/phase3/analysis/outputs/rq3_mismatched_calibration_v1"
+}

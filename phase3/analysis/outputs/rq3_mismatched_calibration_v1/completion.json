@@ -1,0 +1,26 @@
+{
+  "completed_at_utc": "2026-09-14T06:32:01.113423+00:00",
+  "output_hashes": {
+    "analysis_metadata.json": "b4a2a0b1745103f37face3e8289d8661c346862f75ef8280bdbf41b027b5eaa9",
+    "diff_ids.csv": "1a6c6ff3ae9b6c326a9ae3b5c9b6cfa991b3632decd40d3f4b0859df920b9d65",
+    "embeddings/codebert_descriptions.npy": "ee5644512f9140238ea257779f93689d34eff539713298d1a68268eef818a8fb",
+    "embeddings/codebert_diffs.npy": "fbf6c21bf414dfcf8708ca2c1ca3f3d5422d6a49a656fb7902709320e47299b7",
+    "embeddings/graphcodebert_descriptions.npy": "e535c27de1996573e9841e3ad947864c0e61d5e987478a01c2e34110e91fcd33",
+    "embeddings/graphcodebert_diffs.npy": "bb6559833eac50f0f104ebbf437f7700102bd28b4f38245a8a78ea95a49dd273",
+    "protocol/README.md": "426791c996a1d65a82641aa74e36461bae747e3efe9e2821e549815002af465e",
+    "protocol/analysis.py": "4d9a8a78cfc17f0b1be117264a50aceea7d19a79b169546c0d02cc1df6785105",
+    "protocol/run_pipeline.sh": "fe2935d8f4da9268c814455045811c959faabcdab9d1d94773ab6585d294092a",
+    "protocol/verify_outputs.py": "343624b62beccfd93c72ba3ec6ac93e97fb0b1e8c5f23a434f039be4e2c0f955",
+    "row_level/codebert_calibration.csv": "90038f1deec7449427c5ac012a0320ad9b16e1f5c0d66d6c080aab80a1add17e",
+    "row_level/graphcodebert_calibration.csv": "571760f6e4c05c077372b5c390bc9fdf950c41a5a47b58a56d1d3daee1ca7f79",
+    "row_metadata.csv": "23827b92ceecffbc12c622887b277f796c053a1363c2bc4264a75e24c0db6e71",
+    "summaries/calibration_tests.csv": "9d35d49afe3df67f3bab561e4972656ebdabfd5b08f31038a03230c7bb8220b9",
+    "summaries/context_human_ai_margin_comparisons.csv": "b7f8d1b498e9664d4c157023dd775f5c4bcbf815e699a8b3b2d9b65c2581cc48",
+    "summaries/group_summary.csv": "f589c8d8ee99507ef028eb5afd03e36de628f697ff3d162184de996f51882737",
+    "summaries/pooled_human_ai_comparisons.csv": "bdb4e80808c48eda65a8b8db7d92821d912e7ecb472d12e1198fead8561f0ba4",
+    "verification/verification_report.json": "ea675050cfe99ad389bbab44bbabb65add3e046e5938ff5af6104e1411e6f70b"
+  },
+  "protocol": "rq3-mismatched-calibration-v1",
+  "status": "complete_and_verified",
+  "verification_report": "verification/verification_report.json"
+}

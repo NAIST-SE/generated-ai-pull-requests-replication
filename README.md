@@ -4,12 +4,13 @@ This repository contains the public datasets, exact study code, precomputed resu
 supplementary material for:
 
 > **Context, Semantics, and Alignment in AI-Generated Pull Request Descriptions**
-> Under review — Transactions on Software Engineering (TSE)
+> Prepared for submission to Transactions on Software Engineering (TSE)
 
 Historical large artifacts are archived on OSF at **https://osf.io/aq5rj/**. The corrected
 corpus and the result packages used by the current manuscript are included directly in this
 branch. See [`AUDIT_PROVENANCE.md`](AUDIT_PROVENANCE.md) for immutable source commits, hashes,
-public-layout decisions, and exclusions.
+public-layout decisions, and exclusions. For the current RQ3 retrieval/calibration evidence,
+see [`RQ3_PUBLICATION.md`](RQ3_PUBLICATION.md); older raw-cosine outputs are not the primary result.
 
 ## Current authoritative study state
 
@@ -36,7 +37,7 @@ results**.
 - **Prelim-RQ** — How accurately do the selected tools detect AI-generated PR descriptions?
 - **RQ1** — How does generation context affect detector signal?
 - **RQ2** — How does context shape structural, lexical, and generated-to-reference similarity?
-- **RQ3** — How does measured code-text alignment compare with the human baseline?
+- **RQ3** — How does PR-specific code-text association compare with the human baseline?
 
 Models: `gpt-5-mini-2025-08-07`, `meta-llama/Llama-3.1-70B-Instruct`, and
 `Qwen/Qwen2.5-72B-Instruct`. Temperature was explicitly 1 for Llama and Qwen. The GPT request
@@ -59,7 +60,8 @@ omitted temperature and used OpenAI's model-default decoding behaviour.
 │   ├── generation/                 # Corrected B4 generation and verification
 │   ├── detection/corrected_rerun/  # Pinned three-detector implementation
 │   └── analysis/
-│       ├── corrected_rq23/         # Final RQ2/RQ3 pipeline and verifier
+│       ├── corrected_rq23/         # RQ2 pipeline and original raw-cosine outputs
+│       ├── rq3_mismatched_calibration/ # Current RQ3 retrieval/calibration extensions
 │       ├── deep_audit/              # Corrected Prelim-RQ/RQ1 analyses
 │       ├── b4_issue_source_audit/   # Genuine-issue provenance audit
 │       ├── b4_linked_issue_reuse/   # Corrected B4 metrics, tests, and verifier
@@ -104,7 +106,14 @@ and Python bytecode are intentionally excluded.
 - `phase3/analysis/outputs/corrected_detection_v1/` — corrected Prelim-RQ and RQ1 tables,
   contrasts, figure, and independent verification;
 - `phase3/analysis/outputs/corrected_rq23_v1/` — executed RQ2/RQ3 notebooks, row-level numeric
-  exports, figures, reconstructed verification tables, and completion manifest;
+  exports, figures, reconstructed verification tables, and completion manifest; RQ3 raw
+  cosine is retained descriptively, with current inference in the following packages;
+- `phase3/analysis/outputs/rq3_mismatched_calibration_v1/` — matched/nonmatched cosine,
+  correct-diff ranks, margin comparisons, and verification;
+- `phase3/analysis/outputs/rq3_embedding_postprocess_sensitivity_v1/` — all centering and
+  leading-component-removal sensitivity results;
+- `phase3/analysis/outputs/rq3_retrieval_inference_v1/` — primary paired reciprocal-rank
+  comparisons, MRR intervals, and verification;
 - `phase3/analysis/outputs/tier_b/b4-issue-source-audit-v1/` — verified 273-PR genuine-issue
   population and regeneration manifest;
 - `phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/` — corrected prompt-exact

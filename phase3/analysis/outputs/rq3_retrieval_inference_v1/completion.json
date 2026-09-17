@@ -1,0 +1,18 @@
+{
+  "completed_at_utc": "2026-09-14T07:55:42.164746+00:00",
+  "output_hashes": {
+    "analysis_metadata.json": "95c4faf556dd234baaca5e69240493981cb9d5693dce34b2e78fb48ceb4b3bad",
+    "protocol/RETRIEVAL_INFERENCE_PROTOCOL.md": "383e8a5b52d118d9038d1187f3ad3cda65ec49fc1ff880b18ab92c66beae6ae3",
+    "protocol/paired_stats.py": "15e72a49e385004152ee62f4527082428dbd05849f899ecc7de09df3af78a2ec",
+    "protocol/retrieval_inference.py": "55aa90fe732f7cf9dd4a072b499a55ada546b2b9b1d90a4a172b706be5686967",
+    "protocol/run_retrieval_inference.sh": "5d9618facdb73eaf12d6088e2efa91d550e50bae30535d05326c96ecf3ec4183",
+    "protocol/verify_retrieval_inference.py": "81efe19a69def7b3fd0ba95b17c2f2255a54089e16204188ee3625473e8f12bb",
+    "summaries/context_human_ai_reciprocal_rank_comparisons.csv": "e0665021847633b045ac48eaac3ce38249b17033ab1272906d017ee4bfc15a72",
+    "summaries/pooled_human_ai_reciprocal_rank_comparisons.csv": "48c871f7464a009af91126d6f18a23d87f561650a4ad440e97a10fff1a0e04d9",
+    "summaries/pooled_retrieval_summary.csv": "5883919cf2289a26b752acaeca1e34cd35c1722263d4761873d374d91c105399",
+    "verification/verification_report.json": "f001193402a7d8d4ee108d2c216784953a4b565515a1b37fc7ad7d13d398dd73"
+  },
+  "protocol": "rq3-retrieval-inference-v1",
+  "status": "complete_and_verified",
+  "verification_report": "verification/verification_report.json"
+}

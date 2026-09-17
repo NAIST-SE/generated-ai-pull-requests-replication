@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "bh_corrections_reconstructed": "pass",
+    "calibration_tests_reconstructed": "pass",
+    "context_paired_tests_reconstructed": "pass",
+    "diff_count": 308,
+    "embedding_shapes": "pass",
+    "existing_matched_score_drift": {
+      "codebert": {
+        "max_abs_difference": 3.1009116652214175e-07,
+        "n": 5630
+      },
+      "graphcodebert": {
+        "max_abs_difference": 7.560113439719629e-07,
+        "n": 5630
+      }
+    },
+    "group_summaries_reconstructed": "pass",
+    "nonmatching_diffs_per_description": 307,
+    "pooled_paired_tests_reconstructed": "pass",
+    "row_metadata_count": 5630,
+    "row_metrics_reconstructed": "pass"
+  },
+  "protocol": "rq3-mismatched-calibration-v1",
+  "status": "pass",
+  "verified_at_utc": "2026-09-14T06:32:01.113229+00:00"
+}

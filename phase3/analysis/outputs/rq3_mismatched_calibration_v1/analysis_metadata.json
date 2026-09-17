@@ -1,0 +1,88 @@
+{
+  "analysis": {
+    "calibration_test": "one-sided Wilcoxon margin > 0; BH within 19 source cells per encoder",
+    "human_ai_test": "two-sided paired Wilcoxon by PR; matched-pairs rank-biserial; BH",
+    "nonmatching_reference": "all incorrect PR diffs; deterministic; no random shuffle",
+    "postprocessing": "none",
+    "primary_margin": "matched cosine minus mean cosine over all 307 nonmatching diffs"
+  },
+  "created_at_utc": "2026-09-14T06:31:57.660347+00:00",
+  "cuda": {
+    "available": true,
+    "cuda_runtime": "12.8",
+    "device": "NVIDIA TITAN RTX"
+  },
+  "encoders": {
+    "codebert": {
+      "batch_size": 16,
+      "data_flow_graph_supplied": null,
+      "description_embedding_shape": [
+        5630,
+        768
+      ],
+      "diff_embedding_shape": [
+        308,
+        768
+      ],
+      "elapsed_seconds": 36.935687684919685,
+      "max_length": 512,
+      "model_name": "microsoft/codebert-base",
+      "representation": "first token of final hidden state",
+      "revision": "3b0952feddeffad0063f274080e3c23d75e7eb39"
+    },
+    "graphcodebert": {
+      "batch_size": 16,
+      "data_flow_graph_supplied": false,
+      "description_embedding_shape": [
+        5630,
+        768
+      ],
+      "diff_embedding_shape": [
+        308,
+        768
+      ],
+      "elapsed_seconds": 36.93251169286668,
+      "max_length": 512,
+      "model_name": "microsoft/graphcodebert-base",
+      "representation": "first token of final hidden state",
+      "revision": "2b0488a7bb0eefc7041f1bb2cad1ab26b0da269d"
+    }
+  },
+  "host": "nokogiri",
+  "inputs": {
+    "corpus": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/temperature_1/run_3_corrected_detection_v1/corpus.csv",
+    "corpus_sha256": "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
+    "diffs": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/datasets/selected_prs_with_diffs_and_file_contents.csv",
+    "diffs_sha256": "45c71d0170fc9343d999998ad6515e9b5b8298f63b66215f4110b3911f681d0c",
+    "expected_codebert": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/codebert_metrics.csv",
+    "expected_codebert_sha256": "932dbb166dfcc221e48a7696161ed541e24057e059bc79e057bd1e331e5c1550",
+    "expected_graphcodebert": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/graphcodebert_metrics.csv",
+    "expected_graphcodebert_sha256": "2c96eb065c971f07fc21ffd145f9cbab097695b532454303504b8c1875b2820b"
+  },
+  "packages": {
+    "numpy": "2.3.2",
+    "pandas": "2.3.1",
+    "scipy": "1.17.0",
+    "statsmodels": "0.14.6",
+    "tokenizers": "0.22.2",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  },
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "population": {
+    "ai_descriptions": 5322,
+    "descriptions": 5630,
+    "human_descriptions": 308,
+    "nonmatching_diffs_per_description": 307,
+    "pr_diffs": 308
+  },
+  "protocol": "rq3-mismatched-calibration-v1",
+  "python": "3.12.9 (main, Aug 12 2025, 23:22:19) [GCC 11.4.0]",
+  "random_retrieval_reference": {
+    "expected_mean_rank": 154.5,
+    "expected_mrr": 0.020483564759898883,
+    "recall_at_1": 0.003246753246753247,
+    "recall_at_10": 0.032467532467532464,
+    "recall_at_5": 0.016233766233766232
+  }
+}

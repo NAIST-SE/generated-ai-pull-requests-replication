@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "all_bh_corrections_reconstructed": "pass",
+    "all_group_summaries_reconstructed": "pass",
+    "all_rank_biserial_effects_reconstructed": "pass",
+    "all_transformed_row_metrics_reconstructed": "pass",
+    "all_wilcoxon_tests_reconstructed": "pass",
+    "balanced_reference": "pass",
+    "frozen_input_hashes": "pass",
+    "geometry": {
+      "codebert": {
+        "common_mean": "pass",
+        "reference_shape": [
+          616,
+          768
+        ],
+        "singular_values": "pass",
+        "top_three_component_subspace": "pass"
+      },
+      "graphcodebert": {
+        "common_mean": "pass",
+        "reference_shape": [
+          616,
+          768
+        ],
+        "singular_values": "pass",
+        "top_three_component_subspace": "pass"
+      }
+    },
+    "variants": [
+      "raw",
+      "centered",
+      "remove_top_1",
+      "remove_top_2",
+      "remove_top_3"
+    ]
+  },
+  "protocol": "rq3-embedding-postprocess-sensitivity-v1",
+  "status": "pass",
+  "verified_at_utc": "2026-09-14T06:39:06.472243+00:00"
+}

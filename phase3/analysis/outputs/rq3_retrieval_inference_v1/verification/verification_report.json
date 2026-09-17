@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "bh_corrections": "pass",
+    "context_paired_comparisons": "pass",
+    "ordinary_cliffs_delta_reported": false,
+    "pooled_descriptive_summaries": "pass",
+    "pooled_matched_pairs_rank_biserial": "pass",
+    "pooled_paired_bootstrap_intervals": "pass",
+    "pooled_paired_wilcoxon": "pass",
+    "row_level_rank_identities": "pass",
+    "source_calibration_complete_and_verified": "pass",
+    "source_hashes": "pass"
+  },
+  "protocol": "rq3-retrieval-inference-v1",
+  "status": "pass",
+  "verified_at_utc": "2026-09-14T07:55:42.164438+00:00"
+}

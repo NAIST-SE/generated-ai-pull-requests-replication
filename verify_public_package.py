@@ -14,10 +14,14 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from verify_rq3_publication import verify as verify_rq3_publication
+
 
 ROOT = Path(__file__).resolve().parent
 
 HASHES = {
+    "rq3_publication_manifest.json":
+        "80b254d149767efcc1506df384a5787db58864879ef4fc31a8a2c4df912a7c8e",
     "datasets/temperature_1/run_3_corrected_detection_v1/corpus.csv":
         "07136384785d6d02d17762535ab51a2007a7a47b8c41b77fbb311ce9c8780306",
     "datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv":
@@ -91,6 +95,8 @@ def csv_header(path: Path) -> set[str]:
 def main() -> int:
     failures: list[str] = []
     checks: dict[str, object] = {}
+    failures.extend(verify_rq3_publication())
+    checks["rq3_publication"] = "61 source/numeric artifacts; 10 declared cache exclusions"
 
     for relative, expected in HASHES.items():
         path = ROOT / relative
@@ -479,6 +485,8 @@ def main() -> int:
             failures.append(f"README is missing required boundary text: {phrase!r}")
     if "Without File Contents" not in supplementary:
         failures.append("supplementary TeX is missing the Without File Contents context")
+    if r"\WithoutFileContents~has the highest MRR" not in supplementary:
+        failures.append("supplementary BM25 leading configuration is not Without File Contents")
     if "Post-hoc Binoculars Robustness Check" not in supplementary:
         failures.append("supplementary TeX is missing the post-hoc Binoculars results")
     for stale in ("peak median F1 of 0.136", "Linked Issue consistently yielded the highest"):
