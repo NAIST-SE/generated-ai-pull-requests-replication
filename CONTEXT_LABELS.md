@@ -50,6 +50,40 @@ analysis was rerun. These path overrides are recorded in the presentation manife
 
 ## Reproduce the presentation layer
 
+### Figure 7 portrait follow-up
+
+The manuscript and current supplement use the standalone
+`phase3/analysis/outputs/bm25_portrait_v2/bm25_retrieval_portrait.pdf` rather than
+page 8 of the ten-page bundle. Three vertically stacked model panels replace the
+horizontal strip that became unreadable at single-column width. The original
+bundle and numerical result packages remain unchanged.
+
+`phase3/analysis/presentation_labels/render_bm25_portrait.py` is the exact source
+executed on Nokogiri. It loads all 5,322 frozen BM25 score rows, checks all 18 cell
+counts, executes only the original source's plotting block, and rearranges those
+same artists. The before/after hashes of box, whisker, and median coordinates,
+axis limits, and tick positions are identical. No retrieval scoring, summary
+computation, or statistical tests are run; outliers remain hidden as in the
+original chart. Source/input hashes, environment versions, and output hashes are
+in `bm25_portrait_v2/presentation_manifest.json`. The initial server-only v1 preview
+was superseded during visual QA to restore y-axis labels on every stacked panel.
+
+Reproduce on Nokogiri, using a new output directory:
+
+```bash
+/home/ayo-b/.pyenv/versions/3.12.9/bin/python -B \
+  phase3/analysis/presentation_labels/render_bm25_portrait.py \
+  --study-root /path/to/complete/study-tree \
+  --output-dir /path/to/new/bm25-portrait-output
+```
+
+The supplementary figure copy is hash-checked against this asset by
+`verify_public_package.py`. Historical label-refresh files and their verifier
+anchors are retained, not replaced. The manuscript uses column width; the
+single-column supplement uses 65% of its wider text block.
+
+### Original context-label refresh
+
 Run on Nokogiri using its existing `iwadi-main` Python 3.12.9 environment. The
 complete study tree must provide the files listed in
 `phase3/analysis/presentation_labels/context_label_inputs.json` (the replication

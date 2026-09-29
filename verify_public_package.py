@@ -42,6 +42,10 @@ HASHES = {
         "ac84ef02dcb96cae44da7ee14ed5d3d4fc6ef1fe68dd708c2ccf21fa05b2b715",
     "phase3/analysis/outputs/context_display_v1/presentation_manifest.json":
         "6bf14cb1a469e683b03bd6c3265d80bdd78de82000cca5a161235221b610fb11",
+    "phase3/analysis/outputs/bm25_portrait_v2/presentation_manifest.json":
+        "770ce9cb54a4365174cd842dfebb8b7dd225f74ac6a31dcb308315815654640a",
+    "supplementary/figures/bm25_retrieval_portrait.pdf":
+        "154a8a334326af270fe8ca39747231e16135f4b5f7125403ce6bd2c022ae7e64",
     "phase3/analysis/outputs/tier_b/b4-issue-source-audit-v1/completion.json":
         "5f02893cc9b767358aa7da40bbe13735600c7fadf2dadd0d7ebb67418eb3cf89",
     "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/verification.json":
@@ -138,6 +142,33 @@ def main() -> int:
     checks["context_display_refresh"] = {
         "inputs": len(presentation["inputs"]), "outputs": len(presentation["outputs"]),
         "geometry_checks": len(geometry_checks),
+    }
+
+    # Figure 7 uses a separate portrait asset; keep the earlier bundle immutable.
+    portrait_dir = ROOT / "phase3/analysis/outputs/bm25_portrait_v2"
+    portrait = load_json("phase3/analysis/outputs/bm25_portrait_v2/presentation_manifest.json")
+    for relative, expected in portrait["inputs"].items():
+        if sha256(ROOT / relative) != expected:
+            failures.append(f"BM25 portrait input mismatch: {relative}")
+    for relative, expected in portrait["outputs"].items():
+        if sha256(portrait_dir / relative) != expected:
+            failures.append(f"BM25 portrait output mismatch: {relative}")
+    if sha256(ROOT / "phase3/analysis/presentation_labels/render_bm25_portrait.py") != portrait["script_sha256"]:
+        failures.append("BM25 portrait renderer differs from executed source")
+    if portrait["reference_geometry_sha256"] != portrait["portrait_geometry_sha256"]:
+        failures.append("BM25 portrait changed plotted data geometry")
+    if portrait["rows"] != 5322 or len(portrait["cell_counts"]) != 18:
+        failures.append("BM25 portrait population is incomplete")
+    if sha256(portrait_dir / "bm25_retrieval_portrait.pdf") != sha256(
+        ROOT / "supplementary/figures/bm25_retrieval_portrait.pdf"
+    ):
+        failures.append("supplement BM25 figure differs from verified portrait")
+    supplement_source = (ROOT / "supplementary/supplementary.tex").read_text()
+    if r"\includegraphics[width=0.65\textwidth]{figures/bm25_retrieval_portrait.pdf}" not in supplement_source:
+        failures.append("supplement does not use the current BM25 portrait asset")
+    checks["bm25_portrait_refresh"] = {
+        "rows": portrait["rows"], "cells": len(portrait["cell_counts"]),
+        "geometry_unchanged": True,
     }
 
     dataset_link = ROOT / "phase3" / "datasets"

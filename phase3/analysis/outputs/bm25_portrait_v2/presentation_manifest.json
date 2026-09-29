@@ -1,0 +1,138 @@
+{
+  "purpose": "Figure 7 layout only; no retrieval scoring or statistical tests",
+  "created_utc": "2026-09-29T09:04:23.068082+00:00",
+  "inputs": {
+    "phase3/analysis/deep_audit/analysis_rq2_bm25_retrieval.py": "e9e498ddb4b89f82a69dd1b4086cd7a10b99957de0d95025a4b9b20022628a1b",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/bm25_retrieval/bm25_retrieval_scores.csv": "b3a2b2576741142032ebf04e637084c2f8dd3ce05f000cbb9a227d240f859c93"
+  },
+  "script_sha256": "a6709892841d06365d321f97bc0f4a088a829d5e939ead2fabd1b10f76df84c2",
+  "rows": 5322,
+  "models": [
+    "Qwen/Qwen2.5-72B-Instruct",
+    "gpt-5-mini-2025-08-07",
+    "meta-llama/llama-3.1-70b-instruct"
+  ],
+  "contexts": [
+    "P-1",
+    "P-2",
+    "P-3",
+    "P-4",
+    "P-5",
+    "P-6"
+  ],
+  "cell_counts": [
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "variation": "P-1",
+      "n": 308
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "variation": "P-2",
+      "n": 308
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "variation": "P-3",
+      "n": 308
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "variation": "P-4",
+      "n": 302
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "variation": "P-5",
+      "n": 273
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "variation": "P-6",
+      "n": 273
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "variation": "P-1",
+      "n": 308
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "variation": "P-2",
+      "n": 308
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "variation": "P-3",
+      "n": 308
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "variation": "P-4",
+      "n": 302
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "variation": "P-5",
+      "n": 273
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "variation": "P-6",
+      "n": 273
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "variation": "P-1",
+      "n": 308
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "variation": "P-2",
+      "n": 308
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "variation": "P-3",
+      "n": 308
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "variation": "P-4",
+      "n": 308
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "variation": "P-5",
+      "n": 273
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "variation": "P-6",
+      "n": 273
+    }
+  ],
+  "layout": {
+    "panels": "3 rows, 1 column",
+    "size_inches": [
+      4.9,
+      7.6
+    ],
+    "axis_font_pt": 14,
+    "tick_font_pt": 12,
+    "showfliers": false
+  },
+  "reference_geometry_sha256": "22521d4e70608abd6bab6508d10441fa67703fad249986283519b9f98d08f0bc",
+  "portrait_geometry_sha256": "22521d4e70608abd6bab6508d10441fa67703fad249986283519b9f98d08f0bc",
+  "outputs": {
+    "bm25_retrieval_portrait.pdf": "154a8a334326af270fe8ca39747231e16135f4b5f7125403ce6bd2c022ae7e64",
+    "bm25_retrieval_portrait.png": "466fee5a98d23dad3b85951883a874072ac82c5db502cdcc5d3b06e5378c1707"
+  },
+  "environment": {
+    "python": "3.12.9",
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.2",
+    "pandas": "2.3.1",
+    "seaborn": "0.13.2"
+  }
+}

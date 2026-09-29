@@ -65,6 +65,11 @@ labels and hashes. Join by P-1--P-6, not by display labels. The plot-only presen
 refresh is documented in [`CONTEXT_LABELS.md`](CONTEXT_LABELS.md); it uses cached
 scores and does not rerun inference or statistical tests.
 
+Figure 7 now uses the separately versioned
+`phase3/analysis/outputs/bm25_portrait_v2/bm25_retrieval_portrait.pdf`, with three
+stacked model panels for print legibility. Its frozen scores and boxplot geometry
+are unchanged; the previous horizontal figure remains in the historical bundle.
+
 ## Repository layout
 
 ```text
