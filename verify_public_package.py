@@ -46,6 +46,8 @@ HASHES = {
         "770ce9cb54a4365174cd842dfebb8b7dd225f74ac6a31dcb308315815654640a",
     "supplementary/figures/bm25_retrieval_portrait.pdf":
         "154a8a334326af270fe8ca39747231e16135f4b5f7125403ce6bd2c022ae7e64",
+    "supplementary/generation_prompt.tex":
+        "0ead0b56d665674b279a45aacbd49e1f13e960a0145edd474015a2e6c2cd6d94",
     "phase3/analysis/outputs/tier_b/b4-issue-source-audit-v1/completion.json":
         "5f02893cc9b767358aa7da40bbe13735600c7fadf2dadd0d7ebb67418eb3cf89",
     "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/verification.json":
@@ -166,6 +168,9 @@ def main() -> int:
     supplement_source = (ROOT / "supplementary/supplementary.tex").read_text()
     if r"\includegraphics[width=0.65\textwidth]{figures/bm25_retrieval_portrait.pdf}" not in supplement_source:
         failures.append("supplement does not use the current BM25 portrait asset")
+    for include in ("generation_prompt",):
+        if rf"\input{{{include}}}" not in supplement_source:
+            failures.append(f"supplement does not include relocated material: {include}")
     checks["bm25_portrait_refresh"] = {
         "rows": portrait["rows"], "cells": len(portrait["cell_counts"]),
         "geometry_unchanged": True,

@@ -50,7 +50,7 @@ analysis was rerun. These path overrides are recorded in the presentation manife
 
 ## Reproduce the presentation layer
 
-### Figure 7 portrait follow-up
+### BM25 portrait follow-up (originally Figure 7)
 
 The manuscript and current supplement use the standalone
 `phase3/analysis/outputs/bm25_portrait_v2/bm25_retrieval_portrait.pdf` rather than

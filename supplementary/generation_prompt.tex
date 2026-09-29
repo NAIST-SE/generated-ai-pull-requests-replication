@@ -1,0 +1,29 @@
+% Relocated from Overleaf be05c0b; the prompt body is unchanged.
+\begin{lstlisting}[
+    basicstyle=\ttfamily\footnotesize,
+    frame=single,
+    breaklines=true,
+    caption={Prompt for the Repo Path context configuration.},
+    label={lst:sample_prompt},
+    captionpos=b,
+    morekeywords={CONTEXT, END, JSON}
+]
+"You are a helpful assistant that generates GitHub pull request
+descriptions. Based on the provided context, write a clear and
+informative description. Respond with ONLY a JSON object in this
+format: {"description": "<your description here>"}
+Do not include any other text or explanation.
+
+### CONTEXT
+<repository>JabRef/jabref</repository>
+
+<affected_files>
+CHANGELOG.md
+src/main/java/org/jabref/JabRefMain.java
+</affected_files>
+### END CONTEXT
+
+Reminder: based on the provided context, write a clear and
+informative description. Respond with ONLY a JSON object in
+this format: {"description": "..."}.
+\end{lstlisting}

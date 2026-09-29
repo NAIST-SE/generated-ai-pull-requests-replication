@@ -6,6 +6,11 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{enumitem}
+\usepackage{listings}
+\usepackage{placeins}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\AtBeginDocument{\renewcommand{\thelstlisting}{S\arabic{lstlisting}}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 \usepackage{geometry}
 \geometry{margin=1in}
@@ -23,7 +28,7 @@
 \newcommand{\LinkedIssues}{Linked Issue}
 \newcommand{\WithoutFileContents}{Multi-source}
 
-\title{\textbf{Supplementary Results}\\[0.5em]
+\title{\textbf{Supplementary Material}\\[0.5em]
 \large\textit{Context, Semantics, and Alignment in AI-Generated Pull Request Descriptions}}
 \author{Ayobami Joshua Joseph, Youmei Fan, Sebastian Baltes, Christoph Treude,\\
 Kenichi Matsumoto, Raula Gaikovina Kula}
@@ -32,17 +37,17 @@ Kenichi Matsumoto, Raula Gaikovina Kula}
 \begin{document}
 \maketitle
 
-This document reports supplementary results for the paper
+This document reports supplementary methods and results for the paper
 \textit{``Context, Semantics, and Alignment in AI-Generated Pull Request Descriptions.''}
 The full replication package, including datasets, analysis notebooks, and code, is available
 in the \href{https://github.com/NAIST-SE/generated-ai-pull-requests-replication}{public
 GitHub repository}.
 
-It provides additional descriptive detail for the Preliminary Question, the post-hoc
-\binocularsDetector~robustness check, per-context
-distributions for the four lexical and structural metrics whose effect sizes are summarised
-in the main paper, and detailed interpretation of the RQ2 ROUGE, BERTScore, and fixed-corpus
-BM25 retrieval measures.
+It provides additional descriptive detail for the Preliminary Question and post-hoc
+\binocularsDetector~robustness check, RQ2 structural and lexical distributions,
+ROUGE, BERTScore, and fixed-corpus BM25 retrieval results,
+and an example generation prompt. Tables, figures, and listings use an S prefix to
+distinguish them from those in the main paper.
 
 \section{Preliminary Question}
 
@@ -118,8 +123,10 @@ threshold, and Apple-MPS implementation.
 
 \subsection{Structural and lexical metric distributions}
 
-The following figures present the per-context distributions for the FKGL, TTR, MTLD, and
-lexical-density metrics whose effect sizes are summarised in the main paper. Each figure
+Figures~\ref{fig:fkgl_boxplots}--\ref{fig:ld_boxplots} present the per-context distributions
+for FKGL, TTR, bidirectional MTLD, and lexical density, complementing
+the paired effect-size tables retained in the main paper.
+Each figure
 compares the distribution of AI-generated descriptions with the human baseline across the
 six context configurations.
 
@@ -219,9 +226,20 @@ top configuration. These measures do not define a
 percentage of human similarity, and they do not establish factual correctness or review
 adequacy.
 
+\FloatBarrier
+
 BERTScore's 512-token limit truncated the AI side of 4.85\% of the 5,322 corrected pairs. When
 either the AI or paired human description is considered, 9.88\% of pairs were affected, with
 64,066 input tokens removed (2.94\% of all input tokens). AI-side truncation was highest for
 \proprietaryLLM~under \FileCont~(23.51\%), so that cell should be interpreted cautiously.
+\section{Example Generation Prompt}
+
+Supplementary Listing~\ref{lst:sample_prompt} preserves the example Repo Path prompt
+from the main paper. The same base instruction and JSON output format were used
+across all six configurations; only the supplied context block varied. The full
+set of templates is retained in the replication package. The file paths below are
+example input, not an additional experimental condition.
+
+\input{generation_prompt}
 
 \end{document}

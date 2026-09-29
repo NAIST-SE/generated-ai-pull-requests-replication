@@ -65,7 +65,7 @@ labels and hashes. Join by P-1--P-6, not by display labels. The plot-only presen
 refresh is documented in [`CONTEXT_LABELS.md`](CONTEXT_LABELS.md); it uses cached
 scores and does not rerun inference or statistical tests.
 
-Figure 7 now uses the separately versioned
+The manuscript's BM25 figure uses the separately versioned
 `phase3/analysis/outputs/bm25_portrait_v2/bm25_retrieval_portrait.pdf`, with three
 stacked model panels for print legibility. Its frozen scores and boxplot geometry
 are unchanged; the previous horizontal figure remains in the historical bundle.
@@ -258,6 +258,15 @@ This check does not execute study analyses. It validates file presence, hashes, 
 counts, completion statuses, excluded operational artifacts, and the historical/current boundary.
 
 ## Supplementary results
+
+The September 29 revision retains the five full structural/lexical effect-size
+tables, BERTScore, and the readable BM25 chart in the manuscript. Any future
+relocation of the effect-size tables is deferred to the supervisors. The ROUGE-L
+distribution is Supplementary Figure S5, and the unchanged example Repo Path
+prompt is Supplementary Listing S1 (`supplementary/generation_prompt.tex`).
+Supplementary Table S1 remains the pooled Binoculars results. The main-paper
+effect-size tables retain all 108 values, significance markers, and sample-size
+and correction qualifications; the supplement does not duplicate them.
 
 Compile without writing generated files into the repository:
 
