@@ -1,0 +1,570 @@
+{
+  "protocol": "context-display-labels-v1",
+  "host": "nokogiri",
+  "operation": "plot-only; no inference or statistical tests",
+  "script_sha256": "80785d77f121a88c689d29afef2bdf18389be4d61870b047d50de6f666259793",
+  "inputs": {
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/word_sentence_metrics.csv": "29f1271e043c34a3d44aaa1ab7f7bb04f48369471d0cef65d74e5ca6328d81f3",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/codebert_metrics.csv": "932dbb166dfcc221e48a7696161ed541e24057e059bc79e057bd1e331e5c1550",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/fkgl_metrics.csv": "99f6a12d051823a00c22ca5dbc0a34d58b0dcc0bedc65f638a774799be59b334",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/lexical_density_metrics.csv": "2d06e188fa2d058f752b470ffc729d41016b73c6db1d53a9e30f5e20b79fd0d7",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/graphcodebert_metrics.csv": "2c96eb065c971f07fc21ffd145f9cbab097695b532454303504b8c1875b2820b",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/rouge_metrics.csv": "13d50eb9a1223da1f8474ef3cbedb89eaf5c3c565ec44518cff2fb4ccdcdff2b",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/ttr_metrics.csv": "6a684eb6c08305c2654b6488e9e3ad070438641e2ab52e50f8c478337189ef30",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/mtld_metrics.csv": "363974379200d4e1f6aca90b5e0a12a153b384d3e5dea9e8cf82c9c45939104b",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/bertscore_metrics.csv": "77dbcb28f28ab1c5dfa8433551c51869b8d372f9524e6f5db0f9422b1a8f9031",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_lexical_density.ipynb": "255cc6af6a750fcb79c65e4cdfb99bc1c1defb1ab0fd394f7defa6fc6f058a4e",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_reading_ease.ipynb": "19a001faa00789693bbef23fa4212aef1ec7725ae15b234418951b5d31df766d",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_word_sentence_count.ipynb": "54de3cd28829daf91b94633a6f1c66e441cc69915ed325fccf5a51f3a3224327",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_mtld.ipynb": "f5c656488902f192437f239d7f6d882f6cefdc18a154ee6d452026928ef56032",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_rouge.ipynb": "3377900a09d90daa933eb73eaf2ec0ce034d1b134fcd9126672eb83b31bbcc35",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_ttr.ipynb": "6c0208d1f8a0ccdb3cf0512289b3393dd47b0c9ad5c13f19b1b6f9a1424c0129",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq3_graphcodebert.ipynb": "243eb06d2519ab9d61200b807ac05a3b74b8f40c457cef44cdef4973cbeb4922",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_bertscore.ipynb": "2dab294bda0a9316f1eb85175878c01a5e58c0e72a49be72ba4cb599dc32b60d",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq3_codebert.ipynb": "b227aa68e37358ad97c9c8c5086517576a82a323c415f1a58e45a03267551d27",
+    "phase3/analysis/deep_audit/plot_rq1_probability_boxplots.py": "03de0e6fe320d4c196874c90d5e2977804544854654929bb0ce0c789a2f6a27d",
+    "phase3/analysis/deep_audit/server_guard.py": "d8c4ecc867cf4d9148700d9374cd9535bffc78b4fe8fc30c8032783fc54a897f",
+    "phase3/analysis/deep_audit/analysis_rq2_bm25_retrieval.py": "e9e498ddb4b89f82a69dd1b4086cd7a10b99957de0d95025a4b9b20022628a1b",
+    "phase3/analysis/rq3_mismatched_calibration/plot_manuscript_rq3.py": "1175cf280a5504e91d3b4c19eeb00c6abd52e8339f2b6e1a68ba1817906c40b9",
+    "phase3/analysis/outputs/corrected_detection_v1/rq1/rq1_model_context_pairwise.csv": "c7e6eebfcd8bb834696806daa82d859b762f29e10ef5f5fa5abfae2540d6cfd1",
+    "phase3/analysis/outputs/rq3_retrieval_inference_v1/summaries/context_human_ai_reciprocal_rank_comparisons.csv": "e0665021847633b045ac48eaac3ce38249b17033ab1272906d017ee4bfc15a72",
+    "phase3/analysis/outputs/rq3_mismatched_calibration_v1/summaries/group_summary.csv": "f589c8d8ee99507ef028eb5afd03e36de628f697ff3d162184de996f51882737",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/bm25_retrieval/bm25_retrieval_scores.csv": "b3a2b2576741142032ebf04e637084c2f8dd3ce05f000cbb9a227d240f859c93",
+    "phase3/datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91"
+  },
+  "source_overrides": {
+    "phase3/analysis/rq3_mismatched_calibration/plot_manuscript_rq3.py": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/context-display-v1.Wde7kl/plot_manuscript_rq3.py",
+    "phase3/analysis/outputs/rq3_retrieval_inference_v1/summaries/context_human_ai_reciprocal_rank_comparisons.csv": "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/context-display-v1.Wde7kl/context_human_ai_reciprocal_rank_comparisons.csv"
+  },
+  "display_mapping": {
+    "File Diff": "Patch",
+    "File\nDiff": "Patch",
+    "Diff": "Patch",
+    "File Contents": "Full Code",
+    "File\nContents": "Full\nCode",
+    "File Cont.": "Full Code",
+    "File": "Full Code",
+    "Without File Contents": "Multi-source",
+    "No File Cont.": "Multi-source",
+    "No-FC": "Multi-source"
+  },
+  "plot_geometry_checks": [
+    {
+      "output": "rq1/rq1_probability_boxplots_paired.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Repo",
+            "Title",
+            "Diff",
+            "File",
+            "Issue",
+            "No-FC"
+          ],
+          "after": [
+            "Repo",
+            "Title",
+            "Patch",
+            "Full Code",
+            "Issue",
+            "Multi-source"
+          ]
+        },
+        {
+          "before": [
+            "Repo",
+            "Title",
+            "Diff",
+            "File",
+            "Issue",
+            "No-FC"
+          ],
+          "after": [
+            "Repo",
+            "Title",
+            "Patch",
+            "Full Code",
+            "Issue",
+            "Multi-source"
+          ]
+        },
+        {
+          "before": [
+            "Repo",
+            "Title",
+            "Diff",
+            "File",
+            "Issue",
+            "No-FC"
+          ],
+          "after": [
+            "Repo",
+            "Title",
+            "Patch",
+            "Full Code",
+            "Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "5c851b81f329958cabc449da63e25576b5928d67570b41493927520f05e45d3e",
+      "geometry_after": "5c851b81f329958cabc449da63e25576b5928d67570b41493927520f05e45d3e"
+    },
+    {
+      "output": "rq1/rq1_probability_boxplots_paired.png",
+      "label_changes": [],
+      "geometry_before": "5c851b81f329958cabc449da63e25576b5928d67570b41493927520f05e45d3e",
+      "geometry_after": "5c851b81f329958cabc449da63e25576b5928d67570b41493927520f05e45d3e"
+    },
+    {
+      "output": "outputs/figures_pdf/verbosity_word_count.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "8d8c7d1c5f7da34953bad4a60689119b7fe42e400845deb15ee06c32a4504ba6",
+      "geometry_after": "8d8c7d1c5f7da34953bad4a60689119b7fe42e400845deb15ee06c32a4504ba6"
+    },
+    {
+      "output": "outputs/figures_pdf/fkgl.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "46b7c54c407db166c5cc4687633182151b91cb4624066c002bbcc8b1e0666595",
+      "geometry_after": "46b7c54c407db166c5cc4687633182151b91cb4624066c002bbcc8b1e0666595"
+    },
+    {
+      "output": "outputs/figures_pdf/ttr.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "c662bca1a1b85e597456bd78791b96e358226c603af4cfe8334766779ce49e9f",
+      "geometry_after": "c662bca1a1b85e597456bd78791b96e358226c603af4cfe8334766779ce49e9f"
+    },
+    {
+      "output": "outputs/figures_pdf/MTLD_Original_Distribution_Human_vs_Contexts.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "0213b2cd089be98dfea72081c1c4af5bedb0aa6b6a1900890681c6910c40b93b",
+      "geometry_after": "0213b2cd089be98dfea72081c1c4af5bedb0aa6b6a1900890681c6910c40b93b"
+    },
+    {
+      "output": "outputs/figures_pdf/MTLD_Bidirectional_Distribution_Human_vs_Contexts.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "9edf2d49e6573c90a02f19c7b100e6017b1ea003055fa55f93559622f57b4f61",
+      "geometry_after": "9edf2d49e6573c90a02f19c7b100e6017b1ea003055fa55f93559622f57b4f61"
+    },
+    {
+      "output": "outputs/figures_pdf/lexical_density.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "957da317bd5dbff9806ecf3b4d22d530a600e012f387e3005f58c1165812230c",
+      "geometry_after": "957da317bd5dbff9806ecf3b4d22d530a600e012f387e3005f58c1165812230c"
+    },
+    {
+      "output": "outputs/figures_pdf/rouge.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "89bbb01491f0dc2419cb96b7d311a3258156a2785971c3ea0fc75e923b99748e",
+      "geometry_after": "89bbb01491f0dc2419cb96b7d311a3258156a2785971c3ea0fc75e923b99748e"
+    },
+    {
+      "output": "outputs/figures_pdf/bertscore.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "78bcd991da6ca0b13bb6a884b860655928c5d4dcb7335263f57446d46310ddb2",
+      "geometry_after": "78bcd991da6ca0b13bb6a884b860655928c5d4dcb7335263f57446d46310ddb2"
+    },
+    {
+      "output": "outputs/figures_pdf/codebert.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "63fa3e54af40b582c1122eba63e4f7b5f5cdb124a070e04ec795484c9e6903c5",
+      "geometry_after": "63fa3e54af40b582c1122eba63e4f7b5f5cdb124a070e04ec795484c9e6903c5"
+    },
+    {
+      "output": "outputs/figures_pdf/graphcodebert.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Contents",
+            "Linked Issue",
+            "Without File Contents"
+          ],
+          "after": [
+            "Human",
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Linked Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "8a2d64ca30fb61ab1a61b9a55b889eb262bd6eb74b709fc98a57bb176cceb635",
+      "geometry_after": "8a2d64ca30fb61ab1a61b9a55b889eb262bd6eb74b709fc98a57bb176cceb635"
+    },
+    {
+      "output": "outputs/figures_pdf/bm25_retrieval.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Cont.",
+            "Issue",
+            "No File Cont."
+          ],
+          "after": [
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Issue",
+            "Multi-source"
+          ]
+        },
+        {
+          "before": [
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Cont.",
+            "Issue",
+            "No File Cont."
+          ],
+          "after": [
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Issue",
+            "Multi-source"
+          ]
+        },
+        {
+          "before": [
+            "Repo Path",
+            "PR Title",
+            "File Diff",
+            "File Cont.",
+            "Issue",
+            "No File Cont."
+          ],
+          "after": [
+            "Repo Path",
+            "PR Title",
+            "Patch",
+            "Full Code",
+            "Issue",
+            "Multi-source"
+          ]
+        }
+      ],
+      "geometry_before": "940208d14b925adece92d6a26de377655a40a9e55be1c1e4150f64f0d82282d1",
+      "geometry_after": "940208d14b925adece92d6a26de377655a40a9e55be1c1e4150f64f0d82282d1"
+    },
+    {
+      "output": "rq3/rq3_retrieval_calibration.pdf",
+      "label_changes": [
+        {
+          "before": [
+            "Repo\nPath",
+            "PR\nTitle",
+            "File\nDiff",
+            "File\nContents",
+            "Linked\nIssue",
+            "Multi-\nsource"
+          ],
+          "after": [
+            "Repo\nPath",
+            "PR\nTitle",
+            "Patch",
+            "Full\nCode",
+            "Linked\nIssue",
+            "Multi-\nsource"
+          ]
+        },
+        {
+          "before": [
+            "Repo\nPath",
+            "PR\nTitle",
+            "File\nDiff",
+            "File\nContents",
+            "Linked\nIssue",
+            "Multi-\nsource"
+          ],
+          "after": [
+            "Repo\nPath",
+            "PR\nTitle",
+            "Patch",
+            "Full\nCode",
+            "Linked\nIssue",
+            "Multi-\nsource"
+          ]
+        },
+        {
+          "before": [
+            "Repo\nPath",
+            "PR\nTitle",
+            "File\nDiff",
+            "File\nContents",
+            "Linked\nIssue",
+            "Multi-\nsource"
+          ],
+          "after": [
+            "Repo\nPath",
+            "PR\nTitle",
+            "Patch",
+            "Full\nCode",
+            "Linked\nIssue",
+            "Multi-\nsource"
+          ]
+        },
+        {
+          "before": [
+            "Repo\nPath",
+            "PR\nTitle",
+            "File\nDiff",
+            "File\nContents",
+            "Linked\nIssue",
+            "Multi-\nsource"
+          ],
+          "after": [
+            "Repo\nPath",
+            "PR\nTitle",
+            "Patch",
+            "Full\nCode",
+            "Linked\nIssue",
+            "Multi-\nsource"
+          ]
+        }
+      ],
+      "geometry_before": "d475aafc5c9fcad66f663296ddabfbd95b82c0bc6cc1316d4e00666714d56781",
+      "geometry_after": "d475aafc5c9fcad66f663296ddabfbd95b82c0bc6cc1316d4e00666714d56781"
+    },
+    {
+      "output": "rq3/rq3_retrieval_calibration.png",
+      "label_changes": [],
+      "geometry_before": "d475aafc5c9fcad66f663296ddabfbd95b82c0bc6cc1316d4e00666714d56781",
+      "geometry_after": "d475aafc5c9fcad66f663296ddabfbd95b82c0bc6cc1316d4e00666714d56781"
+    }
+  ],
+  "versions": {
+    "python": "3.12.9",
+    "matplotlib": "3.10.8",
+    "seaborn": "0.13.2",
+    "pandas": "2.3.1"
+  },
+  "bundle_page_order": [
+    "verbosity_word_count.pdf",
+    "fkgl.pdf",
+    "ttr.pdf",
+    "MTLD_Bidirectional_Distribution_Human_vs_Contexts.pdf",
+    "lexical_density.pdf",
+    "rouge.pdf",
+    "bertscore.pdf",
+    "bm25_retrieval.pdf",
+    "codebert.pdf",
+    "graphcodebert.pdf"
+  ],
+  "outputs": {
+    "outputs/figures_pdf/MTLD_Bidirectional_Distribution_Human_vs_Contexts.pdf": "912dd9dca176278e34b404dc843af7c2887366023a914d06584519f2f67a1904",
+    "outputs/figures_pdf/MTLD_Original_Distribution_Human_vs_Contexts.pdf": "22e6928f8f1f2bb457983e23c5bb19d1bdc1ea2dedf65682b2bd7d84d82d2450",
+    "outputs/figures_pdf/bertscore.pdf": "14dc05eb23a8e6c974870ea969fd47b951b2180db4828c2d0739c3d1eff6a58e",
+    "outputs/figures_pdf/bm25_retrieval.pdf": "39cacc365a5b52c9bd9b62b452fefc4ec45f7014cef1f537fd7834cbfbc94f70",
+    "outputs/figures_pdf/codebert.pdf": "9757b7406cc32f184707ea39d1dfb2fdcc68bf74055b731b758dd23f4b462cfc",
+    "outputs/figures_pdf/fkgl.pdf": "9952f68651069f0fd15abda91f5039c548b3319294d65931828bfc5258ded1fa",
+    "outputs/figures_pdf/graphcodebert.pdf": "81b2a31cd88314a0968b517135e6f3d8502a6fbda194e5486a002a6120014526",
+    "outputs/figures_pdf/lexical_density.pdf": "169b9a3289ab66762e735c780b440027ee18132e5fb657eb2a5b94e93e3f4192",
+    "outputs/figures_pdf/rouge.pdf": "e5a51b7c144fa7a92f6b666b3fc7a96ede2183f9c7b30ae4a561c5554424fb16",
+    "outputs/figures_pdf/ttr.pdf": "acf5a067b2335561b36f06c65e747ad89a7b6e6fccc18005e6005c4a65effd7f",
+    "outputs/figures_pdf/verbosity_word_count.pdf": "60a20ce0f35ce4677d0ba418b56271962075fbd3b40449cfea6d9a0d8eb822ac",
+    "rq1/metadata.json": "121fe815ca9610c79df7b6d2ffbf9954a72edbf88c6d63edc4e8a4d575ecf1dd",
+    "rq1/rq1_probability_boxplots_paired.pdf": "3d31c4a0b9c510e58c38c799918ed52468be410ac3acf90f6574c1b39c1c32b2",
+    "rq1/rq1_probability_boxplots_paired.png": "74e44a68341c804083a9f559661592c975c9c8d4f8c36a4e1b0f864bfab4187a",
+    "rq3/figure_metadata.json": "8988a2cd47c235319a4c15a9700fabee6b0a7c70c3690c51b38579108700aac4",
+    "rq3/rq3_retrieval_calibration.pdf": "9702c6bed8b7f46cf51aee5d00a9ea473071d8af7a1676bb4954548dcad65d0b",
+    "rq3/rq3_retrieval_calibration.png": "903e10daf4878b57e396aaf07b5e29e652c311409ba72b9041ebd709dba884f5",
+    "textual_features_boxplots.pdf": "62c5d158cefb4fbf434cbdeddc2f6188040ef409be90797c03467112b1dcbd6e"
+  }
+}

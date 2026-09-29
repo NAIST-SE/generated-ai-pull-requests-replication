@@ -19,9 +19,9 @@
 \newcommand{\robertaDetector}{ChatGPT Detector RoBERTa}
 \newcommand{\robertaQaDetector}{ChatGPT-QA Detector RoBERTa}
 \newcommand{\binocularsDetector}{Binoculars}
-\newcommand{\FileCont}{File Contents}
+\newcommand{\FileCont}{Full Code}
 \newcommand{\LinkedIssues}{Linked Issue}
-\newcommand{\WithoutFileContents}{Without File Contents}
+\newcommand{\WithoutFileContents}{Multi-source}
 
 \title{\textbf{Supplementary Results}\\[0.5em]
 \large\textit{Context, Semantics, and Alignment in AI-Generated Pull Request Descriptions}}
@@ -47,7 +47,7 @@ BM25 retrieval measures.
 \section{Preliminary Question}
 
 The corrected detector run scores every description and produces no false positives on the 308
-human baselines in the File Diff comparison, so specificity is 1.000 in every cell. Detection
+human baselines in the Patch comparison, so specificity is 1.000 in every cell. Detection
 sensitivity is nevertheless strongly model dependent. For \proprietaryLLM,
 \robertaDetector~has recall 0.006 (F1 0.013), \robertaQaDetector~flags no descriptions, and
 \zeroGptDetector~has recall 0.143 (F1 0.250). For \openSourceLLMOne, the corresponding F1
@@ -99,7 +99,7 @@ stronger discrimination.
 
 On per-PR scores averaged across the available generators, the six context ranks differ
 ($\chi^2(5)=267.0$, $n=273$, $p<0.001$). Fourteen of the 15 paired Wilcoxon contrasts remain
-significant after a separate Benjamini--Hochberg correction; only File Diff versus Linked Issue
+significant after a separate Benjamini--Hochberg correction; only Patch versus Linked Issue
 is non-significant ($p_{adj}=0.669$, $r_{rb}=-0.030$). PR Title has the highest pooled median AI
 score and Repo Path the lowest. Model-specific F1 ranges are 0.493--0.820 for Qwen,
 0.159--0.616 for Llama, and 0.000--0.092 for gpt-5-mini. These post-hoc results corroborate
@@ -212,9 +212,9 @@ six context configurations.
 Across the structural and lexical measures, differences from the paired human descriptions
 depend on the model, metric, and configuration; neither minimal, code-dense, nor narrative
 configurations are uniformly closest to the human baseline. The ROUGE and BERTScore results
-show that generated-to-reference similarity varies by configuration, with Without File Contents
+show that generated-to-reference similarity varies by configuration, with Multi-source
 obtaining the highest medians for all three models. The fixed-corpus BM25 analysis likewise
-ranks Without File Contents highest by MRR for all three models. Linked Issue alone is not the
+ranks Multi-source highest by MRR for all three models. Linked Issue alone is not the
 top configuration. These measures do not define a
 percentage of human similarity, and they do not establish factual correctness or review
 adequacy.

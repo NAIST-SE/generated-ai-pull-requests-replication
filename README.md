@@ -17,7 +17,7 @@ see [`RQ3_PUBLICATION.md`](RQ3_PUBLICATION.md); older raw-cosine outputs are not
 The corrected study uses 308 human PR descriptions and 5,322 successful AI descriptions:
 
 - P1--P4 were applicable to all 308 PRs;
-- P5 (Linked Issue) and P6 (Without File Contents) were applicable only to the 273 PRs with a
+- P5 (Linked Issue) and P6 (Multi-source context) were applicable only to the 273 PRs with a
   verified genuine GitHub issue;
 - 12 P4 generations were unavailable (six Qwen and six GPT);
 - the detector corpus contains 5,630 texts after adding the 308 human descriptions.
@@ -47,10 +47,23 @@ omitted temperature and used OpenAI's model-default decoding behaviour.
 |---|---|---|
 | P-1 | Repo Path | Repository name and affected paths |
 | P-2 | PR Title | PR title |
-| P-3 | File Diff | Unified diff |
-| P-4 | File Contents | Full contents of modified files |
+| P-3 | Patch | Unified diff |
+| P-4 | Full Code | Full contents of modified files, not the entire repository |
 | P-5 | Linked Issue | Verified issue title and body |
-| P-6 | Without File Contents | P1 + P2 + P3 + P5 |
+| P-6 | Multi-source context | P1 + P2 + P3 + P5 |
+
+### Reader-facing names and legacy labels
+
+The manuscript uses **Patch** (P-3), **Full Code** (P-4), and **Multi-source context**
+(P-6; **Multi-source** in compact tables and plots). Their legacy labels are
+**File Diff**, **File Contents**, and **Without File Contents**, respectively.
+The experimental conditions have not changed: P-6 combines repository path, PR title,
+diff, and linked-issue text; it is not an ablation against an all-sources condition.
+
+Frozen CSVs, prompts, filenames, notebooks, and historical outputs retain their original
+labels and hashes. Join by P-1--P-6, not by display labels. The plot-only presentation
+refresh is documented in [`CONTEXT_LABELS.md`](CONTEXT_LABELS.md); it uses cached
+scores and does not rerun inference or statistical tests.
 
 ## Repository layout
 

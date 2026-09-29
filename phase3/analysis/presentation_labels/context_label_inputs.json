@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/word_sentence_metrics.csv": "29f1271e043c34a3d44aaa1ab7f7bb04f48369471d0cef65d74e5ca6328d81f3",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/codebert_metrics.csv": "932dbb166dfcc221e48a7696161ed541e24057e059bc79e057bd1e331e5c1550",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/fkgl_metrics.csv": "99f6a12d051823a00c22ca5dbc0a34d58b0dcc0bedc65f638a774799be59b334",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/lexical_density_metrics.csv": "2d06e188fa2d058f752b470ffc729d41016b73c6db1d53a9e30f5e20b79fd0d7",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/graphcodebert_metrics.csv": "2c96eb065c971f07fc21ffd145f9cbab097695b532454303504b8c1875b2820b",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/rouge_metrics.csv": "13d50eb9a1223da1f8474ef3cbedb89eaf5c3c565ec44518cff2fb4ccdcdff2b",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/ttr_metrics.csv": "6a684eb6c08305c2654b6488e9e3ad070438641e2ab52e50f8c478337189ef30",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/mtld_metrics.csv": "363974379200d4e1f6aca90b5e0a12a153b384d3e5dea9e8cf82c9c45939104b",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/bertscore_metrics.csv": "77dbcb28f28ab1c5dfa8433551c51869b8d372f9524e6f5db0f9422b1a8f9031",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_lexical_density.ipynb": "255cc6af6a750fcb79c65e4cdfb99bc1c1defb1ab0fd394f7defa6fc6f058a4e",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_reading_ease.ipynb": "19a001faa00789693bbef23fa4212aef1ec7725ae15b234418951b5d31df766d",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_word_sentence_count.ipynb": "54de3cd28829daf91b94633a6f1c66e441cc69915ed325fccf5a51f3a3224327",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_mtld.ipynb": "f5c656488902f192437f239d7f6d882f6cefdc18a154ee6d452026928ef56032",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_rouge.ipynb": "3377900a09d90daa933eb73eaf2ec0ce034d1b134fcd9126672eb83b31bbcc35",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_ttr.ipynb": "6c0208d1f8a0ccdb3cf0512289b3393dd47b0c9ad5c13f19b1b6f9a1424c0129",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq3_graphcodebert.ipynb": "243eb06d2519ab9d61200b807ac05a3b74b8f40c457cef44cdef4973cbeb4922",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq2_bertscore.ipynb": "2dab294bda0a9316f1eb85175878c01a5e58c0e72a49be72ba4cb599dc32b60d",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/analysis_rq3_codebert.ipynb": "b227aa68e37358ad97c9c8c5086517576a82a323c415f1a58e45a03267551d27",
+    "phase3/analysis/deep_audit/plot_rq1_probability_boxplots.py": "03de0e6fe320d4c196874c90d5e2977804544854654929bb0ce0c789a2f6a27d",
+    "phase3/analysis/deep_audit/server_guard.py": "d8c4ecc867cf4d9148700d9374cd9535bffc78b4fe8fc30c8032783fc54a897f",
+    "phase3/analysis/deep_audit/analysis_rq2_bm25_retrieval.py": "e9e498ddb4b89f82a69dd1b4086cd7a10b99957de0d95025a4b9b20022628a1b",
+    "phase3/analysis/rq3_mismatched_calibration/plot_manuscript_rq3.py": "1175cf280a5504e91d3b4c19eeb00c6abd52e8339f2b6e1a68ba1817906c40b9",
+    "phase3/analysis/outputs/corrected_detection_v1/rq1/rq1_model_context_pairwise.csv": "c7e6eebfcd8bb834696806daa82d859b762f29e10ef5f5fa5abfae2540d6cfd1",
+    "phase3/analysis/outputs/rq3_retrieval_inference_v1/summaries/context_human_ai_reciprocal_rank_comparisons.csv": "e0665021847633b045ac48eaac3ce38249b17033ab1272906d017ee4bfc15a72",
+    "phase3/analysis/outputs/rq3_mismatched_calibration_v1/summaries/group_summary.csv": "f589c8d8ee99507ef028eb5afd03e36de628f697ff3d162184de996f51882737",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/bm25_retrieval/bm25_retrieval_scores.csv": "b3a2b2576741142032ebf04e637084c2f8dd3ce05f000cbb9a227d240f859c93",
+    "phase3/datasets/temperature_1/run_3_corrected_detection_v1/detection_results.csv": "b995b02848b4e7487682379afa22c6b7d6a8a06a404f35dac3ebca60daf9aa91"
+  }
+}

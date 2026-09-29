@@ -1,0 +1,15 @@
+{
+  "inputs": {
+    "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/context-display-v1.Wde7kl/context_human_ai_reciprocal_rank_comparisons.csv": "e0665021847633b045ac48eaac3ce38249b17033ab1272906d017ee4bfc15a72",
+    "/mnt/ext-hdd1/ayo/llm-in-prs/phase3/analysis/outputs/rq3_mismatched_calibration_v1/summaries/group_summary.csv": "f589c8d8ee99507ef028eb5afd03e36de628f697ff3d162184de996f51882737"
+  },
+  "outputs": {
+    "rq3_retrieval_calibration.pdf": "9702c6bed8b7f46cf51aee5d00a9ea473071d8af7a1676bb4954548dcad65d0b",
+    "rq3_retrieval_calibration.png": "903e10daf4878b57e396aaf07b5e29e652c311409ba72b9041ebd709dba884f5"
+  },
+  "panels": {
+    "bottom": "Background-adjusted matched-minus-mean-mismatched cosine margin; median by context.",
+    "top": "Established exhaustive correct-diff retrieval; MRR is descriptive by context."
+  },
+  "protocol": "rq3-manuscript-figure-v1"
+}

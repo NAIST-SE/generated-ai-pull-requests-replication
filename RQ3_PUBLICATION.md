@@ -15,7 +15,10 @@ association result.
    variant is reported, not selected for a favourable outcome.
 3. `phase3/analysis/outputs/rq3_retrieval_inference_v1/`: paired reciprocal-rank
    comparisons, BH-adjusted tests, rank-biserial effects, and paired MRR intervals.
-4. `phase3/analysis/outputs/rq3_manuscript_figures_v1/`: the manuscript figure.
+4. `phase3/analysis/outputs/rq3_manuscript_figures_v1/`: the original manuscript figure.
+5. `phase3/analysis/outputs/context_display_v1/rq3/`: the current figure with Patch,
+   Full Code, and Multi-source display labels; the same frozen numerical summaries.
+   See [`CONTEXT_LABELS.md`](CONTEXT_LABELS.md) for the label-only refresh.
 
 The exact source is under `phase3/analysis/rq3_mismatched_calibration/`. Its README
 is the frozen initial diagnostic protocol; the later `POSTPROCESSING_PROTOCOL.md`

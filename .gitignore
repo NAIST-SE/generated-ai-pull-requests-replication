@@ -18,6 +18,10 @@ note.txt
 !datasets/temperature_1/run_3_cleaned/*.json
 !phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/*.csv
 !phase3/analysis/outputs/tier_b/b4-linked-issue-reuse-v2/*.json
+!phase3/analysis/presentation_labels/context_label_inputs.json
+!phase3/analysis/outputs/context_display_v1/presentation_manifest.json
+!phase3/analysis/outputs/context_display_v1/rq1/metadata.json
+!phase3/analysis/outputs/context_display_v1/rq3/figure_metadata.json
 *.log
 **/env/**
 *.venv/**

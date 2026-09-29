@@ -37,7 +37,11 @@ HASHES = {
     "phase3/analysis/outputs/corrected_rq23_v1/completion.json":
         "bdd1866d1310a424c50b28a299435bda68bb3dc8f4eeb017f062ada42e9a08b5",
     "supplementary/figures/textual_features_boxplots.pdf":
+        "62c5d158cefb4fbf434cbdeddc2f6188040ef409be90797c03467112b1dcbd6e",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/figures_pdf/textual_features_boxplots.pdf":
         "ac84ef02dcb96cae44da7ee14ed5d3d4fc6ef1fe68dd708c2ccf21fa05b2b715",
+    "phase3/analysis/outputs/context_display_v1/presentation_manifest.json":
+        "6bf14cb1a469e683b03bd6c3265d80bdd78de82000cca5a161235221b610fb11",
     "phase3/analysis/outputs/tier_b/b4-issue-source-audit-v1/completion.json":
         "5f02893cc9b767358aa7da40bbe13735600c7fadf2dadd0d7ebb67418eb3cf89",
     "phase3/analysis/outputs/tier_b/generation-session-diagnostic-v1/verification.json":
@@ -109,6 +113,32 @@ def main() -> int:
                 f"SHA-256 mismatch for {relative}: expected {expected}, got {actual}"
             )
     checks["hash_anchors"] = len(HASHES)
+
+    # Reader-facing labels changed; frozen numerical/source artifacts did not.
+    presentation_dir = ROOT / "phase3/analysis/outputs/context_display_v1"
+    presentation = load_json("phase3/analysis/outputs/context_display_v1/presentation_manifest.json")
+    for relative, expected in presentation["inputs"].items():
+        if sha256(ROOT / relative) != expected:
+            failures.append(f"presentation input hash mismatch: {relative}")
+    for relative, expected in presentation["outputs"].items():
+        if sha256(presentation_dir / relative) != expected:
+            failures.append(f"presentation output hash mismatch: {relative}")
+    renderer = ROOT / "phase3/analysis/presentation_labels/render_context_labels.py"
+    if sha256(renderer) != presentation["script_sha256"]:
+        failures.append("presentation renderer does not match the executed source")
+    geometry_checks = presentation["plot_geometry_checks"]
+    if len(geometry_checks) != 15 or any(
+        check["geometry_before"] != check["geometry_after"] for check in geometry_checks
+    ):
+        failures.append("presentation plot-geometry checks are incomplete or failed")
+    if sha256(presentation_dir / "textual_features_boxplots.pdf") != sha256(
+        ROOT / "supplementary/figures/textual_features_boxplots.pdf"
+    ):
+        failures.append("supplement figure does not match the current presentation bundle")
+    checks["context_display_refresh"] = {
+        "inputs": len(presentation["inputs"]), "outputs": len(presentation["outputs"]),
+        "geometry_checks": len(geometry_checks),
+    }
 
     dataset_link = ROOT / "phase3" / "datasets"
     if not dataset_link.is_symlink():
@@ -483,10 +513,10 @@ def main() -> int:
     for phrase in required_readme:
         if phrase not in readme:
             failures.append(f"README is missing required boundary text: {phrase!r}")
-    if "Without File Contents" not in supplementary:
-        failures.append("supplementary TeX is missing the Without File Contents context")
+    if r"\newcommand{\WithoutFileContents}{Multi-source}" not in supplementary:
+        failures.append("supplementary TeX does not map P-6's macro to Multi-source")
     if r"\WithoutFileContents~has the highest MRR" not in supplementary:
-        failures.append("supplementary BM25 leading configuration is not Without File Contents")
+        failures.append("supplementary BM25 leading configuration is not P-6 / Multi-source")
     if "Post-hoc Binoculars Robustness Check" not in supplementary:
         failures.append("supplementary TeX is missing the post-hoc Binoculars results")
     for stale in ("peak median F1 of 0.136", "Linked Issue consistently yielded the highest"):
