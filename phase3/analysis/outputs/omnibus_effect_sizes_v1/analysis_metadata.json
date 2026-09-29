@@ -1,0 +1,16 @@
+{
+  "description": "Effect sizes derived from stored omnibus test statistics; no test was rerun.",
+  "formulas": {
+    "kendalls_w": "chi2 / (n * (k - 1)), k = 6 context configurations; tie-corrected via scipy's Friedman chi2",
+    "eta2_Q": "Q / (n * (k - 1)), k = 3 generators (Serlin, Carr, and Marascuilo, 1982)",
+    "mcnemar": "range of |paired_rate_difference_a_minus_b| across the nine comparisons"
+  },
+  "inputs": {
+    "outputs/corrected_detection_v1/prelim/prelim_cochrans_q.csv": "b6063790d348a9a33d5c01d4631547bb7d6fd539f9855569a944b0462bf6bf0a",
+    "outputs/corrected_detection_v1/prelim/prelim_mcnemar_pairwise.csv": "5023e1394f75b5efb41fe15e1903697c43d9f6e6217dd97e0ea8d9045b178416",
+    "outputs/corrected_detection_v1/rq1/rq1_friedman.csv": "3adca665aafd87f03e37824c9414eb469f65cf836c8b70c0ed44709edd5c914a",
+    "outputs/tier_b/b1-modern-detectors-v1/rq1_friedman.csv": "a59b44b52302772885ce75a0734e589d233b24cd431c8ecc4fef5a9098693246",
+    "outputs/corrected_rq23_v1/notebooks/outputs/bm25_retrieval/bm25_retrieval_friedman.csv": "7c27d7e2881f0f78daab600f93ea69ca6dafd60ea0fe2cfa3c715a1161c654a7"
+  },
+  "n_records": 12
+}

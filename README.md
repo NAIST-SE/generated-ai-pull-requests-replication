@@ -127,7 +127,10 @@ and Python bytecode are intentionally excluded.
 - `phase3/analysis/outputs/tier_b/generation-session-outcome-sensitivity-v1/` — verified
   raw-text-free outcome sensitivity results;
 - `phase3/analysis/outputs/tier_b/generation-session-six-context-bridge-v1/` — verified
-  six-context headline bridge.
+  six-context headline bridge;
+- `phase3/analysis/outputs/omnibus_effect_sizes_v1/` — Kendall's W and Cochran's Q eta^2_Q
+  derived from the stored omnibus test statistics, plus the McNemar paired-difference range
+  (script: `phase3/analysis/effect_sizes/derive_omnibus_effect_sizes.py`).
 
 The old `b4-linked-issue-reuse-v1` execution is not published because it predates the
 genuine-issue audit. The published corrected v2 analysis uses the 273-PR prompt-exact manifest,
