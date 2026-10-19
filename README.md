@@ -4,7 +4,7 @@ This repository contains the public datasets, exact study code, precomputed resu
 supplementary material for:
 
 > **Context, Semantics, and Alignment in AI-Generated Pull Request Descriptions**
-> Prepared for submission to Transactions on Software Engineering (TSE)
+> Prepared for submission to Empirical Software Engineering (EMSE)
 
 Historical large artifacts are archived on OSF at **https://osf.io/aq5rj/**. The corrected
 corpus and the result packages used by the current manuscript are included directly in this
@@ -148,7 +148,12 @@ and Python bytecode are intentionally excluded.
   six-context headline bridge;
 - `phase3/analysis/outputs/omnibus_effect_sizes_v1/` — Kendall's W and Cochran's Q eta^2_Q
   derived from the stored omnibus test statistics, plus the McNemar paired-difference range
-  (script: `phase3/analysis/effect_sizes/derive_omnibus_effect_sizes.py`).
+  (script: `phase3/analysis/effect_sizes/derive_omnibus_effect_sizes.py`);
+- `phase3/analysis/outputs/descriptive_reporting_v1/` — matched human/AI medians and quartiles,
+  cell-level recall and unique-human false-positive-rate Wilson intervals, and reused
+  PR-clustered pooled recall intervals. This additive reporting package does not change
+  detector decisions or prior tests. Its source, reproduction instructions, and independent
+  verifier are in `phase3/analysis/descriptive_reporting_v1/`.
 
 The old `b4-linked-issue-reuse-v1` execution is not published because it predates the
 genuine-issue audit. The published corrected v2 analysis uses the 273-PR prompt-exact manifest,
@@ -160,7 +165,7 @@ description quality, or a causal effect of adding issue text. The post-hoc B1 an
 Binoculars to the three pre-specified detectors on the same 5,630-description corpus. Binoculars
 has pooled recall 0.290, specificity 0.987, and strongly generator-dependent recall
 (0.015--0.597); it does not overturn the conclusion that detector behaviour depends on generator
-and context. Fast-DetectGPT was not run and remains deferred unless a TSE revision requests it.
+and context. Fast-DetectGPT was not run and remains outside this study unless an approved protocol amendment adds it.
 B2 human-coding materials will be added separately after their publication boundary is approved.
 
 ## Reproducing the corrected workflow
@@ -259,12 +264,19 @@ counts, completion statuses, excluded operational artifacts, and the historical/
 
 ## Supplementary results
 
-The September 29 revision retains the five full structural/lexical effect-size
-tables, BERTScore, and the readable BM25 chart in the manuscript. Any future
-relocation of the effect-size tables is deferred to the supervisors. The ROUGE-L
+The current manuscript retains the five full structural/lexical effect-size
+tables and the readable BM25 chart. Any future relocation of the effect-size
+tables is deferred to the supervisors. The October 1 length pass keeps the
+BERTScore distribution only as existing Supplementary Figure S6, with its
+findings and numerical interpretation retained in the main text. The ROUGE-L
 distribution is Supplementary Figure S5, and the unchanged example Repo Path
 prompt is Supplementary Listing S1 (`supplementary/generation_prompt.tex`).
-Supplementary Table S1 remains the pooled Binoculars results. The main-paper
+The October 1 reporting addition places human false-positive-rate intervals in
+Supplementary Table S1, pooled recall intervals for all detectors in S2, and per-context
+recall intervals in S3--S5. The existing pooled Binoculars results are now S6. The main paper
+retains the word-count boxplot and reports one matched median/quartile table for
+FKGL, TTR, MTLD, and lexical density, with MTLD complete-pair counts explicit.
+Full word- and sentence-count summaries remain in the reporting outputs. The main-paper
 effect-size tables retain all 108 values, significance markers, and sample-size
 and correction qualifications; the supplement does not duplicate them.
 

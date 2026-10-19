@@ -10,7 +10,7 @@ retroactively enter their original confirmatory test families.
   corrected three-detector corpus.
 - Active additional detector: Binoculars only.
 - Deferred contingency: Fast-DetectGPT was not run and is not part of the reported results. It
-  remains dormant unless a TSE revision explicitly requests it.
+  remains dormant unless an approved study-protocol amendment adds it.
 - Experiment source: `JosephAyo/llm-in-prs`, branch `revision/co-author-review`, commit
   `492923572940e19611ebe612d6c689c2b11877f1`.
 

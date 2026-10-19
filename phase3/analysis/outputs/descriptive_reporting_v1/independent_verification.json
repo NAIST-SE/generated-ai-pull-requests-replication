@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "verifier_sha256": "961c2993055ffab794f5504be83519d4e8ac5efa4918569a635fc2a9b58e9aa1",
+  "manifest_sha256": "34a126c45a6f1a7358139aa887f8824246511f99f93202df4665538841fbe500",
+  "descriptive_comparisons_independently_reconstructed": 108,
+  "rate_intervals_independently_checked": 92,
+  "nist_worked_example_and_boundary_checks": "PASS",
+  "source_and_output_hashes": "PASS",
+  "existing_mtld_complete_pair_exclusions": [
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "n_pairs": "297",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "n_pairs": "297",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "n_pairs": "297",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "n_pairs": "291",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "n_pairs": "262",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "n_pairs": "262",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "n_pairs": "297",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "n_pairs": "297",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "n_pairs": "297",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "n_pairs": "291",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "n_pairs": "262",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "n_pairs": "262",
+      "n_excluded_missing_metric": "11"
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "n_pairs": "216",
+      "n_excluded_missing_metric": "92"
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "n_pairs": "294",
+      "n_excluded_missing_metric": "14"
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "n_pairs": "291",
+      "n_excluded_missing_metric": "17"
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "n_pairs": "288",
+      "n_excluded_missing_metric": "20"
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "n_pairs": "261",
+      "n_excluded_missing_metric": "12"
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "n_pairs": "262",
+      "n_excluded_missing_metric": "11"
+    }
+  ]
+}

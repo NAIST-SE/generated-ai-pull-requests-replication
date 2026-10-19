@@ -1,0 +1,104 @@
+% Generated; pointwise intervals, not simultaneous comparisons.
+\begin{table}[htbp]
+\centering
+\caption{Human false-positive rates on the 308 unique human descriptions. Intervals are 95\% Wilson intervals; these baselines are reused, not independent samples for each model or context.}
+\label{tab:human_false_positive_intervals}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Detector} & \textbf{False positives} & \textbf{Human $n$} & \textbf{FPR (\%) [95\% CI]} \\
+\midrule
+RoBERTa & 0 & 308 & 0.0 [0.0, 1.2] \\
+RoBERTa-QA & 0 & 308 & 0.0 [0.0, 1.2] \\
+ZeroGPT & 0 & 308 & 0.0 [0.0, 1.2] \\
+Binoculars & 4 & 308 & 1.3 [0.5, 3.3] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Recall (\%) pooled over available contexts, with the existing 95\% PR-clustered percentile-bootstrap intervals (2,000 replicates). AI counts are 1,772 for Qwen and GPT, 1,778 for Llama, and 5,322 overall. Binoculars is post-hoc.}
+\label{tab:pooled_recall_intervals}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Detector} & \textbf{Qwen2.5-72B} & \textbf{GPT-5-mini} & \textbf{Llama-3.1-70B} & \textbf{All models} \\
+\midrule
+RoBERTa & 35.8 [33.2, 38.3] & 0.4 [0.1, 0.7] & 28.7 [26.6, 31.0] & 21.6 [20.3, 23.0] \\
+RoBERTa-QA & 63.7 [61.1, 66.3] & 0.1 [0.0, 0.2] & 17.5 [15.6, 19.4] & 27.1 [25.9, 28.3] \\
+ZeroGPT & 46.5 [44.0, 49.1] & 20.6 [18.7, 22.6] & 1.9 [1.2, 2.5] & 23.0 [21.7, 24.2] \\
+Binoculars & 59.7 [57.3, 62.2] & 1.5 [1.0, 2.1] & 25.9 [23.8, 28.1] & 29.0 [27.8, 30.3] \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\begin{table}[htbp]
+\centering
+\caption{Recall (\%) by context for Qwen2.5-72B, with 95\% Wilson intervals. Each column retains the detector's recorded decision rule; Binoculars is post-hoc.}
+\label{tab:context_recall_intervals_1}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Context} & \textbf{AI $n$} & \textbf{RoBERTa} & \textbf{RoBERTa-QA} & \textbf{ZeroGPT} & \textbf{Binoculars} \\
+\midrule
+Repo Path & 308 & 23.7 [19.3, 28.8] & 40.6 [35.2, 46.2] & 49.0 [43.5, 54.6] & 33.1 [28.1, 38.6] \\
+PR Title & 308 & 69.8 [64.5, 74.7] & 78.6 [73.7, 82.8] & 21.4 [17.2, 26.3] & 70.5 [65.1, 75.3] \\
+Patch & 308 & 20.1 [16.0, 25.0] & 53.6 [48.0, 59.1] & 43.5 [38.1, 49.1] & 64.3 [58.8, 69.4] \\
+Full Code & 302 & 36.8 [31.5, 42.3] & 81.8 [77.0, 85.7] & 68.2 [62.8, 73.2] & 68.9 [63.4, 73.8] \\
+Linked Issue & 273 & 41.8 [36.1, 47.7] & 63.7 [57.9, 69.2] & 44.3 [38.5, 50.3] & 54.2 [48.3, 60.0] \\
+Multi-source & 273 & 21.6 [17.1, 26.9] & 64.5 [58.6, 69.9] & 53.5 [47.6, 59.3] & 67.8 [62.0, 73.0] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Recall (\%) by context for GPT-5-mini, with 95\% Wilson intervals. Each column retains the detector's recorded decision rule; Binoculars is post-hoc.}
+\label{tab:context_recall_intervals_2}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Context} & \textbf{AI $n$} & \textbf{RoBERTa} & \textbf{RoBERTa-QA} & \textbf{ZeroGPT} & \textbf{Binoculars} \\
+\midrule
+Repo Path & 308 & 0.0 [0.0, 1.2] & 0.0 [0.0, 1.2] & 30.2 [25.3, 35.5] & 1.6 [0.7, 3.7] \\
+PR Title & 308 & 0.6 [0.2, 2.3] & 0.3 [0.1, 1.8] & 32.1 [27.2, 37.6] & 4.9 [3.0, 7.9] \\
+Patch & 308 & 0.6 [0.2, 2.3] & 0.0 [0.0, 1.2] & 14.3 [10.8, 18.6] & 0.0 [0.0, 1.2] \\
+Full Code & 302 & 0.3 [0.1, 1.9] & 0.0 [0.0, 1.3] & 3.6 [2.0, 6.4] & 0.0 [0.0, 1.3] \\
+Linked Issue & 273 & 0.0 [0.0, 1.4] & 0.0 [0.0, 1.4] & 28.2 [23.2, 33.8] & 1.8 [0.8, 4.2] \\
+Multi-source & 273 & 0.7 [0.2, 2.6] & 0.0 [0.0, 1.4] & 15.0 [11.3, 19.7] & 0.7 [0.2, 2.6] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Recall (\%) by context for Llama-3.1-70B, with 95\% Wilson intervals. Each column retains the detector's recorded decision rule; Binoculars is post-hoc.}
+\label{tab:context_recall_intervals_3}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Context} & \textbf{AI $n$} & \textbf{RoBERTa} & \textbf{RoBERTa-QA} & \textbf{ZeroGPT} & \textbf{Binoculars} \\
+\midrule
+Repo Path & 308 & 23.4 [19.0, 28.4] & 11.0 [8.0, 15.0] & 0.6 [0.2, 2.3] & 8.8 [6.1, 12.5] \\
+PR Title & 308 & 58.4 [52.9, 63.8] & 24.7 [20.2, 29.8] & 0.6 [0.2, 2.3] & 45.1 [39.7, 50.7] \\
+Patch & 308 & 13.3 [10.0, 17.6] & 8.4 [5.8, 12.1] & 0.0 [0.0, 1.2] & 16.6 [12.8, 21.1] \\
+Full Code & 308 & 38.0 [32.7, 43.5] & 26.0 [21.4, 31.1] & 5.8 [3.7, 9.0] & 35.1 [29.9, 40.5] \\
+Linked Issue & 273 & 15.8 [11.9, 20.5] & 12.5 [9.1, 16.9] & 1.5 [0.6, 3.7] & 16.1 [12.2, 20.9] \\
+Multi-source & 273 & 21.2 [16.8, 26.5] & 22.7 [18.1, 28.0] & 2.6 [1.2, 5.2] & 33.7 [28.4, 39.5] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier

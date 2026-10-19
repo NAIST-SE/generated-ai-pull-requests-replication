@@ -1,8 +1,8 @@
 """Frozen candidate configuration for B1 additional-detector scoring.
 
 Binoculars is the active B1 detector. Fast-DetectGPT remains implemented as a
-contingency and is not part of the active analysis unless a TSE revision asks
-for it. Changing the active detector set requires a documented amendment.
+contingency and is not part of the active analysis unless an approved
+study-protocol amendment adds it.
 """
 
 from __future__ import annotations

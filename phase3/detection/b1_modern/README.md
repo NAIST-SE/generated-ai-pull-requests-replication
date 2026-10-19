@@ -9,7 +9,7 @@ The package also retains a fully specified **Fast-DetectGPT** implementation usi
 maintainers' January 2026
   Llama-3-8B/Llama-3-8B-Instruct recommendation, BF16, 8,192-token limit, and the official
   pair-specific Gaussian calibration. It is a contingency only: do not run or include it in
-  the active analysis unless a TSE revision explicitly requests it and the protocol is amended.
+  the active analysis unless an approved study-protocol amendment adds it.
 
 The input is exactly 5,630 records from
 `run_3_corrected_detection_v1/corpus.csv`, SHA-256
@@ -24,7 +24,7 @@ package inventory, model revisions, and hardware record are provenance-gated by 
 
 ## Contingency GPU requirements
 
-These requirements apply only if a future TSE revision requests Fast-DetectGPT.
+These requirements apply only after an approved study-protocol amendment adds Fast-DetectGPT.
 
 - Linux host approved for study computation;
 - NVIDIA GPU with BF16 and at least 48 GB VRAM (one GPU is sufficient; two can be used by the

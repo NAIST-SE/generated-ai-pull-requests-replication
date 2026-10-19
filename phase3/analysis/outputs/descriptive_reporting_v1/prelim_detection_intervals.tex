@@ -1,0 +1,25 @@
+% Generated from verified detector decisions; thresholds unchanged.
+\begin{table*}[t]
+\centering
+\caption{Baseline detection performance on the \FileDiff~context (Preliminary Question). Recall includes a 95\% Wilson interval; each row has 308 AI and 308 human descriptions. For each of the three pre-specified detectors, the human false-positive rate is 0.000 [0.000, 0.012] (0/308); specificity is 1.000.}
+\label{tab:prelim_rq_results}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{llrrrr}
+\toprule
+\textbf{Model} & \textbf{Tool} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall [95\% CI]} & \textbf{F1} \\
+\midrule
+Qwen2.5-72B & RoBERTa & 0.601 & 1.000 & 0.201 [0.160, 0.250] & 0.335 \\
+ & RoBERTa-QA & 0.768 & 1.000 & 0.536 [0.480, 0.591] & 0.698 \\
+ & ZeroGPT & 0.718 & 1.000 & 0.435 [0.381, 0.491] & 0.606 \\
+\midrule
+Llama-3.1-70B & RoBERTa & 0.567 & 1.000 & 0.133 [0.100, 0.176] & 0.235 \\
+ & RoBERTa-QA & 0.542 & 1.000 & 0.084 [0.058, 0.121] & 0.156 \\
+ & ZeroGPT & 0.500 & 0.000 & 0.000 [0.000, 0.012] & 0.000 \\
+\midrule
+GPT-5-mini & RoBERTa & 0.503 & 1.000 & 0.006 [0.002, 0.023] & 0.013 \\
+ & RoBERTa-QA & 0.500 & 0.000 & 0.000 [0.000, 0.012] & 0.000 \\
+ & ZeroGPT & 0.571 & 1.000 & 0.143 [0.108, 0.186] & 0.250 \\
+\bottomrule
+\end{tabular}
+\end{table*}

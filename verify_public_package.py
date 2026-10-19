@@ -20,6 +20,8 @@ from verify_rq3_publication import verify as verify_rq3_publication
 ROOT = Path(__file__).resolve().parent
 
 HASHES = {
+    "phase3/analysis/outputs/descriptive_reporting_v1/manifest.json":
+        "34a126c45a6f1a7358139aa887f8824246511f99f93202df4665538841fbe500",
     "rq3_publication_manifest.json":
         "80b254d149767efcc1506df384a5787db58864879ef4fc31a8a2c4df912a7c8e",
     "datasets/temperature_1/run_3_corrected_detection_v1/corpus.csv":
@@ -107,6 +109,33 @@ def main() -> int:
     checks: dict[str, object] = {}
     failures.extend(verify_rq3_publication())
     checks["rq3_publication"] = "61 source/numeric artifacts; 10 declared cache exclusions"
+
+    # Additive descriptive reporting: verify copies and receipts, not statistics.
+    reporting = ROOT / "phase3/analysis/outputs/descriptive_reporting_v1"
+    report = load_json("phase3/analysis/outputs/descriptive_reporting_v1/manifest.json")
+    for name, expected in report["output_sha256"].items():
+        if sha256(reporting / name) != expected:
+            failures.append(f"Descriptive reporting output mismatch: {name}")
+    for relative, expected in report["source_sha256"].items():
+        if sha256(ROOT / relative) != expected:
+            failures.append(f"Descriptive reporting input mismatch: {relative}")
+    if sha256(ROOT / "phase3/analysis/descriptive_reporting_v1/analyse_reporting.py") != report["script_sha256"]:
+        failures.append("Descriptive reporting producer differs from executed source")
+    independent = load_json("phase3/analysis/outputs/descriptive_reporting_v1/independent_verification.json")
+    if independent["status"] != "PASS" or independent["manifest_sha256"] != sha256(reporting / "manifest.json"):
+        failures.append("Descriptive reporting independent receipt does not bind to this run")
+    if sha256(ROOT / "phase3/analysis/descriptive_reporting_v1/verify_reporting.py") != independent["verifier_sha256"]:
+        failures.append("Descriptive reporting verifier differs from executed source")
+    for name, expected_count in [("matched_textual_descriptives.csv", 108),
+                                 ("detector_recall_intervals.csv", 88),
+                                 ("human_false_positive_intervals.csv", 4)]:
+        if len(load_csv("phase3/analysis/outputs/descriptive_reporting_v1/" + name)) != expected_count:
+            failures.append(f"Descriptive reporting row count mismatch: {name}")
+    if sha256(reporting / "detector_uncertainty_tables.tex") != sha256(ROOT / "supplementary/detector_uncertainty_tables.tex"):
+        failures.append("Supplement detector intervals differ from verified output")
+    if r"\input{detector_uncertainty_tables}" not in (ROOT / "supplementary/supplementary.tex").read_text():
+        failures.append("Supplement does not include verified detector interval tables")
+    checks["descriptive_reporting"] = "108 matched summaries; 88 recall and 4 human-FPR intervals; source hashes and independent receipt verified"
 
     for relative, expected in HASHES.items():
         path = ROOT / relative

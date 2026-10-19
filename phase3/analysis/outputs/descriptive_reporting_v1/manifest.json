@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-01T05:15:15.067192+00:00",
+  "host": "nokogiri",
+  "server_commit": "492923572940e19611ebe612d6c689c2b11877f1",
+  "replication_source_commit": "b843f7e264090227bcb090c15acfcc694e4353ed",
+  "python": "3.12.9",
+  "packages": {
+    "numpy": "2.3.2",
+    "pandas": "2.3.1",
+    "scipy": "1.17.0",
+    "statsmodels": "0.14.6"
+  },
+  "script_sha256": "e20c63b0f57f099d56562d69fe567e87757153a858ed6bf0bd7bb9d2c6edd6b9",
+  "source_sha256": {
+    "phase3/analysis/outputs/corrected_rq23_v1/verification/canonical_descriptive_stats.csv": "ec4c185ac9864ecf84f909758720a46c8c0a6791d2d75d91a31b3fe8c56f5703",
+    "phase3/analysis/outputs/corrected_rq23_v1/verification/canonical_context_paired_stats.csv": "92a6db158e91363211b71f8cd096cf6851fa0a2606b980d381cfa9f7ce222131",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/word_sentence_metrics.csv": "29f1271e043c34a3d44aaa1ab7f7bb04f48369471d0cef65d74e5ca6328d81f3",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/fkgl_metrics.csv": "99f6a12d051823a00c22ca5dbc0a34d58b0dcc0bedc65f638a774799be59b334",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/ttr_metrics.csv": "6a684eb6c08305c2654b6488e9e3ad070438641e2ab52e50f8c478337189ef30",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/mtld_metrics.csv": "363974379200d4e1f6aca90b5e0a12a153b384d3e5dea9e8cf82c9c45939104b",
+    "phase3/analysis/outputs/corrected_rq23_v1/notebooks/outputs/row_level/lexical_density_metrics.csv": "2d06e188fa2d058f752b470ffc729d41016b73c6db1d53a9e30f5e20b79fd0d7",
+    "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/all_detector_scores.csv": "a63bc80f5a319e2c0ec80b6010a405794f75e53ffb6339b4f268deebeffd7396",
+    "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/performance.csv": "f14e28fa4310b92732c69963c1b17c61d1950c0bdab4a48a6c9c16d52ec465aa",
+    "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/metadata.json": "0d5b989c12cbdc2944fc5a1fbc62cff3a3e9c9a8e7aa395b0245a68c3069f13f",
+    "phase3/analysis/outputs/tier_b/b1-modern-detectors-v1/analysis_verification.json": "82568546f598fc35f59150ef952b2b6009720b416b449aef18b677a9e6bf67b3"
+  },
+  "descriptive_policy": "Human subset matched by PR to each model/context and restricted to complete pairs per metric, matching canonical paired tests; median and linear-interpolated Q1/Q3; no text feature recomputation",
+  "interval_policy": "Pointwise 95% Wilson for cell recall and unique-human FPR; existing PR-cluster bootstrap for pooled recall; no new inferential comparisons",
+  "output_sha256": {
+    "detector_recall_intervals.csv": "e498c76820cd3bac3bf848ae6693eebb27b48c43f03958b3b205203a883f5473",
+    "detector_uncertainty_tables.tex": "af6831e72073b0798794a9477bbdf5f6cd01117bb5fd393b3453564bf7001cfe",
+    "full_human_baseline_descriptives.csv": "9169d1ee47c9d250200db226abd1368bf60a7e3a8c7273b181e03365722a58ab",
+    "human_false_positive_intervals.csv": "6e47b7e3ac50598b85dc5febdb820eab957c97baf5f7bc723e4ddaca0f082a2a",
+    "matched_textual_descriptives.csv": "3b32ae0df825ca8fdb8cce5b83dd5e720c824ae0ded6b9158958245d5f11735c",
+    "prelim_detection_intervals.tex": "3071e89d2e14a70f296fff91ad87fc6ca4db536dbbb6c71749f3621ace968d57",
+    "rq2_lexical_descriptives.tex": "0a9a21cea8f582345ec00f39d3c56c246db1b7c0194a7c2761ddddb5a04e4978",
+    "rq2_structural_descriptives.tex": "a9264cd426a54340f583500f9bba949311e01b4f879826c38c2126db0f2e416b",
+    "verification.json": "13793526bd0233d5aefd40ed73a69a00d9c84c847380d83d5dda68a4cdb15079"
+  },
+  "publication_repackaging": "Recorded server execution metadata and all input/output content hashes are retained. Source paths were mapped to their public replication-package locations; numerical outputs are unchanged."
+}

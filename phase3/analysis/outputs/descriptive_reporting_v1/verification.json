@@ -1,0 +1,1491 @@
+{
+  "status": "PASS",
+  "descriptive_comparisons": [
+    {
+      "metric": "Word Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Word Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Sentence Count",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Flesch Kincaid Grade",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Type-Token Ratio",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "MTLD Bidirectional",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    },
+    {
+      "metric": "Lexical Density",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "canonical_ai_summary_matches": true,
+      "paired_medians_match": true,
+      "pr_membership_matches": true
+    }
+  ],
+  "detector_views": [
+    {
+      "detector": "roberta",
+      "view_level": "pooled",
+      "generator": "pooled",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "pooled",
+      "generator": "pooled",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "roberta-qa",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "pooled",
+      "generator": "pooled",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "zerogpt",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "pooled",
+      "generator": "pooled",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "all",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "Qwen/Qwen2.5-72B-Instruct",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "gpt-5-mini-2025-08-07",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-1",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-2",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-3",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-4",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-5",
+      "all_point_estimates_match": true
+    },
+    {
+      "detector": "binoculars",
+      "view_level": "generator_context",
+      "generator": "meta-llama/llama-3.1-70b-instruct",
+      "context_code": "P-6",
+      "all_point_estimates_match": true
+    }
+  ],
+  "source_files_unchanged": true,
+  "new_significance_tests": 0,
+  "detector_calls": 0,
+  "generation_calls": 0
+}
