@@ -43,11 +43,18 @@ The full replication package, including datasets, analysis notebooks, and code, 
 in the \href{https://github.com/NAIST-SE/generated-ai-pull-requests-replication}{public
 GitHub repository}.
 
-It provides additional descriptive detail for the Preliminary Question and post-hoc
+It documents sampling and reference-audit details and provides additional descriptive detail for the Preliminary Question and post-hoc
 \binocularsDetector~robustness check, RQ2 structural and lexical distributions,
 ROUGE, BERTScore, and fixed-corpus BM25 retrieval results,
 and an example generation prompt. Tables, figures, and listings use an S prefix to
 distinguish them from those in the main paper.
+
+\section{Sampling and Reference Audit}
+\label{sec:sampling_reference_audit}
+
+We selected a simple random sample of 308 PRs from the filtered population of 1,536 PRs. Sample size was set using the finite-population formula for a binary proportion with 95\% confidence, a 5\% margin of error, and $p=0.5$. These assumptions set the sample size, not a power or precision guarantee for the subsequent metrics. The sampled distributions of word count, total churn, and changed-file count visually track the same distributions in the filtered population. We treat this agreement as a descriptive check rather than proof of representativeness.
+
+For each sampled PR, we collected patch-level, file-level, and referenced-artifact data through the GitHub REST API. A post-collection audit traced every reference back to its PR body and verified the corresponding API object type. The sample contains 352 PR--artifact references representing 343 unique artifacts: 293 references to 284 genuine issues and 59 references to pull requests. Of the 308 sampled PRs, 273 reference at least one genuine issue and 35 reference pull requests only. We retained all 308 PRs for the human baseline and the Repo Path, PR Title, Patch, and Full Code configurations; Linked Issue and Multi-source were restricted to the 273 genuine-issue PRs. Manual review also confirmed that the retained issues fall within the same study time window as their corresponding PRs. The resulting dataset contains 2,523 diff hunks and 1,344 modified files.
 
 \section{Preliminary Question}
 
