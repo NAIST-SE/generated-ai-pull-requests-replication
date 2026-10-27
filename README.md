@@ -264,9 +264,9 @@ counts, completion statuses, excluded operational artifacts, and the historical/
 
 ## Supplementary results
 
-The current manuscript retains the five full structural/lexical effect-size
-tables and the readable BM25 chart. Any future relocation of the effect-size
-tables is deferred to the supervisors. The October 1 length pass keeps the
+The current manuscript retains the full structural/lexical effect-size results
+in one grouped table and the readable BM25 chart. Any future relocation of the
+effect-size results is deferred to the supervisors. The October 1 length pass keeps the
 BERTScore distribution only as existing Supplementary Figure S6, with its
 findings and numerical interpretation retained in the main text. The ROUGE-L
 distribution is Supplementary Figure S5, and the unchanged example Repo Path
@@ -277,7 +277,7 @@ recall intervals in S3--S5. The existing pooled Binoculars results are now S6. T
 retains the word-count boxplot and reports one matched median/quartile table for
 FKGL, TTR, MTLD, and lexical density, with MTLD complete-pair counts explicit.
 Full word- and sentence-count summaries remain in the reporting outputs. The main-paper
-effect-size tables retain all 108 values, significance markers, and sample-size
+effect-size table retains all 108 values, significance markers, and sample-size
 and correction qualifications; the supplement does not duplicate them.
 
 Compile without writing generated files into the repository:
