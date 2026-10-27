@@ -46,7 +46,7 @@ GitHub repository}.
 It documents sampling and reference-audit details and provides additional descriptive detail for the Preliminary Question and post-hoc
 \binocularsDetector~robustness check, RQ2 structural and lexical distributions,
 ROUGE, BERTScore, and fixed-corpus BM25 retrieval results,
-and an example generation prompt. Tables, figures, and listings use an S prefix to
+linked-issue reuse methods and results, and an example generation prompt. Tables, figures, and listings use an S prefix to
 distinguish them from those in the main paper.
 
 \section{Sampling and Reference Audit}
@@ -256,6 +256,94 @@ BERTScore's 512-token limit truncated the AI side of 4.85\% of the 5,322 correct
 either the AI or paired human description is considered, 9.88\% of pairs were affected, with
 64,066 input tokens removed (2.94\% of all input tokens). AI-side truncation was highest for
 \proprietaryLLM~under \FileCont~(23.51\%), so that cell should be interpreted cautiously.
+\section{Linked-Issue Reuse Robustness Check}
+\label{sec:linked_issue_reuse}
+
+\textbf{Corpus and source matching.}
+For the 273 PRs with verified genuine linked issues, the analysis scored 4,902 AI-generated descriptions and 273 historical human descriptions against the exact rendered issue title/body block stored in their prompts (5,175 description--issue pairs). Comments and discussion threads were excluded. Each PR contributed one issue block, possibly containing multiple linked issues: the 273 blocks represent 293 linked-issue occurrences and 284 unique issues. There are 265 unique rendered blocks. All 1,638 issue-exposed prompt blocks matched the frozen source manifest. Linked Issue is the primary issue-exposed configuration; Multi-source is a secondary issue-exposed configuration. Repo Path, PR Title, Patch, and Full Code do not include issue text.
+
+\textbf{Primary measure and inference.}
+The primary outcome is occurrence-level generated five-gram containment: the number of five-token windows in a description that also occur in its issue block, divided by the total number of five-token windows in that description. Repeated matching windows count separately. Text is conservatively normalized using Unicode NFKC, Markdown link labels in place of link markup, collapsed whitespace, and lowercase; tokens are Unicode word-character sequences. A description or source shorter than five tokens receives zero containment. The released outputs also retain raw case-sensitive and additional lexical diagnostics.
+
+For each generator, paired two-sided Wilcoxon signed-rank tests compare Linked Issue with the four issue-unexposed configurations. One Benjamini--Hochberg correction covers these 12 primary comparisons. The Multi-source-versus-unexposed family (12 comparisons) and Linked-Issue-versus-Multi-source family (three comparisons) are corrected separately. Matched-pairs rank-biserial correlations report the paired effect direction. Qwen and GPT Full Code comparisons contain 267 PR pairs because each model has six unavailable generations; every other comparison contains 273 pairs. Table~\ref{tab:issue_reuse_paired} reports all 27 five-gram comparisons.
+
+\textbf{Exact reuse results.}
+Table~\ref{tab:issue_reuse_summary} reports low median containment under Linked Issue, while every issue-unexposed model--configuration median is zero. All 12 primary comparisons remain significant after correction ($p_{adj}\leq2.1\times10^{-23}$; $r_{rb}=0.953$--$1.000$). Multi-source also exceeds its paired issue-unexposed comparisons ($p_{adj}\leq1.8\times10^{-5}$), despite zero medians for every generator. These zero medians coexist with a systematic paired shift among a minority of descriptions. Linked Issue exceeds Multi-source for all three generators ($p_{adj}\leq1.6\times10^{-10}$).
+
+\begin{table}[htbp]
+\centering
+\caption{Linked-issue reuse and supporting retrieval results. Containment is the median percentage of generated five-token windows also present in the prompt-exact issue block. Recall@1 is the percentage of Linked Issue descriptions retrieving their own PR's issue block first from the fixed 273-block corpus.}
+\label{tab:issue_reuse_summary}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrr}
+\toprule
+Generator & \multicolumn{2}{c}{Median containment (\%)} & BM25 Recall@1 (\%) \\
+\cmidrule(lr){2-3}
+ & Linked Issue & Multi-source & Linked Issue \\
+\midrule
+Qwen2.5-72B & 1.20 & 0.00 & 84.2 \\
+GPT-5-mini & 1.53 & 0.00 & 87.5 \\
+Llama-3.1-70B & 1.96 & 0.00 & 87.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Supporting retrieval and semantic checks.}
+Each description also queries the fixed corpus of 273 PR-specific issue blocks with BM25 (\texttt{BM25Okapi}, $k_1=1.5$, $b=0.75$; tied matches receive their average rank). The block for the same PR is the sole relevant document. All 12 Linked-Issue-versus-unexposed reciprocal-rank comparisons remain significant under their separate Benjamini--Hochberg correction ($p_{adj}\leq3.2\times10^{-27}$), with Recall@1 of 84.2\%--87.5\% (Table~\ref{tab:issue_reuse_summary}). Generated-to-issue BERTScore F1 also favors Linked Issue in all 12 separately corrected comparisons. This secondary BERTScore uses \texttt{microsoft/deberta-xlarge-mnli}, baseline rescaling, and no IDF weighting. Its 512-token limit truncates at least one side of 1,418 of 5,175 pairs (27.4\%), so it remains supporting evidence. The complete BM25 and BERTScore estimates and comparisons are retained in the replication package.
+
+\textbf{Interpretation and provenance.}
+The check supports measurable but limited exact issue-text transfer. Matching phrases may include necessary technical wording and identifiers; they do not establish plagiarism, wholesale copying, factual correctness, completeness, or reviewer usefulness. The Qwen and GPT issue-unexposed and issue-exposed outputs come from different generation sessions. All six Llama configurations were generated in one session, but the design is not factorial. These comparisons therefore establish association rather than an isolated causal effect of adding issue text. Multi-source reuses less exact issue wording than Linked Issue despite its stronger similarity to the historical human descriptions, so exact phrase reuse alone does not explain its RQ2 advantage.
+
+The replication package retains the verified frozen outputs in the \texttt{b4-linked-issue-}\allowbreak\texttt{reuse-v2} directory. These include the source manifest, description-level scores, all five separately corrected inferential families, completion hashes, and independent verification.
+
+\begin{table}[htbp]
+\centering
+\caption{All paired five-gram containment comparisons. Each family receives a separate Benjamini--Hochberg correction. Positive $r_{rb}$ favors the issue-exposed configuration named in the family heading; the comparison column names its paired control. All listed comparisons are significant at $\alpha=0.05$.}
+\label{tab:issue_reuse_paired}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{llrrr}
+\toprule
+Generator & Comparison & Paired $n$ & $r_{rb}$ & Adjusted $p$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Primary: Linked Issue versus issue-unexposed configurations (12 tests)}} \\
+Qwen2.5-72B & Repo Path & 273 & 1.000 & $1.17\times10^{-25}$ \\
+ & PR Title & 273 & 0.967 & $1.63\times10^{-24}$ \\
+ & Patch & 273 & 0.987 & $2.66\times10^{-25}$ \\
+ & Full Code & 267 & 1.000 & $2.66\times10^{-25}$ \\
+GPT-5-mini & Repo Path & 273 & 0.990 & $6.06\times10^{-34}$ \\
+ & PR Title & 273 & 0.991 & $6.06\times10^{-34}$ \\
+ & Patch & 273 & 0.953 & $5.65\times10^{-32}$ \\
+ & Full Code & 267 & 0.984 & $2.10\times10^{-33}$ \\
+Llama-3.1-70B & Repo Path & 273 & 0.995 & $1.03\times10^{-24}$ \\
+ & PR Title & 273 & 0.971 & $7.92\times10^{-24}$ \\
+ & Patch & 273 & 0.964 & $2.07\times10^{-23}$ \\
+ & Full Code & 273 & 1.000 & $1.03\times10^{-24}$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Secondary: Multi-source versus issue-unexposed configurations (12 tests)}} \\
+Qwen2.5-72B & Repo Path & 273 & 1.000 & $1.95\times10^{-9}$ \\
+ & PR Title & 273 & 0.704 & $1.77\times10^{-5}$ \\
+ & Patch & 273 & 0.870 & $9.44\times10^{-8}$ \\
+ & Full Code & 267 & 0.997 & $1.67\times10^{-9}$ \\
+GPT-5-mini & Repo Path & 273 & 0.971 & $4.33\times10^{-16}$ \\
+ & PR Title & 273 & 0.939 & $2.06\times10^{-15}$ \\
+ & Patch & 273 & 0.864 & $1.13\times10^{-13}$ \\
+ & Full Code & 267 & 0.977 & $4.33\times10^{-16}$ \\
+Llama-3.1-70B & Repo Path & 273 & 0.999 & $7.67\times10^{-14}$ \\
+ & PR Title & 273 & 0.946 & $9.40\times10^{-13}$ \\
+ & Patch & 273 & 0.856 & $5.67\times10^{-11}$ \\
+ & Full Code & 273 & 0.953 & $3.81\times10^{-13}$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Secondary: Linked Issue versus Multi-source (three tests)}} \\
+Qwen2.5-72B & Multi-source & 273 & 0.899 & $1.71\times10^{-22}$ \\
+GPT-5-mini & Multi-source & 273 & 0.716 & $5.13\times10^{-20}$ \\
+Llama-3.1-70B & Multi-source & 273 & 0.576 & $1.54\times10^{-10}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
 \section{Example Generation Prompt}
 
 Supplementary Listing~\ref{lst:sample_prompt} preserves the example Repo Path prompt
