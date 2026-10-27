@@ -1,9 +1,9 @@
-# Replication Package — Context, Semantics, and Alignment in AI-Generated Pull Request Descriptions
+# Replication Package — AI-Generated Pull Request Descriptions: Weak Detection Despite Semantic and Structural Differences
 
 This repository contains the public datasets, exact study code, precomputed results, and
 supplementary material for:
 
-> **Context, Semantics, and Alignment in AI-Generated Pull Request Descriptions**
+> **AI-Generated Pull Request Descriptions: Weak Detection Despite Semantic and Structural Differences**
 > Prepared for submission to Empirical Software Engineering (EMSE)
 
 Historical large artifacts are archived on OSF at **https://osf.io/aq5rj/**. The corrected
