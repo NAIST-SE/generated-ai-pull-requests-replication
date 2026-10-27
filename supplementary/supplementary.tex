@@ -67,6 +67,8 @@ scores are 0.235, 0.156, and 0.000. The strongest baseline signal occurs for
 \openSourceLLMTwo: F1 is 0.335 for \robertaDetector, 0.698 for \robertaQaDetector, and 0.606
 for \zeroGptDetector.
 
+For each detector, Cochran's $Q$ compares the three generators' paired binary outcomes on the same 308 PRs. We report the maximum-normalized effect size $\eta^2_Q=Q/(n(k-1))$, with $n=308$ paired PRs and $k=3$ generators. It scales $Q$ by a theoretical maximum that need not be attainable for these data; it is not variance explained. For each pairwise exact McNemar comparison, the effect size is the paired difference in flag rates between the two generators. One Benjamini--Hochberg correction covers the nine comparisons (three generator pairs for each of three detectors).
+
 On paired binary decisions for the same 308 PRs, flag rates differ across generators for every
 detector: \zeroGptDetector~($Q(2)=177.2$), \robertaDetector~($Q(2)=61.8$), and
 \robertaQaDetector~($Q(2)=277.8$), all $p<0.001$. All nine exact McNemar comparisons remain
