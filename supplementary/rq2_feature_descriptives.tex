@@ -1,0 +1,71 @@
+% Presentation-only combination of verified TeX cells; do not hand-edit.
+\begin{table}[tbp]
+\centering
+\caption{Readability and lexical values by model and context (RQ2): median [Q1, Q3]. H is the human baseline matched to that model--context cell; A is AI. The same $n$ applies to H and A; the main $n$ reflects eligibility or unavailable generations. FKGL is the Flesch--Kincaid grade level; TTR and lexical density are proportions. Bidirectional MTLD uses complete pairs only ($n_{\mathrm{MTLD}}$).}
+\label{tab:rq2_feature_descriptives}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{llrrll}
+\toprule
+\textbf{Model} & \textbf{Context} & \textbf{$n$} & \textbf{$n_{\mathrm{MTLD}}$} & \textbf{FKGL} & \textbf{TTR} \\
+\midrule
+Qwen2.5-72B & Repo Path & 308 & 297 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 12.63 [11.21, 13.97]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.715 [0.654, 0.768]} \\
+ & PR Title & 308 & 297 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 13.51 [12.31, 14.64]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.826 [0.785, 0.864]} \\
+ & Patch & 308 & 297 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 12.85 [11.27, 14.40]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.684 [0.624, 0.733]} \\
+ & Full Code & 302 & 291 & \shortstack[l]{H: 11.10 [9.52, 13.02]\\A: 13.85 [12.41, 15.08]} & \shortstack[l]{H: 0.594 [0.530, 0.648]\\A: 0.641 [0.595, 0.689]} \\
+ & Linked Issue & 273 & 262 & \shortstack[l]{H: 11.04 [9.46, 12.93]\\A: 12.48 [11.08, 14.08]} & \shortstack[l]{H: 0.592 [0.523, 0.646]\\A: 0.694 [0.652, 0.750]} \\
+ & Multi-source & 273 & 262 & \shortstack[l]{H: 11.04 [9.46, 12.93]\\A: 12.18 [10.61, 13.54]} & \shortstack[l]{H: 0.592 [0.523, 0.646]\\A: 0.640 [0.600, 0.678]} \\
+\midrule
+GPT-5-mini & Repo Path & 308 & 297 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 13.83 [12.79, 15.18]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.575 [0.529, 0.624]} \\
+ & PR Title & 308 & 297 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 12.11 [10.97, 13.44]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.561 [0.522, 0.613]} \\
+ & Patch & 308 & 297 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 13.44 [11.72, 15.13]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.572 [0.511, 0.643]} \\
+ & Full Code & 302 & 291 & \shortstack[l]{H: 11.10 [9.52, 13.02]\\A: 14.49 [12.96, 15.97]} & \shortstack[l]{H: 0.594 [0.530, 0.648]\\A: 0.546 [0.507, 0.606]} \\
+ & Linked Issue & 273 & 262 & \shortstack[l]{H: 11.04 [9.46, 12.93]\\A: 11.90 [10.76, 13.17]} & \shortstack[l]{H: 0.592 [0.523, 0.646]\\A: 0.489 [0.459, 0.528]} \\
+ & Multi-source & 273 & 262 & \shortstack[l]{H: 11.04 [9.46, 12.93]\\A: 12.60 [11.32, 14.08]} & \shortstack[l]{H: 0.592 [0.523, 0.646]\\A: 0.528 [0.490, 0.575]} \\
+\midrule
+Llama-3.1-70B & Repo Path & 308 & 216 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 13.72 [11.12, 16.34]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.909 [0.786, 1.000]} \\
+ & PR Title & 308 & 294 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 14.64 [12.21, 16.98]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.923 [0.867, 0.960]} \\
+ & Patch & 308 & 291 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 12.83 [10.55, 15.45]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.828 [0.743, 0.909]} \\
+ & Full Code & 308 & 288 & \shortstack[l]{H: 11.07 [9.50, 12.94]\\A: 13.88 [12.13, 16.48]} & \shortstack[l]{H: 0.595 [0.530, 0.661]\\A: 0.746 [0.667, 0.833]} \\
+ & Linked Issue & 273 & 261 & \shortstack[l]{H: 11.04 [9.46, 12.93]\\A: 12.70 [10.15, 16.07]} & \shortstack[l]{H: 0.592 [0.523, 0.646]\\A: 0.828 [0.732, 0.905]} \\
+ & Multi-source & 273 & 262 & \shortstack[l]{H: 11.04 [9.46, 12.93]\\A: 11.80 [10.19, 13.77]} & \shortstack[l]{H: 0.592 [0.523, 0.646]\\A: 0.750 [0.683, 0.821]} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Presentation-only combination of verified TeX cells; do not hand-edit.
+\begin{table}[tbp]
+\ContinuedFloat
+\caption[]{Readability and lexical values (continued): MTLD and lexical density. Definitions and sample sizes follow the first part of Table~\ref{tab:rq2_feature_descriptives}.}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{llrrll}
+\toprule
+\textbf{Model} & \textbf{Context} & \textbf{$n$} & \textbf{$n_{\mathrm{MTLD}}$} & \textbf{MTLD} & \textbf{Lexical density} \\
+\midrule
+Qwen2.5-72B & Repo Path & 308 & 297 & \shortstack[l]{H: 57.79 [48.17, 67.60]\\A: 57.73 [45.41, 68.83]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.581 [0.545, 0.619]} \\
+ & PR Title & 308 & 297 & \shortstack[l]{H: 57.79 [48.17, 67.60]\\A: 74.70 [64.00, 90.72]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.618 [0.585, 0.653]} \\
+ & Patch & 308 & 297 & \shortstack[l]{H: 57.79 [48.17, 67.60]\\A: 58.33 [47.27, 72.88]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.565 [0.533, 0.598]} \\
+ & Full Code & 302 & 291 & \shortstack[l]{H: 57.10 [47.84, 67.44]\\A: 57.39 [48.23, 70.72]} & \shortstack[l]{H: 0.556 [0.511, 0.610]\\A: 0.613 [0.580, 0.651]} \\
+ & Linked Issue & 273 & 262 & \shortstack[l]{H: 57.22 [48.19, 67.44]\\A: 67.54 [56.72, 79.81]} & \shortstack[l]{H: 0.556 [0.511, 0.615]\\A: 0.583 [0.557, 0.610]} \\
+ & Multi-source & 273 & 262 & \shortstack[l]{H: 57.22 [48.19, 67.44]\\A: 55.95 [45.36, 67.69]} & \shortstack[l]{H: 0.556 [0.511, 0.615]\\A: 0.550 [0.520, 0.582]} \\
+\midrule
+GPT-5-mini & Repo Path & 308 & 297 & \shortstack[l]{H: 57.79 [48.17, 67.60]\\A: 78.78 [68.71, 90.96]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.711 [0.686, 0.737]} \\
+ & PR Title & 308 & 297 & \shortstack[l]{H: 57.79 [48.17, 67.60]\\A: 79.80 [69.79, 94.95]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.687 [0.656, 0.709]} \\
+ & Patch & 308 & 297 & \shortstack[l]{H: 57.79 [48.17, 67.60]\\A: 69.85 [59.27, 81.78]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.699 [0.661, 0.732]} \\
+ & Full Code & 302 & 291 & \shortstack[l]{H: 57.10 [47.84, 67.44]\\A: 75.03 [64.25, 87.96]} & \shortstack[l]{H: 0.556 [0.511, 0.610]\\A: 0.724 [0.691, 0.757]} \\
+ & Linked Issue & 273 & 262 & \shortstack[l]{H: 57.22 [48.19, 67.44]\\A: 77.73 [67.91, 91.51]} & \shortstack[l]{H: 0.556 [0.511, 0.615]\\A: 0.662 [0.643, 0.685]} \\
+ & Multi-source & 273 & 262 & \shortstack[l]{H: 57.22 [48.19, 67.44]\\A: 72.64 [63.02, 85.85]} & \shortstack[l]{H: 0.556 [0.511, 0.615]\\A: 0.685 [0.661, 0.715]} \\
+\midrule
+Llama-3.1-70B & Repo Path & 308 & 216 & \shortstack[l]{H: 57.94 [49.00, 67.90]\\A: 42.30 [28.71, 53.83]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.737 [0.667, 0.800]} \\
+ & PR Title & 308 & 294 & \shortstack[l]{H: 57.90 [48.25, 67.72]\\A: 63.05 [37.66, 95.34]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.650 [0.607, 0.692]} \\
+ & Patch & 308 & 291 & \shortstack[l]{H: 57.79 [47.84, 67.68]\\A: 49.39 [35.50, 65.93]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.700 [0.643, 0.743]} \\
+ & Full Code & 308 & 288 & \shortstack[l]{H: 57.66 [47.84, 67.77]\\A: 45.17 [36.78, 58.58]} & \shortstack[l]{H: 0.556 [0.511, 0.613]\\A: 0.714 [0.660, 0.761]} \\
+ & Linked Issue & 273 & 261 & \shortstack[l]{H: 57.34 [48.18, 67.44]\\A: 56.00 [44.96, 74.06]} & \shortstack[l]{H: 0.556 [0.511, 0.615]\\A: 0.650 [0.600, 0.702]} \\
+ & Multi-source & 273 & 262 & \shortstack[l]{H: 57.22 [48.19, 67.44]\\A: 57.14 [43.57, 73.51]} & \shortstack[l]{H: 0.556 [0.511, 0.615]\\A: 0.611 [0.561, 0.652]} \\
+\bottomrule
+\end{tabular}
+\end{table}

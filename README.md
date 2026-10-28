@@ -264,21 +264,29 @@ counts, completion statuses, excluded operational artifacts, and the historical/
 
 ## Supplementary results
 
-The current manuscript retains the full structural/lexical effect-size results
-in one grouped table and the readable BM25 chart. Any future relocation of the
-effect-size results is deferred to the supervisors. The October 1 length pass keeps the
-BERTScore distribution only as existing Supplementary Figure S6, with its
-findings and numerical interpretation retained in the main text. The ROUGE-L
-distribution is Supplementary Figure S5, and the unchanged example Repo Path
-prompt is Supplementary Listing S1 (`supplementary/generation_prompt.tex`).
-The October 1 reporting addition places human false-positive-rate intervals in
-Supplementary Table S1, pooled recall intervals for all detectors in S2, and per-context
-recall intervals in S3--S5. The existing pooled Binoculars results are now S6. The main paper
-retains the word-count boxplot and reports one matched median/quartile table for
-FKGL, TTR, MTLD, and lexical density, with MTLD complete-pair counts explicit.
-Full word- and sentence-count summaries remain in the reporting outputs. The main-paper
-effect-size table retains all 108 values, significance markers, and sample-size
-and correction qualifications; the supplement does not duplicate them.
+The current manuscript retains all structural/lexical effect-size results in one
+grouped table and the baseline-rescaled BERTScore distributions against paired human
+descriptions. The effect-size table retains all 108 values, significance markers,
+sample-size qualifications, and correction details; the supplement does not duplicate it.
+
+Supplementary Table S7 contains the matched human/AI medians and quartiles for FKGL,
+TTR, bidirectional MTLD, and lexical density, with MTLD complete-pair counts explicit.
+Its two portrait parts share one table number. The table source is
+`supplementary/rq2_feature_descriptives.tex`, copied without changing any cells from
+the verified manuscript table. Full word- and sentence-count summaries remain in the
+reporting outputs.
+
+Supplementary Figure S1 shows word-count distributions; S2--S5 show FKGL, TTR,
+bidirectional MTLD, and lexical-density distributions. ROUGE-L is Figure S6 and
+fixed-corpus BM25 retrieval is Figure S7. The BERTScore plot is now in the main paper;
+its numerical interpretation, baseline-rescaling qualifications, and truncation limits
+remain documented here. All plots reuse the existing verified assets.
+
+Human false-positive-rate intervals are in Supplementary Table S1, pooled recall
+intervals for all detectors in S2, and per-context recall intervals in S3--S5.
+Pooled Binoculars results remain S6. Linked-issue reuse tables follow the relocated
+descriptive table. The unchanged example Repo Path prompt is Supplementary Listing S1
+(`supplementary/generation_prompt.tex`).
 
 Compile without writing generated files into the repository:
 

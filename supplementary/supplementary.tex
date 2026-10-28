@@ -5,6 +5,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{caption}
 \usepackage{enumitem}
 \usepackage{listings}
 \usepackage{placeins}
@@ -154,12 +155,18 @@ threshold, and Apple-MPS implementation.
 
 \subsection{Structural and lexical metric distributions}
 
-Figures~\ref{fig:fkgl_boxplots}--\ref{fig:ld_boxplots} present the per-context distributions
-for FKGL, TTR, bidirectional MTLD, and lexical density, complementing
-the matched readability/lexical median/quartile table and paired effect-size table retained in the main paper.
-Each figure
-compares the distribution of AI-generated descriptions with the human baseline across the
-six context configurations.
+Table~\ref{tab:rq2_feature_descriptives} reports readability and lexical medians and quartiles on the same matched PR pairs as the tests. Human subsets therefore follow each model--context cell's available generations. MTLD additionally excludes pairs with a missing metric value; its sample sizes are shown separately.
+
+\input{rq2_feature_descriptives}
+
+Figure~\ref{fig:verbosity_boxplots} presents word-count distributions. Figures~\ref{fig:fkgl_boxplots}--\ref{fig:ld_boxplots} present the per-context distributions for FKGL, TTR, bidirectional MTLD, and lexical density, complementing the paired effect-size table retained in the main paper. Each figure compares the distribution of AI-generated descriptions with the human baseline across the six context configurations.
+
+\begin{figure}[p]
+        \centering
+        \includegraphics[page=1,width=\columnwidth,height=0.75\textheight,keepaspectratio]{figures/textual_features_boxplots.pdf}
+        \caption{Textual Verbosity Boxplots (RQ2). The plots compare the verbosity of the generated descriptions to the human baseline across six context configurations.}
+        \label{fig:verbosity_boxplots}
+    \end{figure}
 
 \begin{figure}[htbp]
     \centering
@@ -201,7 +208,7 @@ six context configurations.
     human self-comparison baseline, because a description compared with itself produces a
     degenerate score rather than an empirical human distribution.
 
-    \item \textbf{BERTScore}: Figure~\ref{fig:bertscore_boxplots} shows that
+    \item \textbf{BERTScore}: The distributions shown in the main paper indicate that
     \WithoutFileContents~has the highest generated-to-reference BERTScore median for all three
     models, with a maximum baseline-rescaled median F1 of 0.003 for \proprietaryLLM. Because
     baseline rescaling was enabled, these
@@ -229,13 +236,7 @@ six context configurations.
     \label{fig:rouge_boxplots}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[page=7,width=\textwidth]{figures/textual_features_boxplots.pdf}
-    \caption{BERTScore F1 distributions against the paired human description, with baseline
-    rescaling enabled (RQ2).}
-    \label{fig:bertscore_boxplots}
-\end{figure}
+
 
 \begin{figure}[htbp]
     \centering
@@ -247,6 +248,8 @@ six context configurations.
     \label{fig:bm25_retrieval}
 \end{figure}
 
+\FloatBarrier
+
 Across the structural and lexical measures, differences from the paired human descriptions
 depend on the model, metric, and configuration; neither minimal, code-dense, nor narrative
 configurations are uniformly closest to the human baseline. The ROUGE and BERTScore results
@@ -256,8 +259,6 @@ ranks Multi-source highest by MRR for all three models. Linked Issue alone is no
 top configuration. These measures do not define a
 percentage of human similarity, and they do not establish factual correctness or review
 adequacy.
-
-\FloatBarrier
 
 BERTScore's 512-token limit truncated the AI side of 4.85\% of the 5,322 corrected pairs. When
 either the AI or paired human description is considered, 9.88\% of pairs were affected, with
