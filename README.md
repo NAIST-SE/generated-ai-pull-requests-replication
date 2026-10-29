@@ -273,7 +273,11 @@ Supplementary Table S1 summarizes dataset filtering, sampled artifacts, and gene
 coverage. Its source, `supplementary/dataset_summary.tex`, preserves the original
 manuscript table, including all numerical cells and its coverage footnote.
 
-Supplementary Table S8 contains the matched human/AI medians and quartiles for FKGL,
+Supplementary Table S2 reports detector input modes and truncation counts across
+5,630 descriptions. The original main-paper table, including its successful-scoring
+note, is preserved in `supplementary/detector_input_handling.tex`.
+
+Supplementary Table S9 contains the matched human/AI medians and quartiles for FKGL,
 TTR, bidirectional MTLD, and lexical density, with MTLD complete-pair counts explicit.
 Its two portrait parts share one table number. The table source is
 `supplementary/rq2_feature_descriptives.tex`, copied without changing any cells from
@@ -286,9 +290,9 @@ fixed-corpus BM25 retrieval is Figure S7. The BERTScore plot is now in the main 
 its numerical interpretation, baseline-rescaling qualifications, and truncation limits
 remain documented here. All plots reuse the existing verified assets.
 
-Human false-positive-rate intervals are in Supplementary Table S2, pooled recall
-intervals for all detectors in S3, and per-context recall intervals in S4--S6.
-Pooled Binoculars results are in S7. Linked-issue reuse tables follow the relocated
+Human false-positive-rate intervals are in Supplementary Table S3, pooled recall
+intervals for all detectors in S4, and per-context recall intervals in S5--S7.
+Pooled Binoculars results are in S8. Linked-issue reuse tables follow the relocated
 descriptive table. The unchanged example Repo Path prompt is Supplementary Listing S1
 (`supplementary/generation_prompt.tex`).
 

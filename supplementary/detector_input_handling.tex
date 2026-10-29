@@ -1,0 +1,31 @@
+% Relocated detector input handling; original table block and cells preserved.
+\begingroup
+\providecommand{\revAudit}[1]{#1}
+\providecommand{\revBOne}[1]{#1}
+\providecommand{\detectorCorpusCountActual}{5,630}
+\newif\ifrevfinal
+\revfinaltrue
+
+\begin{table}[htbp]
+\centering
+\caption{\revAudit{Detector input handling across the \detectorCorpusCountActual~descriptions.}}
+\label{tab:detection_token_truncation}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+{\ifrevfinal\else\color{revcAudit}\fi
+\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}Xrr@{}}
+\toprule
+\textbf{Detector} & \textbf{Input Mode} & \textbf{Truncated} & \textbf{Pct} \\ \midrule
+\zeroGptDetector & Complete description & 0 & 0.00\% \\
+\shortstack[l]{ChatGPT Detector \\ RoBERTa} & Description, 512 tokens & 274 & 4.87\% \\
+\shortstack[l]{ChatGPT-QA Detector \\ RoBERTa} & Title--description pair, 512 tokens & 302 & 5.36\% \\
+\binocularsDetector & Description, 512 tokens & \revBOne{268} & \revBOne{4.76\%} \\ \bottomrule
+\end{tabularx}
+}
+\par\smallskip
+\begin{minipage}{\columnwidth}
+\scriptsize
+\revAudit{All descriptions were scored successfully.}
+\end{minipage}
+\end{table}
+\endgroup
