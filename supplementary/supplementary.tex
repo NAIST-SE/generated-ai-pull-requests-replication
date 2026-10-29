@@ -5,6 +5,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{listings}
@@ -61,6 +62,10 @@ For each sampled PR, we collected patch-level, file-level, and referenced-artifa
 The nominal design allows $308\times6\times3=5,544$ descriptions, or 1,848 per model. Restricting Linked Issue and Multi-source to the 273 PRs with genuine issues leaves 5,334 eligible model--PR--configuration cells. The corpus contains 5,322 successful generations: 1,778 Llama descriptions, 1,772 Qwen descriptions, and 1,772 GPT descriptions. All eligible Llama cells are available; six Full Code outputs are unavailable for each of Qwen and GPT. The 210 inapplicable issue-dependent cells and 12 unavailable outputs account for the difference from the nominal design.
 
 Seven exceptionally long Llama Full Code prompts used the protocol's head--tail-preserving 90,000-token file-content budget and a non-binding 4,096-token completion cap. These settings apply only to those seven prompts. The other successful generation inputs were not truncated. The frozen generation protocol and verifier in the replication package record the input-length rule and its metadata checks.
+
+Table~\ref{tab:dataset_summary} summarizes dataset filtering, sampled artifacts, and generated descriptions.
+
+\input{dataset_summary}
 
 \section{Preliminary Question}
 
