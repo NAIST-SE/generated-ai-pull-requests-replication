@@ -71,6 +71,11 @@ Table~\ref{tab:dataset_summary} summarizes dataset filtering, sampled artifacts,
 
 \section{Preliminary Question}
 
+{\raggedright
+\textbf{RoBERTa checkpoints and decisions.}
+The checkpoints were \nolinkurl{Hello-SimpleAI/chatgpt-detector-roberta} (revision \texttt{d2b342c6\allowbreak{}1775d5dd\allowbreak{}0221808a\allowbreak{}79983ed3\allowbreak{}b86ffd86}) and \nolinkurl{Hello-SimpleAI/chatgpt-qa-detector-roberta} (revision \texttt{25aad95e\allowbreak{}922d9263\allowbreak{}1f861646\allowbreak{}42a3db10\allowbreak{}4deee087}). Both used label 0 for human text and label 1 for ChatGPT text. The AI score was the softmax probability of label 1; descriptions were flagged when this score was at least 0.5.\par}
+
+
 The corrected run of the three pre-specified detectors scores every description and produces no false positives on the 308
 human baselines in the Patch comparison, so specificity is 1.000 in every cell. Detection
 sensitivity is nevertheless strongly model dependent. For \proprietaryLLM,
