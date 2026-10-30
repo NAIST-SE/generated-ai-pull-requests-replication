@@ -48,7 +48,7 @@ GitHub repository}.
 It documents sampling, reference-audit, and generation-coverage details and provides additional descriptive detail for the Preliminary Question and post-hoc
 \binocularsDetector~robustness check, RQ2 structural and lexical distributions,
 ROUGE, BERTScore, and fixed-corpus BM25 retrieval results,
-RQ3 retrieval and calibration methods, linked-issue reuse methods and results, and an example generation prompt. Tables, figures, and listings use an S prefix to
+RQ3 retrieval and calibration methods and context-specific results, linked-issue reuse methods and results, and an example generation prompt. Tables, figures, and listings use an S prefix to
 distinguish them from those in the main paper.
 
 \section{Sampling and Reference Audit}
@@ -277,7 +277,7 @@ BERTScore's 512-token limit truncated the AI side of 4.85\% of the 5,322 correct
 either the AI or paired human description is considered, 9.88\% of pairs were affected, with
 64,066 input tokens removed (2.94\% of all input tokens). AI-side truncation was highest for
 \proprietaryLLM~under \FileCont~(23.51\%), so that cell should be interpreted cautiously.
-\section{RQ3: Retrieval, Calibration, and Sensitivity Methods}
+\section{RQ3: Retrieval, Calibration, and Sensitivity}
 \label{sec:rq3_methods}
 
 \textbf{Description-to-diff retrieval.}
@@ -289,10 +289,55 @@ For each generator and PR, AI reciprocal rank is averaged over all available con
 \textbf{Matched-minus-mismatched calibration.}
 For each description, the calibrated margin is its cosine similarity to the correct diff minus its mean cosine similarity to all 307 nonmatching diffs. The nonmatching reference is deterministic, with no random shuffle or sampled subset. This margin separates correct-pair similarity from background similarity in the embedding space. Raw matched cosine remains descriptive. Calibration comparisons average AI margins across available contexts within each generator and PR before pairing with the human margin. Two-sided Wilcoxon tests and matched-pairs rank-biserial correlations use a three-generator Benjamini--Hochberg family within each encoder and metric. Context-specific human--AI comparisons use one 18-comparison family per encoder. A separate calibration diagnostic tests whether margins exceed zero using one-sided Wilcoxon tests, corrected across the human cell and 18 model--context cells within each encoder (19 tests).
 
+Table~\ref{tab:rq3_context_effects} reports the paired human--AI comparisons within each configuration for retrieval and calibrated margins.
+
+\begin{table}[htbp]
+\centering
+\caption{Paired human--AI effects within each generation configuration (RQ3).}
+\label{tab:rq3_context_effects}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+\multicolumn{8}{l}{\textit{A. Correct-diff reciprocal rank}} \\
+\textbf{Encoder} & \textbf{Generator} & \shortstack{\textbf{Repo}\\\textbf{Path}} & \shortstack{\textbf{PR}\\\textbf{Title}} & \textbf{Patch} & \shortstack{\textbf{Full}\\\textbf{Code}} & \shortstack{\textbf{Linked}\\\textbf{Issue}} & \shortstack{\textbf{Multi-}\\\textbf{source}} \\
+\midrule
+CodeBERT & Qwen2.5-72B & $+0.116^{\dagger}$ & $+0.183$ & $-0.040^{\dagger}$ & $+0.061^{\dagger}$ & $+0.068^{\dagger}$ & $-0.057^{\dagger}$ \\
+ & GPT-5-mini & $-0.199$ & $-0.220$ & $-0.583$ & $-0.207$ & $-0.255$ & $-0.502$ \\
+ & Llama-3.1-70B & $+0.194$ & $+0.178$ & $+0.112^{\dagger}$ & $+0.110^{\dagger}$ & $+0.161$ & $+0.117^{\dagger}$ \\
+\addlinespace[3pt]
+GraphCodeBERT & Qwen2.5-72B & $-0.158$ & $-0.354$ & $-0.694$ & $-0.238$ & $-0.310$ & $-0.581$ \\
+ & GPT-5-mini & $-0.130^{\dagger}$ & $-0.247$ & $-0.701$ & $-0.539$ & $-0.128^{\dagger}$ & $-0.424$ \\
+ & Llama-3.1-70B & $-0.199$ & $-0.367$ & $-0.685$ & $-0.050^{\dagger}$ & $-0.443$ & $-0.671$ \\
+\midrule
+\multicolumn{8}{l}{\textit{B. Calibrated cosine margin}} \\
+\textbf{Encoder} & \textbf{Generator} & \shortstack{\textbf{Repo}\\\textbf{Path}} & \shortstack{\textbf{PR}\\\textbf{Title}} & \textbf{Patch} & \shortstack{\textbf{Full}\\\textbf{Code}} & \shortstack{\textbf{Linked}\\\textbf{Issue}} & \shortstack{\textbf{Multi-}\\\textbf{source}} \\
+\midrule
+CodeBERT & Qwen2.5-72B & $+0.157$ & $+0.229$ & $+0.050^{\dagger}$ & $+0.125^{\dagger}$ & $+0.137^{\dagger}$ & $+0.008^{\dagger}$ \\
+ & GPT-5-mini & $-0.216$ & $-0.111^{\dagger}$ & $-0.604$ & $-0.166$ & $-0.278$ & $-0.454$ \\
+ & Llama-3.1-70B & $+0.240$ & $+0.258$ & $+0.156$ & $+0.189$ & $+0.230$ & $+0.135^{\dagger}$ \\
+\addlinespace[3pt]
+GraphCodeBERT & Qwen2.5-72B & $-0.164$ & $-0.377$ & $-0.792$ & $-0.392$ & $-0.361$ & $-0.706$ \\
+ & GPT-5-mini & $-0.222$ & $-0.294$ & $-0.872$ & $-0.693$ & $-0.207$ & $-0.669$ \\
+ & Llama-3.1-70B & $-0.159$ & $-0.382$ & $-0.757$ & $-0.154$ & $-0.425$ & $-0.777$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\textwidth}
+\footnotesize
+Cells are matched-pairs rank-biserial correlations: positive values favor human descriptions and negative values favor AI. $^{\dagger}$ denotes $p_{adj}\geq0.05$. Benjamini--Hochberg correction covers 18 comparisons separately within each encoder and outcome. Matched sample sizes are 308 for Repo Path, PR Title, and Patch; 302 for Qwen/GPT Full Code and 308 for Llama Full Code; and 273 for Linked Issue and Multi-source. Margins use the original embeddings before post-processing. Exact adjusted $p$-values are retained in the replication package.
+\end{minipage}
+\end{table}
+
+\FloatBarrier
+
 \textbf{Embedding-space sensitivity.}
 For each encoder, a common mean and principal directions are fitted to a balanced reference of 616 vectors: 308 human-description embeddings and 308 diff embeddings. AI descriptions do not contribute to this fit. The same frozen transformation is applied to every human description, generated description, and diff. Four sensitivity variants subtract the common mean alone, or subtract it and remove the leading one, two, or three principal directions. Each variant repeats the calibration and its inferential families. All variants are reported alongside the raw calibration; none is selected after inspecting its result. These checks assess sensitivity to embedding geometry, rather than providing a replacement quality measure. The scores do not establish structural correspondence, factual accuracy, completeness, or reviewer usefulness.
 
 The replication package's \texttt{RQ3\_PUBLICATION.md} maps the executed protocols, source, numeric outputs, completion manifests, and independent verification reports for the retrieval, calibration, and post-processing packages.
+
+\FloatBarrier
 
 \section{Linked-Issue Reuse Robustness Check}
 \label{sec:linked_issue_reuse}
