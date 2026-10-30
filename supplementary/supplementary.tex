@@ -58,6 +58,8 @@ We selected a simple random sample of 308 PRs from the filtered population of 1,
 
 For each sampled PR, we collected patch-level, file-level, and referenced-artifact data through the GitHub REST API. A post-collection audit traced every reference back to its PR body and verified the corresponding API object type. The sample contains 352 PR--artifact references representing 343 unique artifacts: 293 references to 284 genuine issues and 59 references to pull requests. Of the 308 sampled PRs, 273 reference at least one genuine issue and 35 reference pull requests only. We retained all 308 PRs for the human baseline and the Repo Path, PR Title, Patch, and Full Code configurations; Linked Issue and Multi-source were restricted to the 273 genuine-issue PRs. Manual review also confirmed that the retained issues fall within the same study time window as their corresponding PRs. The resulting dataset contains 2,523 diff hunks and 1,344 modified files.
 
+PR titles and descriptions were taken from the stored GitHub export. File and issue retrieval logs record collection on 20 February 2026. Per-file patches came from the PR files endpoint, and file contents followed its contents URLs; the stored blob/raw URLs retain the corresponding revision references. Removed files can refer to a different revision from the other files in the same PR. Of the 1,344 file records, 1,341 contain stored file contents; generation used the available contents. Issue titles and bodies were fetched in their then-current form. We did not reconstruct PR or issue text as it stood at PR creation.
+
 \textbf{Generation coverage and input length.}
 The nominal design allows $308\times6\times3=5,544$ descriptions, or 1,848 per model. Restricting Linked Issue and Multi-source to the 273 PRs with genuine issues leaves 5,334 eligible model--PR--configuration cells. The corpus contains 5,322 successful generations: 1,778 Llama descriptions, 1,772 Qwen descriptions, and 1,772 GPT descriptions. All eligible Llama cells are available; six Full Code outputs are unavailable for each of Qwen and GPT. The 210 inapplicable issue-dependent cells and 12 unavailable outputs account for the difference from the nominal design.
 
@@ -163,6 +165,8 @@ threshold, and Apple-MPS implementation.
 \section{RQ2: Textual Similarity}
 
 \subsection{Structural and lexical metric distributions}
+
+RQ2 used the PR body strings in the frozen corpus and the stored generated text. Markdown, checklists, template text, URLs, code blocks, and quoted material were retained rather than rendered or removed. The generation scripts attempted to extract the \texttt{description} field from JSON responses and retained response text when parsing failed. Ten stored AI strings still begin with a malformed JSON description wrapper; these strings were used as stored. Each metric then applied its own tokenizer or text processing. These comparisons therefore concern stored description artifacts, and retained scaffolding may contribute to the measured structural and lexical differences.
 
 Table~\ref{tab:rq2_feature_descriptives} reports readability and lexical medians and quartiles on the same matched PR pairs as the tests. Human subsets therefore follow each model--context cell's available generations. MTLD additionally excludes pairs with a missing metric value; its sample sizes are shown separately.
 
