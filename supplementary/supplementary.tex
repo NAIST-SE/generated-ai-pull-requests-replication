@@ -231,7 +231,7 @@ Figure~\ref{fig:verbosity_boxplots} presents word-count distributions. Figures~\
     human self-comparison baseline, because a description compared with itself produces a
     degenerate score rather than an empirical human distribution.
 
-    \item \textbf{BERTScore}: The distributions shown in the main paper indicate that
+    \item \textbf{BERTScore}: Figure~\ref{fig:bertscore_boxplots} shows that
     \WithoutFileContents~has the highest generated-to-reference BERTScore median for all three
     models, with a maximum baseline-rescaled median F1 of 0.003 for \proprietaryLLM. Because
     baseline rescaling was enabled, these
@@ -260,6 +260,14 @@ Figure~\ref{fig:verbosity_boxplots} presents word-count distributions. Figures~\
 \end{figure}
 
 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[page=7,width=\textwidth,height=0.75\textheight,keepaspectratio]{figures/textual_features_boxplots.pdf}
+    \caption{BERTScore F1 distributions against the paired human description, with baseline
+    rescaling enabled (RQ2).}
+    \label{fig:bertscore_boxplots}
+\end{figure}
 
 \begin{figure}[htbp]
     \centering
