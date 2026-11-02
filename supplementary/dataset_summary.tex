@@ -1,6 +1,5 @@
 % Relocated dataset summary; original table block and numerical cells preserved.
 \begingroup
-\providecommand{\revAudit}[1]{#1}
 \providecommand{\diffHunkCount}{2,523}
 \providecommand{\eligibleDescriptionsCountTotal}{5,334}
 \providecommand{\fileCount}{1,344}
@@ -30,24 +29,24 @@
 \multicolumn{4}{l}{\textit{A. Data Filtering \& Sampling}} \\
 Raw & Initial JabRef PRs & \originalPRTotalCount & From GitHub API \\
 Filtering & 1. Pre-LLM Cutoff & \prCountAfterPreLLMCutoff & Excl: post-ChatGPT \\
-& 2. Code \& Reference Filters & \preOutlierRemovalPRCount & \revAudit{Excl: empty/no resolved reference} \\
+& 2. Code \& Reference Filters & \preOutlierRemovalPRCount & Excl: empty/no resolved reference \\
 & 3. Outlier Removal & \textbf{\intermediatePRCount} & Excl: IQR length/churn \\
 Sample & Sampled PRs ($n$) & \textbf{\sampledPRCount} & Sample-size formula \\
 \midrule
 \multicolumn{4}{l}{\textit{B. Human Baseline Characteristics ($n=308$)}} \\
 Sample & Total File Diffs & \diffHunkCount & Baseline context \\
 & Total Files Modified & \fileCount & \\
-& \revAudit{Unique Referenced Artifacts} & \revAudit{\uniqueReferencedArtifactCount} & \revAudit{284 issues; 59 PRs} \\
+& Unique Referenced Artifacts & \uniqueReferencedArtifactCount & 284 issues; 59 PRs \\
 \midrule
 \multicolumn{4}{l}{\textit{C. Generated Data (LLM Outputs)}} \\
 Design & Context Configurations & 6 & Repo Path to Multi-source \\
 Generations & Planned per Model & \plannedDescriptionsCountPerModel & \sampledPRCount{} $\times$ 6 prompts \\
-& \revAudit{Eligible after issue matching} & \revAudit{\eligibleDescriptionsCountTotal} & \revAudit{P-5/P-6 available for \linkedIssuePRCount{} PRs} \\
-& \revAudit{Successful: Qwen / GPT} & \revAudit{\generatedDescriptionsCountQwen{} / \generatedDescriptionsCountGPT} & \revAudit{Six unavailable P-4 outputs each} \\
-& \revAudit{Successful: Llama} & \revAudit{\generatedDescriptionsCountLlama} & \revAudit{All eligible cells available} \\
-& \revAudit{Total Analyzed} & \textbf{\revAudit{\generatedDescriptionsCountActual{}\textsuperscript{*}}} & \revAudit{Complete analyzed dataset} \\
+& Eligible after issue matching & \eligibleDescriptionsCountTotal & P-5/P-6 available for \linkedIssuePRCount{} PRs \\
+& Successful: Qwen / GPT & \generatedDescriptionsCountQwen{} / \generatedDescriptionsCountGPT & Six unavailable P-4 outputs each \\
+& Successful: Llama & \generatedDescriptionsCountLlama & All eligible cells available \\
+& Total Analyzed & \textbf{\generatedDescriptionsCountActual{}\textsuperscript{*}} & Complete analyzed dataset \\
 \bottomrule
-\multicolumn{4}{@{}p{\columnwidth}@{}}{\revAudit{\textsuperscript{*}Of the nominal 5,544 cells, 210 P-5/P-6 cells lacked a verified linked issue and 12 P-4 outputs were unavailable.}}
+\multicolumn{4}{@{}p{\columnwidth}@{}}{\textsuperscript{*}Of the nominal 5,544 cells, 210 P-5/P-6 cells lacked a verified linked issue and 12 P-4 outputs were unavailable.}
 \end{tabularx}
 \end{table}
 \endgroup

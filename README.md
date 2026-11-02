@@ -1,9 +1,9 @@
-# Replication Package — AI-Generated Pull Request Descriptions: Weak Detection Despite Semantic and Structural Differences
+# Replication Package — AI-Generated Pull Request Descriptions: Weak Detection Despite Structural and Lexical Differences
 
 This repository contains the public datasets, exact study code, precomputed results, and
 supplementary material for:
 
-> **AI-Generated Pull Request Descriptions: Weak Detection Despite Semantic and Structural Differences**
+> **AI-Generated Pull Request Descriptions: Weak Detection Despite Structural and Lexical Differences**
 > Prepared for submission to Empirical Software Engineering (EMSE)
 
 Historical large artifacts are archived on OSF at **https://osf.io/aq5rj/**. The corrected
