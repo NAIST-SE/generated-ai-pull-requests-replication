@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite this version of the replication package when using its data, code, or results."
+type: dataset
+title: "Replication Package for AI-Generated Pull Request Descriptions: Weak Detection Despite Structural and Lexical Differences"
+authors:
+  - family-names: Joseph
+    given-names: Ayobami Joshua
+  - family-names: Fan
+    given-names: Youmei
+  - family-names: Baltes
+    given-names: Sebastian
+  - family-names: Treude
+    given-names: Christoph
+  - family-names: Matsumoto
+    given-names: Kenichi
+  - family-names: Kula
+    given-names: Raula Gaikovina
+version: "emse-review-2026-11-02"
+date-released: "2026-11-02"
+repository-code: "https://github.com/NAIST-SE/generated-ai-pull-requests-replication"
+url: "https://github.com/NAIST-SE/generated-ai-pull-requests-replication/tree/emse-review-2026-11-02"

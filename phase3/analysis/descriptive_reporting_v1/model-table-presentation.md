@@ -4,9 +4,9 @@ Publication tables use Qwen2.5-72B, GPT-5-mini, and Llama-3.1-70B, in that
 order. Full model identifiers remain in the model setup. Frozen statistical
 outputs and their historical manifests remain unchanged.
 
-The baseline detector-table producer now follows its existing `MODELS` list,
-which already gives this order. Do not rerun that producer to update layout.
-Use the presentation formatter with the current publication TeX instead:
+The baseline detector-table producer is preserved byte-for-byte as executed,
+matching its recorded manifest hash. Use the separate presentation formatter
+with the current publication TeX to update model names and order:
 
 ```bash
 python3 format_model_tables.py \

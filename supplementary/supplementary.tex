@@ -352,7 +352,7 @@ Cells are matched-pairs rank-biserial correlations: positive values favor human 
 
 \textbf{Embedding-space sensitivity.}
 For each encoder, a common mean and principal directions are fitted to a balanced reference of 616 vectors: 308 human-description embeddings and 308 diff embeddings. AI descriptions do not contribute to this fit. The same frozen transformation is applied to every human description, generated description, and diff. Four sensitivity variants subtract the common mean alone, or subtract it and remove the leading one, two, or three principal directions. Each variant repeats the calibration and its inferential families. The replication package reports pooled human--AI comparisons for the raw calibration and all four variants.\footnote{See
-\href{https://github.com/NAIST-SE/generated-ai-pull-requests-replication/blob/revision/co-author-review/phase3/analysis/outputs/rq3_embedding_postprocess_sensitivity_v1/summaries/pooled_human_ai_all_variants.csv}{\nolinkurl{pooled_human_ai_all_variants.csv}}
+\href{https://github.com/NAIST-SE/generated-ai-pull-requests-replication/blob/emse-review-2026-11-02/phase3/analysis/outputs/rq3_embedding_postprocess_sensitivity_v1/summaries/pooled_human_ai_all_variants.csv}{\nolinkurl{pooled_human_ai_all_variants.csv}}
 in \nolinkurl{rq3_embedding_postprocess_sensitivity_v1};
 \texttt{margin\_mean} is the calibrated-margin outcome.}
 No variant is selected after inspecting its result. These checks assess sensitivity to embedding geometry, rather than providing a replacement quality measure. The scores do not establish structural correspondence, factual accuracy, completeness, or reviewer usefulness.

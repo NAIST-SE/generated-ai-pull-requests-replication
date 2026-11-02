@@ -225,7 +225,7 @@ def write_detection_tex(rates, humans, out):
              r"\label{tab:prelim_rq_results}", r"\footnotesize", r"\setlength{\tabcolsep}{5pt}",
              r"\begin{tabular}{llrrrr}",r"\toprule",
              r"\textbf{Model} & \textbf{Tool} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall [95\% CI]} & \textbf{F1} \\",r"\midrule"]
-    for mi, model in enumerate(MODELS):
+    for mi, model in enumerate([MODELS[0],MODELS[2],MODELS[1]]):
         for di, detector in enumerate(list(DETECTORS)[:3]):
             r = rates[(rates.detector == detector) & (rates.generator == model) & (rates.context_code == "P-3")].iloc[0]
             lines.append(" & ".join([SHORT[model] if di==0 else "",DETECTORS[detector],f"{r.accuracy:.3f}",f"{r.precision:.3f}",interval(r),f"{r.f1:.3f}"])+r" \\")

@@ -6,9 +6,13 @@ supplementary material for:
 > **AI-Generated Pull Request Descriptions: Weak Detection Despite Structural and Lexical Differences**
 > Prepared for submission to Empirical Software Engineering (EMSE)
 
+Current development is on `main`. The manuscript cites the reviewed snapshot
+[`emse-review-2026-11-02`](https://github.com/NAIST-SE/generated-ai-pull-requests-replication/tree/emse-review-2026-11-02);
+[`CITATION.cff`](CITATION.cff) records its citation metadata.
+
 Historical large artifacts are archived on OSF at **https://osf.io/aq5rj/**. The corrected
 corpus and the result packages used by the current manuscript are included directly in this
-branch. See [`AUDIT_PROVENANCE.md`](AUDIT_PROVENANCE.md) for immutable source commits, hashes,
+repository. See [`AUDIT_PROVENANCE.md`](AUDIT_PROVENANCE.md) for immutable source commits, hashes,
 public-layout decisions, and exclusions. For the current RQ3 retrieval/calibration evidence,
 see [`RQ3_PUBLICATION.md`](RQ3_PUBLICATION.md); older raw-cosine outputs are not the primary result.
 
@@ -264,10 +268,11 @@ counts, completion statuses, excluded operational artifacts, and the historical/
 
 ## Supplementary results
 
-The current manuscript retains all structural/lexical effect-size results in one
-grouped table and the baseline-rescaled BERTScore distributions against paired human
-descriptions. The effect-size table retains all 108 values, significance markers,
-sample-size qualifications, and correction details; the supplement does not duplicate it.
+The current manuscript combines all structural/lexical effect-size results with
+ROUGE-L F1 and baseline-rescaled BERTScore F1 medians in one grouped RQ2 table.
+It retains all 108 effect sizes and their significance markers, sample-size
+qualifications, and correction details, alongside 36 descriptive similarity medians.
+The supplement provides the corresponding metric distributions.
 
 Supplementary Table S1 summarizes dataset filtering, sampled artifacts, and generation
 coverage. Its source, `supplementary/dataset_summary.tex`, preserves the original
@@ -285,10 +290,11 @@ the verified manuscript table. Full word- and sentence-count summaries remain in
 reporting outputs.
 
 Supplementary Figure S1 shows word-count distributions; S2--S5 show FKGL, TTR,
-bidirectional MTLD, and lexical-density distributions. ROUGE-L is Figure S6 and
-fixed-corpus BM25 retrieval is Figure S7. The BERTScore plot is now in the main paper;
-its numerical interpretation, baseline-rescaling qualifications, and truncation limits
-remain documented here. All plots reuse the existing verified assets.
+bidirectional MTLD, and lexical-density distributions. ROUGE-L is Figure S6,
+baseline-rescaled BERTScore is Figure S7, and fixed-corpus BM25 retrieval is Figure S8.
+The BERTScore plot accompanies its numerical interpretation, baseline-rescaling
+qualifications, and truncation limits in the supplement. All plots reuse the
+existing verified assets.
 
 Human false-positive-rate intervals are in Supplementary Table S3, pooled recall
 intervals for all detectors in S4, and per-context recall intervals in S5--S7.
@@ -300,7 +306,8 @@ Compile without writing generated files into the repository:
 
 ```bash
 supp_build_dir="$(mktemp -d /tmp/llm-prs-supplement.XXXXXX)"
-tectonic -X compile --outdir "$supp_build_dir" --keep-logs supplementary/supplementary.tex
+cd supplementary
+tectonic -X compile --outdir "$supp_build_dir" --keep-logs supplementary.tex
 ```
 
 ## Interactive tools
@@ -310,4 +317,8 @@ filterable corpus inspector. Both run client-side through GitHub Pages.
 
 ## Citation
 
-Citation metadata will be added upon acceptance.
+Use [`CITATION.cff`](CITATION.cff) to cite the replication package. The reviewed
+version is [`emse-review-2026-11-02`](https://github.com/NAIST-SE/generated-ai-pull-requests-replication/tree/emse-review-2026-11-02).
+This tag identifies the corrected dataset, study code, precomputed results, and
+supplementary sources used by the manuscript. The historical OSF archive predates
+this corrected-study version.
